@@ -1,0 +1,172 @@
+<div loading="lazy"
+    class="full-width pt6 pb6 pt10--md pb10--md hero-section  desktop-hero {% if product.handle  == 'sleep-powder' %}image-push{% endif %}"
+    style="min-height: 380px;background-image: url({{ section.settings.heroBGImage | img_url : '2048x2048' }})">
+    <div class="large-container pl3 pr3 pl6--md pr6--md pt6 pb6 mt3--md mb3--md pt10--md pb10--md">
+        <div class="row align--middle gutter--none">
+            <div class="col tl c7 c6--md c5--lg c4--xl pt6--md">
+                <h2 class="sans--large fw--600 mb2 {% if product.handle == " mini-dream-bundle" or product.handle == "sea-salt-caramel-extra-strength-dream-powder" %}color--black{% else
+                    %}color--white{%endif%}">
+                    {{ section.settings.heroHeading | escape }}
+                </h2>
+                {% if section.settings.heroBodyText %}
+                <div class="sans--body-new fw--600 {% if product.handle == "mini-dream-bundle" or product.handle == "sea-salt-caramel-extra-strength-dream-powder"
+                    %}color--black{%else%}color--white{%endif%}">
+                    {{ section.settings.heroBodyText }}
+                </div>
+                {% endif %}
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div loading="lazy" class="full-width mobile-hero  {% if product.handle  == 'sleep-powder' %}image-push{% endif %}"
+    style="min-height: 380px;background-size: 101%; background-repeat: no-repeat; background-image: url({{ section.settings.heroMobImage | img_url : '2048x2048' | crop: 'center' }})">
+    <div class="large-container pl3 pr3 pl6--md pr6--md pt6 pb6 mt3--md mb3--md pt10--md pb10--md">
+        <div class="row align--middle gutter--none mobile-content">
+            <div class="tc content-container">
+                {% if section.settings.heroHeading %}
+                <h2 class="sans--large fw--600 mb2 {% if product.handle == " mini-dream-bundle" or product.handle == "sea-salt-caramel-extra-strength-dream-powder"
+                    %}color--black{%else%}color--white{%endif%}">
+                    {{ section.settings.heroHeading | escape }}
+                </h2>
+                {% endif %}
+                {% if section.settings.heroBodyText %}
+                <div class="sans--body-new mobile-copy fw--600 {% if product.handle == " mini-dream-bundle" or product.handle == "sea-salt-caramel-extra-strength-dream-powder"
+                    %}color--black{%else%}color--white{%endif%}">
+                    {{ section.settings.heroBodyText }}
+                </div>
+                {% endif %}
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .hero-section {
+        background-color: #fff;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .mobile-hero {
+        display: none;
+    }
+
+    @media (min-width: 1540px) {
+        .hero-section {
+            min-height: 720px !important;
+        }
+
+    }
+
+    @media (min-width: 1700px) {
+        .hero-section {
+            min-height: 1500px !important;
+        }
+
+
+    }
+
+    @media (max-width: 800px) {
+        .mobile-hero {
+            display: flex;
+            padding-top: 0;
+            padding: 0;
+        }
+
+        .desktop-hero {
+            display: none;
+        }
+
+        .mobile-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content-container {
+            width: 70%;
+            min-height: 500px;
+        }
+
+        .mobile-copy {
+            font-size: 16px;
+            line-height: 150%;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+        .content-container {
+            padding-top: 25px;
+            width: 100%;
+            min-height: 500px;
+            padding-top: 60px;
+        }
+
+        .mobile-copy {
+            font-size: 12px;
+            line-height: 150%;
+        }
+
+    }
+
+    @media (max-width: 700px) {
+        .large-container {
+            padding-bottom: 0 !important;
+    }
+        .image-push {
+            background-position: calc(35% - 50px) 50% !important;
+        }
+
+    }
+
+    .large-container {
+        max-width: 1600px;
+        margin: inherit auto;
+    }
+</style>
+
+{% schema %}
+{
+"name": "Product Mid Hero",
+"class": "product-subscription_banner",
+"settings": [
+{
+"type": "image_picker",
+"id": "heroBGImage",
+"label": "Background Image"
+},
+{
+"type": "image_picker",
+"id": "heroMobImage",
+"label": "Mobile Image"
+},
+{
+"type": "color",
+"id": "heroBGColor",
+"label": "Background Color",
+"default": "#fff"
+},
+{
+"type": "text",
+"id": "heroHeading",
+"label": "Title"
+},
+{
+"type": "richtext",
+"id": "heroBodyText",
+"label": "Body Copy"
+}
+],
+"presets": [{
+"name": "Product Mid Hero",
+"category": "Content"
+}]
+}
+
+{% endschema %}

@@ -1,0 +1,172 @@
+<div class="pt6 pb4 pb10--md" style="background-color: #fbfcff;">
+  <div class="row align--center">
+    <div class="col c6--md c8--lg">
+      <h2 class="fw--600 sans--large mb3 color--blue tc pr3 pl3">meet the mindfully-sourced ingredients behind Elevate
+      </h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row align--center">
+
+      <div class="col c6--md">
+        <div class="ingredients-accordion">
+          <div class="ingredients-item">
+            <a href="#acc1Desk" class="acc-heading-ingredients sans--medium mt1 mb1 disable-focus-ring">Elevate Balance
+              <i class="fa fa-angle-down fr" aria-hidden="true"></i></a>
+
+            <section id="acc1Desk" class="acc-content-ingredients">
+              <div class="inner">
+                Elevate Balance contains prebiotics + probiotics to support a healthy microbiome.
+              </div><!-- / .inner -->
+            </section>
+          </div><!-- / .item -->
+          <div class="ingredients-item">
+            <a href="#acc2Desk" class="acc-heading-ingredients sans--medium mt1 mb1 disable-focus-ring">Elevate Energy
+              <i class="fa fa-angle-down fr" aria-hidden="true"></i></a>
+
+            <section id="acc2Desk" class="acc-content-ingredients">
+              <div class="inner">
+                Elevate Energy contains caffeine for a daily pick-me-up.
+              </div><!-- / .inner -->
+            </section>
+          </div><!-- / .item -->
+
+        </div>
+
+
+      </div>
+
+      <div class="col c6--md">
+        <div class="ingredients-item">
+          <a href="#acc7Desk" class="acc-heading-ingredients sans--medium mt1 mb1 disable-focus-ring">Elevate Recovery<i
+              class="fa fa-angle-down fr" aria-hidden="true"></i></a>
+
+          <section id="acc7Desk" class="acc-content-ingredients">
+            <div class="inner">
+              Elevate Recovery contains collagen to support joints, skin, hair and nails.
+            </div><!-- / .inner -->
+          </section>
+        </div><!-- / .item -->
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="tc container mt7 mb10 sans--medium">
+  believe it or not, 75% of Americans are chronically dehydrated. And while water is essential, H2O alone won’t always
+  do the trick. That’s why we created clean electrolyte powders that deliver effective and fast hydration thanks to
+  supercharged and super-hydrating ingredients like coconut water and himalyan sea salt. So whether you’re looking for
+  everyday balance, energy or recovery support, our powders are here to give your body the hydration it craves.
+</div>
+
+<style>
+  .ingredients-item {
+    border: #3E7DCA solid 2px !important;
+  }
+
+  .acc-heading-ingredients {
+    color: #3E7DCA !important;
+  }
+</style>
+
+
+{% schema %}
+{
+"name": "Elvate Recovery",
+"settings": [
+{
+"type": "image_picker",
+"id": "statBGImage",
+"label": "Background Image"
+},
+{
+"type": "color",
+"id": "statBGColor",
+"label": "Background Color",
+"default": "#fff"
+},
+{
+"type": "text",
+"id": "heroHeading",
+"label": "Title"
+},
+{
+"type": "text",
+"id": "section_styles",
+"label": "Section Styles"
+}
+],
+"blocks": [
+{
+"type": "column",
+"name": "Accordian",
+"limit": 10,
+"settings": [
+{
+"type": "text",
+"id": "statHeading",
+"label": "Accordian heading"
+},
+{
+"type": "richtext",
+"id": "statContent",
+"label": "Accordian content"
+}
+]
+}
+],
+"presets": [{
+"name": "Elvate Recovery",
+"category": "Content"
+}]
+}
+
+{% endschema %}
+
+
+<script>
+
+
+  let accTitleIngredients = document.getElementsByClassName("acc-heading-ingredients");
+  let accContentIngredients = document.getElementsByClassName("acc-content-ingredients");
+  let singleModeIngredients = true;
+
+  for (let j = 0; j < accContentIngredients.length; j++) {
+    let realHeightIngredients = accContentIngredients[j].offsetHeight;
+    accContentIngredients[j].setAttribute("data-height", realHeightIngredients + "px");
+    accContentIngredients[j].style.height = 0;
+  }
+
+  for (let i = 0; i < accTitleIngredients.length; i++) {
+    accTitleIngredients[i].onclick = function () {
+      let openedAccIngredients = this.getAttribute('href').replace('#', '');
+
+      if (this.classList.contains("active")) {
+        this.classList.remove("active");
+        document.getElementById(openedAccIngredients).style.height = 0;
+
+        return false;
+      }
+
+      if (singleModeIngredients) {
+        for (let k = 0; k < accTitleIngredients.length; k++) {
+          accTitleIngredients[k].classList.remove("active");
+        }
+
+        for (let j = 0; j < accContentIngredients.length; j++) {
+          accContentIngredients[j].style.height = 0;
+        }
+      }
+
+      this.classList.add("active");
+
+      document.getElementById(openedAccIngredients).style.height = accContentIngredients[i].getAttribute("data-height");
+
+      return false;
+    }
+  }
+
+
+
+</script>

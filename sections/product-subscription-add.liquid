@@ -1,0 +1,153 @@
+
+<div class="full-width pt2--md">
+    <div class="row bg--blue align--middle gutter--none">
+		{% if section.settings.variantid %}
+			<div class="col tc c12--md" style="background-color: #E6F1FF;">
+				<h2 class="fw--600 sans--medium mt3 mb2 color--blue">dream subscription</h2>
+				<h3 class="fw--300 sans--body color--blue mb1">join + save. Skip or cancel anytime.</h3>
+
+				<span class="media__fixed tc"><span class="db color--blue fw--600 sans--medium">
+					{{ section.settings.price }}
+					<s class="compare-at-price color--blue">{{ section.settings.saleprice }}</s>
+					</span></span>
+					<p class="sans--small color--blue fw--300 pt2" >
+                      <span style=""> {{section.settings.headertext}} </span> {{ section.settings.headertext1 }}
+              		</p>
+					<p class="sans--small color--blue fw--600 pt1">renews at 20% off</p>
+
+				<div class="media__fixed mt2 mb5">
+					<a title="learn more" style="color: #fff !important; line-height: 2; background-color: #2f358e !important" class="add_to_cart_dream1 dib custom-button--wave-primary-top link--opacity pill bg--blue color--white" href="https://beamorganics.com/cart/{{ section.settings.variantid}}:1">get 35% off</a>
+				</div>
+			</div>
+			
+		{% endif %}
+    </div>
+</div>
+
+<style>
+	.pill {
+        border-radius: 32px;
+        display: inline-block;
+        border: #2F358E;
+        transition: 200ms ease-in-out;
+        min-width: 220px;
+        width: auto !important;
+        padding-right: 32px;
+        padding-left: 32px;
+
+    }
+
+    .pill--blue:hover {
+        background-color: #494fa7;
+    }
+
+    .pill:hover {
+        background-color: #E9F2FF;
+    }
+
+	@media screen and (max-width: 600px) {
+       
+	   .pill {
+		   border-radius: 32px;
+		   display: inline-block;
+		   border: #2F358E;
+		   transition: 200ms ease-in-out;
+		   min-width: inherit;
+		   width: inherit !important;
+		   padding-right: 32px;
+		   padding-left: 32px;
+
+	   }
+   }
+</style>
+
+<script>
+
+
+	$(document).ready(function () {
+		$('.add_to_cart_dream1').click(function(){
+			  addItemToCart()
+			  return false;
+		});
+	
+	});
+	
+		function addItemToCart() {
+		  data = {
+			"id": {{ section.settings.variantid}},
+			"quantity": 1,
+			"properties": {
+			  "shipping_interval_frequency": "30",
+			  "shipping_interval_unit_type": "Days"
+			}
+		  }
+		  jQuery.ajax({
+			type: 'POST',
+			url: '/cart/add.js',
+			data: data,
+			dataType: 'json',
+			success: function() { 
+			  window.location.href = '/cart'; 
+			}
+		  });
+		}
+	
+		$(document).ready(function () {
+	
+		$('.qtybox .btnqty').on('click', function () {
+			var qty = parseInt($(this).parent('.qtybox').find('.quantity-input').val());
+			if ($(this).hasClass('qtyplus')) {
+				qty++;
+			} else {
+				if (qty > 1) {
+					qty--;
+				}
+			}
+			qty = (isNaN(qty)) ? 1 : qty;
+			$(this).parent('.qtybox').find('.quantity-input').val(qty);
+		});
+	})
+</script>
+{% schema %}
+{
+  "name": "Product Subscription Add",
+  "class": "product-subscription_add",
+  "settings": [	
+             {
+              "type": "text",
+              "id": "variantid",
+              "label": "Subscription product id"			
+			},
+			{
+				"type": "text",
+				"id": "price",
+				"label": "Product Price"
+			},
+			{
+				"type": "text",
+				"id": "saleprice",
+				"label": "Product Sale Price"
+			},
+			{
+              "type":"text",
+              "id":"review",
+              "label": "Customer review"			  
+			},
+			{
+				"type":"text",
+				"id":"headertext",
+				"label": "Subscription Text"			  
+			  },
+			{
+				"type":"text",
+				"id":"headertext1",
+				"label": "Subscription Text"			  
+			  }
+  ],
+  "presets": [{
+    "name": "Product Subscription Add",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

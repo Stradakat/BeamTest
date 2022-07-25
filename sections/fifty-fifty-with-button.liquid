@@ -1,0 +1,134 @@
+<div class="full-width fifty-section">
+    {% if product.handle == 'dream-extra-strength-powder' %}
+    <div class="row align--middle gutter--none dream-xs-contain">
+    {% else %}
+    <div class="row align--middle gutter--none fifty-contain">
+    {% endif %}
+            <div class="col tl c6--md" >
+                
+                <img loading="lazy" class="full-width" src="{{ section.settings.fiftyImage | img_url: '1024x1024' }}">
+
+            </div>
+            <div class="col tl c6--md pt2--md paragraph-contain">
+                <div class="p2" style="max-width: 500px; margin: 0 auto;">
+                    {% if section.settings.heroHeading %}
+                    <h2 style="color: #427CBF"  class="sans--medium fw--600 mb2 mb3--md color--black">
+                        {{ section.settings.heroHeading | escape }}
+                    </h2>
+                    {% endif %}
+                    {% if section.settings.heroBodyTopText %}
+                    <div class="sans--body-new fw--400 mb1">
+                        {{ section.settings.heroBodyTopText }}
+                    </div>                
+                    {% endif %}
+                <a class="btn fw--600 mt3" href="https://beamtlc.typeform.com/to/nlLblABQ">Apply here</a>
+                </div>
+                {% if section.settings.smallFiftyImage %}
+
+                <img  loading="lazy" class="full-width" src="{{ section.settings.smallFiftyImage | img_url: '1024x1024' }}">
+
+                {% endif %}
+
+            </div>
+
+    </div>
+</div>
+
+<style>
+    .fifty-contain {
+        background: #fff !important;
+    }
+    .btn {
+        border-radius: 3px;
+        display: inline-block;
+        background-color: #427BBE;
+        color: #fff;
+        transition: 200ms ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 225px;
+        height: 55px;
+    }
+.hero-section {
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@media (min-width: 1540px) {
+    .hero-section {
+        min-height: 720px !important;
+    }
+
+}
+.large-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.dream-xs-contain {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px){
+    .paragraph-contain {
+        text-align: center;
+    }
+    .btn{ 
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+.dream-xs-contain {
+    flex-direction: column;
+}
+}
+    
+</style>
+
+{% schema %}
+{
+  "name": "Half Page",
+  "class": "product-subscription_banner",
+  "settings": [	      
+            {
+                "type": "image_picker",
+                "id": "fiftyImage",
+                "label": "Left Image"
+            },
+            {
+                "type": "color",
+                "id": "heroBGColor",
+                "label": "Background Color",
+                "default": "#fff"
+              },
+			{
+				"type": "text",
+				"id": "heroHeading",
+				"label": "Title"
+			},
+			{
+				"type": "text",
+				"id": "heroBodyTopText",
+				"label": "Top Body Text"
+			},
+			{
+				"type": "richtext",
+				"id": "heroBodyText",
+				"label": "Body Copy"
+			},
+            {
+                "type": "image_picker",
+                "id": "smallFiftyImage",
+                "label": "Left Image"
+            }
+  ],
+  "presets": [{
+    "name": "Half Page",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

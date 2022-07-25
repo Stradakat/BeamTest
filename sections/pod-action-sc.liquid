@@ -1,0 +1,391 @@
+{% assign product = all_products['10-serving-dream-powder-sweatcoin'] %}
+
+<div class="action-contain">
+    <div class="action-inline-2">
+        <div class="action-flex">
+            <img class="action-img" src="{{ section.settings.joinImg2 |  img_url: '1200x1800' }}">
+        </div>
+        <div class="action-flex-copy-2">
+            <h1 class="action-title">{{section.settings.joinTitle2}}</h1>
+            <div class="faq-contain"><div class="faq-item ">
+                <div class="shopify_explorer_faq__question fw--600 link">
+                    <h1 class="title-block">Nano CBD</h1><span class="toggle-open"></span>
+                </div>
+
+                <div class="shopify_explorer_faq__answer answer rte">
+                    CBD particles with the highest absorption potential to naturally support mood, stress, rest, and wellbeing*
+                </div>
+            </div><div class="faq-item ">
+                <div class="shopify_explorer_faq__question fw--600 link">
+                    <h1 class="title-block">Reishi</h1><span class="toggle-open"></span>
+                </div>
+
+                <div class="shopify_explorer_faq__answer answer rte">
+                    A mushroom superfood that helps to support the body’s sleep cycle and manage stress*
+                </div>
+            </div><div class="faq-item ">
+                <div class="shopify_explorer_faq__question fw--600 link">
+                    <h1 class="title-block">Magnesium</h1><span class="toggle-open"></span>
+                </div>
+
+                <div class="shopify_explorer_faq__answer answer rte">
+                    A mineral that aids the body’s ability to fall asleep by relaxing the muscles and regulating the nervous system*
+                </div>
+            </div><div class="faq-item ">
+                <div class="shopify_explorer_faq__question fw--600 link">
+                    <h1 class="title-block">L-Theanine</h1><span class="toggle-open"></span>
+                </div>
+
+                <div class="shopify_explorer_faq__answer answer rte">
+                    An amino acid that promotes relaxation and helps improve sleep quality*
+                </div>
+            </div><div class="faq-item ">
+                <div class="shopify_explorer_faq__question fw--600 link">
+                    <h1 class="title-block">Melatonin</h1><span class="toggle-open"></span>
+                </div>
+
+                <div class="shopify_explorer_faq__answer answer rte">
+                    A compound that regulates the body’s circadian rhythm, promoting restful sleep*
+                </div>
+            </div></div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .gaurentee {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 10px;
+        width: 80%;
+        font-size: italic;
+    }
+
+    .form-action {
+        width: 80%;
+    }
+
+    .button--primary {
+        border-radius: 5px !important;
+        font-size: 18px;
+    }
+
+    .faq-contain {
+        padding-top: 7%;
+    }
+
+    .answer {
+        display: none;
+    }
+
+    .answer {
+        display: none;
+        padding-top: 20px;
+    }
+
+    .answer li {
+        text-indent: -25px;
+        margin-left: 30px;
+        font-size: 16px;
+    }
+
+    .hide-div {
+        display: none;
+    }
+
+    .shopify_explorer_faq__item--expandable>.shopify_explorer_faq__question {
+        cursor: pointer;
+    }
+
+    .shopify_explorer_faq__item--expandable>.shopify_explorer_faq__answer {
+        display: none;
+    }
+
+    .shopify_explorer_faq__separator {
+        text-transform: none;
+        text-align: center;
+    }
+
+    .shopify_explorer_faq__separator :not(:first-child) {
+        margin-top: 1.2em;
+    }
+
+    .shopify_explorer_faq__item {
+        /* border-bottom: 1px solid #000; */
+    }
+
+    .shopify_explorer_faq__item:not(:last-child) {
+        margin-bottom: 0.9em;
+    }
+
+    .shopify_explorer_faq__item .shopify_explorer_faq__question {
+        margin-bottom: 0.2em;
+        position: relative;
+        padding: 11px 15px;
+        padding-right: 30px;
+        margin: 0;
+        font-weight: 100;
+        font-size: 1.1rem;
+        background: #8dbc24;
+        color: #fff;
+    }
+
+    .shopify_explorer_faq__item .shopify_explorer_faq__question.active::before {
+        -webkit-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        transform: rotate(-135deg)
+    }
+
+    .shopify_explorer_faq__item .shopify_explorer_faq__answer {
+        padding: 41px 15px;
+    }
+
+    .shopify_explorer_faq__item .shopify_explorer_faq__answer.active {
+        border-top: 1px solid #000;
+        background: rgba(238, 238, 238, 0.64)
+    }
+
+    .shopify_explorer_faq__item .shopify_explorer_faq__question::before {
+        position: absolute;
+        right: 0;
+        border-bottom: 3px solid #fff;
+        border-right: 3px solid #fff;
+        content: '';
+        display: block;
+        height: 12px;
+        margin-top: -8px;
+        pointer-events: none;
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        -webkit-transform-origin: 66% 66%;
+        -ms-transform-origin: 66% 66%;
+        transform-origin: 66% 66%;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
+        width: 12px;
+    }
+
+    .question-active {
+        color: #15599D;
+    }
+
+    .shopify_explorer_faq__question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+
+    .title-block {
+        max-width: 80%;
+    }
+
+    .action-inline {
+        width: 80%;
+        display: flex;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+
+    .action-img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .action-img-2 {
+        object-fit: cover;
+        width: 95%;
+        padding-left: 5%;
+    }
+
+    .action-contain {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: -20px;
+
+    }
+
+    .action-inline-2 {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        flex-direction: row-reverse;
+        margin-bottom: -8px;
+    }
+
+    .action-flex {
+        width: 50%;
+    }
+
+    .action-flex-copy {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 4%;
+    }
+
+    .action-flex-copy-2 {
+        width: 38%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .action-title {
+        font-size: 24px;
+        color: #15599D;
+        font-weight: 600;
+    }
+
+    .action-copy {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .pod-button {
+        border-radius: 3px;
+        display: inline-block;
+        background-color: #15599D;
+        color: #fff;
+        transition: 200ms ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 65%;
+        height: 60px;
+        
+    }
+    .button-text {
+        width: 100%;
+    }
+
+    .pod-button:hover {
+        background-color: #5b96d8;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    ::marker {
+        font-size: 14px;
+    }
+
+    .faq-item {
+        width: 100%;
+        font-size: 16px;
+        border-bottom: 2px solid #f4f4f4;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .faq-item:last-child {
+        border-bottom: 0;
+        margin-bottom: 20px;
+    }
+
+    .faq-item:hover {
+        cursor: pointer;
+    }
+
+    .toggle-open {
+        display: flex;
+        background: url("https://cdn.shopify.com/s/files/1/0264/4076/1399/t/35/assets/down-arrow-2.png?v=1644501959");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 18px;
+        height: 18px;
+    }
+
+    .expanded {
+        display: flex !important;
+        background: url("https://cdn.shopify.com/s/files/1/0264/4076/1399/t/35/assets/exit-black.png?v=1644502052") !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    @media screen and (max-width: 800px) {
+
+    .faq-contain {
+        padding: 5%;
+    }
+
+        .action-title {
+            padding: 0 5%;
+        }
+    }
+</style>
+
+{% schema %}
+{
+"name": "Join",
+"settings": [
+{
+"type": "text",
+"id": "joinTitle",
+"label": "title"
+},
+{
+"type": "textarea",
+"id": "copy",
+"label": "copy"
+},
+{
+"type": "image_picker",
+"id": "joinImg",
+"label": "Image"
+},
+{
+"type": "text",
+"id": "joinTitle2",
+"label": "title"
+},
+{
+"type": "textarea",
+"id": "copy2",
+"label": "copy"
+},
+{
+"type": "image_picker",
+"id": "joinImg2",
+"label": "Image"
+}
+],
+"blocks": [
+{
+"type": "separator",
+"name": "Section separator",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading"
+}
+]
+}, {
+"type": "question",
+"name": "Question",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Question"
+}, {
+"type": "textarea",
+"id": "answer",
+"label": "Answer"
+}
+]
+}
+]
+}
+
+{% endschema %}

@@ -1,0 +1,201 @@
+<div class="pt0 pb2--md pr" style="z-index: 1;">
+    <div class="pr mr4 ml4 mt0--md header-margin">
+        <div class="grid-container header-main-contain" style="">
+            <div class="row align--center">
+                <div class="col c12--lg pb4 pe--auto header-outer">
+                    <div class="">
+                        <div class="pr">
+                            <div class="push-up">
+                                <div style="display: flex; align-items: center; justify-content: center;" class="header-contain">
+                                    <div class="pa header-content">
+                                    <h2 class="sans--medium mb2 color--white mobile-title color--blue"><a href="/collections/shop-all">Shop All</a></h2>
+                                    <h2 style="font-weight: 300; line-height: 125%;" role="heading" class="sans--medium mb2 color--white header-subtitle">{{section.settings.heroHeading}}</h2>
+                                    </div>
+                                    <picture class="full-width-img desktop-img">
+                                        <source
+                                            srcset="{{section.settings.statBGImage | img_url: '2048x2048'}}"
+                                            media="(min-width: 800px)"><img class="full-width-img header-image" alt="about us header photo" src="{{section.settings.statBGImage | img_url: '2048x2048' | crop: 'center' }}">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pt0 pb2--md hidden" style="z-index: 1; padding-top: 0; margin-top: -38px;">
+    <div class="mt0--md">
+        <div class="">
+            <div class="row align--center alt-img-contain">
+                <div class="col c12--lg pb4 pe--auto header-outer">
+                    <div class="">
+                        <div class="pr">
+                            <div class="push-up">
+                                <div style="display: flex; align-items: center;" class="header-contain alt-contain">
+                                    <div class="pa header-content alt-header-content">
+                                    <h2 style="font-weight: 300; line-height: 125%;" role="heading" class="sans--medium mb2 color--white header-alt-subtitle">The highest-quality wellness products to help you reach your potential</h2>
+                                    <a class="btn" href="/collections/shop-all">Shop all</a>
+                                    </div>
+                                    <picture class="full-width-alt-img desktop-img">
+                                        <source
+                                            srcset="{{section.settings.altImage | img_url: '2048x2048'}}"
+                                            media="(min-width: 800px)"><img class="full-width-img full-width-alt-img header-image" alt="about us header photo" src="{{section.settings.altImage | img_url: '2048x2048' | crop: 'center' }}">
+                                    </picture>
+                                    <picture class="full-width-alt-img mobile-alt-img">
+                                        <source
+                                            srcset="{{section.settings.altMobImage | img_url: '2048x2048'}}"
+                                            media="(min-width: 800px)"><img class="header-alt-mob-image" alt="about us header photo" src="{{section.settings.altMobImage | img_url: '2048x2048' | crop: 'center' }}">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .alt-img-contain {
+        height: 100vh;
+    }
+    .full-width-img {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+    }
+   
+    .btn {
+        border-radius: 3px;
+        display: inline-block;
+        transition: 200ms ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 55px;
+        color: #2F358E !important;
+        line-height: 2;
+        background-color: #fff !important;
+        margin-left: 20%;
+        margin-top: 5%;
+    }
+    .full-width-alt-img {
+        height: 100vh;
+        object-fit: cover;
+        width: 100%;
+    }
+    .header-subtitle {
+        width: 50vw;
+        text-align: center;
+    }
+    .header-alt-subtitle {
+        font-size: 35px;
+        text-align: left;
+        width: 40vw;
+        margin-left: 20%;
+    }
+    .header-outer {
+        height: 100%;
+        padding-bottom: 0;
+    }
+    .mobile-title {
+        display: none;
+    }
+    .mobile-alt-img {
+        display: none;
+    }
+    
+    @media screen and (max-width: 800px) {
+        .alt-header-content {
+        margin-top: -51vh;
+    }
+    .btn {
+        margin: auto;
+    }
+        .header-alt-subtitle {
+            width: 100%;
+            margin-left: 0;
+            text-align: center;
+            font-size: 30px;
+        }
+        .alt-contain {
+        justify-content: center;
+    }
+        .desktop-img {
+            display: block;
+        }
+        .mobile-alt-img {
+         display: block;
+        }
+        .header-margin {
+            margin: 0 15px;
+        }
+        .header-main-contain {
+            padding: 0 !important;
+        }
+        .header-outer {
+        height: max-content;
+    }
+        .mobile-title {
+            display: flex;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .full-width-img {
+            height: 225px !important;
+        }
+        .header-image {
+            display: none;
+        }
+        .header-subtitle {
+            color: black;
+            width: 80vw;
+        }
+        .header-content {
+            width: 80vw;
+        }
+        .header-alt-mob-image {
+            height: 100vh;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .header-subtitle {
+            width: 85vw !important;
+        }
+        .header-content {
+            width: 85vw;
+        }
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Collection Header",
+"settings": [	      
+          {
+              "type": "image_picker",
+              "id": "statBGImage",
+              "label": "Background Image"
+          },
+            {
+              "type": "richtext",
+              "id": "heroHeading",
+              "label": "Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "altImage",
+            "label": "Alt Background Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "altMobImage",
+            "label": "Alt Background Image"
+        }
+]
+}
+{% endschema %}

@@ -1,0 +1,134 @@
+<div class="pt2 mt8 mb0 mt3--md mb0--md icons-container" style="width: 100%;">
+    <h2 class="fw--600 sans--medium mb1 pr1 pl1 pt3 tc icons-title">More to love about Beam</h2>
+    <h2 class="fw--400 sans--body mb5 pl1 pr1 tc icons-sub" style="line-height: 1.4;">Functional wellness products to help you reach your potential</h2>
+    <div class="icons-inline">
+        {% for block in section.blocks%}
+        <a href="{{block.settings.statContent}}">
+        <hr class="mobile-line">
+        <div class="icon-item">
+        <img class="icoImage" src="{{ block.settings.iconImg |  img_url: 'medium' }}">
+        <h1 class="fw--600 icon-text">{{block.settings.statHeading}} <span class="arrow">></span></h1>
+        </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .icons-title {
+        font-size: 24px;
+    }
+    .icons-sub {
+        font-size: 16px;
+    }
+    .icons-container {
+        background-color: #fafafa;
+        margin: 80px auto 80px;
+        padding-bottom: 50px;
+    }
+    .icons-inline {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        margin-bottom: 40px;
+        width: 70%;
+        margin: auto;
+    }
+    .icon-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .icoImage {
+        max-height: 40px;
+        max-width: 40px;
+        margin-bottom: 20px;
+    }
+    .mobile-line {
+      display: none;
+    }
+    .icon-text {
+        font-size: 14px;
+    }
+
+    @media (max-width: 1150px) {
+    .icons-inline {
+        width: 90%;
+    }
+}
+@media (max-width: 800px) {
+    
+    .icoImage {
+        display: none;
+    }
+    .icons-inline {
+        flex-direction: column;
+        align-items: center;
+    }
+    .arrow {
+      display: none;
+    }
+    .icon-item {
+      font-style: 25px !important;
+      padding: 20px 0;
+    }
+    .icon-text {
+      font-size: 20px;
+    }
+    .mobile-line {
+      display: block;
+      border-style: inset; 
+      border-width: 1px;
+      margin: 0;
+      width: 90vw;
+    }
+    .icons-inline {
+      margin-bottom: 10px;
+    }
+
+    }
+</style>
+
+{% schema %}
+{
+    "name": "links",
+  "settings": [	      
+            {
+				"type": "text",
+				"id": "heroSubtitle",
+				"label": "SubTitle"
+			}
+  ],
+  "blocks": [
+  {
+    "type": "column",
+    "name": "link",
+    "limit": 10,
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "iconImg",
+            "label": "Image"
+        },
+      {
+        "type": "text",
+        "id": "statHeading",
+        "label": "Name"
+      },
+      {
+        "type": "url",
+        "id": "statContent",
+        "label": "Link"            
+      }
+    ]
+  }
+],
+  "presets": [{
+    "name": "Links",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

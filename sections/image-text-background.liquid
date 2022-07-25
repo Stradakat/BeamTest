@@ -1,0 +1,89 @@
+<div class="mt4--md mb10--md pt2--md">
+
+	<div class="mt10--md mb10--md" style="background-color: #f0f0ff;">
+		<div class="container">
+			<div class="row align--middle">
+				<div class="col c5--md show--md" style="margin-top: -100px;margin-bottom: -80px;">
+					<img class="full-width rounded-image" src="{{ section.settings.image | img_url: '1024x1024' }}">
+				</div>
+				<div class="col c2 hide--md"></div>
+				<div class="col pt3 c8 hide--md">
+					<img class="full-width rounded-image" src="{{ section.settings.image | img_url: '1024x1024' }}">
+				</div>
+				<div class="col c1 show--md"></div>
+				<div class="col c6--md">
+					<div class="tc mt3 hide--md ">
+						{% if section.settings.icon %}
+						<span style="width: 38px;" class="dib ml1 mb1">
+							<img class="full-width" src="{{ section.settings.icon | img_url: '1024x1024' }}">
+						</span>
+						{% endif %}
+					</div>
+					{% if section.settings.heading %}
+					<h2 class="sans--large tc tl--md fw--600 mt3 mt0--md mb2 color--blue">{{ section.settings.heading }}
+						{% if section.settings.icon %}
+						<span style="width: 38px;" class="show--md dib ml1 mb1">
+							<img class="full-width" src="{{ section.settings.icon | img_url: '1024x1024' }}">
+						</span>
+						{% endif %}
+					</h2>
+					{% endif %}
+					{% if section.settings.content %}
+					<p class="sans--body tc tl--md fw--400 mb4 color--black">
+						{{section.settings.content}}
+					</p>
+					{% endif %}
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<style>
+	.rounded-image {
+		border-radius: 68px;
+	}
+
+	@media screen and (max-width: 600px) {
+		.rounded-image {
+			border-radius: 28px;
+		}
+	}
+</style>
+{% schema %}
+{
+"name": "Image Text Background",
+"class": "aboutus-sliders",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+},
+{
+"type": "image_picker",
+"id": "icon",
+"label": "Heading Icon"
+},
+{
+"type":"text",
+"id":"heading",
+"label": "Heading",
+"default": "The Power of Dream"
+},
+{
+"type":"text",
+"id":"content",
+"label": "Content",
+"default": "Content text"
+}
+],
+"presets": [{
+"name": "Image Text Background",
+"category": "Content"
+}]
+}
+
+{% endschema %}

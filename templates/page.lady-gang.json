@@ -1,0 +1,97 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-subscription-banner",
+      "settings": {
+        "newlogo": "shopify:\/\/shop_images\/theSkimm_PrimaryLogo_beam.png",
+        "headertext": "exclusive offer for TheSkimm readers",
+        "bannerproduct": "dream-powder-skimm",
+        "subscriptionid": "39503729983543",
+        "heading": "LadyGang loves CBD",
+        "popupheading": "dream powder",
+        "popupimg": "shopify:\/\/shop_images\/hemp-nutritionfacts-dream-powder-1.jpg",
+        "description": "dream is a delicious,guilt-free, CBD-based hot cocoa that promotes better sleep and a more refreshedmorning*—all with no artificial sweeteners oradded sugar. it contains five powerful ingredients - Nano Hemp, reishi,magnesium,L-Theanine, and melatonin - to help you sleep like a lady and get the zzz’s you deserve.ALT: so you can enjoy your deepest night’s sleep.",
+        "btntext": "sleep better",
+        "price": "61.75",
+        "saleprice": "$95.00"
+      }
+    },
+    "1634605917d2e54b1d": {
+      "type": "marquee-section",
+      "settings": {
+      }
+    },
+    "1634608712a2cc884c": {
+      "type": "text-image-no-background",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/mathewfras__b_e_a_c_o_n_2021_01_29_07_06_30.jpg",
+        "labeltext": "they love us",
+        "heading": "why the fittest man on earth loves dream",
+        "content": "\"at 10:00pm every night, we turn off the tv and cozy up with a cup of @beam dream. we talk about the day, the future and spend time winding down before bed.\"",
+        "subheading": "Mat Fraser",
+        "other": "5x fittest man on earth"
+      }
+    },
+    "1634608719ad78863e": {
+      "type": "icon-grid",
+      "blocks": {
+        "1634608719ad78863e-0": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-hemp.png",
+            "iconheading": "Nano Hemp",
+            "iconcontent": "particles with the highest absorption potential to naturally support inflammation, balance, and sleep*"
+          }
+        },
+        "1634608719ad78863e-1": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-magnesium.png",
+            "iconheading": "reishi",
+            "iconcontent": "mushroom superfood that helps to support the body’s sleep cycle as well as manage stress*"
+          }
+        },
+        "1634608719ad78863e-2": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-melatonin.png",
+            "iconheading": "magnesium",
+            "iconcontent": "mineral that aids the body’s ability to fall asleep by producing melatonin and regulating the nervous system*"
+          }
+        },
+        "ca1834d6-c418-4776-84e6-26d498ec2620": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-reishi.png",
+            "iconheading": "L-Theanine",
+            "iconcontent": "amino acid that promotes relaxation, calmness and helps improve sleep quality*"
+          }
+        },
+        "4c504bb8-746b-4ce6-ae95-6535567226f2": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-Ltheanine.png",
+            "iconheading": "melatonin",
+            "iconcontent": "compound that regulates the body’s circadian rhythm, promoting restful sleep*"
+          }
+        }
+      },
+      "block_order": [
+        "1634608719ad78863e-0",
+        "1634608719ad78863e-1",
+        "1634608719ad78863e-2",
+        "ca1834d6-c418-4776-84e6-26d498ec2620",
+        "4c504bb8-746b-4ce6-ae95-6535567226f2"
+      ],
+      "settings": {
+        "title": "what’s in your dream powder?"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1634605917d2e54b1d",
+    "1634608712a2cc884c",
+    "1634608719ad78863e"
+  ]
+}

@@ -1,0 +1,1387 @@
+{
+  "current": {
+    "tealium_account": "beamtlc",
+    "tealium_profile": "main",
+    "tealium_environment": "prod",
+    "tealium_enabled": true,
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "customer_layout": "theme",
+    "background_color": "#e6ebeb",
+    "text_color": "#555555",
+    "link_color": "#b5792b",
+    "facebook_url": "https:\/\/www.facebook.com\/shopify",
+    "twitter_url": "https:\/\/twitter.com\/shopify",
+    "pinterest_url": "http:\/\/pinterest.com\/shopify\/",
+    "instagram_url": "http:\/\/instagram.com\/shopify",
+    "vimeo_url": "http:\/\/vimeo.com\/shopify",
+    "youtube_url": "https:\/\/www.youtube.com\/user\/shopify",
+    "social_icons_style": "",
+    "use_logo": false,
+    "base_font_size": "16px",
+    "base_font_family": "'Source Sans Pro', sans-serif",
+    "featured_blog": "news",
+    "homepage_page": "frontpage",
+    "homepage_collection": "frontpage",
+    "products_per_row": "3",
+    "number_of_rows": "4",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      },
+      "banner-slider": {
+        "type": "banner-slider",
+        "blocks": {
+          "banner-slider-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dream-homepage-hero_may21-NOCBD2.jpg",
+              "mobileimage": "shopify:\/\/shop_images\/dream-homepage-hero_may21-NOCBD1-mobile_1000x800_crop_center_1000x800_crop_center.progressive_3f46a88e-be46-491e-a9d4-c32db7740301.jpg",
+              "heading": "get the sleep<br> of your dreams",
+              "content": "our dream powder contains Nano Hemp,<br> reishi, magnesium,L-Theanine, <br>and melatonin for a better night’s rest",
+              "btntext": "Shop Now",
+              "btnlink": "shopify:\/\/products\/dream-powder",
+              "content_align": "left",
+              "text_align": "left"
+            }
+          },
+          "banner-slider-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dream-homepage-hero_may21-NOCBD2.jpg",
+              "mobileimage": "shopify:\/\/shop_images\/dream-homepage-hero_may21-NOCBD1-mobile_1000x800_crop_center_1000x800_crop_center.progressive_3f46a88e-be46-491e-a9d4-c32db7740301.jpg",
+              "heading": "slide 2",
+              "content": "slide 2",
+              "btntext": "slide 2",
+              "btnlink": "",
+              "content_align": "center",
+              "text_align": "center"
+            }
+          },
+          "banner-slider-2": {
+            "type": "video",
+            "settings": {
+              "videonlink": "https:\/\/cdn.shopify.com\/s\/files\/1\/0264\/4076\/1399\/files\/Beam_15S_16x9_2-web.mp4?v=1633530590",
+              "heading": "slide3",
+              "content": "slide3",
+              "btntext": "slide3",
+              "btnlink": "",
+              "content_align": "right",
+              "text_align": "right"
+            }
+          }
+        },
+        "block_order": [
+          "banner-slider-0",
+          "banner-slider-1",
+          "banner-slider-2"
+        ],
+        "settings": {
+          "height": "700px",
+          "height1": "600px"
+        }
+      },
+      "testimonials": {
+        "type": "testimonials",
+        "blocks": {
+          "fb11a97b-7421-46b6-9846-3c68a74cbdaf": {
+            "type": "testimonials_block",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/mat-img.png",
+              "headshot_image": "shopify:\/\/shop_images\/mat-headshot.jpg",
+              "title": "Mat Fraser",
+              "subtitle": "5x Fittest Man on Earth",
+              "description": "getting to sleep is always the hardest part. I pack my days with uppers, like espresso and pre-workout, and a cup of Beam Dream before bed is exactly what I need to help coax me to sleep."
+            }
+          },
+          "fa2d052b-5d02-4249-a566-31e48e35f980": {
+            "type": "testimonials_block",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/danica.jpg",
+              "headshot_image": "shopify:\/\/shop_images\/danica-headshot.jpg",
+              "title": "Danica Patrick",
+              "subtitle": "former professional racecar driver, on Focus Capsules",
+              "description": "focus is incredible at delivering an increased ability to really dial into what you’re doing. There is never a dramatic sensation with their products, just that you realize it did exactly what you wanted it to do. Magic."
+            }
+          },
+          "acc88fbf-2a7d-4345-a354-e2aad0afd572": {
+            "type": "testimonials_block",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/emily-infeld-hero.jpg",
+              "headshot_image": "shopify:\/\/shop_images\/emily-infeld-headshot.jpg",
+              "title": "emily infeld",
+              "subtitle": "olympic athlete",
+              "description": "White Chocolate Peppermint Dream Powder is the perfect winter-y bedtime drink to help me wind down."
+            }
+          },
+          "8e9c2ca6-8be5-45c3-986c-3ec416685cb9": {
+            "type": "testimonials_block",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/brooke-wells-hero.jpg",
+              "headshot_image": "shopify:\/\/shop_images\/brooke-wells-headshot.jpg",
+              "title": "Brooke Wells",
+              "subtitle": "CrossFit athlete",
+              "description": "Beam has helped me in so many areas of my life. It has not only helped manage my stress, but has changed my sleep & recovery for the better."
+            }
+          },
+          "ee0834ab-834f-463f-87a6-bced8542c7c7": {
+            "type": "testimonials_block",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/billy.jpg",
+              "headshot_image": "shopify:\/\/shop_images\/billy-headshot.jpg",
+              "title": "Billy Horschel",
+              "subtitle": "7x PGA Tour Champion + FedEx Cup Champion",
+              "description": "beam is going to be the Nike of the wellness world"
+            }
+          },
+          "5a441a69-1518-4edf-bced-4a12a71228e5": {
+            "type": "testimonials_block",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/dylan-hero.jpg",
+              "headshot_image": "shopify:\/\/shop_images\/dylan-headshot.jpg",
+              "title": "dylan efron",
+              "subtitle": "creator + wellness enthusiast",
+              "description": "Drinking the new White Chocolate Peppermint Dream Powder bc I like to sleep"
+            }
+          },
+          "a522e83e-e52c-4248-9882-c4ff3ba69775": {
+            "type": "testimonials_block",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/quigley-hero.jpg",
+              "headshot_image": "shopify:\/\/shop_images\/quigley-headshot.jpg",
+              "title": "colleen quigley",
+              "subtitle": "olympic athlete",
+              "description": "My bedtime routine of drinking Beam Dream and reading some of my book helps me drift off into deep sleep to prepare for tomorrow."
+            }
+          },
+          "c8d239f7-4370-417c-bcd9-7ae8e9512988": {
+            "type": "testimonials_block",
+            "disabled": true,
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/amanda-sobhy-hero.jpg",
+              "headshot_image": "shopify:\/\/shop_images\/amanda-sobhy-headshot.jpg",
+              "title": "amanda sobhy",
+              "subtitle": "professional squash player",
+              "description": "White Chocolate Peppermint Dream Powder is the perfect bedtime drink during these winter months to help me wind down"
+            }
+          },
+          "50522049-3714-4337-9fd1-0ee1783413a9": {
+            "type": "testimonials_block",
+            "settings": {
+              "testimonial_image": "shopify:\/\/shop_images\/amanda-barnhart-hero.jpg",
+              "headshot_image": "shopify:\/\/shop_images\/amanda-barnhart-headshot.jpg",
+              "title": "amanda barnhart",
+              "subtitle": "CrossFit athlete",
+              "description": "dream has been a crucial part of my night time routine for years now. I literally look forward to it every single night. And This peppermint flavor is a delicious treat that satisfies my nighttime sweet tooth"
+            }
+          }
+        },
+        "block_order": [
+          "fb11a97b-7421-46b6-9846-3c68a74cbdaf",
+          "fa2d052b-5d02-4249-a566-31e48e35f980",
+          "acc88fbf-2a7d-4345-a354-e2aad0afd572",
+          "8e9c2ca6-8be5-45c3-986c-3ec416685cb9",
+          "ee0834ab-834f-463f-87a6-bced8542c7c7",
+          "5a441a69-1518-4edf-bced-4a12a71228e5",
+          "a522e83e-e52c-4248-9882-c4ff3ba69775",
+          "c8d239f7-4370-417c-bcd9-7ae8e9512988",
+          "50522049-3714-4337-9fd1-0ee1783413a9"
+        ],
+        "settings": {
+        }
+      },
+      "brand-inline": {
+        "type": "brand-inline",
+        "blocks": {
+          "7bc9d7a7-8af9-4fcb-9180-e8f1d663b93b": {
+            "type": "brand_block",
+            "settings": {
+              "brand_image": "shopify:\/\/shop_images\/nyt_eeda03f0-931d-4847-ae7b-34fa76e26c6f.png"
+            }
+          },
+          "fd2a2658-cab9-44aa-a4aa-1753f3b286dd": {
+            "type": "brand_block",
+            "settings": {
+              "brand_image": "shopify:\/\/shop_images\/gq_5ea278f7-6a2a-4810-869c-0dea38c6be57.png"
+            }
+          },
+          "eab34ca6-7833-438f-9c41-df1b4cff8426": {
+            "type": "brand_block",
+            "settings": {
+              "brand_image": "shopify:\/\/shop_images\/forbes_26ffa1c3-0fe0-4bc2-84cc-31ea5025dddf.png"
+            }
+          },
+          "804be395-1c6a-4d5c-92e0-56eca1f263a1": {
+            "type": "brand_block",
+            "settings": {
+              "brand_image": "shopify:\/\/shop_images\/mbg_f8710011-bf64-4b3c-94a3-9838b9d518c9.png"
+            }
+          },
+          "90f1143b-ddd1-4377-8e76-8a7e4d186d76": {
+            "type": "brand_block",
+            "settings": {
+              "brand_image": "shopify:\/\/shop_images\/wg_290636b3-b998-4d36-9c01-b80f614673a0.png"
+            }
+          }
+        },
+        "block_order": [
+          "7bc9d7a7-8af9-4fcb-9180-e8f1d663b93b",
+          "fd2a2658-cab9-44aa-a4aa-1753f3b286dd",
+          "eab34ca6-7833-438f-9c41-df1b4cff8426",
+          "804be395-1c6a-4d5c-92e0-56eca1f263a1",
+          "90f1143b-ddd1-4377-8e76-8a7e4d186d76"
+        ],
+        "settings": {
+        }
+      },
+      "about-us-grid": {
+        "type": "about-us-grid",
+        "blocks": {
+          "edc9b7bb-b679-455c-9c17-f2960e6e02f6": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/danica-patrick.jpg",
+              "statHeading": "Danica Patrick",
+              "statContent": "<p><em>professional athlete + global wellness ambassador<\/em><\/p>",
+              "statCaption": "<p>There is never a dramatic sensation with their products, just that you realize it did exactly what you wanted it to do. Magic.<\/p>"
+            }
+          },
+          "3f558615-9242-4480-a67c-28a310d01103": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/billy-horschel_238c5739-d302-441d-8405-1103ba7a2cab.jpg",
+              "statHeading": "Billy Horschel",
+              "statContent": "<p><em>7x PGA Tour Champion + FedEx Cup Champion<\/em><\/p>",
+              "statCaption": "<p>beam is going to be the Nike of the wellness world.<\/p>"
+            }
+          },
+          "5231905d-e6ce-4ecc-9a81-fa344af88f4b": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/baker-mayfield.jpg",
+              "statHeading": "Baker Mayfield",
+              "statContent": "<p><em>2018 NFL draft first overall pick and current Cleveland Browns Quarterback<\/em><\/p>",
+              "statCaption": ""
+            }
+          },
+          "49957ecf-5363-4996-bf75-aac0a7675a94": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/mat-fraser_d88723b9-7f62-4cf1-bda4-eebc7819c352.jpg",
+              "statHeading": "Mat Fraser",
+              "statContent": "<p><em>4x CrossFit Games Champion + fittest man on earth<\/em><\/p>",
+              "statCaption": "<p>i pack my days with uppers, like espresso and pre-workout, and a cup of Beam Dream before bed is exactly what I need to help coax me to sleep.<\/p>"
+            }
+          },
+          "db4ae5eb-3cd8-4bba-b811-ff8cb4bafc71": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/dr-carleara-weiss_00163245-9b38-4678-95e3-8ec09fdb5db9.jpg",
+              "statHeading": "Dr. Carleara Weiss, Ph.D., M.S., R.N.",
+              "statContent": "<p><em>Member of the American Academy of Sleep Medicine<\/em><\/p>",
+              "statCaption": "<p>beam is committed to offering products that may contribute to sleep quality while maintaining an ethical and conscious approach to overall wellness.<\/p>"
+            }
+          },
+          "6cec86e1-9842-431b-9dcb-4bd12231e613": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/tia-clair-toomey_1ee1dd0d-3a70-459f-a80d-23245698c8a6.jpg",
+              "statHeading": "Tia-Clair Toomey-Orr",
+              "statContent": "<p><em>3x CrossFit Games Champion <\/em><\/p>",
+              "statCaption": ""
+            }
+          }
+        },
+        "block_order": [
+          "edc9b7bb-b679-455c-9c17-f2960e6e02f6",
+          "3f558615-9242-4480-a67c-28a310d01103",
+          "5231905d-e6ce-4ecc-9a81-fa344af88f4b",
+          "49957ecf-5363-4996-bf75-aac0a7675a94",
+          "db4ae5eb-3cd8-4bba-b811-ff8cb4bafc71",
+          "6cec86e1-9842-431b-9dcb-4bd12231e613"
+        ],
+        "settings": {
+          "heroSubtitle": ""
+        }
+      },
+      "about-us-founders": {
+        "type": "about-us-founders",
+        "settings": {
+        }
+      },
+      "about-us": {
+        "type": "about-us",
+        "settings": {
+          "statBGImage": "shopify:\/\/shop_images\/hero_8bb9f9d2-f2e8-4d25-b98c-4169f310665a.jpg",
+          "statMobile": "shopify:\/\/shop_images\/hero_8bb9f9d2-f2e8-4d25-b98c-4169f310665a.jpg",
+          "heroHeading": "",
+          "heroSubtitle": ""
+        }
+      },
+      "about-us-icon-list": {
+        "type": "about-us-icon-list",
+        "blocks": {
+          "60863262-9baf-47a0-8937-1f8aff2ecd70": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/ingredients_1.png",
+              "statHeading": "ingredients",
+              "statContent": "<p>our products contain meticulously-chosen ingredients, like THC-free Nano Hemp for optimal absorption, revolutionary nootropics, ancient compounds, and powerful adaptogens. All of our products are third-party lab tested. all for your pursuit of better.<\/p>"
+            }
+          },
+          "5d022fcb-d7d4-4f86-9d9c-71a5103d0bc9": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/nano-hemp.png",
+              "statHeading": "Nano Hemp",
+              "statContent": "<p>many hemp products in the marketplace are made using hemp isolate, which excludes some of the beneficial compounds naturally found in hemp. Beam products are different because they use broad spectrum hemp. When you break those hemp molecules down to tiny droplets, your body has a dramatically increased ability to absorb them.<\/p>"
+            }
+          },
+          "e3dbe3ca-1c5c-4988-947e-1194988b3f33": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/quality.png",
+              "statHeading": "quality",
+              "statContent": "<p>when hemp enters the body, it interacts with our ECS system, which has been found to regulate various parts of the body to help maintain homeostasis. Break those hemp particles down to tiny droplets, and your body has a dramatically increased ability to absorb them. It’s the next level in our innovation that makes beam so much better. <\/p>"
+            }
+          },
+          "f47bb7f4-1dc9-4f6f-8b45-228b040048cc": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/sourcing.png",
+              "statHeading": "sourcing",
+              "statContent": "<p>we spent years finding the highest quality hemp biomass and extraction sources in the United States, including Colorado, Oregon, California, and Montana.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "60863262-9baf-47a0-8937-1f8aff2ecd70",
+          "5d022fcb-d7d4-4f86-9d9c-71a5103d0bc9",
+          "e3dbe3ca-1c5c-4988-947e-1194988b3f33",
+          "f47bb7f4-1dc9-4f6f-8b45-228b040048cc"
+        ],
+        "settings": {
+          "heroSubtitle": ""
+        }
+      },
+      "about-us-bottom": {
+        "type": "about-us-bottom",
+        "blocks": {
+          "0eef03a5-3a00-40f3-8cb7-a7562657b5fb": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/sleep.png",
+              "statHeading": "sleep",
+              "statContent": "shopify:\/\/collections\/sleep"
+            }
+          },
+          "6ad156e8-f84b-45ed-ae2d-3fde860c4a22": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/calm.png",
+              "statHeading": "calm",
+              "statContent": "shopify:\/\/collections\/calm"
+            }
+          },
+          "92f9ddb3-7bc5-4eca-92e5-3e9e5a656c69": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/energy.png",
+              "statHeading": "energy",
+              "statContent": "shopify:\/\/collections\/energy"
+            }
+          },
+          "c6b6b19f-9396-4ec3-97ee-b09557279fa1": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/recovery.png",
+              "statHeading": "recovery",
+              "statContent": "shopify:\/\/collections\/recovery"
+            }
+          },
+          "0ede94ac-dbf0-4d55-8a6a-42141f5e53e1": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/hydration.png",
+              "statHeading": "hydration",
+              "statContent": "shopify:\/\/collections\/hydration-powders"
+            }
+          }
+        },
+        "block_order": [
+          "0eef03a5-3a00-40f3-8cb7-a7562657b5fb",
+          "6ad156e8-f84b-45ed-ae2d-3fde860c4a22",
+          "92f9ddb3-7bc5-4eca-92e5-3e9e5a656c69",
+          "c6b6b19f-9396-4ec3-97ee-b09557279fa1",
+          "0ede94ac-dbf0-4d55-8a6a-42141f5e53e1"
+        ],
+        "settings": {
+          "heroSubtitle": ""
+        }
+      },
+      "featured-blog": {
+        "type": "featured-blog",
+        "settings": {
+          "article": "news\/natural-ingredients-immune-system"
+        }
+      },
+      "subscription-perks": {
+        "type": "subscription-perks",
+        "blocks": {
+          "d58080d4-f400-4aa5-ad8b-422ce0913f21": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/savings.png",
+              "statHeading": "savings for days",
+              "statContent": "<p>20% off every order<\/p>"
+            }
+          },
+          "de355204-cb4e-49d0-885a-4069f60e01a3": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/fully-stocked.png",
+              "statHeading": "fully stocked",
+              "statContent": "<p>monthly deliveries so you never run out<\/p>"
+            }
+          },
+          "3ff8ca1c-452f-460a-9af4-26d1edb4654c": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/no-commitment.png",
+              "statHeading": "no commitment",
+              "statContent": "<p>pause, skip, delay, or cancel anytime<\/p>"
+            }
+          },
+          "821977dd-1b8c-4afc-a5db-0bd0725998dd": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/vip-support.png",
+              "statHeading": "VIP support",
+              "statContent": "<p>manage your orders via online account or text<\/p>"
+            }
+          },
+          "7888457e-927c-48c1-87a1-8d93e125946d": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/free-shipping.png",
+              "statHeading": "free shipping",
+              "statContent": "<p>(always)<\/p>"
+            }
+          },
+          "1396ab8a-920a-4051-9c96-ccc1a9e77350": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/earl-access.png",
+              "statHeading": "early access",
+              "statContent": "<p>skip the line on new products<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "d58080d4-f400-4aa5-ad8b-422ce0913f21",
+          "de355204-cb4e-49d0-885a-4069f60e01a3",
+          "3ff8ca1c-452f-460a-9af4-26d1edb4654c",
+          "821977dd-1b8c-4afc-a5db-0bd0725998dd",
+          "7888457e-927c-48c1-87a1-8d93e125946d",
+          "1396ab8a-920a-4051-9c96-ccc1a9e77350"
+        ],
+        "settings": {
+        }
+      },
+      "sub-terms": {
+        "type": "sub-terms",
+        "settings": {
+          "statBGImage": "shopify:\/\/shop_images\/box.png"
+        }
+      },
+      "faq-section": {
+        "type": "faq-section",
+        "blocks": {
+          "2efe0e21-4f48-4d62-9650-5d0aec207955": {
+            "type": "question",
+            "settings": {
+              "title": "What is the Beam Subscription Program?",
+              "answer": "<li>20% off any product<\/li>\n<li>ships monthly, no hassle<\/li>\n<li>always free shipping (normally spend threshold)<\/li>\n<li>early access to new arrivals, special deals, promotions and more<\/li>\n<li> VIP access to support—whenever you have a q, we’re here for you!<\/li>"
+            }
+          },
+          "2bf912bc-3290-4e15-a326-689b963fd878": {
+            "type": "question",
+            "settings": {
+              "title": "how do I create a login to access my account?",
+              "answer": "<li>right after you purchase a subscription, you should receive an email titled “your beam subscription confirmation.” this email prompts you to create an account.<\/li>\n<li> alternatively, you can navigate to “account” then click on “having trouble logging into your subscription?” to complete your account creation.<\/li>"
+            }
+          },
+          "ead4687c-147f-4ee7-93db-7a4715590d03": {
+            "type": "question",
+            "settings": {
+              "title": "can I merge accounts so all of my products can be in one place?",
+              "answer": "<li> yes! reach out to VIP@beamtlc.com to let us know which accounts the emails are under and we can move those over to the desired account.<\/li>\n<li> what about my rewards? will they transfer over? yes, we can manually move them over for you.<\/li>"
+            }
+          },
+          "8580f21b-cfae-48ef-b964-53560f7bf8b8": {
+            "type": "question",
+            "settings": {
+              "title": "what kind of communication should I expect?",
+              "answer": "you’ll get email updates and if you opt into texts, you’ll get texts about your order."
+            }
+          }
+        },
+        "block_order": [
+          "2efe0e21-4f48-4d62-9650-5d0aec207955",
+          "2bf912bc-3290-4e15-a326-689b963fd878",
+          "ead4687c-147f-4ee7-93db-7a4715590d03",
+          "8580f21b-cfae-48ef-b964-53560f7bf8b8"
+        ],
+        "settings": {
+          "expand_questions": false
+        }
+      },
+      "shipping-faq": {
+        "type": "shipping-faq",
+        "blocks": {
+          "42383143-c6d5-4b5a-8093-1f7c17003230": {
+            "type": "question",
+            "settings": {
+              "title": "Where does Beam ship?",
+              "answer": "we ship to all 50 states."
+            }
+          },
+          "51c35eb8-6a56-4892-b972-f89be1e1df75": {
+            "type": "question",
+            "settings": {
+              "title": "do you ship internationally?",
+              "answer": "unfortunately, we are not able to ship outside of the United States at this time."
+            }
+          },
+          "a3d9261b-a458-4bb5-90df-69178bf2a9cb": {
+            "type": "question",
+            "settings": {
+              "title": "how long will it take for my order to ship?",
+              "answer": "order processing takes 1 to 2 business days. orders placed after 2pm et will be processed the next business day. once the order is processed, you will receive a shipment notification via email with a tracking number. selecting expedited shipping will not decrease the order processing time."
+            }
+          },
+          "ae375fd5-43ee-4f8e-9c3c-89897ddb1d77": {
+            "type": "question",
+            "settings": {
+              "title": "can I track my order?",
+              "answer": "you’ll receive an email with a tracking number as soon as we ship your order."
+            }
+          },
+          "5621061c-8f08-43cb-a284-5a93c04a4c38": {
+            "type": "question",
+            "settings": {
+              "title": "Can I change my shipping address?",
+              "answer": "Once an order has been placed, your shipping address cannot be changed. You may edit your shipping address before an order has been placed by going into your account."
+            }
+          },
+          "f84479f1-f0b1-4488-9e7c-4b1fdb44a9cd": {
+            "type": "question",
+            "settings": {
+              "title": "Can I can cancel my order after it has shipped?",
+              "answer": "While you can cancel an order before its charge date, we are unable to cancel an order once it has been processed. You can check your account for shipping details."
+            }
+          }
+        },
+        "block_order": [
+          "42383143-c6d5-4b5a-8093-1f7c17003230",
+          "51c35eb8-6a56-4892-b972-f89be1e1df75",
+          "a3d9261b-a458-4bb5-90df-69178bf2a9cb",
+          "ae375fd5-43ee-4f8e-9c3c-89897ddb1d77",
+          "5621061c-8f08-43cb-a284-5a93c04a4c38",
+          "f84479f1-f0b1-4488-9e7c-4b1fdb44a9cd"
+        ],
+        "settings": {
+          "expand_questions": false
+        }
+      },
+      "returns-faq": {
+        "type": "returns-faq",
+        "blocks": {
+          "1edffbdc-1af1-4de2-b510-849fa1a962f4": {
+            "type": "question",
+            "settings": {
+              "title": "what’s your return policy?",
+              "answer": "we hope you enjoy our products as much as we do. but, if you change your mind about your order, please email hello@beamtlc.com with your order number and which products you’re looking to return. We’re happy to offer you a refund within 30 days of the initial purchase date. we can also provide guidance if you’d like to try another one of our products instead."
+            }
+          }
+        },
+        "block_order": [
+          "1edffbdc-1af1-4de2-b510-849fa1a962f4"
+        ],
+        "settings": {
+          "expand_questions": false
+        }
+      },
+      "legal-faq": {
+        "type": "legal-faq",
+        "blocks": {
+          "5cc29c26-6671-4c3f-98bf-c78ebcff2422": {
+            "type": "question",
+            "settings": {
+              "title": "do I need a marijuana card or a doctor’s prescription to use Beam products?",
+              "answer": "no. you don’t need permission from a doctor to purchase it or use it."
+            }
+          },
+          "43509c1f-d7b2-46e8-a4d5-d6ab1b570504": {
+            "type": "question",
+            "settings": {
+              "title": "are Beam’s products legal throughout the United States?",
+              "answer": "yes. all of beam’s products can be shipped to all 50 states."
+            }
+          },
+          "2e80b5bb-1de1-40d1-8e7b-956649ee6323": {
+            "type": "question",
+            "settings": {
+              "title": "can I travel on a plane with Beam products?",
+              "answer": "yes. you can travel freely with them in the united states in accordance with tsa regulations."
+            }
+          },
+          "3a0073f7-08f5-4c45-9457-42ba2567a59f": {
+            "type": "question",
+            "settings": {
+              "title": "what kind of analysis is performed on your products?",
+              "answer": "all of beam’s products are tested in-house and by third-party labs to ensure that the right concentration of compounds is present."
+            }
+          }
+        },
+        "block_order": [
+          "5cc29c26-6671-4c3f-98bf-c78ebcff2422",
+          "43509c1f-d7b2-46e8-a4d5-d6ab1b570504",
+          "2e80b5bb-1de1-40d1-8e7b-956649ee6323",
+          "3a0073f7-08f5-4c45-9457-42ba2567a59f"
+        ],
+        "settings": {
+          "expand_questions": false
+        }
+      },
+      "about-faq": {
+        "type": "about-faq",
+        "blocks": {
+          "8694c3ab-c9b8-4318-9b33-77a567fc3487": {
+            "type": "question",
+            "settings": {
+              "title": "how are Beam products different from other hemp products?",
+              "answer": "many hemp products in the marketplace are made using hemp isolate, which excludes some of the beneficial compounds naturally found in hemp. beam products are different because they use broad spectrum hemp, meaning they contain a combination of compounds, terpenes and other beneficial compounds."
+            }
+          },
+          "dd8daf2b-4fba-42f4-8137-d9b9803ba865": {
+            "type": "question",
+            "settings": {
+              "title": "do Beam products have an expiration date?",
+              "answer": "when stored in proper conditions (at or below room temperature, out of direct sunlight) hemp has an extremely long shelf life and is very stable. we include a manufacturing date on all of our products to give you peace of mind."
+            }
+          },
+          "7f00601f-e265-46a0-a1f7-0b298ac89e64": {
+            "type": "question",
+            "settings": {
+              "title": "how should I store my Beam products?",
+              "answer": "All of our products should stored at room temperature and out of direct sunlight. changes in color can occur in natural products but does not change the potency of the product."
+            }
+          }
+        },
+        "block_order": [
+          "8694c3ab-c9b8-4318-9b33-77a567fc3487",
+          "dd8daf2b-4fba-42f4-8137-d9b9803ba865",
+          "7f00601f-e265-46a0-a1f7-0b298ac89e64"
+        ],
+        "settings": {
+          "expand_questions": false
+        }
+      },
+      "collection-header": {
+        "type": "collection-header",
+        "settings": {
+          "statBGImage": "shopify:\/\/shop_images\/blue-bg.jpg",
+          "heroHeading": "<p>the highest-quality functional wellness products for better sleep, calm, energy, recovery, and hydration. <\/p>"
+        }
+      },
+      "inline-flex-product": {
+        "type": "inline-flex-product",
+        "settings": {
+          "inlineText": "",
+          "article": "",
+          "product": ""
+        }
+      },
+      "featured-product": {
+        "type": "featured-product",
+        "settings": {
+          "product": "dream-extra-strength-powder",
+          "featuredImage": "shopify:\/\/shop_images\/dream-xs-feature.jpg"
+        }
+      },
+      "collection-join": {
+        "type": "collection-join",
+        "settings": {
+          "statBGImage": "shopify:\/\/shop_images\/community-image.jpg",
+          "heroHeading": "<p>join the Beam community<\/p>",
+          "subtitle": "<p>when you subscribe, you'll save on essentials and get monthly deliveries to better your body + mind.<\/p>"
+        }
+      },
+      "pod-product": {
+        "type": "pod-product",
+        "settings": {
+          "productImg": "shopify:\/\/shop_images\/dream-pow.jpg",
+          "productImg2": "shopify:\/\/shop_images\/hero_25647c56-b9f8-4ffc-8258-4b5b3c1e7008.jpg",
+          "productImg3": "shopify:\/\/shop_images\/hero_25647c56-b9f8-4ffc-8258-4b5b3c1e7008.jpg",
+          "productImg4": "shopify:\/\/shop_images\/dream-starter-pack-roll.png",
+          "productImg5": "shopify:\/\/shop_images\/tiktok-beam-hero.jpg",
+          "productImg6": "shopify:\/\/shop_images\/tiktok-beam-hero-3.jpg",
+          "productImg7": "shopify:\/\/shop_images\/tiktok-beam-hero-2.jpg"
+        }
+      },
+      "pod-doctor-feature": {
+        "type": "pod-doctor-feature",
+        "settings": {
+          "joinTitle": "Dr. Carleara Weiss",
+          "copy": "We are a 24\/7 society where sleep is undervalued and consequently, many struggle with poor sleep quality. As a sleep scientist, my goal is to help people understand the importance of sleep for physical and mental health. Beam is committed to offering products that may contribute to sleep quality while maintaining an ethical and conscious approach to overall wellness for those who consume their products.",
+          "joinImg": "shopify:\/\/shop_images\/clarissa-desktop.jpg",
+          "joinImg2": "shopify:\/\/shop_images\/clarissa-headshot.jpg",
+          "mobileImg": "shopify:\/\/shop_images\/clarissa-mobile.jpg"
+        }
+      },
+      "pod-cutout": {
+        "type": "pod-cutout",
+        "settings": {
+          "titleMain": "When taking Dream Powder...",
+          "title1": "98% of people",
+          "copy1": "surveyed fell asleep faster",
+          "title2": "99% of people",
+          "copy2": "experienced better sleep quality"
+        }
+      },
+      "pod-lovett-bottom": {
+        "type": "pod-lovett-bottom",
+        "settings": {
+          "joinTitle": "beam + Lovett or Leave It",
+          "copy": "35% off subscriptions + free mug and frother",
+          "joinImg": "shopify:\/\/shop_images\/cee9b5e02acf49fd14f313ad5e40d1c040103017f1e14f95a1d80915f9f2716efc0542d4891f5bb8d83027fe94ba01fac64bb6195f21f1e39569feda816759c9.jpg"
+        }
+      },
+      "hp-icons": {
+        "type": "hp-icons",
+        "blocks": {
+          "56201354-12dc-4fb3-b9f9-79a1760ce1c9": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/sleep.png",
+              "statHeading": "Sleep Collection",
+              "statContent": "shopify:\/\/collections\/sleep"
+            }
+          },
+          "3b53cc6d-5208-4932-9cbe-ddc354c10277": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/calm_5e30df15-3e18-42be-aea1-41d8f621ea28.png",
+              "statHeading": "Calm Collection",
+              "statContent": "shopify:\/\/collections\/calm"
+            }
+          },
+          "2bb18547-57bb-4c48-91a1-c02fcc0a5031": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/energy_173c9462-d985-43ff-89eb-4eb08b8b544a.png",
+              "statHeading": "Energy Collection",
+              "statContent": "shopify:\/\/collections\/energy"
+            }
+          },
+          "7351df1a-3986-4e9f-9d4a-501f491d2222": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/recovery.png",
+              "statHeading": "Recovery Collection",
+              "statContent": "shopify:\/\/collections\/recovery"
+            }
+          },
+          "eb77f0f5-c5fe-4939-8965-8d74a9d28f56": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/hydration.png",
+              "statHeading": "Hydration Collection",
+              "statContent": "shopify:\/\/collections\/hydration-powders"
+            }
+          }
+        },
+        "block_order": [
+          "56201354-12dc-4fb3-b9f9-79a1760ce1c9",
+          "3b53cc6d-5208-4932-9cbe-ddc354c10277",
+          "2bb18547-57bb-4c48-91a1-c02fcc0a5031",
+          "7351df1a-3986-4e9f-9d4a-501f491d2222",
+          "eb77f0f5-c5fe-4939-8965-8d74a9d28f56"
+        ],
+        "settings": {
+          "heroSubtitle": ""
+        }
+      },
+      "hp-join": {
+        "type": "hp-join",
+        "settings": {
+          "joinTitle": "join the Beam Community",
+          "copy": "when you subscribe, you'll save on essentials and get monthly deliveries to support your mind + body. Plus, join a community commited to better.\n<br> \n<br> \n<li>20% off every order<\/li>\n<li>Pause, cancel, skip, or delay anytime <\/li>\n<li>Manage your orders via text or email<\/li>\n<li>Free shipping (always)<\/li>",
+          "joinImg": "shopify:\/\/shop_images\/SET_4_DAY_2_101321_0883_2.jpg",
+          "joinTitle2": "the #beamforbetter guarantee",
+          "copy2": "all first-time product purchases have a 30-day money-back guarantee. If you're unhappy with your products, we'll refund your order.",
+          "joinImg2": "shopify:\/\/shop_images\/SET_4_DAY_2_101321_0883.jpg"
+        }
+      },
+      "hp-contact": {
+        "type": "hp-contact",
+        "settings": {
+          "contactBG": "shopify:\/\/shop_images\/blue-bg.jpg"
+        }
+      },
+      "index-refer": {
+        "type": "index-refer",
+        "settings": {
+          "statBGImage": "shopify:\/\/shop_images\/chill-in-yKWRIc0gZBI-unsplash_Copy_2ec09c87-e137-414e-b498-c448ece3dc9b.jpg",
+          "mobileImg": "shopify:\/\/shop_images\/be-a-pal.jpg",
+          "heroHeading": "<p>Be a Pal.<\/p>",
+          "subtitle": "<p>Refer a friend and get $20 off both of your orders.<\/p>"
+        }
+      },
+      "am-header": {
+        "type": "am-header",
+        "settings": {
+          "rightImg": "shopify:\/\/shop_images\/hero_cac870c3-9188-4708-ac1f-a2d50de81e61.jpg",
+          "heroHeading": "Our",
+          "headerCopy": "<strong>Our exclusive A.M. to P.M. Bundle, (a $275 value), includes:<\/strong>\n<br>\n<p class=\"pt1\">1 bag of <span style=\"text-transform: none !important\" class=\"fw--600\">Dream Powder<\/span>, our delicious, best selling hot cocoa for bedtime<\/p>\n<li class=\"pt1\">1 essential morning product<\/li>\n<li>1 essential afternoon product<\/li>"
+        }
+      },
+      "am-flex": {
+        "type": "am-flex",
+        "settings": {
+          "joinTitle": "Wake up a whole new you.",
+          "copy": "reishi, magnesium, L-Theanine, and melatonin, combine to help you drift off fast, sleep better, and wake up refreshed*.",
+          "joinImg": "shopify:\/\/shop_images\/danica_d3bc83cf-d6bf-4492-8e2e-0935dd84bc53.jpg",
+          "joinTitle2": "sleep is the cornerstone of wellness, but many people aren't getting enough.",
+          "copy2": "with dream powder, you're getting more than just quality shuteye. You're providing your body with a unique blend of sleep-enhancing* vitamins and minerals for your deepest night's sleep.",
+          "joinImg2": "shopify:\/\/shop_images\/dream-2.jpg"
+        }
+      },
+      "lp-cutout": {
+        "type": "lp-cutout",
+        "settings": {
+          "titleMain": "when taking dream powder...",
+          "title1": "98% of people",
+          "copy1": "surveyed fell asleep faster",
+          "title2": "99% of people",
+          "copy2": "experienced better sleep quality"
+        }
+      },
+      "lp-trusted": {
+        "type": "lp-trusted",
+        "blocks": {
+          "9bf51285-859a-4901-a993-0c94ed5f6075": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/danica-headshot_1.jpg",
+              "statHeading": "Danica Patrick",
+              "statContent": "<p style=\"text-transform: none !important\">If I want a nudge to get to sleep with ease, Beam is such a nice way to really like drop me into sleep. The fact that you notice Beam working is magic.<\/p>"
+            }
+          },
+          "bdabb25c-4796-4cd3-9cd2-60b9bd132d80": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/mat-headshot_1.jpg",
+              "statHeading": "Mat Fraser",
+              "statContent": "<p style=\"text-transform: none !important\">Getting to sleep is always the hardest part. I pack my days with uppers, like espresso and pre-workout, and a cup of Beam dream before bed is exactly what i need to help coax me to sleep.<\/p>"
+            }
+          },
+          "1c3ebe9f-8a79-4ce7-b450-e3ec8dbdc271": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/brooke-wells-headshot_1ae21ad0-11f8-49c8-a8ed-300a4628b253.jpg",
+              "statHeading": "Brooke Wells",
+              "statContent": "<p style=\"text-transform: none !important\">Beam has helped me in so many areas of my life. It has not only helped manage my stress, but has changed my sleep & recovery for the better.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "9bf51285-859a-4901-a993-0c94ed5f6075",
+          "bdabb25c-4796-4cd3-9cd2-60b9bd132d80",
+          "1c3ebe9f-8a79-4ce7-b450-e3ec8dbdc271"
+        ],
+        "settings": {
+          "heroSubtitle": ""
+        }
+      },
+      "lp-learn": {
+        "type": "lp-learn",
+        "settings": {
+          "contactBG": "shopify:\/\/shop_images\/dream-full-bleed.jpg"
+        }
+      },
+      "pod-action": {
+        "type": "pod-action",
+        "blocks": {
+          "7178ed04-5dbb-46bf-baf6-12c544e669c5": {
+            "type": "question",
+            "settings": {
+              "title": "nano Hemp",
+              "answer": "Hemp particles with the highest absorption potential to naturally support mood, stress, rest, and wellbeing"
+            }
+          },
+          "75c64f04-127d-4c93-87c4-2be806adb7ec": {
+            "type": "question",
+            "settings": {
+              "title": "reishi",
+              "answer": "A mushroom superfood that helps to support the body’s sleep cycle and manage stress*"
+            }
+          },
+          "22f325f7-cc21-4978-8aec-387fad0dc005": {
+            "type": "question",
+            "settings": {
+              "title": "Magnesium",
+              "answer": "A mineral that aids the body’s ability to fall asleep by relaxing the muscles and regulating the nervous system*"
+            }
+          },
+          "c307d8f9-e747-48ee-b1af-71b600c5e417": {
+            "type": "question",
+            "settings": {
+              "title": "L-Theanine",
+              "answer": "An amino acid that promotes relaxation and helps improve sleep quality*"
+            }
+          },
+          "69121344-ee32-491f-b15d-07d2f64aa95f": {
+            "type": "question",
+            "settings": {
+              "title": "Melatonin",
+              "answer": "A compound that regulates the body’s circadian rhythm, promoting restful sleep*"
+            }
+          }
+        },
+        "block_order": [
+          "7178ed04-5dbb-46bf-baf6-12c544e669c5",
+          "75c64f04-127d-4c93-87c4-2be806adb7ec",
+          "22f325f7-cc21-4978-8aec-387fad0dc005",
+          "c307d8f9-e747-48ee-b1af-71b600c5e417",
+          "69121344-ee32-491f-b15d-07d2f64aa95f"
+        ],
+        "settings": {
+          "joinTitle": "the consequences of poor sleep can include:",
+          "copy": "<li>A disrupted immune system<\/li>\n<li>Mood fluctuation<\/li>\n<li>Lower Productivity<\/li>",
+          "joinImg": "shopify:\/\/shop_images\/dream-1_1.jpg",
+          "joinTitle2": "what's in dream powder?",
+          "copy2": "",
+          "joinImg2": "shopify:\/\/shop_images\/dream-2.jpg"
+        }
+      },
+      "pod-save-bottom": {
+        "type": "pod-save-bottom",
+        "settings": {
+          "joinTitle": "Beam X Pod Save America",
+          "copy": "35% off subscriptions + free mug and frother",
+          "joinImg": "shopify:\/\/shop_images\/slider-2_2711f441-5e7f-4870-8f00-585d57d6772b.jpg"
+        }
+      },
+      "pod-save-bottom-gfy": {
+        "type": "pod-save-bottom-gfy",
+        "settings": {
+          "joinTitle": "Beam X Good For You",
+          "copy": "$20 off subscriptions + free mug and frother",
+          "joinImg": "shopify:\/\/shop_images\/bddffb5597faab5b_1baffa8f-0c6b-4eb9-bed0-86ebdb2d9347.jpg",
+          "joinImg2": "shopify:\/\/shop_images\/bddffb5597faab5b_24497f89-738a-4214-9e6d-0fbc89750e62.jpg"
+        }
+      },
+      "product-checks": {
+        "type": "product-checks",
+        "blocks": {
+          "a1947a7b-b4ab-4cf8-acb7-9e4e9bb70ac4": {
+            "type": "column",
+            "settings": {
+              "compareHeading": "If you experience sleep difficulties or circadian rhythm issues"
+            }
+          },
+          "b14bd9c5-a35e-41f7-9963-489ea8868425": {
+            "type": "column",
+            "settings": {
+              "compareHeading": "If you want to start a delicious bedtime routine"
+            }
+          },
+          "92472faf-2f76-46bb-bb1a-f3031256e05b": {
+            "type": "column",
+            "settings": {
+              "compareHeading": "If you’re an athlete, busy parent, or WFH warrior who works hard and needs help with rest and recovery"
+            }
+          },
+          "13a55ba2-4ecd-406b-ac15-317e448cbe36": {
+            "type": "column",
+            "disabled": true,
+            "settings": {
+              "compareHeading": "If you’re an athlete, busy parent, or WFH warrior who works hard and needs extra help with rest and recovery"
+            }
+          }
+        },
+        "block_order": [
+          "a1947a7b-b4ab-4cf8-acb7-9e4e9bb70ac4",
+          "b14bd9c5-a35e-41f7-9963-489ea8868425",
+          "92472faf-2f76-46bb-bb1a-f3031256e05b",
+          "13a55ba2-4ecd-406b-ac15-317e448cbe36"
+        ],
+        "settings": {
+          "statBGColor": "#ffffff",
+          "heroHeading": "Why Dream Powder is right for you",
+          "statBGImage": "shopify:\/\/shop_images\/why-dream.jpg"
+        }
+      },
+      "fifty-fifty": {
+        "type": "fifty-fifty",
+        "settings": {
+          "fiftyImage": "shopify:\/\/shop_images\/BEAM-DR-WEISS_0429-grey.jpg",
+          "heroBGColor": "#ffffff",
+          "heroHeading": "Meet Beam's resident sleep expert.",
+          "heroBodyTopText": "Dr. Carleara Weiss, Ph.D., M.S., R.N., Member of the American Academy of Sleep Medicine",
+          "heroBodyText": "<p>\"The ingredients in Dream can promote relaxation and give the brain a signal that it is time to sleep.* With that, we are more likely to have a full night of rest and better sleep quality.”<\/p><p><\/p><p>- Dr. Weiss<\/p>"
+        }
+      },
+      "pod-bottom-dan": {
+        "type": "pod-bottom-dan",
+        "settings": {
+          "joinTitle": "Beam X The Dan Bongino Show",
+          "copy": "35% off subscriptions + free mug and frother",
+          "joinImg": "shopify:\/\/shop_images\/BONGINOWestwoodOne-wrapperDBSCoverArt.png"
+        }
+      },
+      "fifty-fifty-with-button": {
+        "type": "fifty-fifty-with-button",
+        "settings": {
+          "fiftyImage": "shopify:\/\/shop_images\/hero_1_05bb526e-b28a-47d8-ab1e-b6a27a31e33b.jpg",
+          "heroBGColor": "#ffffff",
+          "heroHeading": "Join The Beam Ambassador Program",
+          "heroBodyTopText": "A Beam Ambassador is a member of our community whose personal mission aligns with ours: helping people better their bodies and minds in order to reach their maximum potential. Beam Ambassadors give their audience access to exclusive Beam discounts and receive a portion of the profits.",
+          "heroBodyText": ""
+        }
+      },
+      "centered-paragraph": {
+        "type": "centered-paragraph",
+        "settings": {
+          "heroSubtitle": "",
+          "paragraph": ""
+        }
+      },
+      "reverse-checks": {
+        "type": "reverse-checks",
+        "blocks": {
+          "667acaa3-7026-40f1-9a14-8833f5b39bac": {
+            "type": "column",
+            "settings": {
+              "compareHeading": "Earn revenue on your followers’ first-time purchases"
+            }
+          },
+          "6f4f1a91-9fc1-4d09-a15a-4899fcfd9eba": {
+            "type": "column",
+            "settings": {
+              "compareHeading": "Exclusive discounts for your audience"
+            }
+          },
+          "d318116b-604f-4217-af8e-e74a9d5209cf": {
+            "type": "column",
+            "settings": {
+              "compareHeading": "1 free Beam product of your choice per month"
+            }
+          },
+          "13eb6e7c-562b-4fe5-a618-821f0a968d43": {
+            "type": "column",
+            "settings": {
+              "compareHeading": "Ambassador challenges with more opportunities to earn"
+            }
+          },
+          "b1b46c3d-6041-4d62-9d0f-201caa1d8dc2": {
+            "type": "column",
+            "settings": {
+              "compareHeading": "Network with the Beam community, including quarterly meetings with co-founders Matt and Kevin"
+            }
+          },
+          "b3770868-96b5-4f26-8c91-f40a796bff1e": {
+            "type": "column",
+            "settings": {
+              "compareHeading": "Exclusive access to new product launches and special events"
+            }
+          }
+        },
+        "block_order": [
+          "667acaa3-7026-40f1-9a14-8833f5b39bac",
+          "6f4f1a91-9fc1-4d09-a15a-4899fcfd9eba",
+          "d318116b-604f-4217-af8e-e74a9d5209cf",
+          "13eb6e7c-562b-4fe5-a618-821f0a968d43",
+          "b1b46c3d-6041-4d62-9d0f-201caa1d8dc2",
+          "b3770868-96b5-4f26-8c91-f40a796bff1e"
+        ],
+        "settings": {
+          "statBGColor": "#ffffff",
+          "heroHeading": "Why Apply:",
+          "statBGImage": "shopify:\/\/shop_images\/why-apply.jpg"
+        }
+      },
+      "ambassadors-three-block": {
+        "type": "ambassadors-three-block",
+        "blocks": {
+          "1a2754ee-7c06-4cc4-aa47-e5a8a0c53470": {
+            "type": "column",
+            "settings": {
+              "statNumber": "1",
+              "statHeading": "Apply to the Ambassador Program",
+              "statContent": "Join our mission, connect with the incredible Beam Community, and inspire others on their wellness journey."
+            }
+          },
+          "074c7d33-8dcc-494e-89b0-e19c3828b5f5": {
+            "type": "column",
+            "settings": {
+              "statNumber": "2",
+              "statHeading": "Use Your Voice",
+              "statContent": "Spread the word to your audience about Beam. We’ll provide you with a unique link and code, which you’ll share with your followers to give them exclusive discounts."
+            }
+          },
+          "c5ebdd8d-b8f7-4b15-999e-6802b74c6118": {
+            "type": "column",
+            "settings": {
+              "statNumber": "3",
+              "statHeading": "We Share the Love",
+              "statContent": "You’ll earn revenue share on your followers’ first-time purchases, plus plenty of other Ambassador perks."
+            }
+          }
+        },
+        "block_order": [
+          "1a2754ee-7c06-4cc4-aa47-e5a8a0c53470",
+          "074c7d33-8dcc-494e-89b0-e19c3828b5f5",
+          "c5ebdd8d-b8f7-4b15-999e-6802b74c6118"
+        ],
+        "settings": {
+          "heroSubtitle": "",
+          "bgImg": "shopify:\/\/shop_images\/blue-texture-bg.jpg"
+        }
+      },
+      "testimonials-no-img": {
+        "type": "testimonials-no-img",
+        "blocks": {
+          "345417f3-6ddc-424b-a7c3-afd2668389f9": {
+            "type": "testimonials_block",
+            "settings": {
+              "title": "Oskar Payot",
+              "subtitle": "Wellness Coach",
+              "description": "Being a Beam Ambassador gives me the opportunity to make my community aware of the importance of good quality supplements, in my case is good quality sleep with Dream, getting ready the night before for the day ahead, rewarding myself with a chocolate treat before heading to bed"
+            }
+          },
+          "daed7b29-7a8d-4cb9-ad78-6bfcb1d60e11": {
+            "type": "testimonials_block",
+            "settings": {
+              "title": "Kelly Whittaker",
+              "subtitle": "Barry’s Chief Instructor",
+              "description": "I absolutely love being a Beam ambassador because I truly believe in this company and every one of its products. Beam has helped me and my body in so many ways - as an athlete, to take care of my body post-run and post-workout and recover quickly. As a trainer and coach, products that help me focus and be the best version of myself for clients, even on VERY early mornings. And as a human being, I am able to sleep well, get my rest, and feel ready to rock the next day."
+            }
+          },
+          "811da2fb-a638-4dc3-81e0-30d3e41af8a1": {
+            "type": "testimonials_block",
+            "settings": {
+              "title": "Jonathan Levitt",
+              "subtitle": "Host of For The Long Run Podcast",
+              "description": "I love beam not only for their amazing support of the running\/endurance community, but also for how great their products are in helping with sleep\/recovery."
+            }
+          },
+          "644aefb3-0af7-4188-9059-62e3a197aae5": {
+            "type": "testimonials_block",
+            "settings": {
+              "title": "Annie Noffsinger",
+              "subtitle": "Fitness Coach",
+              "description": "I love being a Beam ambassador because I am sharing something I genuinely love and use daily. I have struggled with sleep the past couple years and being an endurance athlete, sleep in crucial to get the most out of my training. Beam has helped me fall asleep and stay asleep nightly and I get 8-9 hours of sleep every night now!!"
+            }
+          },
+          "40f6f93e-6341-463f-a842-dd72a11ba5e1": {
+            "type": "testimonials_block",
+            "settings": {
+              "title": "Jason Ackerman",
+              "subtitle": "CrossFit Coach",
+              "description": "I love helping people inside the walls of CrossFit affiliates, but, there is another 23 hours of the day.  Encourage people to try beam helps me influence those other 23 hours.  Without the proper sleep and recovery, we can never hit our potential.  Beam helps us make that happen."
+            }
+          }
+        },
+        "block_order": [
+          "345417f3-6ddc-424b-a7c3-afd2668389f9",
+          "daed7b29-7a8d-4cb9-ad78-6bfcb1d60e11",
+          "811da2fb-a638-4dc3-81e0-30d3e41af8a1",
+          "644aefb3-0af7-4188-9059-62e3a197aae5",
+          "40f6f93e-6341-463f-a842-dd72a11ba5e1"
+        ],
+        "settings": {
+        }
+      },
+      "pod-cutout-sc": {
+        "type": "pod-cutout-sc",
+        "settings": {
+          "titleMain": "When taking Dream Powder...",
+          "title1": "<span class=\"fw--600\">98% of people<\/span>",
+          "copy1": "surveyed fell asleep faster",
+          "title2": "<span class=\"fw--600\">99% of people<\/span>",
+          "copy2": "experienced better sleep quality"
+        }
+      },
+      "pod-action-sc": {
+        "type": "pod-action-sc",
+        "settings": {
+          "joinTitle": "The consequences of poor sleep can include:",
+          "copy": "<li>A disrupted immune system<\/li>\n<li>Mood fluctuation<\/li>\n<li>Lower Productivity<\/li>",
+          "joinImg": "shopify:\/\/shop_images\/dream-1_1.jpg",
+          "joinTitle2": "What's in Dream Powder?",
+          "copy2": "",
+          "joinImg2": "shopify:\/\/shop_images\/beam_new.png"
+        }
+      },
+      "sweatcoin-bottom": {
+        "type": "sweatcoin-bottom",
+        "settings": {
+          "joinTitle": "Beam x Sweatcoin",
+          "copy": "10-serving bag of Dream Powder (20% off subscription starts in 14 days)",
+          "joinImg": "shopify:\/\/shop_images\/sweatcoin_logo_3.png"
+        }
+      },
+      "single-image": {
+        "type": "single-image",
+        "settings": {
+          "joinImg": "shopify:\/\/shop_images\/sweatcoin-chart.jpg"
+        }
+      },
+      "pod-action-tik": {
+        "type": "pod-action-tik",
+        "settings": {
+          "joinTitle": "",
+          "copy": "",
+          "joinImg": "shopify:\/\/shop_images\/ingredients_1_a0ac32d9-a0ea-4ede-bcf1-8cbce1ed443b.jpg",
+          "joinTitle2": "What's in Dream Powder?",
+          "copy2": "",
+          "joinImg2": "shopify:\/\/shop_images\/ingredients_1_a0ac32d9-a0ea-4ede-bcf1-8cbce1ed443b.jpg"
+        }
+      },
+      "tiktok-bottom": {
+        "type": "tiktok-bottom",
+        "settings": {
+          "joinTitle": "",
+          "copy": ""
+        }
+      },
+      "tiktok-icons": {
+        "type": "tiktok-icons",
+        "blocks": {
+          "4c3255d3-d0cb-4f7b-aa8d-26c1bd478d0b": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/sleep.png",
+              "statHeading": "Sleep Collection",
+              "statContent": "shopify:\/\/collections\/sleep"
+            }
+          },
+          "e41b4d90-650a-4122-ae39-5729d7b7b85d": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/calm_5e30df15-3e18-42be-aea1-41d8f621ea28.png",
+              "statHeading": "Calm Collection",
+              "statContent": "shopify:\/\/collections\/calm"
+            }
+          },
+          "663c35ba-f26a-4c1c-a6a7-41051389f302": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/energy_173c9462-d985-43ff-89eb-4eb08b8b544a.png",
+              "statHeading": "Energy Collection",
+              "statContent": "shopify:\/\/collections\/energy"
+            }
+          },
+          "bf83c8d0-037a-41e3-b8bf-a36939161dd0": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/recovery.png",
+              "statHeading": "Recovery Collection",
+              "statContent": "shopify:\/\/collections\/recovery"
+            }
+          },
+          "de6e78cd-6cf1-417c-87ae-5e210e998198": {
+            "type": "column",
+            "settings": {
+              "iconImg": "shopify:\/\/shop_images\/hydration.png",
+              "statHeading": "Hydration Collection",
+              "statContent": "shopify:\/\/collections\/hydration-powders"
+            }
+          }
+        },
+        "block_order": [
+          "4c3255d3-d0cb-4f7b-aa8d-26c1bd478d0b",
+          "e41b4d90-650a-4122-ae39-5729d7b7b85d",
+          "663c35ba-f26a-4c1c-a6a7-41051389f302",
+          "bf83c8d0-037a-41e3-b8bf-a36939161dd0",
+          "de6e78cd-6cf1-417c-87ae-5e210e998198"
+        ],
+        "settings": {
+          "heroSubtitle": ""
+        }
+      },
+      "ben-bottom": {
+        "type": "ben-bottom",
+        "settings": {
+          "joinTitle": "Beam X The Ben Shapiro Show",
+          "copy": "35% off subscriptions + free mug and frother",
+          "joinImg": "shopify:\/\/shop_images\/aHR0cHM6Ly9tZWdhcGhvbmUuaW1naXgubmV0L3BvZGNhc3RzLzM1YjQyODY4LTVjOTctMTFlYS1iMGNjLTAzOWM3NjZkZmE0OS9pbWFnZS9CU19pVHVuZXNfVGh1bWJfMjEuanBnP2l4bGliPXJhaWxzLTIuMS4yJm1heC13PTMwMDAmbWF4LWg.webp"
+        }
+      },
+      "sweatcoin-bottom-2": {
+        "type": "sweatcoin-bottom-2",
+        "settings": {
+          "joinTitle": "",
+          "copy": "",
+          "joinImg": "shopify:\/\/shop_images\/sweatcoin_logo_3.png"
+        }
+      },
+      "sweatcoin-bottom-3": {
+        "type": "sweatcoin-bottom-3",
+        "settings": {
+          "joinTitle": "",
+          "copy": "",
+          "joinImg": "shopify:\/\/shop_images\/sweatcoin_logo_3.png"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
+  "presets": {
+    "Slate": {
+      "customer_layout": "theme",
+      "background_color": "#e6ebeb",
+      "text_color": "#555555",
+      "link_color": "#b5792b",
+      "facebook_url": "https:\/\/www.facebook.com\/shopify",
+      "twitter_url": "https:\/\/twitter.com\/shopify",
+      "pinterest_url": "http:\/\/pinterest.com\/shopify\/",
+      "instagram_url": "http:\/\/instagram.com\/shopify",
+      "vimeo_url": "http:\/\/vimeo.com\/shopify",
+      "youtube_url": "https:\/\/www.youtube.com\/user\/shopify",
+      "social_icons_style": "",
+      "use_logo": false,
+      "base_font_size": "16px",
+      "base_font_family": "'Source Sans Pro', sans-serif",
+      "featured_blog": "news",
+      "homepage_page": "frontpage",
+      "homepage_collection": "frontpage",
+      "products_per_row": "3",
+      "number_of_rows": "4"
+    }
+  }
+}

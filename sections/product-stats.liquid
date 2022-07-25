@@ -1,0 +1,154 @@
+<div
+  class="full-width pt3 pb3 pt10--md pb10--md stat-section {% if product.handle == 'mini-dream-bundle'%} pt0 {% endif %}">
+  <div class="container">
+    <div class="row align--middle gutter--none pt3 pt6--md pb6--md pl6--md pr6--md stats-padding">
+      <div class="col tc c6--md">
+        {% for block in section.blocks %}
+        <div class="mb2 mb4--md">
+          {% if block.settings.iconimage %}
+          <p class="tl">
+            <span class="dib">
+              <picture class="promo__press-logo p1"><img class="promo__press-logo" style="max-width: 90px;"
+                  src="{{ block.settings.iconimage | img_url: '1024x1024' }} 2x">
+              </picture>
+            </span>
+          </p>
+          {% endif %}
+          {% if block.settings.statHeading %}
+          <h4 class="tl sans--large fw--800 stat-number {% if product.handle == 'the-summer-bedtime-bundle'%} summer-bundle-number {% endif %}">{{ block.settings.statHeading}}</h4>
+          {% endif %}
+          {% if block.settings.statContent %}
+          <h5 class="tl pr sans--medium stat-content {% if product.handle == 'the-summer-bedtime-bundle'%} summer-bundle {% endif %}">
+            {{ block.settings.statContent }}
+          </h5>
+          {% endif %}
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+ 
+  .container {
+    padding: 0 !important;
+    margin: auto !important;
+  }
+
+  .stat-content p::first-letter {
+    text-transform: none !important;
+  }
+
+  .stat-section {
+    background-image: url("{{ section.settings.statBGImage | img_url : '2048x2048' }}");
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .stat-number {
+    color: #3D7CC9
+    }
+    .summer-bundle-number {
+    color: #3D7CC9
+    }
+    .summer-bundle {
+    color: #000;
+  }
+
+  @media (max-width: 799px) {
+    .stat-section {
+      background-image: none;
+    }
+  }
+
+  #shopify-section-template--14175733153847__1635526379cb5fee3b .full-width {
+    padding-top: 0 !important;
+  }
+
+  @media screen and (max-width: 800px) {
+    .stats-padding {
+      padding-top: 0px !important;
+    }
+   
+    .stat-number {
+      text-align: center;
+    }
+
+    .summer-bundle {
+    color: #000;
+  }
+
+    .stat-content {
+      text-align: center;
+    }
+
+  }
+</style>
+
+{% schema %}
+{
+"name": "Product Stats banner",
+"class": "product-subscription_banner",
+"settings": [
+{
+"type": "image_picker",
+"id": "statBGImage",
+"label": "Background Image"
+},
+{
+"type": "color",
+"id": "statBGColor",
+"label": "Background Color",
+"default": "#fff"
+},
+{
+"type": "text",
+"id": "productHeading",
+"label": "Product Title"
+},
+{
+"type": "text",
+"id": "productBodyText",
+"label": "Main Body Copy"
+},
+{
+"type": "text",
+"id": "popupheading",
+"label": "Popup Heading"
+}
+],
+"blocks": [
+{
+"type": "column",
+"name": "Column",
+"limit": 10,
+"settings": [
+{
+"id": "iconimage",
+"type": "image_picker",
+"label": "Image"
+},
+{
+"type": "text",
+"id": "statHeading",
+"label": "Stat heading"
+},
+{
+"type": "html",
+"id": "statContent",
+"label": "Stat content"
+}
+]
+}
+],
+"presets": [{
+"name": "Product Stats banner",
+"category": "Content"
+}]
+}
+
+{% endschema %}

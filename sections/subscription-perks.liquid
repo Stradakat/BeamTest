@@ -1,0 +1,85 @@
+<div class="mt8 mb8 mt10--md mb10--md perks-contain">
+    <div class="perks-content">
+        <div class="video-banner">
+            <video class="perks-video" poster="https://cdn.shopify.com/s/files/1/0264/4076/1399/files/poster_85a03a7d-9d9a-4cf2-bec7-d09214db1f2e.png?v=1643143285" style="max-width:100%;opacity: .85; border-radius: 15px; width: 40vw; height: 600px; object-fit: cover;" muted playsinline autoplay loop>
+                <source src="https://cdn.shopify.com/s/files/1/0264/4076/1399/files/dream-mobile-homepage.mp4?v=1643141779" type="video/mp4">
+            </video>
+        </div>
+        <div class="perks-copy">
+            <h1 class="color--blue mb4 perks-on" style="font-weight: 300; font-size: 35px;">perks on perks</h1>
+            <div class="icon-list">
+            {% for block in section.blocks %}
+            <div style="display: flex; flex-direction: row; margin-bottom: 10px;" class="item-contain">
+                <picture class="mr5 icon-img" style="margin-top: 5px;">
+                    <source
+                        srcset="{{block.settings.iconImg | img_url: '1024x1024'}}"
+                        media="(min-width: 800px)"><img class="full-width subicon" alt="subscription icon photo" src="{{block.settings.iconImg | img_url: '1024x1024'}}">
+                </picture>
+                <div class="full-width icon-content">                       
+                    <h1 class="fw--600 sans--medium color--black">{{block.settings.statHeading}}</h1>
+                    <h1 class="fw--400 sans--body mb3  block-content" style="line-height: 1.4;">
+                        {{block.settings.statContent}}
+                    </h1>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .perks-content {
+            display: flex;
+            width: 90%;
+            margin: auto;
+            align-items: center;
+            margin: 0 15vw;
+        }
+    .perks-copy {
+        display: flex;
+        flex-direction: column;
+    }
+    .icon-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .perks-copy {
+            padding-left: 8%;
+        }
+</style>
+
+{% schema %}
+{
+  "name": "Perks",
+  "blocks": [
+  {
+    "type": "column",
+    "name": "Icon Item",
+    "limit": 10,
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "iconImg",
+            "label": "Icon"
+        },
+      {
+        "type": "text",
+        "id": "statHeading",
+        "label": "Item heading"
+      },
+      {
+        "type": "richtext",
+        "id": "statContent",
+        "label": "Item content"            
+      }
+    ]
+  }
+],
+  "presets": [{
+    "name": "About Us",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

@@ -1,0 +1,73 @@
+<div class="mt4 mb3 mt7--md mb6--md">
+    <div class="container pt2--md pb2--md">
+        <div class="row">
+
+            <div class="col hide--md mb2 mb0--md">
+                <div class="">
+                    <div class="pr">
+                        <div class="push-up">
+                            <picture class="full-width">
+                                <img class="full-width rounded one-time_image"
+                                    src="{{ section.settings.subImage | img_url: '800x720', crop: 'center' }}">
+
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col c7--md c6--lg pt1--md mb3 tc tl--md">
+
+                <h2 class="fw--600 sans--large mb2 color--blue">the fittest man on earth loves dream powder</h2>
+                <h3 class="fw--300 sans--body mb2 color--blue">"i’ve always been a big promoter of sleep. not just any
+                    kind of
+                    sleep, quality sleep. i blackout my room, i turn the temperature down, i’ve found the perfect
+                    mattress and i aim for 9-10 hours a night. getting to sleep is always the hardest part. i pack my
+                    days with uppers, like espresso and preworkout, that a cup of beam dream before bed is exactly what
+                    I need to help coax me to sleep."</h3>
+
+                <h2 class="sans--medium color--blue"><span class="fw--600">-Mat Fraser</span><span
+                        style="font-style: italic;">&nbsp 5x fittest man on earth</span></h2>
+
+
+            </div>
+            <div class="col c1--lg show--md"></div>
+
+            <div class="col c5--md c5--lg mb2 mb0--md show--md">
+                <div class="">
+                    <div class="pr">
+                        <div class="push-up">
+                            <picture class="full-width">
+                                <img class="full-width rounded one-time_image"
+                                    src="{{ section.settings.subImage | img_url: '800x720', crop: 'center' }}">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+"name": "Mat Fraser Testimonial",
+"class": "product-subscription_banner",
+"settings": [
+{
+"type": "image_picker",
+"id": "subImage",
+"label": "Sub Image"
+}
+],
+"presets": [{
+"name": "Mat Fraser Testimonial",
+"category": "Content"
+}]
+}
+
+{% endschema %}

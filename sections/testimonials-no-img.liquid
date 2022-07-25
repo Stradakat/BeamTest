@@ -1,0 +1,188 @@
+<div class="mt2 mb5--md">
+    <div>
+        <div class="right-div-container">
+        <div class="testimonial-slider pt2--md pb2--md pl0 pr0 ml2 mr0">
+            {% for block in section.blocks %}
+            <div class="row quote-contain">
+                <div class="col c7--md tc tl--md pl5 testimonial-content">
+                    <div class="quote-icon tc">
+                        <svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>quote icon</title>
+                            <defs>
+                                <circle id="path-1" cx="25" cy="25" r="25"></circle>
+                            </defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="ambassador-program" transform="translate(-695.000000, -2312.000000)">
+                                    <g id="Group-9" transform="translate(355.000000, 2312.000000)">
+                                        <g id="quote-icon" transform="translate(340.000000, 0.000000)">
+                                            <mask id="mask-2" fill="white">
+                                                <use xlink:href="#path-1"></use>
+                                            </mask>
+                                            <use id="Mask" fill="#D3E8FF" xlink:href="#path-1"></use>
+                                            <text id="“" mask="url(#mask-2)" font-family="Didot-Bold, Didot" font-size="60" font-weight="bold" fill="#3E7DCA">
+                                                <tspan x="11.1092437" y="58.1152461">“</tspan>
+                                            </text>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                   
+                  
+                    <h3 class="tc fw--300 sans--medium mb2 pt3 quote-descript" style="font-size: 18px;">
+                        {{block.settings.description}}</h3>
+                    <h2 class="tc fw--600 sans--medium mb1 color--blue capitalize" style="font-size: 20px;">
+                    -{{block.settings.title}}</h2>
+                    <h3 class="tc fw--300 sans--medium mb2" style="font-style: italic; font-size: 18px;">
+                    {{block.settings.subtitle}}</h3>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.testimonial-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            useTransform: true,
+            cssEase: 'ease-in-out',
+            fade: true,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 10000,
+            dots: true,
+            speed: 1000,
+            customPaging : function(slider, i) {
+                return '<button id=slick-slide-control' + i  + '><span class="slick-dots-custom"></span></button>';
+
+            },
+            
+            responsive: [
+                {
+                breakpoint: 1000,
+                settings: {
+                    cssEase: 'slidein',
+                    }
+                },
+            ]
+        });
+    });
+</script>
+<style>
+    .slick-dots li.slick-active button {
+        background-color: transparent !important;
+    }
+    .testimonial-slider {
+        padding-top: 5%;
+    }
+    .slick-dots-custom {
+        height: 12px;
+        width: 12px;
+        background-color: #427CBF;
+        opacity: .4;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    .slick-dots li { 
+        width: 4%;
+    }
+    .slick-dots li.slick-active .slick-dots-custom {
+        opacity: 1 !important;
+    }
+    .slick-dots li.slick-active {
+        opacity: 1 !important;
+    }
+    .testimonial-content {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        padding-left: 0 !important;
+    }
+    .slick-dots {
+        width: 30%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    } 
+    @media screen and (max-width: 800px) {
+        .quote-descript {
+            width: 90%;
+            margin: auto;
+        }
+        .slick-dots {
+            margin-left: 28%;
+        }
+    }
+</style>
+
+{% schema %}
+{
+"name": {
+"en": "Testimonials No Image"
+},
+"blocks": [
+{
+"type": "testimonials_block",
+"name": {
+"en": "Testimonial"
+},
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Name"
+},
+{
+"type": "text",
+"id": "subtitle",
+"label": "Subtitle"
+},
+{
+"type": "text",
+"id": "description",
+"label": "Description"
+}
+]
+}
+],
+"presets": [
+{
+"name": {
+"en": "Testimonials No Image"
+},
+"category": {
+"cs": "Text",
+"da": "Tekst",
+"de": "Text",
+"en": "Text",
+"es": "Texto",
+"fi": "Teksti",
+"fr": "Texte",
+"it": "Testo",
+"ja": "テキスト",
+"ko": "텍스트",
+"nb": "Tekst",
+"nl": "Tekst",
+"pl": "Tekst",
+"pt-BR": "Texto",
+"pt-PT": "Texto",
+"sv": "Text",
+"th": "ข้อความ",
+"tr": "Metin",
+"vi": "Văn bản",
+"zh-CN": "文本",
+"zh-TW": "文字"
+}
+}
+]
+}
+{% endschema %}

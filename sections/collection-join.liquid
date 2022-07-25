@@ -1,0 +1,140 @@
+<div class="pt0 pb2--md pr join-contain" style="z-index: 1;">
+    <div class="pr m4--md mt0--md join-main">
+        <div class="grid-container main-join-contain" style="">
+            <div class="row align--center">
+                <div class="col c12--lg pb4 pe--auto join-outer">
+                    <div class="">
+                        <div class="pr">
+                            <div class="push-up">
+                                <div style="display: flex; align-items: center; justify-content: center;" class="header-contain">
+                                    <div class="pa join-content">
+                                    <h2 style="font-weight: 300; line-height: 125%;" role="heading" class="sans--medium mb2 color--white join-title">{{section.settings.heroHeading}}</h2>
+                                    <h2 style="font-weight: 300; line-height: 125%;" class="sans--medium mb2 color--white join-subtitle">{{section.settings.subtitle}}</h2>
+                                    <a class="join-btn color--blue" href="/pages/subscriptions">join now</a>
+                                    </div>
+                                    <picture class="full-width desktop-img">
+                                        <source
+                                            srcset="{{section.settings.statBGImage | img_url: '2048x2048'}}"
+                                            media="(min-width: 800px)"><img loading="lazy" class="full-width join-image" alt="about us header photo" src="{{section.settings.statBGImage | img_url: '2048x2048' | crop: 'center' }}">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .header-contain {
+    }
+    .join-outer {
+        height: 500px;
+    }
+    .full-width {
+        height: 300px;
+        object-fit: cover;
+    }
+    .join-contain {
+        margin-top: 10%;
+    }
+    .join-btn {
+        width: 15vw;
+        background: white;
+        border-radius: 5px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-weight: 600;
+    }
+    .join-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        padding-top: 200px;
+    }
+    .join-image {
+        filter: brightness(.6);
+        height: 500px;
+    }
+    .join-content h2{
+            color: white;
+        }
+    .join-subtitle {
+        width: 50vw;
+        text-align: center;
+        font-size: 20px;
+    }
+    .join-title {
+        width: 50vw;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 400;
+    }
+    @media screen and (max-width: 800px) {
+        .join-content {
+            width: 90%;
+            padding-top: 100px;
+        }
+        .main-join-contain {
+            padding: 0;
+            margin: 0;
+        }
+        .join-btn {
+            width: 45vw;
+            background: #3d7cc9;
+            color: #fff;
+        }
+        .join-outer {
+            padding-bottom: 0;
+        }
+        .join-title {
+        font-size: 25px;
+        width: 90vw;
+        }
+        .join-subtitle {
+            width: 90vw;
+            font-size: 18px;
+        }
+        .join-image {
+            height: 350px;
+        }
+            .join-outer {
+            height: 350px;
+        }
+        .join-main {
+            height: 350px;
+        }
+        .join-contain {
+            margin-top: 48%;
+        }
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Join Now",
+"settings": [	      
+          {
+              "type": "image_picker",
+              "id": "statBGImage",
+              "label": "Background Image"
+          },
+            {
+              "type": "richtext",
+              "id": "heroHeading",
+              "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "subtitle",
+            "label": "Subtitle"
+        }
+]
+}
+{% endschema %}

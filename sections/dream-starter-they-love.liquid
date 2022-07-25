@@ -1,0 +1,94 @@
+<div class="mt4 mb3 mt7--md mb10--md">
+    <div class="container pt2--md pb2--md">
+        <div class="row">
+
+            <div class="col hide--md mb2 mb0--md">
+                <div class="">
+                    <div class="pr">
+                        <div class="push-up">
+                            <picture class="full-width">
+                                <source srcset="{{ 'mathewfras__b_e_a_c_o_n_2021_01_29_07_06_30.jpg' | asset_url }}"
+                                    media="(min-width: 800px)"><img class="full-width rounded-image"
+                                    alt="an all-natural alternative" src="{{ 'mathewfras__b_e_a_c_o_n_2021_01_29_07_06_30.jpg' | asset_url }}">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col c7--md c6--lg pt1--md mb3 tc tl--md">
+                <h6 class="sans--body mb3"><span class="color--white fw--600"
+                        style="padding: 2px 16px; border-radius: 5px;background-color: #427BBE">They love us</span></h6>
+
+                <h2 class="fw--600 sans--large mb2 color--blue">why the busiest (and fittest) people on earth love Dream
+                </h2>
+                <h3 class="fw--300 sans--body mb2 color--black">"I’ve always been a big promoter of sleep. Not just any kind of sleep, quality sleep. I blackout my room, I turn the temperature down, I've found the perfect mattress and I aim for 9-10 hours a night. Getting to sleep is always the hardest part. I pack my days with uppers, like espresso and preworkout, and a cup of Beam Dream before bed is exactly what i need to help coax me to sleep."
+                </h3>
+
+                <h2 class="sans--medium color--black"><span class="fw--600">-Mat Fraser</span><span
+                        style="font-style: italic;">&nbsp 5x Fittest Man on Earth</span></h2>
+
+
+            </div>
+            <div class="col c1--lg show--md"></div>
+
+            <div class="col c5--md c5--lg mb2 mb0--md show--md">
+                <div class="">
+                    <div class="pr">
+                        <div class="push-up">
+                            <picture class="full-width">
+                                <source srcset="{{ 'mathewfras__b_e_a_c_o_n_2021_01_29_07_06_30.jpg' | asset_url }}" media="(min-width: 800px)">
+                                <img class="full-width rounded-image" alt="an all-natural alternative"
+                                    src="{{ 'mathewfras__b_e_a_c_o_n_2021_01_29_07_06_30.jpg' | asset_url }}">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Dream Starter TLU",
+  "settings": [	      
+            {
+				"type": "text",
+				"id": "heroSubtitle",
+				"label": "SubTitle"
+			}
+  ],
+  "blocks": [
+  {
+    "type": "column",
+    "name": "link",
+    "limit": 10,
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "iconImg",
+            "label": "Image"
+        },
+      {
+        "type": "text",
+        "id": "statHeading",
+        "label": "Name"
+      },
+      {
+        "type": "url",
+        "id": "statContent",
+        "label": "Link"            
+      }
+    ]
+  }
+],
+  "presets": [{
+    "name": "Dream Starter TLU",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

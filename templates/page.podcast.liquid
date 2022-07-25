@@ -1,0 +1,67 @@
+{% comment %}
+Re-use the 'rte' class wherever you output content that was added by a merchant using
+the Rich Text Editor ( 'rte' stands for rich text editor ).
+Style all HTML elements in that content the same way across the board.
+Use the 'rte' class in your CSS to help maintain that consistency.
+Example: the h2 element should have the same size and color in:
+- product descriptions
+- collection descriptions
+- 'page' pages' content
+- blog post
+{% endcomment %}
+<div class="mt7 pt7 mb3 pb6 bg--light-blue">
+    <div class="container tc">
+        <h4 style="letter-spacing: 4px;" class="fw--600 sans--body color--white">PODCAST LISTENERS</h4>
+
+        <h3 style="line-height: 1.4;" class="fw--400 sans--medium color--white mt2 mb3 pl1 pr1">
+            nearly 40% off the first 3 months of a subscription <br><span class="sans-body">or</span><br>
+            20% off a One-time purchase
+
+        </h3>
+        <h3 class="fw--400 sans--body color--white">
+            use code <strong style="text-transform: uppercase !important;">PODCAST</strong> at checkout
+        </h3>
+        
+        </div>
+    
+    
+    </div>
+    
+
+
+    <div class="mb0 pt4 pb4 pt7--md pb8--md tc">
+
+              <div class="grid-container contained">
+                  <div class="row align--center">
+                      <div class="col c9--lg">
+                          <div class="row gutter--vertical align--center">
+        
+                                    {% for product in collections.start-with-these.products %}
+                                    <div class="col c6--sm c4--md hide-{{product.handle}}">
+                                        <div class="product-card">
+                                            {% include 'product-grid-hydration' with 'three-per-row' %}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+        
+        
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="mt4 tc">
+            <a href="/collections/shop-all" style="" class="pill p4 pt1 pb1 fw--600 color--white bg--blue">Shop All</a>
+    </div>
+
+        </div>
+    
+
+
+
+
+    <style>
+    
+        ol li {
+            margin-bottom: 16px;
+        }
+    </style>

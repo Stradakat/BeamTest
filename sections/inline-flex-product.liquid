@@ -1,0 +1,94 @@
+{% if section.settings.bgImage %}
+<div class="pr">
+    <a {% if section.settings.article %} href="{{section.settings.article.url}}" {% else %} href="{{section.settings.product.url}}" {% endif %}>
+    <img class="inline-image" src={{ section.settings.bgImage | img_url: '1024x1024' }}>
+    <h1 class="quote-overlay">{{section.settings.inlineText}}</h1>
+    {% if section.settings.icon %}
+    <img class="icon" src={{ section.settings.icon | img_url: 'medium' }}>
+    {% endif %}    
+    </a>
+</div>
+{% endif %}
+
+
+<style>
+    .inline-image {
+        width: 100%;
+        height: 23.3vw;
+        object-fit: cover;
+    }
+    .quote-overlay {
+        position: absolute;
+        color: #fff;
+        line-height: 130%;
+        font-size: 20px;
+        top: 40%;
+        left: 50%;
+        width: 80%;
+        font-weight: 500;
+        transform: translate(-50%, -50%);
+    }
+    .icon {
+        position: absolute;
+        color: #fff;
+        line-height: 130%;
+        font-size: 20px;
+        top: 70%;
+        left: 50%;
+        width: 15%;
+        height: auto;
+        font-weight: 500;
+        transform: translate(-50%, -50%);
+    }
+    @media screen and (max-width: 800px) {
+        .inline-image {
+            height: 49vw;
+        }
+        .icon {
+            display: none;
+        }
+        .quote-overlay {
+            text-align: center;
+            padding-top: 15%;
+        }
+        .featured-image {
+            width: 100% !important;
+            padding: 0;
+        }
+        
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Inline Feature",
+"settings": [	      
+        {
+            "type": "image_picker",
+            "id": "bgImage",
+            "label": "Background Image"
+        },
+        {
+            "type": "richtext",
+            "id": "inlineText",
+            "label": "Inline Copy"
+        },
+        {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+        },
+        {
+            "type": "article",
+            "id": "article",
+            "label": "Article"
+        },
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+        }
+]
+}
+
+{% endschema %}

@@ -1,0 +1,61 @@
+<div class="terms-contain">
+    <div class="terms-list">
+        <h1 class="color--blue" style="font-size: 35px; font-weight: 300;">subscribe on your terms</h1>
+        <li class="list-item sans--medium pt5" style="font-weight: 300;">
+            Get delivery updates
+        </li>
+        <li class="list-item sans--medium pt1" style="font-weight: 300;">
+           Swap products anytime
+        </li>
+        <li class="list-item sans--medium pt1" style="font-weight: 300;">
+            Flexible monthly delivery dates
+        </li>
+    </div>
+    <div class="pb5">
+        <picture class="full-width desktop-img">
+            <source
+                srcset="{{section.settings.statBGImage | img_url: '1024x1024'}}"
+                media="(min-width: 800px)"><img class="terms-image" alt="subscription box photo" src="{{section.settings.statBGImage | img_url: '1024x1024' | crop: 'center' }}">
+        </picture>
+    </div>
+</div>
+
+<style>
+    .terms-image {
+        width: 30vw;
+        margin-left: 30%;
+    }
+    .terms-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .list-item::marker {
+        width: 50%;
+        font-size: 16px;
+    }
+</style>
+
+
+{% schema %}
+{
+    "name": "Your Terms",
+  "settings": [	      
+            {
+                "type": "image_picker",
+                "id": "statBGImage",
+                "label": "Header Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "statMobile",
+                "label": "Mobile Image"
+            }
+  ],
+  "presets": [{
+    "name": "About Us",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

@@ -1,0 +1,228 @@
+<meta name="robots" content="noindex">
+<div class="pt2 mt0 mb0 mt3--md mb0--md" style="background-color:#f4f4f4;">
+	<div class="full-contain">
+    <div class="tc pt10 pb4 pr hero-sleep"  >     		
+			<!-- <img class="pt2--md pb5 logo" src="{{ 'beam-logo-white.png' | asset_url }}"/> -->
+            <h2 style="text-transform: none !important;" class="sans--large fw--300 mb0 ws--pre-line hero-header new--blue">Sleep Analysis Sources</h2>      
+            <p style="text-transform: none !important;" class="main-copy fw--400 mb0 ws--pre-line color--white">Dean, G. E., Weiss, C., Jungquist, C. R., Klimpt, M. L., Alameri, R., Ziegler, P. A., Steinbrenner, L. M., Dexter, E. U., Dhillon, S. S., Lucke, J. F., & Dickerson, S. S. (2020). Nurse-Delivered Brief Behavioral Treatment for Insomnia in Lung Cancer Survivors: A Pilot RCT. Behavioral sleep medicine, 18(6), 774–786. <a href="https://doi.org/10.1080/15402002.2019.1685523">https://doi.org/10.1080/15402002.2019.1685523</a></p>
+            <p style="text-transform: none !important;" class="main-copy fw--400 mb0 ws--pre-line color--white">Dean, G. E., Weiss, C., Morris, J. L., & Chasens, E. R. (2017). Impaired Sleep: A Multifaceted Geriatric Syndrome. The Nursing clinics of North America, 52(3), 387–404. <a href="https://doi.org/10.1016/j.cnur.2017.04.009">https://doi.org/10.1016/j.cnur.2017.04.009</a>></p>
+            <p style="text-transform: none !important;" class="main-copy fw--400 mb0 ws--pre-line color--white">Schmid, et al. 2008. A single night of sleep deprivation increases ghrelin levels and feelings of hunger in normal-weight healthy men. Journal of sleep research, 17(3), 331–334. <a href="https://doi.org/10.1111/j.1365-2869.2008.00662.x">https://doi.org/10.1111/j.1365-2869.2008.00662.x</a></p>
+            <p style="text-transform: none !important;" class="main-copy fw--400 mb0 ws--pre-line color--white">Taheri, S., Lin, L., Austin, D., Young, T., & Mignot, E. (2004). Short sleep duration is associated with reduced leptin, elevated ghrelin, and increased body mass index. PLoS medicine, 1(3), e62. <a href="https://doi.org/10.1371/journal.pmed.0010062">https://doi.org/10.1371/journal.pmed.0010062</a></p>
+            <p style="text-transform: none !important;" class="main-copy fw--400 mb0 ws--pre-line color--white">Donga, E., van Dijk, M., van Dijk, J. G., Biermasz, N. R., Lammers, G. J., van Kralingen, K. W., Corssmit, E. P., & Romijn, J. A. (2010). A single night of partial sleep deprivation induces insulin resistance in multiple metabolic pathways in healthy subjects. The Journal of clinical endocrinology and metabolism, 95(6), 2963–2968. <a href="https://doi.org/10.1210/jc.2009-2430">https://doi.org/10.1210/jc.2009-2430</a></p>
+            <p style="text-transform: none !important;" class="main-copy fw--400 mb0 ws--pre-line color--white">Souza et al. (2017). High-Intensity Interval Training Attenuates Insulin Resistance Induced by Sleep Deprivation in Healthy Males. Front. Physiol., 07 December 2017 | <a href="https://doi.org/10.3389/fphys.2017.00992">https://doi.org/10.3389/fphys.2017.00992</a></p>
+            <p style="text-transform: none !important;" class="main-copy fw--400 mb0 ws--pre-line color--white">Nagai, M., Hoshide, S., & Kario, K. (2010). Sleep duration as a risk factor for cardiovascular disease- a review of the recent literature. Current cardiology reviews, 6(1), 54–61. <a href="https://doi.org/10.2174/157340310790231635">https://doi.org/10.2174/157340310790231635</a></p>
+            <!-- <a class="btn fw--600" href="#tracker">Track last night's sleep</a> -->
+        </div>
+	</div>
+		<div id="tracker" class="pr" >
+            <div class="pr mt0--md">
+                <div class="grid-container contained dates-container">
+					<div style="text-transform: none !important;" class="sleep-headers color--white"></div>
+                </div>
+            </div>
+        </div>
+        <div class="form-padding">
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<style>
+	html{
+		scroll-behavior:smooth
+	}
+	a {
+		text-decoration: underline;
+		color: #427CBF
+	}
+    .form-padding {
+        background-color:#f4f4f4;
+        padding-top: 5%;
+    }
+	.new--blue {
+		color: #427CBF;
+	}
+
+	.hero-header {
+		margin-top: 10%;
+	}
+	.pb5p {
+		padding-bottom: 10%;
+	}
+    .gOXIVZ {
+        background-color: transparent !important;
+    }
+	.logo {
+		width: 125px;
+		padding-top: 8%;
+	}
+	.sleep-headers {
+		font-size: 30px;
+	}
+	.dates-container {
+		display: flex;
+		margin: auto;
+		justify-content: center;
+		padding-bottom: 7px;
+	}
+	 .btn {
+        border-radius: 3px;
+        display: inline-block;
+        color: #427BBE;
+        background-color: #fff;
+        transition: 200ms ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 225px;
+        height: 55px;
+		margin: auto;
+    }
+	.fw--300 {
+		font-weight: 300;
+	}
+	.hero-sleep {
+		width: 55vw;
+		margin: auto;
+		padding-bottom: 3%;
+	}
+	.main-copy {
+		font-size: 20px;
+		line-height: 150%;
+		padding: 3% 0;
+		color: #000;
+		text-align: left;
+	}
+	.gifts-container {
+		margin: auto;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.date-circle {
+		border: 1px solid white;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.today-date {
+		background-color: #5DA2F6;
+		border: 0;
+	}
+	/* .date-circle-container {
+		width: 50vw;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		padding: 5% 0 0;
+		margin: auto;
+	} */
+	.circle-day {
+		text-transform: capitalize !important;
+		font-size: 12px;
+		padding-bottom: 5px;
+		padding-top: 12px;
+	}
+	.passed-day {
+		background-color: #314367;
+		border: 0;
+	}
+	.circle-number {
+		font-size: 40px;
+	}
+	.reward-quart {
+		width: 45%;
+		background-color: rgb(54, 73, 110, .6);
+		margin-bottom: 2%;
+		margin-right: 2%;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		height: 150px;
+		justify-content: space-between;
+	}
+	.rewards-container {
+		width: 55vw;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-top: 2%;
+	}
+	.full-contain {
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-repeat: no-repeat;
+		background-position-y: -1vw;
+		background-position-x: -2vw;
+		background-repeat: no-repeat;
+		background-size: 90vw;
+	}
+	.quart-icon {
+		width: 25px;
+		margin: 10px 20px;
+	}
+	.custom-icon {
+		width: 20px;
+		margin-top: 12px;
+	}
+	.quart-copy {
+		margin: 10px 20px 20px;
+		font-size: 14px;
+		width: 70%;
+		line-height: 125%;
+	}
+    @media screen and (max-width: 800px) {
+		.hero-sleep {
+			padding-top: 10%;
+			width: 90vw;
+			padding-bottom: 10%;
+		}
+		.pb5p {
+		padding-bottom: 10%;
+		}
+		.sleep-headers {
+			font-size: 19px;
+		}
+		.rewards-container {
+			flex-direction: column;
+			width: 90vw;
+		}
+		.reward-quart {
+			width: 100%;
+		}
+		.date-circle-container {
+			width: 85vw;
+		}
+		.date-circle {
+			width: 60px;
+			height: 60px;
+		}
+		.circle-number {
+			font-size: 23px;
+		}
+		.circle-day {
+			padding-top: 3px;
+			padding-bottom: 0;
+		}
+		
+	}
+    @media screen and (max-width: 400px) {
+		.date-circle-container {
+			width: 93vw;
+		}
+		.dates-container {
+			padding: 0;
+		}
+		.sleep-headers {
+			font-size: 18px;
+		}
+
+	}
+</style>

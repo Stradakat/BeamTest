@@ -1,0 +1,86 @@
+<div class="pt1 pb1 tc color--white" style="background-color: #8c8cf0;">
+    <div class="marquee">
+        <div class="track">
+            <div class="content">
+                non-GMO <span class="pl3 pr3 pl8--md pr8--md">•</span> dairy free <span
+                    class="pl3 pr3 pl8--md pr8--md">•</span> gluten free<span class="pl3 pr3 pl8--md pr8--md">•</span>
+                no sugar added<span class="pl3 pr3 pl8--md pr8--md">•</span>
+                non-GMO <span class="pl3 pr3 pl8--md pr8--md">•</span> dairy free <span
+                    class="pl3 pr3 pl8--md pr8--md">•</span> gluten free<span class="pl3 pr3 pl8--md pr8--md">•</span>
+                no sugar added<span class="pl3 pr3 pl8--md pr8--md">•</span>               
+                non-GMO <span class="pl3 pr3 pl8--md pr8--md">•</span> dairy free <span
+                    class="pl3 pr3 pl8--md pr8--md">•</span> gluten free<span class="pl3 pr3 pl8--md pr8--md">•</span>
+                no sugar added<span class="pl3 pr3 pl8--md pr8--md">•</span>
+                non-GMO <span class="pl3 pr3 pl8--md pr8--md">•</span> dairy free <span
+                    class="pl3 pr3 pl8--md pr8--md">•</span> gluten free<span class="pl3 pr3 pl8--md pr8--md">•</span>
+                no sugar added<span class="pl3 pr3 pl8--md pr8--md">•</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+<style>
+	.marquee {
+        position: relative;
+        width: 100vw;
+        max-width: 100%;
+        height: 26px;
+        overflow-x: hidden;
+    }
+
+    .marquee .content {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .track {
+        position: absolute;
+        white-space: nowrap;
+        will-change: transform;
+        animation: marquee 74s linear infinite;
+    }
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+	@media screen and (max-width: 600px) {
+        .marquee {
+            position: relative;
+            width: 100vw;
+            max-width: 100%;
+            height: 22px;
+            overflow-x: hidden;
+        }
+
+        .marquee .content {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .track {
+            position: absolute;
+            white-space: nowrap;
+            will-change: transform;
+            animation: marquee 124s linear infinite;
+        }
+    }
+</style>
+{% schema %}
+{
+  "name": "Marquee",
+  "class": "marquee-section",
+  "settings": [	             
+  ],
+  "presets": [{
+    "name": "Marquee",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

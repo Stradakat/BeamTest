@@ -1,0 +1,109 @@
+<div class="doc-contain">
+    <div class="doc-inline">
+        <div class="doc-flex">
+        <img class="doc-img mobile-img" src="{{ section.settings.mobileImg |  img_url: '800x720' }}">
+        <img class="doc-img desktop-im" src="{{ section.settings.joinImg |  img_url: '1024x1024' }}">
+        </div>
+        <div class="doc-flex-copy">
+            <h1 class="doc-title">Meet Beam's Resident Sleep Expert</h1>
+            <h1 style="text-transform: capitalize !important;" class="doc-subtitle">{{section.settings.joinTitle}}</h1>
+            <h1 class="doc-copy pt3 pb3">{{section.settings.copy}}</h1>
+            <img class="headshot" src="{{ section.settings.joinImg2 |  img_url: '1024x1024' }}">
+            <h1 style="text-transform: none !important" class="headshot-title">-Dr. Weiss, PhD, MS, RN</h1>
+            <h1 class="headshot-subtitle">Sleep Scientist</h1>
+        </div>
+    </div>
+</div>
+
+<style>
+    .mobile-img {
+        display: none;
+    }
+    .doc-contain {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .doc-inline {
+        width: 80%;
+    }
+    .doc-img {
+        width: 100%;
+    }
+    .doc-flex-copy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .doc-title {
+        font-size: 16px;
+        color: #427BBE;
+        font-weight: 600;
+        padding-top: 3%;
+    }
+    .doc-subtitle {
+        font-size: 32px;
+        padding-top: 3%;
+        font-weight: 300;
+    }
+    .doc-copy {
+        text-align: center;
+    }
+    .headshot {
+        width: 7%;
+    }
+    .headshot-title {
+        padding-top: 1%;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    ::marker {
+        font-size: 14px;
+    }
+    @media screen and (max-width: 800px) {
+        .mobile-img {
+            display: flex;
+        }
+        .desktop-im {
+            display: none;
+        }
+        
+    }
+</style>
+
+
+{% schema %}
+{
+    "name": "Doctor",
+  "settings": [	      
+            {
+				"type": "text",
+				"id": "joinTitle",
+				"label": "title"
+			},
+            {
+				"type": "textarea",
+				"id": "copy",
+				"label": "copy"
+			},
+            {
+                "type": "image_picker",
+                "id": "joinImg",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "joinImg2",
+                "label": "Headshot"
+            },
+            {
+                "type": "image_picker",
+                "id": "mobileImg",
+                "label": "Image"
+            }
+  ]
+}
+
+{% endschema %}

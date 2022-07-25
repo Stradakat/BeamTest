@@ -1,0 +1,134 @@
+<div class="join-contain">
+    <div class="join-inline">
+        <div class="join-flex">
+        <img loading="lazy" class="join-img" src="{{ section.settings.joinImg |  img_url: '800x1200' }}">
+        </div>
+        <div class="join-flex-copy">
+            <h1 role="heading" class="join-title">{{section.settings.joinTitle}}</h1>
+            <h1 class="join-copy pt3 pb3">{{section.settings.copy}}</h1>
+            <a class="btn fw--600" href="/pages/subscriptions">Learn More</a>
+        </div>
+    </div>
+    <div class="join-inline-2">
+        <div class="join-flex">
+        <img loading="lazy" class="join-img" src="{{ section.settings.joinImg2 |  img_url: '800x1200' }}">
+        </div>
+        <div class="join-flex-copy-2">
+            <h1 class="join-title">{{section.settings.joinTitle2}}</h1>
+            <h1 class="join-copy pt3 pb3">{{section.settings.copy2}}</h1>
+            <a class="btn fw--600" href="/collections/shop-all">Shop All</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .join-inline {
+        width: 80%;
+        display: flex;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+    .join-img {
+        object-fit: cover;
+        width: 90%;
+        margin-right: 10%;
+    }
+    .join-img-2 {
+        object-fit: cover;
+        width: 95%;
+        padding-left: 5%;
+    }
+    .join-contain {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .join-inline-2 {
+        width: 80%;
+        display: flex;
+        margin: auto;
+        padding-bottom: 50px;
+        flex-direction: row-reverse;
+    }
+    .join-flex {
+        width: 50%;
+    }
+    .join-flex-copy {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 4%;
+    }
+    .join-flex-copy-2 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 14%;
+    }
+    .join-title {
+        font-size: 24px;
+        color: #427BBE;
+        font-weight: 600;
+    }
+    .join-copy {
+        font-size: 16px;
+        line-height: 150%;
+    }
+    .btn {
+        border-radius: 3px;
+        display: inline-block;
+        background-color: #427BBE;
+        color: #fff;
+        transition: 200ms ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 225px;
+        height: 55px;
+    }
+    
+    ::marker {
+        font-size: 14px;
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Join",
+  "settings": [	      
+            {
+				"type": "text",
+				"id": "joinTitle",
+				"label": "title"
+			},
+            {
+				"type": "textarea",
+				"id": "copy",
+				"label": "copy"
+			},
+            {
+                "type": "image_picker",
+                "id": "joinImg",
+                "label": "Image"
+            },
+            {
+				"type": "text",
+				"id": "joinTitle2",
+				"label": "title"
+			},
+            {
+				"type": "textarea",
+				"id": "copy2",
+				"label": "copy"
+			},
+            {
+                "type": "image_picker",
+                "id": "joinImg2",
+                "label": "Image"
+            }
+  ]
+}
+
+{% endschema %}

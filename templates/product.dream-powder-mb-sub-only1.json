@@ -1,0 +1,180 @@
+{
+  "sections": {
+    "1634522024b75d8bb8": {
+      "type": "product-subscription-banner",
+      "settings": {
+        "newlogo": "shopify:\/\/shop_images\/theSkimm_PrimaryLogo_beam.png",
+        "headertext": "exclusive offer for TheSkimm readers",
+        "bannerproduct": "dream-powder-skimm",
+        "subscriptionid": "39512140578871",
+        "heading": "your best sleep, ever.",
+        "popupheading": "dream powder",
+        "popupimg": "shopify:\/\/shop_images\/hemp-nutritionfacts-dream-powder-1.jpg",
+        "description": "dream is a delicious, guilt-free, CBD-based hot cocoa that promotes better sleep and a more refreshed morning—all with no artificial sweeteners or added sugar. it contains five powerful ingredients - nano CBD, reishi, magnesium,L-Theanine, and melatonin - to help you get the zzz’s you deserve.",
+        "price": "61.75",
+        "saleprice": "$95.00"
+      }
+    },
+    "16345229841284da9d": {
+      "type": "marquee-section",
+      "settings": {
+      }
+    },
+    "163452314601aaca70": {
+      "type": "text-image-no-background",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/drweiss-testimonial.jpg",
+        "labeltext": "Meet Beam's resident sleep expert",
+        "heading": "dr. carleara weiss",
+        "content": "“we are a 24\/7 society where sleep is undervalued and consequently, many struggle with poor sleep quality. as a sleep scientist, my goal is to help people understand the importance of sleep for physical and mental health. beam is committed to offering products that may contribute to sleep quality while maintaining an ethical and conscious approach to overall wellness for those who consume their products.”",
+        "subheading": "Dr. Weiss, PhD, MS, RN",
+        "other": "sleep scientist"
+      }
+    },
+    "1634523326018e257f": {
+      "type": "image-text-background",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/dream1.jpg",
+        "icon": "shopify:\/\/shop_images\/zzz.png",
+        "heading": "The Power of Dream",
+        "content": "Content textWith Dream Powder, you’re getting more than just quality shuteye. You’re providing your body with sleep-enhancing* vitamins and minerals, such as Magnesium, Reishi,L-Theanine, and Nano Hemp."
+      }
+    },
+    "16345233667e2f53f0": {
+      "type": "icon-grid",
+      "blocks": {
+        "16345233667e2f53f0-0": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-magnesium.png",
+            "iconheading": "reishi",
+            "iconcontent": "mushroom superfood that helps to support the body’s sleep cycle as well as manage stress*"
+          }
+        },
+        "16345233667e2f53f0-1": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-melatonin.png",
+            "iconheading": "magnesium",
+            "iconcontent": "mineral that aids the body’s ability to fall asleep by producing melatonin and regulating the nervous system*"
+          }
+        },
+        "16345233667e2f53f0-2": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-hemp.png",
+            "iconheading": "Nano Hemp",
+            "iconcontent": "particles with the highest absorption potential to naturally support inflammation, balance, and sleep*"
+          }
+        },
+        "22455323-567b-44ff-b420-de85646741bc": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-reishi.png",
+            "iconheading": "L-Theanine",
+            "iconcontent": "amino acid that promotes relaxation, calmness and helps improve sleep quality*"
+          }
+        },
+        "f85e6e21-e4e9-43bc-99bc-77506449a9d5": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-Ltheanine.png",
+            "iconheading": "melatonin",
+            "iconcontent": "compound that regulates the body’s circadian rhythm, promoting restful sleep*"
+          }
+        }
+      },
+      "block_order": [
+        "16345233667e2f53f0-0",
+        "16345233667e2f53f0-1",
+        "16345233667e2f53f0-2",
+        "22455323-567b-44ff-b420-de85646741bc",
+        "f85e6e21-e4e9-43bc-99bc-77506449a9d5"
+      ],
+      "settings": {
+        "title": "what’s in your dream powder?"
+      }
+    },
+    "1634575840cbe5f8d8": {
+      "type": "text-image-background",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/dream_rebrand-lifestyle_08-enjoy.jpg",
+        "headingimage": "shopify:\/\/shop_images\/half-moon.png",
+        "heading": "how to enjoy",
+        "content": "put at least 1 scoop of dream powder into a mug of warm milk or hot water and blend using your beam frother for a cozy frothy finish. Sip 20-30 minutes before bedtime then enjoy your deepest night’s sleep."
+      }
+    },
+    "16345765276bb36b8b": {
+      "type": "table-layout",
+      "settings": {
+        "left-heading": "98%",
+        "left-content": "fall asleep faster when taking dream.",
+        "right-heading": "100%",
+        "right-content": "experience better sleep quality"
+      }
+    },
+    "163457663007dbade4": {
+      "type": "image-text-background",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/dream2.jpg",
+        "icon": "shopify:\/\/shop_images\/coffee-mug.png",
+        "heading": "your new night-time ritual",
+        "content": "we suggest preparing your cup of dream about 30 minutes before bedtime. Calming, nightly rituals help signal to your body and mind that it’s time to wind down once and for all. So whether you want to read, meditate or journal before bed, dream slips seamlessly into your night-time routine."
+      }
+    },
+    "16345770726c006872": {
+      "type": "logo-grid",
+      "blocks": {
+        "16345770726c006872-0": {
+          "type": "column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/maxim-logo.png",
+            "logocontent": "\"these pro-athlete-approved hemp products will improve physical and mental wellness.\""
+          }
+        },
+        "16345770726c006872-1": {
+          "type": "column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/beam-homepage-presslogo-forbes_2x_be45a002-498d-49e9-8bbf-60145ca4dab6.png",
+            "logocontent": "\"[Beam] is a great addition to an athlete’s nightly routine.\""
+          }
+        },
+        "16345770726c006872-2": {
+          "type": "column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/beam-homepage-presslogo-realsimple_2x_190725_183951.png",
+            "logocontent": "\"i've started using [Beam] hemp everyday... and it changed my life.\""
+          }
+        }
+      },
+      "block_order": [
+        "16345770726c006872-0",
+        "16345770726c006872-1",
+        "16345770726c006872-2"
+      ],
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "product-subscription-add",
+      "settings": {
+        "variantid": "39512140578871",
+        "price": "",
+        "saleprice": "",
+        "review": ""
+      }
+    }
+  },
+  "order": [
+    "1634522024b75d8bb8",
+    "16345229841284da9d",
+    "163452314601aaca70",
+    "1634523326018e257f",
+    "16345233667e2f53f0",
+    "1634575840cbe5f8d8",
+    "16345765276bb36b8b",
+    "163457663007dbade4",
+    "16345770726c006872",
+    "main"
+  ]
+}

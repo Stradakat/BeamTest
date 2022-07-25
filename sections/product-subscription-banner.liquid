@@ -1,0 +1,475 @@
+{% assign add_to_cart = 'subscribe' %}
+{% assign sold_out = 'Sold Out' %}
+{% assign unavailable = 'Unavailable' %}
+{% assign product = section.settings.bannerproduct %}
+{% assign product_id = product.id %}
+{% assign subscriptionid = section.settings.subscriptionid %}
+
+<meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
+<meta itemprop="image" content="{{ product | img_url: 'grande' }}" />
+<div class="modal hidden" id="download-modal"></div>
+<div class="modal--overlay hidden"></div>
+<div class="header-lp bg--white pt2 pb2 p2--md pl3--md pr3--md" style="border-bottom: 1px solid rgb(172, 172, 172);">
+    <div class="grid-container contained">
+        <div class="row align--middle">
+            <div class="col c4--md c3--lg tc tl--md">
+                <a title="beam" href="/">
+<!--                     <img style="margin-top: 4px; height: 32px;" width="auto" src="{{ section.settings.newlogo | img_url: 'master' }}"> -->
+<img style="height: 26px;" width="auto" src="{{ 'beam-logo-black.png' | asset_url }}">
+
+                </a>
+            </div>
+            <div class="col c8--md c9--lg tc tr--md">
+                <p class="color--black show--md fw--600" ><span class="bold-heading"> {{section.settings.headertext}} </span> {{ section.settings.headertext1 }}</p>
+              <p class="color--black sans--small pt0 pb2 hide--md fw--600" >{{ section.settings.headertext1 }}</p>
+            </div> 
+            <div class="col c4--md c3--lg tc tr--md hide--md">
+                <a title="learn more" style="color: #fff !important; line-height: 2; background-color: #2f358e !important" class="add_to_cart_dream1 dib custom-button--wave-primary-top link--opacity pill bg--blue color--white" href="https://beamorganics.com/cart/{{ section.settings.subscriptionid}}:1">{{section.settings.btntext}}</a>
+            </div> 
+
+        </div>
+    </div>
+</div>
+
+
+<div id="detailsModal" class="details-modal">
+
+
+    <!-- Modal content -->
+    <div class="details-modal-content" style="max-width: 700px;">
+        <div class="details-header tl color--white purple-header">
+            <h1 class="sans--large fw--300 lowercase" temprop="name">{{ section.settings.popupheading }}</h1>
+            <p class="sans--small fw--600">{{ product.type }}</p>
+            <span class="close fw--600" style="font-weight: 600 !important;">&times;</span>
+        </div>
+        <div class="inner">
+            <img style="width: 100%;height: auto;" src="{{ section.settings.popupimg | img_url : '1024x1024' }}">
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="grid-container contained">
+    <!-- Section 1 -->
+    <div class="row mt1 mt0--md pt0--md align--middle">
+        <div class="col c1--md c1--lg show--md"></div>
+        <div class="col c5--md c5--lg pb4--md pr mt1 mt3--md left-grid">
+            <div class="of--hidden" data-image-gallery>
+
+                <div class="pdp-images slideshow slideshow-second product-photo-container" id="new-dream-second">
+                   
+                    <div class="slide">
+                        <img class="rounded" src="{{ section.settings.bannerimg | img_url: '800x700', crop: 'center' }}">
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col c4--md c5--lg pb2 right-grid">
+                <h2 class="pt1 pt1--md mb2 sans--large fw--600 tc color--blue">
+                    {{ section.settings.heading }}
+                </h2>
+
+                <div class="tc">
+
+                    <p class="sans--body mt1 color--black fw--400">
+                        {{ section.settings.description }}
+                    </p>
+
+                    <div class="mt2">
+                        <p class="sans--body color--black fw--600">
+                            <span>{{section.settings.headertext}}</span> 
+                            {{ section.settings.headertext1 }}
+                        </p>
+
+                        <p class="sans--small fw--600 pt1">
+                            <span class="media__fixed tc">
+                              <span class="db color--blue fw--600 sans--medium">
+                                  <s class="compare-at-price color--blue">{{section.settings.saleprice }}</s>
+                                  {{ section.settings.price }}
+                              </span>
+                            </span>
+                        </p>
+                </div>
+    
+    
+                    <div class="pt1 pt1--md pt1--lg pt2--xl pb1 pb0--md">
+                     <div class="media__fixed mt1 mb2 tc">
+                       <a title="learn more" style="color: #fff !important; line-height: 2; background-color: #2f358e !important" class="add_to_cart_dream1 dib custom-button--wave-primary-top link--opacity pill bg--blue color--white" href="https://beamorganics.com/cart/{{ section.settings.subscriptionid}}:1">{{section.settings.btntext}}</a></div>
+                    </div>
+                    <div id="detailsModalBtnGuarantee" class="sans--body tc lowercase mt2--md"><i class="far fa-thumbs-up pr1" aria-hidden="true"></i>30 Day Money Back Guarantee</div>
+                    <p id="detailsModalBtn" class="mt2 mb2 mb3--md fw--600 sans--body pointer underline color--blue tc tc--md"><span class="hide--md">tap</span><span class="show--md">click</span> for ingredients + product
+                      details</p>
+  
+                </div>
+        </div>
+    </div>
+</div>
+
+<style>
+	.klaviyo-form {display: none !important;}
+    #main {padding-top: 0 !important;}
+    .header__nav > .contained  {display: none !important;}
+  .header__nav {
+  	position: relative;
+  }
+  #new-dream-second .slick-dots {
+  	display: none;
+  }
+    .rc_radio_options {
+        border-radius: 14px;
+        border: 1px solid #2F358E;
+        margin-bottom: 10px;
+    }
+
+    div.rc_block__type.rc_block__type__onetime {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: 1px solid #2F358E;
+    }
+
+    div.rc_block__type {
+        border-radius: 14px;
+    }
+
+    .rounded-more {
+        border-radius: 14px;
+    }
+
+    .sans--body-new {
+        font-size: 13px;
+        letter-spacing: .15px;
+        line-height: 25px;
+    }
+
+    .template-product .header__nav {
+        background-color: #fff;
+        border-bottom: 1px solid #e6e6e6;
+    }
+	.pill {
+        border-radius: 32px;
+        display: inline-block;
+        border: #2F358E;
+        transition: 200ms ease-in-out;
+        min-width: 220px;
+        width: auto !important;
+        padding-right: 32px;
+        padding-left: 32px;
+
+    }
+
+    .pill--blue:hover {
+        background-color: #494fa7;
+    }
+
+    .pill:hover {
+        background-color: #E9F2FF;
+    }
+	@media screen and (min-width: 600px) {
+		.slideshow-second .slick-dots li {
+			width: 19%;
+			display: inline-block;
+			margin-right: 1%;
+		}
+
+		.slideshow-second .slick-dots {
+			bottom: -10px !important;
+		}
+	}
+	@media screen and (max-width: 600px) {
+       
+        .pill {
+            border-radius: 32px;
+            display: inline-block;
+            border: #2F358E;
+            transition: 200ms ease-in-out;
+            min-width: 100%;
+            width: 100% !important;
+            padding-right: 32px;
+            padding-left: 32px;
+
+        }
+	}
+	 @media screen and (min-width: 600px) {
+
+        .slideshow-second .slick-dots li {
+            width: 19%;
+            display: inline-block;
+            margin-right: 1%;
+        }
+
+        .slideshow-second .slick-dots {
+            bottom: -10px !important;
+        }
+    }
+	@media screen and (max-width: 1424px) {
+        .slick-dots {
+            top: auto !important;
+            bottom: -20px !important;
+            left: auto !important;
+            right: auto;
+            text-align: center;
+        }
+
+        .slick-dots li {
+            display: inline;
+            margin-right: 8px;
+        }
+
+        .slideshow.slideshow-mobile .slick-dots {
+            bottom: 24px !important;
+        }
+
+        .slideshow.slideshow-mobile .slick-dots li button {
+            background-color: transparent;
+        }
+
+        .slick-dots li button {
+            background-color: #C2C2C2;
+        }
+
+        .slick-dots li button {
+            text-indent: -100000px;
+            border-radius: 100%;
+            border: solid rgba(255, 255, 255, 0.781) 1px;
+            background-color: #C2C2C2;
+            width: 14px;
+            height: 14px;
+        }
+
+        .slideshow.slideshow-mobile .slick-dots li.slick-active button,
+        .slick-dots li.slick-active button {
+            background-color: #8c8cf0;
+        }
+    }
+  .bold-heading {    	
+      color: #6a94d4;
+    }
+  @media screen and (max-width: 767px) {
+    .header-lp .db {
+    	margin: auto;
+      	margin-bottom: 20px;
+    }
+    .bold-heading {
+    	font-size: 15px;
+      color: #6a94d4;
+    }
+    .grid-container h2 {
+    	margin-top: 20px;
+    }
+    .aboutus-sliders h2, .text-image_background h2 {
+    	margin-top: 0px;
+    }
+    .oneline {
+    	font-size: 10px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .grid-container .left-grid {
+    	padding-right: 50px;
+    }
+    .grid-container .right-grid {
+    	padding-left: 50px;
+    }
+  }
+</style>
+
+<script>
+
+
+	$(document).ready(function () {
+		$('.add_to_cart_dream1').click(function(){
+			  addItemToCart()
+			  return false;
+		});
+	
+	});
+	
+		function addItemToCart() {
+		  data = {
+            "id": {{subscriptionid}},
+			"quantity": 1,
+			"properties": {
+			  "shipping_interval_frequency": "30",
+			  "shipping_interval_unit_type": "Days"
+			}
+		  }
+		  jQuery.ajax({
+			type: 'POST',
+			url: '/cart/add.js',
+			data: data,
+			dataType: 'json',
+			success: function() { 
+			  window.location.href = '/cart'; 
+			}
+		  });
+		}
+	
+		$(document).ready(function () {
+	
+		$('.qtybox .btnqty').on('click', function () {
+			var qty = parseInt($(this).parent('.qtybox').find('.quantity-input').val());
+			if ($(this).hasClass('qtyplus')) {
+				qty++;
+			} else {
+				if (qty > 1) {
+					qty--;
+				}
+			}
+			qty = (isNaN(qty)) ? 1 : qty;
+			$(this).parent('.qtybox').find('.quantity-input').val(qty);
+		});
+	
+	
+		$('.pdp-images.slideshow').slick({
+			autoplay: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			fade: true,
+			useTransform: true,
+			arrows: true,
+			dots: true,
+			autoplaySpeed: 5000,
+			adaptiveHeight: false,
+			pauseOnHover: true,
+			customPaging: function (slick, index) {
+				var targetImage = slick.$slides.eq(index).find('img').attr('src');
+				return '<img src=" ' + targetImage + ' "/>';
+			},
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						fade: false,
+						arrows: false,
+						dots: true,
+						customPaging: function (slider, i) {
+							return $('<button type="button" />').text(i + 1);
+						},
+						lazyLoad: $(this).find('[data-lazy]').length > 0 ? 'progressive' : null
+					}
+				}
+			]
+		});
+	
+	
+	
+		// Get the modal
+		var modal = document.getElementById("detailsModal");
+	
+		// Get the button that opens the modal
+		var btn1 = document.getElementById("detailsModalBtn");
+	
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+	
+	
+		// When the user clicks on the button, open the modal
+		btn1.onclick = function () {
+			modal.style.display = "block";
+		}
+		// When the user clicks on the button, open the modal
+	
+	
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+	
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	
+	});
+	
+	
+</script>
+
+{% schema %}
+{
+  "name": "Product Sub banner 2",
+  "class": "product-subscription_banner",
+  "settings": [	      
+			{
+				"type": "image_picker",
+				"id": "newlogo",
+				"label": "Landing page header logo"
+			}, 
+			{
+				"type": "image_picker",
+				"id": "bannerimg",
+				"label": "Landing page Banner Image"
+			},
+			{
+				"type": "text",
+				"id": "headertext",
+				"label": "Landing page header text"
+			},
+			{
+				"type": "text",
+				"id": "headertext1",
+				"label": "Landing page header text1"
+			},
+			{
+              "type":"product",
+              "id":"bannerproduct",
+              "label": "Product"			
+			},
+			{
+				"type": "text",
+				"id": "subscriptionid",
+				"label": "Product subscription id"
+			},
+			{
+				"type": "text",
+				"id": "heading",
+				"label": "Heading",
+				"default": "your best sleep, ever."
+			},
+			
+			{
+				"type": "text",
+				"id": "popupheading",
+				"label": "Popup Heading"
+			},
+			{
+				"type": "image_picker",
+				"id": "popupimg",
+				"label": "Popup Image"
+			},			
+			{
+				"type": "text",
+				"id": "description",
+				"label": "Custom product description"				
+			},
+			{
+				"type": "text",
+				"id": "btntext",
+				"label": "Button Text",
+				"default": "get 35% off"
+			},
+			{
+				"type": "text",
+				"id": "price",
+				"label": "Product Price"
+			},
+			{
+				"type": "text",
+				"id": "saleprice",
+				"label": "Product Sale Price"
+			}
+  ],
+  "presets": [{
+    "name": "Product Sub banner 2",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

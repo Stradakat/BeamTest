@@ -1,0 +1,81 @@
+<div class="pdp-images slideshow slideshow-mobile product-photo-container">
+    <div id="imgDP" class="slide slide-{{ forloop.index }}">
+        <img width="100px" class="product-image-main" src="{{ section.settings.productImg | product_img_url: "master" }}">
+    </div>
+    <div id="imgSSC" class="slide slide-{{ forloop.index }}">
+        <img width="100px" class="product-image-main" src="{{ section.settings.productSSC| product_img_url: "master" }}">
+    </div>
+    <div id="imgXS" class="slide slide-{{ forloop.index }}">
+        <img width="100px" class="product-image-main" src="{{ section.settings.productXS | product_img_url: "master" }}">
+    </div>
+    <div class="slide slide-{{ forloop.index }}">
+        <img class="product-image-main" src="{{ section.settings.productImg3 | product_img_url: "master" }}">
+    </div>
+    <div class="slide slide-{{ forloop.index }}">
+        <img class="product-image-main" src="{{ section.settings.productImg4 | product_img_url: "master" }}">
+    </div>
+    <div class="slide slide-{{ forloop.index }}">
+        <img class="product-image-main" src="{{ section.settings.productImg5 | product_img_url: "master" }}">
+    </div>
+    <div class="slide slide-{{ forloop.index }}">
+        <img class="product-image-main" src="{{ section.settings.productImg6 | product_img_url: "master" }}">
+    </div>
+    <div class="slide slide-{{ forloop.index }}">
+        <img class="product-image-main" src="{{ section.settings.productImg7 | product_img_url: "master" }}">
+    </div>
+</div>
+{% schema %}
+
+{
+    "name": "Product",
+  "settings": [	      
+            {
+                "type": "image_picker",
+                "id": "productImg",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "productImg2",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "productImg3",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "productImg4",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "productImg5",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "productImg6",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "productImg7",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "productSSC",
+                "label": "SSCImage"
+            },
+            {
+                "type": "image_picker",
+                "id": "productXS",
+                "label": "productXS"
+            }
+            
+  ]
+}
+
+{% endschema %}

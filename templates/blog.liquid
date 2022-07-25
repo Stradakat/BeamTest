@@ -1,0 +1,392 @@
+
+{% paginate blog.articles by 12 %}
+
+<div class="reveal__container active pt10">
+  {% assign currentBlog = blog.url | split: '/blogs/' | slice: 1 %}
+
+  <div class="mt4 mb4 mt8--md mb6--md">
+    <div class="row align--center mb5">
+      <div class="col c6--md c9--lg tc">
+        <p role="heading" style="font-size: 20px;" class="tc mb2 mb2--md color--blue fw--600">The Daily Beam</p>
+          <div class="tc sans--large color--black">
+              <h2 style="font-weight: 300;">All Things Beam + Wellness, to better your body + mind.</h2>
+          </div>
+      </div>
+  </div>
+</div>
+  <div class="pt3 pb6">
+    {% section 'featured-blog' %}
+  <a name="nav"></a>
+  </div>
+
+  <div id="dialog-open" class="blog-nav desktop-drop pb8">
+  <div class="blog-content">
+    {% for link in linklists.blogs.links %}
+    {% assign item = link.object %}
+    {% assign title = item.title | downcase %}
+    {% if title == blog.handle %}
+    <div class="blog-div current-blog">
+      {% else %}
+      <div class="blog-div">
+      {% endif %}
+      {% if title == blog.handle %}
+      <a class="current-link" href="{{item.url}}" >{{item.title}}</a>
+      {% else %}
+      <a href="{{item.url}}#nav" >{{item.title}}</a>
+      {% endif %}
+    </div>
+  {% endfor %}
+  </div>
+  </div>
+
+  
+  <label class="dropdown pb3 mobile-drop" >
+
+    <div id="menu-trigger" class="dd-button blog-div mb5">
+      <a class="first-link">{{blog.handle}}
+      </a>
+      <span class="down-arrow"></span>
+    </div>
+  
+    <input type="checkbox" class="dd-input" id="test">
+    <ul id="menu-show" class="dd-menu">
+      <h1 class="exit-button" id="exit">X</h1>
+      {% for link in linklists.blogs.links %}
+      {% assign item = link.object %}
+      <a href="{{item.url}}" >{{item.title}}</a>
+      {% endfor %}
+    </ul>
+  </label>
+
+  <div class="reveal__component__0--fade-fast grid-container">
+    <div class="articles row mt3 mb8 mb5--md">
+  {% for article in blog.articles %}
+      {% assign article_has_image = false %}
+      {% assign img_tag = '<' | append: 'img' %}
+      {% if article.excerpt_or_content contains img_tag %}
+        {% assign src = src[1] | split: '"' | first %}
+        {% if src %}
+          {% assign article_has_image = true %}
+          {% assign image_src = src | replace: '_small', '' | replace: '_compact', '' | replace: '_medium', '' | replace: '_large', '' | replace: '_grande', '' %}
+        {% endif %}
+      {% endif %}  
+      <div class="col c12 c6--md c6--lg mb2 mb3--md article-item">
+        <div class="article{% if forloop.first %} first{% endif %}{% if forloop.last %} last{% endif %} clear ml1 mr1 mb4">
+        <div class="article-img">  
+        <a href="{{article.url}}">
+          <img class="article__grid-image lazyload" src="{{ article.image | img_url: 'master' }}">
+          </a>
+        </div>
+        <a href="{{article.url}}">
+        <div class="article-content">
+            <h2 class="sans--medium fw--600 mb1">
+              {% assign src = article.excerpt_or_content | split: 'src="' %}
+                {% assign handle_main = article.handle | split: '/' | first %}
+              <h1 style="text-transform: uppercase" class="color--blue featured">{{handle_main}}</h1>
+              <p class="article-date" style="font-weight: 300; text-transform: lowercase; color: grey; font-size: 18px;">{{article.published_at | date: "%B %d, %Y" }}</p>
+              <a class="sans--medium fw--600 pt2 article-title" href="{{ article.url }}">{{ article.title }}</a>
+            </h2>
+        </div> 
+      </a>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+
+<script>
+function myFunction() {
+  var open = document.getElementById("dialog-open");
+  open.click(function () {
+    alert('hello')
+  });
+
+}
+</script>
+
+{% if paginate.pages > 1 %}
+<div class="pagination">
+{% comment %}
+  When paginating blog articles, a previous article is actually a newer article, not an older one,
+  because blog articles are shown and paginated in a reversed chronological order.
+  The word 'previous' can be confusing, hence we'll change it.
+{% endcomment %}
+<div class="pagination-contain">
+{{ paginate | default_pagination | replace: 'Previous', '' | replace: 'Next', '' }}
+</div>
+{% endif %}
+
+{% endpaginate %}
+
+
+<style>
+    .article-item {
+    padding: 0 !important;
+  }
+  .pagination-contain {
+    width: 10vw;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+  .current-blog {
+    border: 3px solid #3d7cc9 !important;
+    background: #deeefe;
+    margin-left: -2px;
+  }
+  .current-link {
+    color: #3d7cc9 !important;
+  }
+  .mobile-drop {
+    display: none !important;
+  }
+  .blog-nav {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .blog-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid lightgray;
+    border-left: 0;
+  }
+  .blog-div:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 2px solid lightgray;
+  }
+  .blog-div:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .blog-div a {
+    padding: 15px 5vw;
+    text-transform: uppercase;
+    color: #9b9292;
+    letter-spacing: 4px;
+    font-weight: 600;
+    font-size: 14px;
+}
+  .articles {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5vw;
+  }
+  .article {
+    display: flex;
+    width: 85vw;
+  }
+  .article-content {
+    display: flex;
+    flex-direction: column;
+    width: 51%;
+    padding-left: 8%;
+    justify-content: center;
+    text-align: left;
+  }
+  .article__grid-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    height: 400px;
+  }
+  .article-img {
+    width: 72%;
+  }
+  .featured {
+        letter-spacing: 5px;
+        font-size: 13px;
+        font-weight: 700
+    }
+    .blog-content {
+      display: flex;
+      height: 50px;
+    }
+
+  .dropdown {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+.dd-input:checked + .dd-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 5vw;
+  text-transform: uppercase;
+  color: #7e7676;
+  letter-spacing: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  width: 90vw;
+  top: 0;
+  margin-top: -1px;
+  border: 2px solid lightgray;
+} 
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider{
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
+    @media screen and (max-width: 800px) {
+      .exit-button {
+        display: block;
+        position: absolute;
+        right: 0;
+        padding-right: 5%;
+        font-size: 18px;
+      }
+      .mobile-drop {
+        display: flex !important;
+      }
+      .desktop-drop {
+        display: none !important;
+      }
+      .reveal__container {
+        padding-top: 50px;
+      }
+      .article-item {
+        margin-top: 50px;
+      }
+      .blog-nav {
+        position: relative;
+      }
+      .blog-div { 
+        display: none;
+        position: absolute;
+      }
+      .blog-div:first-child { 
+        display: flex;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        width: 90vw;
+        text-align: left;
+        justify-content: space-between;
+        padding: 15px 0;
+      }
+      .blog-div:hover .blog-div {
+        display: block;
+      }
+      .blog-nav {
+        display: block;
+        width: 90vw;
+      }
+      .down-arrow {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid #7e7676;
+        border-right: 2px solid #7e7676;
+        transform: rotate(45deg);
+        margin: 0px 25px;
+      }
+      .blog-div a {
+        padding: 5px 5vw;
+      }
+      .article {
+        flex-direction: column;
+        width: 90vw;
+        margin: auto;
+        padding-bottom: 20px;
+      }
+      .articles {
+        margin: 0;
+        max-width: 100vw;
+        width: 100vw;
+      }
+      .article-img {
+        width: 100%;
+      }
+      .article-date {
+        display: none;
+      }
+      .article-content {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+      }
+      .grid-container {
+        padding: 0;
+      }
+      
+    }
+</style>
+
+<script>
+  var exit = document.getElementById("exit");
+  var menu = document.getElementById("menu-show");
+  var menuTrigger = document.getElementById("menu-trigger");
+  $(exit).click(function() {
+      menu.style.display = "none";
+})
+$(menuTrigger).click(function() {
+    if (menu.style.display == 'none'){
+      menu.style.display = "flex";
+    }
+    if (menu.style.display == ''){
+      menu.style.display = "flex";
+    }
+})
+
+</script>

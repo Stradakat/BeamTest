@@ -1,0 +1,184 @@
+<div class="athlete-cutout">
+    <div class="athlete-content">
+        <h1 style="text-transform: none!important" class="tc sleep-subtitle">TRUSTED BY</h1>
+        <h1 style="text-transform: none !important" class="tc trusted-title">Top athletes + the wellness community</h1>
+        <div class="ath-flex">
+            {% for block in section.blocks %}
+            <div class="athlete-item">
+            <div class="quote-icon" style="display: flex; flex-direction: row; justify-content: center; width: 17%; margin-bottom: -15%;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="53" height="102" viewBox="0 0 53 102">
+                    <text id="_" data-name="“" transform="translate(3)" fill="#9ec5f9" font-size="102" font-family="HoeflerText-Black, Hoefler Text" font-weight="800" letter-spacing="0.014em"><tspan x="-2.051" y="74">“</tspan></text>
+                </svg>
+            </div>
+            <h1 style="text-transform: none !important" class="ath-copy">{{block.settings.statContent}}</h1>
+            <img  class="athlete-img" style="object-fit: cover; object-position: top; border-radius: 50%;"
+            src="{{ block.settings.iconImg | img_url: 'medium' }}"
+            alt="{{block.settings.iconImg.alt}}">
+            <h1 style="text-transform: none !important" class="fw--600">{{block.settings.statHeading}}</h1>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <img class="bg-left" src="https://cdn.shopify.com/s/files/1/0264/4076/1399/t/35/assets/left-powder.jpg?v=1646418152">
+    <img class="bg-right" src="https://cdn.shopify.com/s/files/1/0264/4076/1399/t/35/assets/left-powder.jpg?v=1646418152">
+</div>
+<style>
+    .ath-copy {
+        font-size: 14px;
+        line-height: 150%;
+    }
+    .sleep-subtitle {
+        color: #427BBE;
+        font-size: 13px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+   .athlete-cutout {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	.athlete-content {
+		width: 100%;
+        z-index: 999;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+	}
+    .bg-right {
+        z-index: 998;
+        position: absolute;
+        width: 50vw;
+        right: 0;
+        margin-right: -22vw;
+        margin-top: -17vw;
+    }
+    .bg-left {
+        z-index: 998;
+        position: absolute;
+        width: 50vw;
+        left: 0;
+        margin-left: -29vw;
+        margin-top: 21vw;
+    }
+    .btn {
+        margin-bottom: 3%;
+    }
+	.ath-flex {
+		display: flex;
+		justify-content: space-evenly;
+        align-items: center;
+        width: 80vw;
+        margin: 0 auto;
+	}
+    .athlete-item {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #f4f4f4;
+        padding: 2%;
+    }
+	.trusted-title {
+		font-size: 18px;
+		font-weight: 800;
+		padding-bottom: 3%;
+	}
+	.copy-title {
+		font-size: 30px;
+		margin: 15px 0;
+	}
+	.inline-item {
+		text-align: center;
+	}
+	.seperator-vertical {
+		border-left: 2px solid #dbdbdb;
+		margin: 0 5%;
+	}
+	.copy-descript {
+		margin-bottom: 15px;
+		font-size: 18px;
+	}
+    .athlete-img {
+        width: 30%;
+        padding: 6% 0 3%;
+    }
+    @media screen and (max-width: 800px) {
+        .trusted-title {
+            width: 90%;
+        }
+	.athlete-content {
+        margin-top: 32%;
+        margin-bottom: 5%;
+    }
+    .ath-flex {
+        width: 100vw;
+        flex-direction: column;
+    }
+    .athlete-item {
+        width: 100%;
+        padding: 5%;
+        background-color: transparent;
+    }
+    .athlete-cutout {
+        padding-top: 40%;
+    }
+    .bg-left {
+        display: none;
+    }
+    .bg-right {
+        display: none;
+    }
+    }
+
+</style>
+
+
+{% schema %}
+{
+    "name": "Athletes",
+  "settings": [	      
+            {
+				"type": "text",
+				"id": "heroSubtitle",
+				"label": "SubTitle"
+			}
+  ],
+  "blocks": [
+  {
+    "type": "column",
+    "name": "Athlete",
+    "limit": 10,
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "iconImg",
+            "label": "Image"
+        },
+      {
+        "type": "text",
+        "id": "statHeading",
+        "label": "heading"
+      },
+      {
+        "type": "textarea",
+        "id": "statContent",
+        "label": "quote"            
+      }
+    ]
+  }
+],
+  "presets": [{
+    "name": "Athletes",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

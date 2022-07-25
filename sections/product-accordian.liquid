@@ -1,0 +1,160 @@
+<div class="full-width {{ section.settings.section_styles | escape }} accordian-section">
+    <div class="">
+    <div class="row align--middle gutter--none">
+            <div class="col tc c6--md show--md">
+                    <img class="full-width" src="{{ section.settings.statBGImage | img_url : '1024x1024' }}"/>
+            </div>
+            <div class="col tc c1--md"></div>
+            <div class="col tl c4--md pb4--md">
+                {% if section.settings.heroHeading %}
+                <h2 class="sans--large fw--600 mb2 color--black pl2 pr2">
+                    {{ section.settings.heroHeading | escape }}
+                </h2>
+                {% endif %}
+                <div class="accordion pl2 pr2">
+                    {% assign count = 0 %}
+                    {% for block in section.blocks %}
+                    {% assign count = count | plus: 1 %}
+
+                <div class="item">
+                    <a href="#acc{{ count }}" class="acc-heading-desktop sans--body disable-focus-ring">
+                        {% if block.settings.statHeading %}
+                        <span style="color: #3E7DCA" class="tl sans--body fw--800">{{ block.settings.statHeading}}</span>
+                    {% endif %}
+                        <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                
+                    <section id="acc{{ count }}" class="acc-content-desktop">
+
+                    <div class="inner pb3 mb2">
+
+						{% if block.settings.statContent %}
+							<h5 class="tl sans--body">
+								{{ block.settings.statContent }}
+							</h5>
+						{% endif %}
+                    </div><!-- / .inner -->
+                </section>
+            </div>
+
+                    {% endfor %}   
+
+ 
+            </div>
+
+    </div>
+</div>
+</div>
+
+</div>
+
+<style>
+
+.accordian-section {
+    background-image: url();
+    background-color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+    
+</style>
+
+
+<script>
+    $( document ).ready(function() {
+    
+    let accTitleDesktop = document.getElementsByClassName("acc-heading-desktop");
+            let accContentDesktop = document.getElementsByClassName("acc-content-desktop");
+            let singleModeDesktop = true;
+            
+            for( let j=0; j<accContentDesktop.length; j++ ){
+                let realHeightDesktop = accContentDesktop[j].offsetHeight;
+                accContentDesktop[j].setAttribute("data-height", realHeightDesktop + "px");
+                accContentDesktop[j].style.height = 0;
+            }
+            
+            for( let i=0; i<accTitleDesktop.length; i++ ){
+                accTitleDesktop[i].onclick = function(){
+                    let openedAccDesktop = this.getAttribute('href').replace('#', '');
+    
+                    if( this.classList.contains("active") ){
+                        this.classList.remove("active");
+                        document.getElementById(openedAccDesktop).style.height = 0;
+                        
+                        return false;
+                    }
+                    
+                    if( singleModeDesktop ){						
+                        for(let k=0; k<accTitleDesktop.length; k++) {
+                            accTitleDesktop[k].classList.remove("active");
+                        }
+    
+                        for(let j=0; j<accContentDesktop.length; j++) {
+                            accContentDesktop[j].style.height = 0;
+                        }
+                    }
+                    
+                    this.classList.add("active");
+                    
+                    document.getElementById(openedAccDesktop).style.height = accContentDesktop[i].getAttribute("data-height");
+                    
+                    return false;
+                }
+        }
+    });
+    
+    </script>
+
+{% schema %}
+{
+  "name": "Accordian - Image Left",
+  "class": "product-subscription_banner",
+  "settings": [	      
+            {
+                "type": "image_picker",
+                "id": "statBGImage",
+                "label": "Background Image"
+            },
+            {
+                "type": "color",
+                "id": "statBGColor",
+                "label": "Background Color",
+                "default": "#fff"
+              },
+              {
+				"type": "text",
+				"id": "heroHeading",
+				"label": "Title"
+			},
+            {
+				"type": "text",
+				"id": "section_styles",
+				"label": "Section Styles"
+			}
+  ],
+  "blocks": [
+  {
+    "type": "column",
+    "name": "Accordian",
+    "limit": 10,
+    "settings": [
+      {
+        "type": "text",
+        "id": "statHeading",
+        "label": "Accordian heading"
+      },
+      {
+        "type": "richtext",
+        "id": "statContent",
+        "label": "Accordian content"            
+      }
+    ]
+  }
+],
+  "presets": [{
+    "name": "Accordian - Image Left",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

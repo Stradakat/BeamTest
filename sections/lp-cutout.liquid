@@ -1,0 +1,121 @@
+<div class="lp-cutout">
+    <div class="cutout-content">
+        <h1 style="text-transform: none!important" class="tc sleep-subtitle">BY THE NUMBERS</h1>
+        <h1 style="text-transform: none !important" class="tc cutout-title">{{section.settings.titleMain}}</h1>
+        <div class="lp-inline">
+            <div class="inline-item">
+                <h1 style="text-transform: none !important" class="copy-title">{{section.settings.title1}}</h1>
+                <h1 style="text-transform: none !important" class="copy-descript">{{section.settings.copy1}}<span class="dagger">&#8224;</span></h1>
+            </div>
+            <div class="seperator-vertical"></div>
+            <div class="inline-item">
+                <h1 style="text-transform: none !important" class="copy-title">{{section.settings.title2}}</h1>
+                <h1 style="text-transform: none !important" class="copy-descript">{{section.settings.copy2}}<span class="dagger">&#8224;</span></h1>
+            </div>
+        </div>
+    </div>
+    <a class="btn tc" href="/products/sleep-powder">Learn More</a>
+</div>
+<style>
+    .sleep-subtitle {
+        color: #427BBE;
+        font-size: 13px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+   .lp-cutout {
+		background: #f4f4f4;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+        position: relative;
+        z-index: 999;
+	}
+	.cutout-content {
+		padding: 5% 0 3%;
+		width: 60%;
+	}
+    .btn {
+        margin-bottom: 3%;
+    }
+	.lp-inline {
+		display: flex;
+		justify-content: center;
+        align-items: center;
+	}
+	.cutout-title {
+		font-size: 18px;
+		font-weight: 800;
+		padding-bottom: 3%;
+	}
+	.copy-title {
+		font-size: 30px;
+		margin: 15px 0;
+	}
+	.inline-item {
+		text-align: center;
+	}
+	.seperator-vertical {
+		border-left: 2px solid #dbdbdb;
+		margin: 0 5%;
+	}
+	.copy-descript {
+		margin-bottom: 15px;
+		font-size: 18px;
+	}
+    .dagger {
+        font-size: 9px;
+        margin-top: -7px;
+        position: absolute;
+    }
+    @media screen and (max-width: 800px){
+        .cutout-content {
+            width: 90%;
+        }
+        .lp-inline {
+		flex-direction: column;
+	}
+    .lp-cutout {
+        padding: 5% 0;
+    }
+        
+    }
+</style>
+
+{% schema %}
+{
+    "name": "99%",
+  "settings": [	      
+            {
+				"type": "text",
+				"id": "titleMain",
+				"label": "title main"
+			},
+            {
+				"type": "text",
+				"id": "title1",
+				"label": "title1"
+			},
+            {
+				"type": "textarea",
+				"id": "copy1",
+				"label": "copy1"
+			},
+            {
+				"type": "text",
+				"id": "title2",
+				"label": "title2"
+			},
+            {
+				"type": "textarea",
+				"id": "copy2",
+				"label": "copy2"
+			}
+  ]
+}
+
+
+{% endschema %}

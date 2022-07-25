@@ -1,0 +1,157 @@
+<div class="full-width {{ section.settings.section_styles | escape }} accordian-section">
+    <div class="">
+    <div class="row align--middle gutter--none check-contain">
+        <div class="compare-img check-img-contain">
+            <img class="full-width checks-image" src="{{ section.settings.statBGImage | img_url : '1024x1024' }}"/>
+        </div>  
+            <div class="col tl c5--md pb4--md compare-content-contain">
+                {% if section.settings.heroHeading %}
+                <h2 style="color: #427CBF" class="sans--medium mb2 color--black fw--600 pl2 pr2">
+                    {{ section.settings.heroHeading | escape }}
+                </h2>
+                {% endif %}
+                <div class="accordion pl2 pr2">
+                    {% assign count = 0 %}
+                    {% for block in section.blocks %}
+                    {% assign count = count | plus: 1 %}
+
+                <div class="item flex-contain">
+                    {% if block.settings.compareHeading %}
+                    <div class="check">
+                    <span class="check-dot"></span>
+                    </div>
+                    <div class="check-copy">
+                    <span class="tl sans--medium"><p class="check-item">{{ block.settings.compareHeading}}</p></span>
+                    </div>
+                    {% endif %}
+            </div>
+
+                    {% endfor %}   
+
+ 
+            </div>
+
+    </div>
+</div>
+</div>
+
+</div>
+
+<style>
+    .check-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #427CBF;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .check-item::first-letter {
+        text-transform: none !important;
+    }
+.check-contain {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin: 0 3%;
+    align-items: center;
+}
+.check-img-contain {
+    width: 50% !important;
+}
+
+.accordian-section {
+    background-image: url();
+    background-color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 0% 0;
+}
+.accordion .item {
+    border-bottom: none;
+    padding-top: 4%;
+}
+.flex-contain {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 80%;
+}
+.check-copy {
+    padding-left: 2%;
+}
+.checks-image {
+    max-height: 90%;
+    object-fit: cover;
+    width: 100%;
+}
+.check-item {
+    font-size: 18px;
+}
+
+.compare-content-contain {
+    padding-left: 5% !important;
+}
+
+@media screen and (max-width: 800px) {
+    .flex-contain {
+        width: 95%;
+    }
+    .check-img-contain {
+    width: 100% !important;
+}
+.check-contain {
+    flex-direction: column-reverse;
+}    
+.compare-content-contain {
+    padding: 20px;
+    padding-left: 1% !important;
+}
+}
+    
+</style>
+
+{% schema %}
+{
+    "name": "header and copy",
+    "class": "product-subscription_banner",
+    "settings": [	      
+              {
+                  "type": "color",
+                  "id": "statBGColor",
+                  "label": "Background Color",
+                  "default": "#fff"
+                },
+                {
+          "type": "text",
+          "id": "heroHeading",
+          "label": "Title"
+        },
+        {
+            "type": "image_picker",
+            "id": "statBGImage",
+            "label": "Background Image"
+        }
+    ],
+    "blocks": [
+    {
+      "type": "column",
+      "name": "Accordian",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "compareHeading",
+          "label": "Accordian heading"
+        }
+      ]
+    }
+    ],
+    "presets": [{
+      "name": "header and copy",
+      "category": "Content"
+    }]
+    }
+    
+{% endschema %}

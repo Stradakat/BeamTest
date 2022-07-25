@@ -1,0 +1,530 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "productHeading": "Dream Extra Strength Powder",
+        "productBodyText": "",
+        "mobileBodyText": "",
+        "tagText": "New",
+        "subImage": "shopify:\/\/shop_images\/how-to-enjoy.jpg",
+        "servingSize": "30 servings",
+        "popupheading": "Dream Extra Strength Powder",
+        "popupimg": "shopify:\/\/shop_images\/hemp-nutritionfacts-dream-XS-powder-30BG_1_d40a3726-471a-423b-8485-eb6b8cce6721.jpg"
+      }
+    },
+    "163591091178dea289": {
+      "type": "horizontal-bar-new",
+      "blocks": {
+        "163591091178dea289-0": {
+          "type": "column",
+          "settings": {
+            "iconheading": "dairy free",
+            "iconcontent": ""
+          }
+        },
+        "163591091178dea289-1": {
+          "type": "column",
+          "settings": {
+            "iconheading": "Gluten free",
+            "iconcontent": ""
+          }
+        },
+        "163591091178dea289-2": {
+          "type": "column",
+          "settings": {
+            "iconheading": "keto friendly",
+            "iconcontent": ""
+          }
+        },
+        "4a1fb147-516c-4906-b4e5-160d6321d8f7": {
+          "type": "column",
+          "settings": {
+            "iconheading": "no sugar added",
+            "iconcontent": ""
+          }
+        },
+        "dc8e6f20-e41e-4deb-99d7-a4872fa1e47a": {
+          "type": "column",
+          "settings": {
+            "iconheading": "Third party lab-tested",
+            "iconcontent": ""
+          }
+        }
+      },
+      "block_order": [
+        "163591091178dea289-0",
+        "163591091178dea289-1",
+        "163591091178dea289-2",
+        "4a1fb147-516c-4906-b4e5-160d6321d8f7",
+        "dc8e6f20-e41e-4deb-99d7-a4872fa1e47a"
+      ],
+      "settings": {
+        "gridTitle": ""
+      }
+    },
+    "1647537306f5cc11f6": {
+      "type": "marquee-with-icons",
+      "blocks": {
+        "16475373062c19f5d7-0": {
+          "type": "column",
+          "settings": {
+            "iconheading": "Dairy free",
+            "iconcontent": ""
+          }
+        },
+        "16475373062c19f5d7-1": {
+          "type": "column",
+          "settings": {
+            "iconheading": "Gluten free",
+            "iconcontent": ""
+          }
+        },
+        "16475373062c19f5d7-2": {
+          "type": "column",
+          "settings": {
+            "iconheading": "keto friendly",
+            "iconcontent": ""
+          }
+        },
+        "bba2d069-8855-4a49-b8b7-219f5a9ef1c5": {
+          "type": "column",
+          "settings": {
+            "iconheading": "no sugar added",
+            "iconcontent": ""
+          }
+        },
+        "6c8805fb-fd25-4d15-8895-1e6f13336c8a": {
+          "type": "column",
+          "settings": {
+            "iconheading": "Third party lab-tested",
+            "iconcontent": ""
+          }
+        },
+        "11c8c3d4-14d4-46d6-ae54-c46c1f8c3db2": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "iconheading": "",
+            "iconcontent": ""
+          }
+        },
+        "fbbf6f4c-5c14-43c9-b43f-80e6a2063215": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "iconheading": "",
+            "iconcontent": ""
+          }
+        }
+      },
+      "block_order": [
+        "16475373062c19f5d7-0",
+        "16475373062c19f5d7-1",
+        "16475373062c19f5d7-2",
+        "bba2d069-8855-4a49-b8b7-219f5a9ef1c5",
+        "6c8805fb-fd25-4d15-8895-1e6f13336c8a",
+        "11c8c3d4-14d4-46d6-ae54-c46c1f8c3db2",
+        "fbbf6f4c-5c14-43c9-b43f-80e6a2063215"
+      ],
+      "settings": {
+        "gridTitle": "subscribe to better sleep"
+      }
+    },
+    "163535382289658a11": {
+      "type": "product-mid-hero-3",
+      "settings": {
+        "heroBGImage": "shopify:\/\/shop_images\/dreamxs-module-desktop_1.jpg",
+        "heroMobImage": "shopify:\/\/shop_images\/dream-xs-mobile_2.jpg",
+        "heroBGColor": "#be8a8a",
+        "heroHeading": "Why Extra Strength Powder?",
+        "heroBodyText": "<p>You wanted more potency in your bedtime routine - without sacrificing the delicious taste and comforting ritual of your nightly hot cocoa. With more of our 5 sleep ingredients, you’re getting an extra-powerful blend of vitamins and minerals that optimize your body + mind for better sleep.<\/p>"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "product-stats": {
+      "type": "product-stats",
+      "blocks": {
+        "bb11208a-d6e0-4846-920b-7bec11022ec0": {
+          "type": "column",
+          "settings": {
+            "statHeading": "98%",
+            "statContent": "<p style=\"text-transform: none !important\">of people surveyed <strong>fall asleep <br>faster<\/strong> when taking Dream Powder.<span style=\"font-size: 10px; position: relative; top: -6px;\">†<\/span><\/p>"
+          }
+        },
+        "3739e969-ca30-49c8-ad92-130967922668": {
+          "type": "column",
+          "settings": {
+            "statHeading": "99%",
+            "statContent": "<p>of people experience <strong>better sleep quality<\/strong>.<span style=\"font-size: 10px; position: relative; top: -6px;\">†<\/span><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bb11208a-d6e0-4846-920b-7bec11022ec0",
+        "3739e969-ca30-49c8-ad92-130967922668"
+      ],
+      "settings": {
+        "statBGImage": "shopify:\/\/shop_images\/frother_d2305112-8f0f-47b9-8f63-f7e3089cb8ca.jpg",
+        "statBGColor": "#ffffff",
+        "productHeading": "",
+        "productBodyText": "",
+        "popupheading": ""
+      }
+    },
+    "163535530806e4dccb": {
+      "type": "grid-with-icons",
+      "blocks": {
+        "163535530806e4dccb-0": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/savings-icon.png",
+            "iconheading": "monthly savings",
+            "iconcontent": ""
+          }
+        },
+        "163535530806e4dccb-1": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/cart.png",
+            "iconheading": "free mug + frother with your first delivery",
+            "iconcontent": ""
+          }
+        },
+        "163535530806e4dccb-2": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/vip.png",
+            "iconheading": "VIP support",
+            "iconcontent": ""
+          }
+        },
+        "8b21463f-9030-49ea-9a33-7b3851baacb1": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/shipping.png",
+            "iconheading": "free shipping on every order",
+            "iconcontent": ""
+          }
+        },
+        "3ac56819-a8cd-4e20-952c-1dead4b055df": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/pause_a4b6c02c-0f2d-4204-8bbe-6d9267133b0e.png",
+            "iconheading": "pause or cancel anytime",
+            "iconcontent": ""
+          }
+        }
+      },
+      "block_order": [
+        "163535530806e4dccb-0",
+        "163535530806e4dccb-1",
+        "163535530806e4dccb-2",
+        "8b21463f-9030-49ea-9a33-7b3851baacb1",
+        "3ac56819-a8cd-4e20-952c-1dead4b055df"
+      ],
+      "settings": {
+        "gridTitle": "subscribe to better sleep"
+      }
+    },
+    "16353565802d2d8b6e": {
+      "type": "product-accordian",
+      "disabled": true,
+      "blocks": {
+        "bd79d06b-de6b-49da-9cc1-bcef1f8e7c3a": {
+          "type": "column",
+          "settings": {
+            "statHeading": "2x the Nano Hemp",
+            "statContent": "<p>hemp particles with the highest absorption potential to naturally support mood, stress, rest, and wellbeing*<\/p>"
+          }
+        },
+        "2d1aeae0-dd4e-429b-aea3-6f82eab98618": {
+          "type": "column",
+          "settings": {
+            "statHeading": "2x the Melatonin",
+            "statContent": "<p>a compound that regulates the body’s circadian rhythm, promoting restful sleep*<\/p>"
+          }
+        },
+        "92639f2f-33ac-4a03-ad11-c69930a040f6": {
+          "type": "column",
+          "settings": {
+            "statHeading": "13mg more Magnesium",
+            "statContent": "<p>a mineral that aids the body’s ability to fall asleep by relaxing the muscles and regulating the nervous system*<\/p>"
+          }
+        },
+        "1d0f84bc-32ab-417d-96cc-07b047ecb7de": {
+          "type": "column",
+          "settings": {
+            "statHeading": "50mg more L-Theanine",
+            "statContent": "<p>an amino acid that promotes relaxation and helps improve sleep quality*<\/p>"
+          }
+        },
+        "1ee8c65c-d2b5-428d-bfb0-a86e73243819": {
+          "type": "column",
+          "settings": {
+            "statHeading": "350mg Reishi",
+            "statContent": "<p>a mushroom superfood that helps to support the body’s sleep cycle and manage stress*<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bd79d06b-de6b-49da-9cc1-bcef1f8e7c3a",
+        "2d1aeae0-dd4e-429b-aea3-6f82eab98618",
+        "92639f2f-33ac-4a03-ad11-c69930a040f6",
+        "1d0f84bc-32ab-417d-96cc-07b047ecb7de",
+        "1ee8c65c-d2b5-428d-bfb0-a86e73243819"
+      ],
+      "settings": {
+        "statBGImage": "shopify:\/\/shop_images\/dream-pow.png",
+        "statBGColor": "#ffffff",
+        "heroHeading": "What’s in Dream Extra Strength Powder?",
+        "section_styles": "pt3 pb6 pt10--md pb10--md"
+      }
+    },
+    "1647354509ab39c529": {
+      "type": "product-measure",
+      "blocks": {
+        "b9ee2381-447b-4a46-a277-965aa0844a18": {
+          "type": "column",
+          "settings": {
+            "compareHeading": "2x the Nano Hemp",
+            "statCompareOne": "<span style=\"font-style: italic\">Dream Extra Strength Powder<\/span><span>40mg<\/span>",
+            "statCompareTwo": "<span style=\"font-style: italic\">Dream Powder<\/span><span>20mg<\/span>",
+            "bottomPercent": "60%"
+          }
+        },
+        "e3cd58c5-804d-479c-9d93-6b21a3c1e5d4": {
+          "type": "column",
+          "settings": {
+            "compareHeading": "2x the Melatonin",
+            "statCompareOne": "<span style=\"font-style: italic\">Dream Extra Strength Powder<\/span><span>6mg<\/span>",
+            "statCompareTwo": "<span style=\"font-style: italic\">Dream Powder<\/span><span>3mg<\/span>",
+            "bottomPercent": "60%"
+          }
+        },
+        "d580183c-c6dc-42ad-aeed-7c701d26b5a0": {
+          "type": "column",
+          "settings": {
+            "compareHeading": "50mg more L-Theanine",
+            "statCompareOne": "<span style=\"font-style: italic\">Dream Extra Strength Powder<\/span><span>350mg<\/span>",
+            "statCompareTwo": "<span style=\"font-style: italic\">Dream Powder<\/span><span>300mg<\/span>",
+            "bottomPercent": "85%"
+          }
+        },
+        "13b6dd36-11d3-45a0-8185-59b59c3ddeb7": {
+          "type": "column",
+          "settings": {
+            "compareHeading": "13mg more Magnesium",
+            "statCompareOne": "<span style=\"font-style: italic\">Dream Extra Strength Powder<\/span><span>44mg<\/span>",
+            "statCompareTwo": "<span style=\"font-style: italic\">Dream Powder<\/span><span>31mg<\/span>",
+            "bottomPercent": "70%"
+          }
+        },
+        "2416dcf1-eec9-4c65-9ad8-893d12dbf09b": {
+          "type": "column",
+          "settings": {
+            "compareHeading": "350mg of Reishi",
+            "statCompareOne": "<span style=\"font-style: italic\">Dream Extra Strength Powder<\/span><span>350mg<\/span>",
+            "statCompareTwo": "<span style=\"font-style: italic\">Dream Powder<\/span><span>350mg<\/span>",
+            "bottomPercent": ""
+          }
+        },
+        "a1a5b22a-9714-4a37-829f-298d5a08e114": {
+          "type": "Accordian",
+          "settings": {
+            "statHeading": "Nano Hemp",
+            "statContent": "<p>hemp particles with the highest absorption potential to naturally support mood, stress, rest, and wellbeing*<\/p>"
+          }
+        },
+        "6d291578-53de-4ba5-8c56-893422b0b404": {
+          "type": "Accordian",
+          "settings": {
+            "statHeading": "Melatonin",
+            "statContent": "<p>a compound that regulates the body’s circadian rhythm, promoting restful sleep*<\/p>"
+          }
+        },
+        "b14ba21a-657e-42b5-976b-38039dac39ce": {
+          "type": "Accordian",
+          "settings": {
+            "statHeading": "L-Theanine",
+            "statContent": "<p>an amino acid that promotes relaxation and helps improve sleep quality*<\/p>"
+          }
+        },
+        "b07554be-df6d-4d1e-817f-226c58499b1a": {
+          "type": "Accordian",
+          "settings": {
+            "statHeading": "Magnesium",
+            "statContent": "<p>a mineral that aids the body’s ability to fall asleep by relaxing the muscles and regulating the nervous system*<\/p>"
+          }
+        },
+        "9348b0c1-6adf-48e0-baca-ddf096925252": {
+          "type": "Accordian",
+          "settings": {
+            "statHeading": "Reishi",
+            "statContent": "<p>a mushroom superfood that helps to support the body’s sleep cycle and manage stress*<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "b9ee2381-447b-4a46-a277-965aa0844a18",
+        "e3cd58c5-804d-479c-9d93-6b21a3c1e5d4",
+        "d580183c-c6dc-42ad-aeed-7c701d26b5a0",
+        "13b6dd36-11d3-45a0-8185-59b59c3ddeb7",
+        "2416dcf1-eec9-4c65-9ad8-893d12dbf09b",
+        "a1a5b22a-9714-4a37-829f-298d5a08e114",
+        "6d291578-53de-4ba5-8c56-893422b0b404",
+        "b14ba21a-657e-42b5-976b-38039dac39ce",
+        "b07554be-df6d-4d1e-817f-226c58499b1a",
+        "9348b0c1-6adf-48e0-baca-ddf096925252"
+      ],
+      "settings": {
+        "statBGColor": "#ffffff",
+        "heroHeading": "What's in Dream Extra Strength Powder?",
+        "statContent": "",
+        "statBGImage": "shopify:\/\/shop_images\/xs-1.jpg"
+      }
+    },
+    "1635356617646f55ff": {
+      "type": "product-mid-hero-4",
+      "settings": {
+        "heroBGImage": "shopify:\/\/shop_images\/how-to-enjoy_2.jpg",
+        "heroMobImage": "shopify:\/\/shop_images\/how-to-enjoy-mobile-v2_1.jpg",
+        "heroBGColor": "#ffffff",
+        "heroHeading": "how to enjoy",
+        "heroBodyText": "<p>Pour 1 scoop of powder into a mug of hot water or milk and blend using your Beam frother for a cozy finish. Sip 20-30 minutes before bedtime to enjoy your deepest night’s sleep.<\/p>"
+      }
+    },
+    "1647354386fef4f01b": {
+      "type": "product-checks",
+      "blocks": {
+        "f823c4be-cbc4-4929-b8b7-3cf9b4bc4bc9": {
+          "type": "column",
+          "settings": {
+            "compareHeading": "If you have a schedule which interrupts your sleep patterns"
+          }
+        },
+        "7fda4e8d-9781-4de0-84c0-c0a93db83f9e": {
+          "type": "column",
+          "settings": {
+            "compareHeading": "If you experience persistent sleep difficulties or circadian rhythm issues"
+          }
+        },
+        "a04168a6-91c0-49f8-a9c7-c71e22dfad86": {
+          "type": "column",
+          "settings": {
+            "compareHeading": "If you want to get the sleep-promoting* power of Extra Strength without giving up your delicious bedtime routine"
+          }
+        },
+        "86f6087c-2f1a-4451-b8d9-b0fda10925cd": {
+          "type": "column",
+          "settings": {
+            "compareHeading": "If you’re an athlete, busy parent, or WFH warrior who works hard and needs extra help with rest and recovery"
+          }
+        },
+        "9fa700d7-12ef-4e0a-9dac-efd860d0a232": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "compareHeading": "If you experience persistent sleep difficulties or circadian rhythm issues"
+          }
+        },
+        "c3cdee41-a889-45ac-acd2-79c7c43d1113": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "compareHeading": "If you want to get the sleep-promoting* power of Extra Strength Capsules without giving up your delicious bedtime routine"
+          }
+        },
+        "6f0cb5af-73a2-417e-90b1-a5240e78387c": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "compareHeading": ""
+          }
+        }
+      },
+      "block_order": [
+        "f823c4be-cbc4-4929-b8b7-3cf9b4bc4bc9",
+        "7fda4e8d-9781-4de0-84c0-c0a93db83f9e",
+        "a04168a6-91c0-49f8-a9c7-c71e22dfad86",
+        "86f6087c-2f1a-4451-b8d9-b0fda10925cd",
+        "9fa700d7-12ef-4e0a-9dac-efd860d0a232",
+        "c3cdee41-a889-45ac-acd2-79c7c43d1113",
+        "6f0cb5af-73a2-417e-90b1-a5240e78387c"
+      ],
+      "settings": {
+        "statBGColor": "#ffffff",
+        "heroHeading": "Why Dream Extra Strength Powder is right for you",
+        "statBGImage": "shopify:\/\/shop_images\/xs-image-update.jpg"
+      }
+    },
+    "163536855792c4574f": {
+      "type": "fifty-fifty",
+      "settings": {
+        "fiftyImage": "shopify:\/\/shop_images\/BEAM-DR-WEISS_0429-grey.jpg",
+        "heroBGColor": "#ffffff",
+        "heroHeading": "Meet Beam's resident sleep expert.",
+        "heroBodyTopText": "Dr. Carleara Weiss, Ph.D., M.S., R.N., Member of the American Academy of Sleep Medicine",
+        "heroBodyText": "<p>\"The ingredients in Dream can promote relaxation and give the brain a signal that it is time to sleep.* With that, we are more likely to have a full night of rest and better sleep quality.”<\/p><p><\/p><p>- Dr. Weiss<\/p>"
+      }
+    },
+    "1635512142e6a1ad8f": {
+      "type": "related-products",
+      "settings": {
+        "statBGColor": "#ffffff",
+        "productHeading": "",
+        "productBodyText": "",
+        "popupheading": ""
+      }
+    },
+    "16358623413a317eb1": {
+      "type": "reviews-end",
+      "settings": {
+        "heroBGColor": "#ffffff",
+        "heroHeading": "",
+        "heroBodyText": ""
+      }
+    },
+    "1635917889a6342e69": {
+      "type": "main-product-bottom",
+      "settings": {
+        "productHeading": "Dream Extra Strength Powder",
+        "productBodyText": "",
+        "mobileBodyText": "",
+        "tagText": "New",
+        "subImage": "shopify:\/\/shop_images\/how-to-enjoy.jpg",
+        "popupheading": "dream powder",
+        "popupimg": "shopify:\/\/shop_images\/hemp-nutritionfacts-dream-powder-1_e8b038ed-953c-4041-b3d1-ebc95afff2e5.jpg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "163591091178dea289",
+    "1647537306f5cc11f6",
+    "163535382289658a11",
+    "product-recommendations",
+    "product-stats",
+    "163535530806e4dccb",
+    "16353565802d2d8b6e",
+    "1647354509ab39c529",
+    "1635356617646f55ff",
+    "1647354386fef4f01b",
+    "163536855792c4574f",
+    "1635512142e6a1ad8f",
+    "16358623413a317eb1",
+    "1635917889a6342e69"
+  ]
+}

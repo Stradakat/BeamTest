@@ -1,0 +1,244 @@
+<div class="mt6 mt10--md">
+
+<div class="swell-reward-beam">
+  
+
+  <!-- Referral Section Code Start -->
+    <div class="referral-section {% if customer %}logged-in{% endif %}">
+      <div class="referral-section-holder">
+        <div class="referral-sidebar-image swell-mobile">
+        </div>
+        <div class="swell-referral-holder">
+          <div class="swell-referral">
+            <div class="swell-referral-loader">
+              <div class="lds-dual-ring"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% if customer %}
+      <div class="referral-section-content">
+
+        <div class="referral-content-holder mt3 mt6--md mb3 mb6--md">
+          <div class="referral-content">
+            <a href="/pages/rewards" class="check-reward-balance">Check Rewards Balance</a>
+            
+			<div class="swell-referral-content">
+				<div class="table-classes">
+					<div class="swell-referral-heading">
+						<h2 class="swell-heading color--white">your referrals</h2>
+					  </div>
+					<div class="swell-table-responsive">
+					  <table class="swell-referral-table">
+						<thead>
+						  <tr>
+							<th class="referral_email">Email</th>
+							<th class="referral_status">Status</th>
+						  </tr>
+						</thead>
+						<tbody class="table-data">
+					  </tbody>
+					  </table>
+					</div>
+				  </div>
+				  <div class="redeem-point">
+					<div class="swell-referral-heading">
+					  <h2 class="swell-heading">how do I redeem my points?</h2>
+					  <p class="swell-detail">Now, the fun part! Simply redeem any rewards credit you've earned directly in the cart.</p>
+					  <ul class="swell-link-list">
+						<li class="swell-link">
+						  <a href="/" class="shop-btn">Shop Now</a>
+						</li>
+					  </ul>
+					</div>
+				  </div>			
+			</div>
+            
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  <!-- Referral Section Code End -->
+</div>
+</div>
+
+<style>
+	.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-heading,	
+	.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-details,
+	.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-refer,
+	.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-media-wrapper .swell-referral-media-details {
+		color: #fff;		
+	}
+	
+	.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-form-wrapper .swell-referral-form-header-details,
+	.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-details {
+		border-bottom-color: #fff;
+		color: #fff;
+	}
+	.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-form-wrapper .swell-referral-form-list .swell-referral-form-list-field {
+		border: 1px solid #fff;
+		border-radius: 10px;
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+	.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-form-wrapper .swell-referral-form-list .swell-referral-form-list-field .swell-referral-form-list-field-input {
+		padding-left: 20px;		
+		color: #fff;
+		border-radius: 10px;
+	}
+	.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-form-wrapper .swell-referral-form-list .swell-referral-form-list-field .swell-referral-form-list-field-input::placeholder {
+		color: #fff;
+	}
+	.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-form-wrapper .swell-referral-form-list .swell-referral-form-list-field .swell-referral-form-list-submit {
+		background-color: #30388c;
+		color: #fff;
+		border-radius: 10px;
+		margin: 2px;
+		text-align: center;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.swell-referral-content {
+		display: flex;		
+	}
+	.referral-section .referral-section-content .referral-content-holder .referral-content .check-reward-balance {
+			text-decoration: none;
+	}
+	.referral-section .referral-section-content .referral-content-holder .referral-content .table-classes {
+		background: #f3f3f3;
+		border-bottom: none;
+		margin-bottom: 0px;
+		margin-right: 10px;
+		border-radius: 10px;
+		padding: 40px 30px;
+	}
+	.referral-section .redeem-point {
+		background: #f3f3f3;
+		margin-left: 10px;
+		border-radius: 10px;
+		padding: 40px 30px;
+	}
+	.swell-link-list .swell-link a {
+		background: #30388c;
+		color: #fff;
+		border-radius: 10px;		
+	}
+	.referral-section .referral-section-content {
+		background-color: #fff;
+	}
+	.referral_email, .referral_status  {
+		color: #C8C8C8 !important;
+	}
+	.referral_status  {
+		text-align: right !important;
+	}
+	.referral-section .referral-section-content .referral-content-holder .referral-content .table-classes .swell-table-responsive::-webkit-scrollbar-track {
+		background: transparent !important;
+	}
+	.referral-section .referral-section-content .referral-content-holder .referral-content .check-reward-balance {
+		font-size: 20px;
+	}
+	.referral-section .referral-section-content .referral-content-holder .referral-content .table-classes .swell-table-responsive .swell-referral-table tbody tr:last-child td {
+		border-bottom: none;
+	}
+	.referral-section .referral-section-content .referral-content-holder .referral-content .check-reward-balance {
+		margin-bottom: 40px;
+	}
+	.referral-section .referral-section-content .referral-content-holder .referral-content .table-classes .swell-table-responsive {
+		padding-right: 0px;
+	}
+	.referral-section .referral-section-content .referral-content-holder .referral-content .table-classes .swell-table-responsive .swell-referral-table tbody tr td:nth-child(2) {
+		text-align: right;
+	}
+
+	@media (min-width: 480px) {
+		.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-details {
+			font-size: 24px;
+			margin-bottom: 10px;
+			padding-bottom: 20px;
+		}
+		.referral-section .referral-section-content .referral-content-holder .referral-content .check-reward-balance {
+			font-size: 20px;
+		}
+
+	}
+	@media (min-width: 768px) {
+		.referral-section .referral-section-holder {
+			background-image: url("{{ 'refer_desktop_hero.jpg' | asset_url }}");
+			min-height: 800px;
+		}
+		.referral-section .referral-section-content .referral-content-holder .referral-content {
+			max-width: 700px;
+		}
+		.referral-section .referral-section-content .referral-content-holder .referral-content .table-classes .swell-table-responsive {
+			min-height: unset;
+		}
+		.referral-section .referral-section-content .referral-content-holder .referral-content .swell-referral-heading .swell-link-list .swell-link {
+			max-width: 150px;
+		}
+		.referral-section .referral-section-content .referral-content-holder .referral-content .swell-referral-heading .swell-detail {
+			margin-top: 20px;
+		}
+		.referral-section .referral-section-content .referral-content-holder .referral-content .check-reward-balance {
+			font-size: 25px;
+		}
+	}
+	
+	@media (min-width: 1024px) {
+		.referral-section .referral-section-content .referral-content-holder .referral-content .check-reward-balance {
+			font-size: 28px;
+		}
+		.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-heading {
+			font-size: 65px;
+			line-height: 1.2;
+		}
+		.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-details {
+			font-size: 25px;			
+		}
+		.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-form-wrapper .swell-referral-form-header-details {
+			font-size: 25px;			
+		}
+		.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-refer {
+			min-height: 453px;
+			max-width: 590px;
+		}
+		.referral-section .referral-section-content .referral-content-holder .referral-content {
+			max-width: 900px;
+		}		
+		
+	}
+	@media (max-width: 767px){
+		.swell-referral-content {
+			flex-direction: column;
+		}
+		.referral-section .referral-section-content .referral-content-holder .referral-content .table-classes {
+			width: 100%;
+			margin-right: 0px;
+			margin-bottom: 20px;
+		}
+		.referral-section .redeem-point {
+			width: 100%;
+			margin-left: 0px;
+		}
+		.referral-section .referral-section-content .referral-content-holder .referral-content .table-classes .swell-table-responsive {
+			min-height: unset !important;
+		}
+		.referral-section .referral-section-content .referral-content-holder .referral-content {
+			max-width: 100% !important;
+			padding: 0 20px;
+		}
+		.referral-section .referral-section-holder {
+			background-image: url("{{ 'refer_mobile_hero.jpg' | asset_url }}");			
+		}
+		.referral-section .referral-section-holder .swell-referral-holder {
+			background: transparent;
+			padding: 50px 20px;
+		}
+		.referral-section .referral-section-holder .swell-referral-holder .swell-referral-content-container .swell-referral-content-main .swell-referral-refer {
+			padding: 0;
+			min-height: unset;
+		}
+	}
+
+	
+</style>

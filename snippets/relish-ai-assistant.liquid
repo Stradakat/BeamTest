@@ -1,0 +1,8 @@
+<!-- Relish AI Code Starts Here -->
+<script>
+var relish_plugin_config_file = "{{ 'relishai-plugin-config.js' | asset_url }}";
+{% if customer %}
+window.relishlyShopifyCustomerEmail = "{{ customer.email }}";
+{% endif %}
+</script>
+<!-- Relish AI Code Ends Here -->

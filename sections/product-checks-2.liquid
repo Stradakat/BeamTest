@@ -1,0 +1,285 @@
+<div class="full-width {{ section.settings.section_styles | escape }} accordian-section">
+    <div class="">
+        <div class="row align--middle gutter--none check-contain {% if page.handle == " sweatcoin" %}sc-contain{% endif
+            %}"">
+            <div class="compare-img check-img-contain {% if page.handle == " sea-salt-caramel-dream-powder"  or product.handle == "sea-salt-caramel-extra-strength-dream-powder"%}
+                sea-salt-contain {% endif %}">
+                <img loading="lazy" class="full-width {% if page.handle=="sweatcoin" %}sc-image{% endif %}"
+                    src="{{ section.settings.statBGImage | img_url : '2048x2048' }}" />
+            </div>
+            <div class="compare-img mobile-img {% if page.handle == "sea-salt-caramel-extra-strength-dream-powder" %} ssc-mob {% endif %}">
+                <img loading="lazy" class="full-width {% if product.handle == "sea-salt-caramel-dream-powder" or product.handle == "the-summer-bedtime-bundle" or product.handle == "sea-salt-caramel-extra-strength-dream-powder" %} doctor-headshot{% endif %} {% if page.handle=="sweatcoin" %}sc-image{% endif %}"
+                    src="{{ section.settings.statMobImage | img_url : '2048x2048' }}" />
+            </div>
+            <div class="col tl c5--md pb4--md compare-content-contain {% if product.handle == "sea-salt-caramel-dream-powder" or product.handle == "the-summer-bedtime-bundle" or product.handle == "sea-salt-caramel-extra-strength-dream-powder"%} sea-content-contain{% endif %}">
+                {% if section.settings.heroHeading %}
+                <h2 class="{% if product.handle == "sea-salt-caramel-dream-powder"%}action-sea sans--large mb2 color--black fw--600
+                pl2 pr2 pod-padding section-pod-title{% else %} sans--large mb2 color--black fw--600
+                    pl2 pr2 pod-padding section-pod-title{% endif %}">
+                    {{ section.settings.heroHeading | escape }}
+                </h2>
+                
+                {% endif %}
+                <h2 class="{% if product.handle == "sea-salt-caramel-dream-powder" or product.handle == "the-summer-bedtime-bundle" or product.handle == "sea-salt-caramel-extra-strength-dream-powder" %}sub-sea sans--body-new fw--600 pl2{% else %}sans--large mb2 color--black fw--600
+                    pl2 pr2 pod-padding section-pod-title{% endif %}">
+                    {{ section.settings.heroSubHeading | escape }}
+                </h2>
+                <div class="accordion pl2 pr2 pod-padding">
+                    {% assign count = 0 %}
+                    {% for block in section.blocks %}
+                    {% assign count = count | plus: 1 %}
+
+                    <div class="item flex-contain {% if product.handle == "sea-salt-caramel-dream-powder" or product.handle == "the-summer-bedtime-bundle" or product.handle == "sea-salt-caramel-extra-strength-dream-powder" %} sea-flex{% endif %}">
+                        {% if block.settings.compareHeading %}
+                        {% if product.handle == "sea-salt-caramel-dream-powder" or product.handle == "the-summer-bedtime-bundle" or product.handle == "sea-salt-caramel-extra-strength-dream-powder" %}
+                        <div class="check">
+                            <img loading="lazy" class="ss-icon-number"
+                            src="{{ block.settings.iconBlock | img_url : '300x300' }}" />
+                        </div>
+                        {% endif %}
+                        <div class="check  {% if product.handle == "sea-salt-caramel-dream-powder" or product.handle == "the-summer-bedtime-bundle" or product.handle == "sea-salt-caramel-extra-strength-dream-powder" %}no-check-sea{%endif%}">
+                            <svg width="10px" height="12px" viewBox="0 0 10 12" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                    font-family="LucidaGrande, Lucida Grande" font-size="14" font-weight="normal">
+                                    <g id="tiktok-mobile" transform="translate(-18.000000, -2604.000000)"
+                                        fill="#15599D">
+                                        <g id="right-for-oyu" transform="translate(18.000000, 2558.000000)">
+                                            <text id="✓">
+                                                <tspan x="0" y="57">✓</tspan>
+                                            </text>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="check-copy">
+                            <span class="tl sans--body">
+                                <p class="check-item {% if product.handle == "sea-salt-caramel-dream-powder" or product.handle == "the-summer-bedtime-bundle" or product.handle == "sea-salt-caramel-extra-strength-dream-powder" %}check-sea{%endif%}">{{ block.settings.compareHeading}}</p>
+                            </span>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    {% endfor %}
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .sub-sea {
+        max-width: 500px;
+        color: #427CBF;
+    }
+    .sub-sea::first-letter {
+        text-transform: capitalize;
+    }
+    .mobile-img {
+        display: none;
+    }
+
+    .check {
+        padding-top: 4px;
+    }
+
+    .check-item::first-letter {
+        text-transform: none !important;
+    }
+
+    .check-contain {
+        display: flex;
+        justify-content: left;
+        margin: 0 3%;
+        align-items: center;
+    }
+
+    .check-img-contain {
+        width: 50% !important;
+    }
+
+    .accordian-section {
+        background-image: url();
+        background-color: #fff;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left;
+        padding: 0% 0;
+    }
+
+    .accordion .item {
+        border-bottom: none;
+        padding-top: 4%;
+    }
+
+    .flex-contain {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .check-copy {
+        padding-left: 5%;
+    }
+
+    .checks-image {
+        max-height: 90%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .compare-content-contain {
+        padding-left: 5% !important;
+    }
+    .ss-icon-number {
+        width: 35px;
+    }
+
+    .no-check-sea {
+            display: none;
+        }
+
+    @media screen and (max-width: 800px) {
+        .check-copy {
+            padding-left: 0;
+        }
+        .ss-icon-number {
+            padding: 2px 0;
+            display: block;
+            margin: auto;
+            margin-bottom: 3px;
+        }
+        .check-sea {
+            text-align: center;
+        }
+        .sub-sea {
+        display: block;
+        width: 70%;
+        font-size: 15px;
+        font-weight: 600;
+        margin: auto;
+        padding: 10px 0;
+    }
+        .doctor-headshot {
+            width: 20vw;
+            margin: auto;
+        }
+
+        .mobile-img {
+            display: block;
+            padding-top: 40px;
+        }
+        .ssc-mob {
+            padding-top: 0;
+            display: none;
+        }
+        .check {
+            padding-right: 10px;
+        }
+
+        .pod-padding {
+            padding: 0 5% !important;
+
+        }
+
+        .check-img-contain {
+            width: 100% !important;
+            display: none;
+        }
+
+        .check-contain {
+            flex-direction: column;
+        }
+
+        .sc-contain {
+            flex-direction: column;
+        }
+
+        .checks-image {
+            display: none;
+        }
+
+        .sc-image {
+            display: block !important;
+        }
+
+        .compare-content-contain {
+            padding: 20px;
+            padding-left: 1% !important;
+        }
+        .sea-content-contain {
+            text-align: center;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        .sea-flex {
+            flex-direction: column;
+        }
+        .action-sea {
+            margin-bottom: 10px !important;
+        }
+    }
+</style>
+
+{% schema %}
+{
+"name": "Product Benefits Numbers",
+"class": "product-subscription_banner",
+"settings": [
+{
+"type": "color",
+"id": "statBGColor",
+"label": "Background Color",
+"default": "#fff"
+},
+{
+"type": "text",
+"id": "heroHeading",
+"label": "Title"
+},
+{
+"type": "text",
+"id": "heroSubHeading",
+"label": "Subtitle"
+},
+{
+"type": "image_picker",
+"id": "statBGImage",
+"label": "Background Image"
+},
+{
+"type": "image_picker",
+"id": "statMobImage",
+"label": "Mobile Image"
+}
+],
+"blocks": [
+{
+"type": "column",
+"name": "Accordian",
+"limit": 10,
+"settings": [
+{
+"type": "textarea",
+"id": "compareHeading",
+"label": "Accordian heading"
+},
+{
+    "type": "image_picker",
+    "id": "iconBlock",
+    "label": "Mobile Image"
+}
+]
+}
+],
+"presets": [{
+"name": "Product Benefits Numbers",
+"category": "Content"
+}]
+}
+
+{% endschema %}

@@ -1,0 +1,88 @@
+<div class="pt2 mt0 mb0 mt3--md mb0--md" style="background-color: #f8f8f8; margin: auto;">
+    <div class="paragraph-centered">
+        <h2 class="fw--600 sans--medium mb2 color--beam-blue pr1 pl1 tc">The Vision</h2>
+        <h2 class="fw--400 sans--body-new mb3 pl1 pr1 tc paragraph">We’re here to push the boundaries of what’s possible in the wellness space, and we can’t do it without you. Beam products are premium, science-backed, and lab-tested - and they work. Our vision for the future: help bring humanity to the next stage of our wellness evolution. Come along for the ride. </h2>
+    </div>
+</div>
+<style>
+    .paragraph-centered {
+        width: 60%;
+        padding: 5% 0;
+        margin: auto;
+    }
+    .paragraph {
+        line-height: 155%;
+        font-size: 18px;
+    }
+    .icons-inline {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .icon-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .icoImage {
+        max-height: 40px;
+        max-width: 40px;
+        margin-bottom: 20px;
+    }
+    .mobile-line {
+      display: none;
+    }
+@media (max-width: 800px) {
+    .paragraph-centered {
+        width: 90%;
+    }
+    .icoImage {
+        display: none;
+    }
+    .icons-inline {
+        flex-direction: column;
+    }
+    .arrow {
+      display: none;
+    }
+    .icon-item {
+      font-style: 25px !important;
+      padding: 20px 0;
+    }
+    .icon-text {
+      font-size: 20px;
+    }
+    .mobile-line {
+      display: block;
+      border-style: inset; 
+      border-width: 1px;
+      margin: 0;
+      width: 90vw;
+    }
+    .icons-inline {
+      margin-bottom: 10px;
+    }
+
+    }
+</style>
+
+{% schema %}
+{
+    "name": "links",
+  "settings": [	      
+            {
+				"type": "text",
+				"id": "heroSubtitle",
+				"label": "title"
+			},
+            {
+				"type": "textarea",
+				"id": "paragraph",
+				"label": "SubTitle"
+			}
+  ]
+}
+
+{% endschema %}

@@ -1,0 +1,156 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-variants",
+      "settings": {
+        "productHeading": "Elevate Energy",
+        "productBodyText": "",
+        "mobileBodyText": "",
+        "tagText": "Hydration + Energy mix",
+        "subImage": "shopify:\/\/shop_images\/elevate-energy.jpg",
+        "popupheading": "Elevate Energy",
+        "popupimg": "shopify:\/\/shop_images\/elevate-energy_lightbox-nutrition-facts.jpg"
+      }
+    },
+    "163591091178dea289": {
+      "type": "horizontal-bar",
+      "blocks": {
+        "163591091178dea289-0": {
+          "type": "column",
+          "settings": {
+            "iconheading": "gluten free",
+            "iconcontent": ""
+          }
+        },
+        "163591091178dea289-1": {
+          "type": "column",
+          "settings": {
+            "iconheading": "no sugar added",
+            "iconcontent": ""
+          }
+        },
+        "163591091178dea289-2": {
+          "type": "column",
+          "settings": {
+            "iconheading": "dairy free",
+            "iconcontent": ""
+          }
+        },
+        "4a1fb147-516c-4906-b4e5-160d6321d8f7": {
+          "type": "column",
+          "settings": {
+            "iconheading": "non-GMO",
+            "iconcontent": ""
+          }
+        },
+        "dc8e6f20-e41e-4deb-99d7-a4872fa1e47a": {
+          "type": "column",
+          "settings": {
+            "iconheading": "keto friendly",
+            "iconcontent": ""
+          }
+        }
+      },
+      "block_order": [
+        "163591091178dea289-0",
+        "163591091178dea289-1",
+        "163591091178dea289-2",
+        "4a1fb147-516c-4906-b4e5-160d6321d8f7",
+        "dc8e6f20-e41e-4deb-99d7-a4872fa1e47a"
+      ],
+      "settings": {
+        "gridTitle": ""
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "product-stats": {
+      "type": "product-stats",
+      "blocks": {
+        "bb11208a-d6e0-4846-920b-7bec11022ec0": {
+          "type": "column",
+          "settings": {
+            "statHeading": "",
+            "statContent": "<p class=\"fw--400\" style=\"max-width: 360px\">Elevate Energy contains 30 mg of green coffee bean extract for a stable, non-jittery kick, plus compounds like beetroot and vitamin b to help your body convert dietary energy into physical energy, and citrulline to support blood flow.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bb11208a-d6e0-4846-920b-7bec11022ec0"
+      ],
+      "settings": {
+        "statBGImage": "shopify:\/\/shop_images\/image_2_3.jpg",
+        "statBGColor": "#ffffff",
+        "productHeading": "",
+        "productBodyText": "",
+        "popupheading": ""
+      }
+    },
+    "1637783651d8d3941b": {
+      "type": "elevate-recovery",
+      "settings": {
+        "statBGColor": "#ffffff",
+        "heroHeading": "",
+        "section_styles": ""
+      }
+    },
+    "16353565802d2d8b6e": {
+      "type": "product-accordian",
+      "settings": {
+        "statBGImage": "shopify:\/\/shop_images\/ingredients_1e1529ff-5a98-4f4e-870b-a4b248e8ebf1.jpg",
+        "statBGColor": "#ffffff",
+        "heroHeading": "no added sugar + paleo, vegan, and keto-friendly. does not contain hemp",
+        "section_styles": "pt3 pb6 pt10--md pb10--md container mb8--md mt5--md"
+      }
+    },
+    "1635356617646f55ff": {
+      "type": "product-mid-hero",
+      "disabled": true,
+      "settings": {
+        "heroBGImage": "shopify:\/\/shop_images\/image_2_2.jpg",
+        "heroBGColor": "#ffffff",
+        "heroHeading": "",
+        "heroBodyText": ""
+      }
+    },
+    "1635512142e6a1ad8f": {
+      "type": "related-products",
+      "settings": {
+        "statBGColor": "#ffffff",
+        "productHeading": "",
+        "productBodyText": "",
+        "popupheading": ""
+      }
+    },
+    "16358623413a317eb1": {
+      "type": "reviews-end",
+      "settings": {
+        "heroBGColor": "#ffffff",
+        "heroHeading": "",
+        "heroBodyText": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "163591091178dea289",
+    "product-recommendations",
+    "product-stats",
+    "1637783651d8d3941b",
+    "16353565802d2d8b6e",
+    "1635356617646f55ff",
+    "1635512142e6a1ad8f",
+    "16358623413a317eb1"
+  ]
+}

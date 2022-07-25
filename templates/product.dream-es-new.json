@@ -1,0 +1,303 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "productHeading": "Dream Extra Strength Capsules",
+        "productBodyText": "",
+        "mobileBodyText": "our most popular sleep capsule is now available with even more sleep-promoting* power so you can get better, deeper sleep when you need it most.",
+        "tagText": "new product",
+        "subImage": "shopify:\/\/shop_images\/beam-dream-xs-product.jpg",
+        "servingSize": "30 servings",
+        "popupheading": "Dream Extra Strength Capsules",
+        "popupimg": "shopify:\/\/shop_images\/hemp-nutritionfacts-dream-caps-1200.jpg"
+      }
+    },
+    "163591091178dea289": {
+      "type": "horizontal-bar",
+      "blocks": {
+        "163591091178dea289-0": {
+          "type": "column",
+          "settings": {
+            "iconheading": "gluten free",
+            "iconcontent": ""
+          }
+        },
+        "163591091178dea289-1": {
+          "type": "column",
+          "settings": {
+            "iconheading": "no sugar added",
+            "iconcontent": ""
+          }
+        },
+        "163591091178dea289-2": {
+          "type": "column",
+          "settings": {
+            "iconheading": "dairy free",
+            "iconcontent": ""
+          }
+        },
+        "4a1fb147-516c-4906-b4e5-160d6321d8f7": {
+          "type": "column",
+          "settings": {
+            "iconheading": "non-GMO",
+            "iconcontent": ""
+          }
+        },
+        "dc8e6f20-e41e-4deb-99d7-a4872fa1e47a": {
+          "type": "column",
+          "settings": {
+            "iconheading": "keto friendly",
+            "iconcontent": ""
+          }
+        }
+      },
+      "block_order": [
+        "163591091178dea289-0",
+        "163591091178dea289-1",
+        "163591091178dea289-2",
+        "4a1fb147-516c-4906-b4e5-160d6321d8f7",
+        "dc8e6f20-e41e-4deb-99d7-a4872fa1e47a"
+      ],
+      "settings": {
+        "gridTitle": ""
+      }
+    },
+    "163535382289658a11": {
+      "type": "product-mid-hero",
+      "settings": {
+        "heroBGImage": "shopify:\/\/shop_images\/image_1.jpg",
+        "heroBGColor": "#be8a8a",
+        "heroHeading": "The Power of Dream Extra Strength Capsules",
+        "heroBodyText": "<p>extra strength means you’re getting a potent blend of sleep-enhancing* vitamins and minerals like Magnesium, Reishi, L-Theanine, and Nano Hemp to bring you quality sleep, faster.<\/p>"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": false,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "product-stats": {
+      "type": "product-stats",
+      "disabled": true,
+      "blocks": {
+        "bb11208a-d6e0-4846-920b-7bec11022ec0": {
+          "type": "column",
+          "settings": {
+            "statHeading": "98%",
+            "statContent": "<p>of people surveyed <strong>fall asleep <br>faster<\/strong> when taking Dream Powder.<span style=\"font-size: 10px; position: relative; top: -6px;\">†<\/span><\/p>"
+          }
+        },
+        "3739e969-ca30-49c8-ad92-130967922668": {
+          "type": "column",
+          "settings": {
+            "statHeading": "99%",
+            "statContent": "<p>of people experience <strong>better sleep quality<\/strong>.<span style=\"font-size: 10px; position: relative; top: -6px;\">†<\/span><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bb11208a-d6e0-4846-920b-7bec11022ec0",
+        "3739e969-ca30-49c8-ad92-130967922668"
+      ],
+      "settings": {
+        "statBGImage": "shopify:\/\/shop_images\/image_2.jpg",
+        "statBGColor": "#ffffff",
+        "productHeading": "",
+        "productBodyText": "",
+        "popupheading": ""
+      }
+    },
+    "163535530806e4dccb": {
+      "type": "grid-with-icons",
+      "blocks": {
+        "163535530806e4dccb-0": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/savings-icon.png",
+            "iconheading": "monthly savings",
+            "iconcontent": ""
+          }
+        },
+        "163535530806e4dccb-1": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/cart.png",
+            "iconheading": "free mug + frother with your first delivery",
+            "iconcontent": ""
+          }
+        },
+        "163535530806e4dccb-2": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/vip.png",
+            "iconheading": "VIP support",
+            "iconcontent": ""
+          }
+        },
+        "8b21463f-9030-49ea-9a33-7b3851baacb1": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/shipping.png",
+            "iconheading": "free shipping on every order",
+            "iconcontent": ""
+          }
+        },
+        "3ac56819-a8cd-4e20-952c-1dead4b055df": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/pause_a4b6c02c-0f2d-4204-8bbe-6d9267133b0e.png",
+            "iconheading": "pause or cancel anytime",
+            "iconcontent": ""
+          }
+        }
+      },
+      "block_order": [
+        "163535530806e4dccb-0",
+        "163535530806e4dccb-1",
+        "163535530806e4dccb-2",
+        "8b21463f-9030-49ea-9a33-7b3851baacb1",
+        "3ac56819-a8cd-4e20-952c-1dead4b055df"
+      ],
+      "settings": {
+        "gridTitle": "subscribe to better sleep"
+      }
+    },
+    "16353565802d2d8b6e": {
+      "type": "product-accordian",
+      "blocks": {
+        "bd79d06b-de6b-49da-9cc1-bcef1f8e7c3a": {
+          "type": "column",
+          "settings": {
+            "statHeading": "Nano Hemp",
+            "statContent": "<p>hemp particles with the highest absorption potential to naturally support mood, stress, rest, and wellbeing*<\/p>"
+          }
+        },
+        "2d1aeae0-dd4e-429b-aea3-6f82eab98618": {
+          "type": "column",
+          "settings": {
+            "statHeading": "reishi",
+            "statContent": "<p>a mushroom superfood that helps to support the body’s sleep cycle and manage stress*<\/p>"
+          }
+        },
+        "92639f2f-33ac-4a03-ad11-c69930a040f6": {
+          "type": "column",
+          "settings": {
+            "statHeading": "magnesium",
+            "statContent": "<p>a mineral that aids the body’s ability to fall asleep by relaxing the muscles and regulating the nervous system*<\/p>"
+          }
+        },
+        "1d0f84bc-32ab-417d-96cc-07b047ecb7de": {
+          "type": "column",
+          "settings": {
+            "statHeading": "l-Theanine",
+            "statContent": "<p>an amino acid that promotes relaxation and helps improve sleep quality*<\/p>"
+          }
+        },
+        "1ee8c65c-d2b5-428d-bfb0-a86e73243819": {
+          "type": "column",
+          "settings": {
+            "statHeading": "melatonin",
+            "statContent": "<p>a compound that regulates the body’s circadian rhythm, promoting restful sleep*<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bd79d06b-de6b-49da-9cc1-bcef1f8e7c3a",
+        "2d1aeae0-dd4e-429b-aea3-6f82eab98618",
+        "92639f2f-33ac-4a03-ad11-c69930a040f6",
+        "1d0f84bc-32ab-417d-96cc-07b047ecb7de",
+        "1ee8c65c-d2b5-428d-bfb0-a86e73243819"
+      ],
+      "settings": {
+        "statBGImage": "shopify:\/\/shop_images\/xs_2.jpg",
+        "statBGColor": "#ffffff",
+        "heroHeading": "what’s in Dream Extra Strength Capsules?",
+        "section_styles": "pt4 pb6 pt0--md pb0--md mt0--md mb0--md"
+      }
+    },
+    "1636307709a1720cc1": {
+      "type": "product-mid-hero-2",
+      "settings": {
+        "heroBGImage": "shopify:\/\/shop_images\/BEAM-PRODUCT-0915_0829-crop.jpg",
+        "heroBGImageMobile": "shopify:\/\/shop_images\/BEAM-PRODUCT-0915_0829-crop-mobile.jpg",
+        "heroBGColor": "#ffffff",
+        "heroHeading": "when to enjoy",
+        "heroBodyText": "with a glass of water, take 2 capsules 45 to 60 minutes before bedtime and enjoy your deepest night’s sleep."
+      }
+    },
+    "163536855792c4574f": {
+      "type": "fifty-fifty",
+      "settings": {
+        "fiftyImage": "shopify:\/\/shop_images\/dr_weiss_2.jpg",
+        "heroBGColor": "#ffffff",
+        "heroHeading": "Meet Beam's resident sleep expert",
+        "heroBodyTopText": " Dr. Carleara Weiss, Ph.D., M.S., R.N., <br>Member of the American Academy of Sleep Medicine",
+        "heroBodyText": "<p>“beam is committed to offering products that may contribute to sleep quality while maintaining an ethical and conscious approach to overall wellness.”<\/p><p><\/p><p>- Dr. Weiss<\/p>"
+      }
+    },
+    "16361348982a2dd943": {
+      "type": "product-mid-hero-2",
+      "settings": {
+        "heroBGImage": "shopify:\/\/shop_images\/image_2.jpg",
+        "heroBGImageMobile": "shopify:\/\/shop_images\/image_2_a4538039-6109-43d5-a7c6-54675394ec51.jpg",
+        "heroBGColor": "#9a4343",
+        "heroHeading": "why do I need Dream Extra Strength Capsules?",
+        "heroBodyText": "<ul class=\"checkmark-list\">\n                            <li>\n<img class=\"mr1\" style=\"position: absolute;left: -27px; top: 5px;\" height=\"16px\" width=\"16px\" src=\"\/\/cdn.shopify.com\/s\/files\/1\/0264\/4076\/1399\/t\/35\/assets\/check.png?v=2214101534731403346\">\n                                If you experience persistent sleep difficulties\n                            <\/li>\n                            <li>\n                                <img class=\"mr1\" style=\"position: absolute;left: -27px; top: 5px;\" height=\"16px\" width=\"16px\" src=\"\/\/cdn.shopify.com\/s\/files\/1\/0264\/4076\/1399\/t\/35\/assets\/check.png?v=2214101534731403346\">\n                                If you have a drastically changing schedule which interrupts your sleep patterns\n                                                            <\/li>\n                            <li>\n                                <img class=\"mr1\" style=\"position: absolute;left: -27px; top: 5px;\" height=\"16px\" width=\"16px\" src=\"\/\/cdn.shopify.com\/s\/files\/1\/0264\/4076\/1399\/t\/35\/assets\/check.png?v=2214101534731403346\">\n                                If you struggle with circadian rhythm issues*\n                            <\/li>\n                        <\/ul>"
+      }
+    },
+    "1635512142e6a1ad8f": {
+      "type": "related-products",
+      "settings": {
+        "statBGColor": "#ffffff",
+        "productHeading": "",
+        "productBodyText": "",
+        "popupheading": ""
+      }
+    },
+    "16358623413a317eb1": {
+      "type": "reviews-end",
+      "settings": {
+        "heroBGColor": "#ffffff",
+        "heroHeading": "",
+        "heroBodyText": ""
+      }
+    },
+    "1635917889a6342e69": {
+      "type": "main-product-bottom",
+      "settings": {
+        "productHeading": "Dream Extra Strength Capsules",
+        "productBodyText": "",
+        "mobileBodyText": "",
+        "tagText": "new product",
+        "subImage": "shopify:\/\/shop_images\/beam-dream-xs-product.jpg",
+        "popupheading": "Dream Extra Strength Capsules",
+        "popupimg": "shopify:\/\/shop_images\/hemp-nutritionfacts-dream-caps-1200.jpg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "163591091178dea289",
+    "163535382289658a11",
+    "product-recommendations",
+    "product-stats",
+    "163535530806e4dccb",
+    "16353565802d2d8b6e",
+    "1636307709a1720cc1",
+    "163536855792c4574f",
+    "16361348982a2dd943",
+    "1635512142e6a1ad8f",
+    "16358623413a317eb1",
+    "1635917889a6342e69"
+  ]
+}

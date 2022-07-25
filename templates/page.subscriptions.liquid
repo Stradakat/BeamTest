@@ -1,0 +1,1111 @@
+<div class="mt8 mb8 mt10--md mb10--md top-level">
+    <div class="reveal__container active">
+        <div class="reveal__component__0--fade-fast grid-container contained pt2--md pb2--md">
+            <div class="row align--center">
+                <div class="col c10--md">
+                    <div class="rich-text header-contain">
+                        <h1 role="heading" pclass="sans--medium fw--600 color--blue pt4" style="text-align: center">
+                            subscribe and #beamforbetter</h1>
+                        <h1 class="sans--large pt2" style="text-align: center; font-weight: 300;">Join the Beam
+                            community</h1>
+                        <h1 class="sans--medium pt4 sub-header-copy" style="text-align: center; font-weight: 400;">when
+                            you subscribe, you'll save on essentials and get monthly deliveries to better your body +
+                            mind</h1>
+                        <a class="subscribe-btn mt4" style="text-decoration: none; border-radius: 5px;"
+                            href="#anchor">Subscribe Today</a>
+                        <h1 class="sans--medium pt2 fw--400 " style="text-align: center; font-size: 16px !important;">
+                            already a member? <a class="sign-in" href="/account/login">Sign In</a></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% section 'subscription-perks' %}
+{% section 'sub-terms' %}
+
+<div class="products-contain">
+    <h1 class="color--blue pb3 pt6 fyb" style="font-weight: 300; font-size: 35px;">find your better</h1>
+    <h1 id="anchor" class="sans--medium mb4 fyb-content" style="font-weight: 300;">Sleep. Calm. Energy. Recovery.
+        Hydration. These are the building blocks of a healthy lifestyle. At Beam, we've got you covered with each and
+        every one.</h1>
+</div>
+<div class="product-menu">
+    <div class="product-list">
+        <a class="menu-item" id="sleep">sleep</a>
+        <a class="menu-item" id="calm">calm</a>
+        <a class="menu-item" id="energy">energy</a>
+        <a class="menu-item" id="recovery">recovery</a>
+        <a class="menu-item" id="hydration">hydration</a>
+    </div>
+</div>
+
+<div class="product-collection flex-collection" id="sleep-trigger">
+    {% for product in collections.sleep.products %}
+    <div class="product-item sleep-item">
+        {% for image in product.images | limit: 1 %}
+        <a href="{{product.url}}">
+            <img class="product-image" src="{{ image.src | img_url: '450x450' }}">
+        </a>
+        <div class="middle">
+            <form class="product-form" action="/cart/add" data-productid="{{product.id}}" method="post">
+                {% if product.variants.size > 1 %}
+                <div style="display:none" class="product-options">
+                    <select name="id" data-productid="{{product.id}}" id="product-select" class="product-select">
+                        {% for variant in product.variants %}
+                        <option {% if variant==selectedVariant %} selected="selected" {% endif %}
+                            value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                {% else %}
+                <input style="display:none" type="hidden" name="id" data-productid="{{product.id}}"
+                    class="product-select" value="{{ product.variants[0].id }}"
+                    data-variant-title="{{ product.variants[0].title }}" />
+                {% endif %}
+                <input style="display:none" type="text" name="quantity" id="quantity" value="1" />
+                <div class="add-to-cart">
+                    <div>
+                        {% assign hide_default_title = false %}
+                        {% if product.variants.size == 1 and product.variants.first.title contains 'Default'
+                        %}
+                        {% assign hide_default_title = true %}
+                        {% endif %}
+                        <div style="display: none;" id="product-variants"
+                            class="select--product-option{% if hide_default_title %} hidden{% endif %}">
+                            <select id="product-select" class="form-select" name="id" data-productid="{{ product.id }}">
+                                {% for variant in product.variants %}
+                                <option class="form-select" {% if variant==product.selected_or_first_available_variant
+                                    %} selected{% endif %} value="{{ variant.id }}">
+                                    {{ variant.title }} - {{ variant.price | money }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+
+
+                        <!-- Begin ReCharge code -->
+                        <div style="display: none;">
+                            {% if product.available %}{% include 'subscription-product-new' %}{% endif %}
+                            <!-- End ReCharge code -->
+                            <div style="display: none" class="sans--small pb2 hidden">
+                                <div id="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"
+                                    class="delta">
+                                    <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+                                    {% if product.available %}
+                                    <link itemprop="availability" href="http://schema.org/InStock" />
+                                    {% else %}
+                                    <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                                    {% endif %}
+                                    <p>
+                                        {% assign variant = product.selected_or_first_available_variant %}
+                                        {% if product.compare_at_price > product.price %}
+                                        <span class="product-price on-sale" itemprop="price">{{ variant.price |
+                                            money }}</span>
+                                        <s class="product-compare-price">{{ variant.compare_at_price | money
+                                            }}</s>
+                                        {% else %}
+                                        <span class="product-price sans--medium fw--600" itemprop="price">{{
+                                            variant.price | money }}</span>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div id="product-add" class="form-action mt0 mb3">
+                            <div style="display: none;" class="qtydiv">
+                                <div class="qtybox">
+                                    <span class="btnqty qtyminus icon-minus">-</span>
+                                    <inputtype="text" id="productQuantity" name="quantity" value="1" min="1"
+                                        class="quantity-selector quantity-input" readonly="">
+                                        <span class="btnqty qtyplus icon-plus">+</span>
+                                </div>
+                            </div>
+                            <div class="sub-btn">
+                                <input type="submit" name="add" id="add" class="sub-input" value="Subscribe Today"
+                                    value="{{ add_to_cart | escape }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            <br>
+            <div class="learn-btn"><a href="{{product.url}}">Learn More</a></div>
+
+        </div>
+        {% endfor %}
+        <a href="{{product.url}}">
+            <div class="product-title-price">
+                <p class="fw--600 product-title">{{ product.title }}</p>
+                {% for variant in product.variants %}
+                <label for="rc_purchase_type_autodeliver" class="rc_label rc_label__autodeliver">
+                    <s class="crossed-out">{{ product.price | money_without_trailing_zeros }}</s>
+                    {% assign check_zeros = variant.metafields.subscriptions.discount_variant_price | split: "." |
+                    slice: 1 %}
+                    {% assign no_zeros = variant.metafields.subscriptions.discount_variant_price | split: "." | slice: 0
+                    %}
+                    {% if check_zeros contains "00" %}
+                    <div id="" class="fw--600 dib rc_price rc_price__autodeliver">
+                        ${{variant.metafields.subscriptions.discount_variant_price | split: "." | slice: 0 }}</div>
+                    {% else %}
+                    <div id="" class="fw--600 dib rc_price rc_price__autodeliver">
+                        {{variant.metafields.subscriptions.discount_variant_price | money }}</div>
+                    {% endif %}
+
+                </label>
+
+                {% endfor %}
+            </div>
+        </a>
+        <div class="sans--body show--md mb1">
+            {% include 'stars-dark' %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="product-collection" id="calm-trigger">
+    {% for product in collections.calm.products %}
+    <div class="product-item">
+        {% for image in product.images | limit: 1 %}
+        <a href="{{product.url}}">
+            <img class="product-image" src="{{ image.src | img_url: '450x450' }}">
+        </a>
+        <div class="middle">
+            <form class="product-form" action="/cart/add" data-productid="{{product.id}}" method="post">
+                {% if product.variants.size > 1 %}
+                <div style="display:none" class="product-options">
+                    <select name="id" data-productid="{{product.id}}" id="product-select" class="product-select">
+                        {% for variant in product.variants %}
+                        <option {% if variant==selectedVariant %} selected="selected" {% endif %}
+                            value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                {% else %}
+                <input style="display:none" type="hidden" name="id" data-productid="{{product.id}}"
+                    class="product-select" value="{{ product.variants[0].id }}"
+                    data-variant-title="{{ product.variants[0].title }}" />
+                {% endif %}
+                <input style="display:none" type="text" name="quantity" id="quantity" value="1" />
+                <div class="add-to-cart">
+                    <div>
+                        {% assign hide_default_title = false %}
+                        {% if product.variants.size == 1 and product.variants.first.title contains 'Default'
+                        %}
+                        {% assign hide_default_title = true %}
+                        {% endif %}
+                        <div style="display: none;" id="product-variants"
+                            class="select--product-option{% if hide_default_title %} hidden{% endif %}">
+                            <select id="product-select" class="form-select" name="id" data-productid="{{ product.id }}">
+                                {% for variant in product.variants %}
+                                <option class="form-select" {% if variant==product.selected_or_first_available_variant
+                                    %} selected{% endif %} value="{{ variant.id }}">
+                                    {{ variant.title }} - {{ variant.price | money }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+
+
+                        <!-- Begin ReCharge code -->
+                        <div style="display: none;">
+                            {% if product.available %}{% include 'subscription-product-new' %}{% endif %}
+                            <!-- End ReCharge code -->
+                            <div style="display: none" class="sans--small pb2 hidden">
+                                <div id="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"
+                                    class="delta">
+                                    <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+                                    {% if product.available %}
+                                    <link itemprop="availability" href="http://schema.org/InStock" />
+                                    {% else %}
+                                    <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                                    {% endif %}
+                                    <p>
+                                        {% assign variant = product.selected_or_first_available_variant %}
+                                        {% if product.compare_at_price > product.price %}
+                                        <span class="product-price on-sale" itemprop="price">{{ variant.price |
+                                            money }}</span>
+                                        <s class="product-compare-price">{{ variant.compare_at_price | money
+                                            }}</s>
+                                        {% else %}
+                                        <span class="product-price sans--medium fw--600" itemprop="price">{{
+                                            variant.price | money }}</span>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div id="product-add" class="form-action mt0 mb3">
+                            <div style="display: none;" class="qtydiv">
+                                <div class="qtybox">
+                                    <span class="btnqty qtyminus icon-minus">-</span>
+                                    <inputtype="text" id="productQuantity" name="quantity" value="1" min="1"
+                                        class="quantity-selector quantity-input" readonly="">
+                                        <span class="btnqty qtyplus icon-plus">+</span>
+                                </div>
+                            </div>
+                            <div class="sub-btn">
+                                <input type="submit" name="add" id="add" class="sub-input" value="Subscribe Today"
+                                    value="{{ add_to_cart | escape }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            <br>
+            <div class="learn-btn"><a href="{{product.url}}">Learn More</a></div>
+        </div>
+        {% endfor %}
+        <a href="{{product.url}}">
+            <div class="product-title-price">
+                <p class="fw--600">{{ product.title }}</p>
+                {% for variant in product.variants %}
+                {% if forloop.first == true %}
+                <label for="rc_purchase_type_autodeliver" class="rc_label rc_label__autodeliver">
+                    <s class="crossed-out">{{ variant.price | money_without_trailing_zeros }}</s>
+                    <div id="" class="fw--600 dib rc_price rc_price__autodeliver">
+                        ${{variant.metafields.subscriptions.discount_variant_price | split: "." | slice: 0 }}</div>
+                </label>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </a>
+        <div class="sans--body show--md mb1">
+            {% include 'stars' %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="product-collection" id="energy-trigger">
+    {% for product in collections.energy.products %}
+    <div class="product-item">
+        {% for image in product.images | limit: 1 %}
+        <a href="{{product.url}}">
+            <img class="product-image" src="{{ image.src | img_url: '450x450' }}">
+        </a>
+        <div class="middle">
+            <form class="product-form" action="/cart/add" data-productid="{{product.id}}" method="post">
+                {% if product.variants.size > 1 %}
+                <div style="display:none" class="product-options">
+                    <select name="id" data-productid="{{product.id}}" id="product-select" class="product-select">
+                        {% for variant in product.variants %}
+                        <option {% if variant==selectedVariant %} selected="selected" {% endif %}
+                            value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                {% else %}
+                <input style="display:none" type="hidden" name="id" data-productid="{{product.id}}"
+                    class="product-select" value="{{ product.variants[0].id }}"
+                    data-variant-title="{{ product.variants[0].title }}" />
+                {% endif %}
+                <input style="display:none" type="text" name="quantity" id="quantity" value="1" />
+                <div class="add-to-cart">
+                    <div>
+                        {% assign hide_default_title = false %}
+                        {% if product.variants.size == 1 and product.variants.first.title contains 'Default'
+                        %}
+                        {% assign hide_default_title = true %}
+                        {% endif %}
+                        <div style="display: none;" id="product-variants"
+                            class="select--product-option{% if hide_default_title %} hidden{% endif %}">
+                            <select id="product-select" class="form-select" name="id" data-productid="{{ product.id }}">
+                                {% for variant in product.variants %}
+                                <option class="form-select" {% if variant==product.selected_or_first_available_variant
+                                    %} selected{% endif %} value="{{ variant.id }}">
+                                    {{ variant.title }} - {{ variant.price | money }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+
+
+                        <!-- Begin ReCharge code -->
+                        <div style="display: none;">
+                            {% if product.available %}{% include 'subscription-product-new' %}{% endif %}
+                            <!-- End ReCharge code -->
+                            <div style="display: none" class="sans--small pb2 hidden">
+                                <div id="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"
+                                    class="delta">
+                                    <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+                                    {% if product.available %}
+                                    <link itemprop="availability" href="http://schema.org/InStock" />
+                                    {% else %}
+                                    <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                                    {% endif %}
+                                    <p>
+                                        {% assign variant = product.selected_or_first_available_variant %}
+                                        {% if product.compare_at_price > product.price %}
+                                        <span class="product-price on-sale" itemprop="price">{{ variant.price |
+                                            money }}</span>
+                                        <s class="product-compare-price">{{ variant.compare_at_price | money
+                                            }}</s>
+                                        {% else %}
+                                        <span class="product-price sans--medium fw--600" itemprop="price">{{
+                                            variant.price | money }}</span>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div id="product-add" class="form-action mt0 mb3">
+                            <div style="display: none;" class="qtydiv">
+                                <div class="qtybox">
+                                    <span class="btnqty qtyminus icon-minus">-</span>
+                                    <inputtype="text" id="productQuantity" name="quantity" value="1" min="1"
+                                        class="quantity-selector quantity-input" readonly="">
+                                        <span class="btnqty qtyplus icon-plus">+</span>
+                                </div>
+                            </div>
+                            <div class="sub-btn">
+                                <input type="submit" name="add" id="add" class="sub-input" value="Subscribe Today"
+                                    value="{{ add_to_cart | escape }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            <br>
+            <div class="learn-btn"><a href="{{product.url}}">Learn More</a></div>
+        </div>
+        {% endfor %}
+        <a href="{{product.url}}">
+            <div class="product-title-price">
+                <p class="fw--600">{{ product.title }}</p>
+                {% for variant in product.variants | limit: 1 %}
+                <label for="rc_purchase_type_autodeliver" class="rc_label rc_label__autodeliver">
+                    <s class="crossed-out">{{ product.price | money_without_trailing_zeros }}</s>
+                    <div id="" class="fw--600 dib rc_price rc_price__autodeliver">
+                        ${{variant.metafields.subscriptions.discount_variant_price | split: "." | slice: 0 }}</div>
+                </label>
+
+                {% endfor %}
+            </div>
+        </a>
+        <div class="sans--body show--md mb1">
+            {% include 'stars' %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+<div class="product-collection" id="recovery-trigger">
+    {% for product in collections.recovery.products %}
+    <div class="product-item">
+        {% for image in product.images | limit: 1 %}
+        <a href="{{product.url}}">
+            <img class="product-image" src="{{ image.src | img_url: '450x450' }}">
+        </a>
+        <div class="middle">
+            <form class="product-form" action="/cart/add" data-productid="{{product.id}}" method="post">
+                {% if product.variants.size > 1 %}
+                <div style="display:none" class="product-options">
+                    <select name="id" data-productid="{{product.id}}" id="product-select" class="product-select">
+                        {% for variant in product.variants %}
+                        <option {% if variant==selectedVariant %} selected="selected" {% endif %}
+                            value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                {% else %}
+                <input style="display:none" type="hidden" name="id" data-productid="{{product.id}}"
+                    class="product-select" value="{{ product.variants[0].id }}"
+                    data-variant-title="{{ product.variants[0].title }}" />
+                {% endif %}
+                <input style="display:none" type="text" name="quantity" id="quantity" value="1" />
+                <div class="add-to-cart">
+                    <div>
+                        {% assign hide_default_title = false %}
+                        {% if product.variants.size == 1 and product.variants.first.title contains 'Default'
+                        %}
+                        {% assign hide_default_title = true %}
+                        {% endif %}
+                        <div style="display: none;" id="product-variants"
+                            class="select--product-option{% if hide_default_title %} hidden{% endif %}">
+                            <select id="product-select" class="form-select" name="id" data-productid="{{ product.id }}">
+                                {% for variant in product.variants %}
+                                <option class="form-select" {% if variant==product.selected_or_first_available_variant
+                                    %} selected{% endif %} value="{{ variant.id }}">
+                                    {{ variant.title }} - {{ variant.price | money }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+
+
+                        <!-- Begin ReCharge code -->
+                        <div style="display: none;">
+                            {% if product.available %}{% include 'subscription-product-new' %}{% endif %}
+                            <!-- End ReCharge code -->
+                            <div style="display: none" class="sans--small pb2 hidden">
+                                <div id="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"
+                                    class="delta">
+                                    <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+                                    {% if product.available %}
+                                    <link itemprop="availability" href="http://schema.org/InStock" />
+                                    {% else %}
+                                    <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                                    {% endif %}
+                                    <p>
+                                        {% assign variant = product.selected_or_first_available_variant %}
+                                        {% if product.compare_at_price > product.price %}
+                                        <span class="product-price on-sale" itemprop="price">{{ variant.price |
+                                            money }}</span>
+                                        <s class="product-compare-price">{{ variant.compare_at_price | money
+                                            }}</s>
+                                        {% else %}
+                                        <span class="product-price sans--medium fw--600" itemprop="price">{{
+                                            variant.price | money }}</span>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div id="product-add" class="form-action mt0 mb3">
+                            <div style="display: none;" class="qtydiv">
+                                <div class="qtybox">
+                                    <span class="btnqty qtyminus icon-minus">-</span>
+                                    <inputtype="text" id="productQuantity" name="quantity" value="1" min="1"
+                                        class="quantity-selector quantity-input" readonly="">
+                                        <span class="btnqty qtyplus icon-plus">+</span>
+                                </div>
+                            </div>
+                            <div class="sub-btn">
+                                <input type="submit" name="add" id="add" class="sub-input" value="Subscribe Today"
+                                    value="{{ add_to_cart | escape }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            <br>
+            <div class="learn-btn"><a href="{{product.url}}">Learn More</a></div>
+        </div>
+        {% endfor %}
+        <a href="{{product.url}}">
+            <div class="product-title-price">
+                <p class="fw--600">{{ product.title }}</p>
+                {% for variant in product.variants | limit: 1 %}
+                <label for="rc_purchase_type_autodeliver" class="rc_label rc_label__autodeliver">
+                    <s class="crossed-out">{{ product.price | money_without_trailing_zeros }}</s>
+                    <div id="" class="fw--600 dib rc_price rc_price__autodeliver">
+                        ${{variant.metafields.subscriptions.discount_variant_price | split: "." | slice: 0 }}</div>
+                </label>
+
+                {% endfor %}
+            </div>
+        </a>
+        <div class="sans--body show--md mb1">
+            {% include 'stars' %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="product-collection" id="hydration-trigger">
+    {% for product in collections.hydration-powders.products %}
+    <div class="product-item">
+        {% for image in product.images | limit: 1 %}
+        <a href="{{product.url}}">
+            <img class="product-image" src="{{ image.src | img_url: '450x450' }}">
+        </a>
+        <div class="middle">
+            <form class="product-form" action="/cart/add" data-productid="{{product.id}}" method="post">
+                {% if product.variants.size > 1 %}
+                <div style="display:none" class="product-options">
+                    <select name="id" data-productid="{{product.id}}" id="product-select" class="product-select">
+                        {% for variant in product.variants %}
+                        <option {% if variant==selectedVariant %} selected="selected" {% endif %}
+                            value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                {% else %}
+                <input style="display:none" type="hidden" name="id" data-productid="{{product.id}}"
+                    class="product-select" value="{{ product.variants[0].id }}"
+                    data-variant-title="{{ product.variants[0].title }}" />
+                {% endif %}
+                <input style="display:none" type="text" name="quantity" id="quantity" value="1" />
+                <div class="add-to-cart">
+                    <div>
+                        {% assign hide_default_title = false %}
+                        {% if product.variants.size == 1 and product.variants.first.title contains 'Default'
+                        %}
+                        {% assign hide_default_title = true %}
+                        {% endif %}
+                        <div style="display: none;" id="product-variants"
+                            class="select--product-option{% if hide_default_title %} hidden{% endif %}">
+                            <select id="product-select" class="form-select" name="id" data-productid="{{ product.id }}">
+                                {% for variant in product.variants %}
+                                <option class="form-select" {% if variant==product.selected_or_first_available_variant
+                                    %} selected{% endif %} value="{{ variant.id }}">
+                                    {{ variant.title }} - {{ variant.price | money }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+
+
+                        <!-- Begin ReCharge code -->
+                        <div style="display: none;">
+                            {% if product.available %}{% include 'subscription-product-new' %}{% endif %}
+                            <!-- End ReCharge code -->
+                            <div style="display: none" class="sans--small pb2 hidden">
+                                <div id="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"
+                                    class="delta">
+                                    <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+                                    {% if product.available %}
+                                    <link itemprop="availability" href="http://schema.org/InStock" />
+                                    {% else %}
+                                    <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                                    {% endif %}
+                                    <p>
+                                        {% assign variant = product.selected_or_first_available_variant %}
+                                        {% if product.compare_at_price > product.price %}
+                                        <span class="product-price on-sale" itemprop="price">{{ variant.price |
+                                            money }}</span>
+                                        <s class="product-compare-price">{{ variant.compare_at_price | money
+                                            }}</s>
+                                        {% else %}
+                                        <span class="product-price sans--medium fw--600" itemprop="price">{{
+                                            variant.price | money }}</span>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div id="product-add" class="form-action mt0 mb3">
+                            <div style="display: none;" class="qtydiv">
+                                <div class="qtybox">
+                                    <span class="btnqty qtyminus icon-minus">-</span>
+                                    <inputtype="text" id="productQuantity" name="quantity" value="1" min="1"
+                                        class="quantity-selector quantity-input" readonly="">
+                                        <span class="btnqty qtyplus icon-plus">+</span>
+                                </div>
+                            </div>
+                            <div class="sub-btn">
+                                <input type="submit" name="add" id="add" class="sub-input" value="Subscribe Today"
+                                    value="{{ add_to_cart | escape }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            <br>
+            <div class="learn-btn"><a href="{{product.url}}">Learn More</a></div>
+        </div>
+        {% endfor %}
+        <a href="{{product.url}}">
+            <div class="product-title-price">
+                <p class="fw--600">{{ product.title }}</p>
+                {% for variant in product.variants | limit: 1 %}
+                <label for="rc_purchase_type_autodeliver" class="rc_label rc_label__autodeliver">
+                    <s class="crossed-out">{{ product.price | money_without_trailing_zeros }}</s>
+                    <div id="" class="fw--600 dib rc_price rc_price__autodeliver">
+                        ${{variant.metafields.subscriptions.discount_variant_price | split: "." | slice: 0 }}</div>
+
+                </label>
+
+                {% endfor %}
+            </div>
+        </a>
+        <div class="sans--body show--md mb1">
+            {% include 'stars' %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% section 'testimonials' %}
+
+<div class="faqs">
+    <h1 class="color--white faqs-title" style="font-size: 30px;">have more questions?</h1>
+    <h1 class="sans--medium color--white m3 faqs-subtitle">check out our FAQs</h1>
+    <a href="/pages/support" class="lm-button">Learn More</a>
+</div>
+
+
+<style>
+    .menu-item {
+        text-transform: capitalize;
+    }
+
+    .lm-button {
+        padding: 10px 30px;
+        background-color: white;
+        color: #326FB8;
+        border-radius: 5px;
+    }
+
+    .faqs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 8% 5vw 6%;
+        align-items: center;
+        padding: 6% 0;
+        border-radius: 10px;
+        background-image: url("https://cdn.shopify.com/s/files/1/0264/4076/1399/t/35/assets/blue-bg.jpg?v=1643723785");
+
+    }
+
+    .product-item {
+        position: relative;
+    }
+
+    .product-image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+        background-color: #326FB8;
+        width: 100%;
+        height: 25.6vw;
+    }
+
+    /* .product-item:hover .product-image {
+  opacity: 0.3;
+} */
+
+    .product-item:hover .middle {
+        opacity: 1;
+        background: linear-gradient(to bottom, rgba(101, 147, 199) 0%, rgba(103, 149, 201, 0.85) 100%);
+    }
+
+    /* .product-item:hover .middle {
+    background: linear-gradient(to bottom, rgba(101,147,199) 0%,rgba(103,149,201) 100%);
+} */
+
+
+    .sub-btn:hover {
+        cursor: pointer;
+    }
+
+    .sub-input:hover {
+        cursor: pointer;
+    }
+
+    .sub-btn {
+        cursor: pointer;
+        background-color: #fff;
+        color: #427BBE;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 16px 32px;
+        margin: 31% 20% 0;
+    }
+
+    .learn-btn {
+        color: white;
+        border: 2px solid white;
+        font-size: 16px;
+        padding: 16px 32px;
+        font-weight: 600;
+        margin: -3% 20% 10%;
+    }
+
+    .header-contain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .sub-header-copy {
+        font-size: 18px;
+    }
+
+    .sign-in {
+        color: #427BBE;
+    }
+
+    .list-item::marker {
+        font-size: 19px;
+    }
+
+    .subscribe-btn {
+        background-color: #427BBE;
+        width: 20%;
+        height: 50px;
+        padding: 5px 10px;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .terms-contain {
+        display: flex;
+        justify-content: center;
+        background-color: #f4f4f4;
+    }
+
+    .products-contain {
+        margin: 0 20vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .product-menu {
+        background-color: #f4f4f4;
+        margin: 0 10vw;
+
+    }
+
+    .product-list {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10%;
+        height: 50px;
+        margin-bottom: 25px;
+    }
+
+    .product-list a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 1%;
+    }
+
+    .product-collection {
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 10vw;
+        justify-content: space-between;
+    }
+
+    .flex-collection:after {
+        content: "";
+        flex: auto;
+    }
+
+    .flex-collection {
+        display: flex;
+    }
+
+    .product-image {
+        width: 100%;
+    }
+
+    .product-item:nth-child(3n) {
+        padding-right: 0;
+    }
+
+    /* .product-item:nth-child(3n) .middle {
+            left: 54%;
+        } */
+    .sleep-item:last-child {
+        margin-left: 2%;
+    }
+
+    .product-item {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5%;
+        width: 32%;
+    }
+
+    .product-title-price {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+
+    .crossed-out {
+        color: rgb(189, 186, 186);
+    }
+
+    .perks-on {
+        margin-bottom: 50px !important;
+        font-size: 30px !important;
+        margin-top: 5%;
+    }
+
+    .fyb-content {
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 800px) {
+        .sleep-item:last-child {
+            margin-left: 0;
+        }
+
+        label.rc_label {
+            padding-top: 2px;
+        }
+
+        .product-title {
+            line-height: 110%;
+        }
+
+        .products-contain {
+            margin: 0 5vw;
+        }
+
+        .fyb {
+            font-size: 25px !important;
+        }
+
+        .fyb-content {
+            margin-bottom: 50px;
+            font-size: 18px;
+        }
+
+        .reveal__container {
+            padding-top: 5%;
+        }
+
+        .top-level {
+            margin-top: 0;
+        }
+
+        .subscribe-btn {
+            width: 50%;
+            height: 54px;
+        }
+
+        .perks-content {
+            flex-direction: column;
+            width: 100%;
+            margin: auto;
+        }
+
+        .perks-video {
+            width: 100vw !important;
+            border-radius: 0 !important;
+        }
+
+        .perks-copy {
+            padding-top: 10%;
+            padding-left: 0;
+        }
+
+        .terms-contain {
+            flex-direction: column-reverse;
+        }
+
+        .terms-image {
+            margin-left: 0;
+            display: flex;
+            width: 50vw;
+            margin: auto;
+        }
+
+        .terms-list {
+            margin: auto;
+            margin-bottom: 40px !important;
+        }
+
+        .terms-list h1 {
+            font-size: 25px !important;
+            margin-bottom: 20px !important;
+        }
+
+        .terms-list li {
+            font-size: 15px !important;
+            padding-top: 0px !important;
+        }
+
+        .product-collection {
+            margin: 0;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .product-image {
+            width: 50vw;
+        }
+
+        .product-item {
+            width: 48%;
+        }
+
+        .product-title-price {
+            flex-direction: column;
+        }
+
+        .middle {
+            display: none;
+        }
+
+        .product-title-price {
+            padding-left: 3%;
+        }
+
+        .product-menu {
+            margin: 0;
+            margin-bottom: 5%;
+        }
+
+        .product-list {
+            padding-left: 5%;
+            width: 100%;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            white-space: nowrap;
+            height: 100%;
+            margin: 0;
+        }
+
+        .product-list::-webkit-scrollbar {
+            width: 0;
+            /* Remove scrollbar space */
+            height: 0;
+            background: transparent;
+            /* Optional: just make scrollbar invisible */
+        }
+
+        .product-list a {
+            margin-right: 10%;
+            height: 50px;
+        }
+
+        .perks-contain {
+            margin-top: 0px;
+            margin-bottom: 30px;
+        }
+
+        .top-level {
+            margin-bottom: 50px;
+        }
+
+        .faqs-title {
+            font-size: 20px !important;
+        }
+
+        .faqs-subtitle {
+            font-size: 17px;
+            margin: 10px;
+        }
+
+        .faqs {
+            padding: 12% 0;
+        }
+
+        .lm-button {
+            padding: 20px 20%;
+            margin-top: 5%;
+        }
+
+        .item-contain {
+            flex-direction: column !important;
+        }
+
+        .subicon {
+            width: 7vw;
+            margin: auto;
+        }
+
+        .perks-copy {
+            width: 90vw;
+            margin: auto;
+        }
+
+        .icon-img {
+            margin-right: 0 !important;
+        }
+
+        .icon-content {
+            text-align: center;
+        }
+
+        .perks-on {
+            text-align: center;
+            font-size: 25px !important;
+            margin-bottom: 30px !important;
+        }
+    }
+</style>
+
+<script>
+
+    $(document).ready(function () {
+        var sleepMenu = document.getElementById('sleep');
+        sleepMenu.style.fontWeight = "600";
+        sleepMenu.style.borderBottom = "4px solid #427BBE";
+        function toggle() {
+            var menuItems = document.getElementsByClassName("menu-item");
+            var divsToHide = document.getElementsByClassName("product-collection");
+            for (var i = 0; i < divsToHide.length; i++) {
+                divsToHide[i].style.display = "none";
+            }
+            for (var i = 0; i < menuItems.length; i++) {
+                menuItems[i].style.borderBottom = "none";
+            }
+        }
+
+
+        $("a").click(function (event) {
+            toggle()
+            var menu = document.getElementById(event.target.id)
+            menu.style.borderBottom = "4px solid";
+            var trigger = document.getElementById(event.target.id + "-trigger");
+            trigger.style.display = "flex";
+        });
+
+        document.querySelectorAll('a[href^="#anchor"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                var sleep = document.getElementById('sleep-trigger');
+                sleep.style.display = "flex";
+                var sleepMenu = document.getElementById('sleep');
+                sleepMenu.style.fontWeight = "600";
+                sleepMenu.style.borderBottom = "4px solid";
+
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    });
+</script>

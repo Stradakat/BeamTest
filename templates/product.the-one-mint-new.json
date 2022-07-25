@@ -1,0 +1,324 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "productHeading": "The One",
+        "productBodyText": "",
+        "mobileBodyText": "our most popular sleep capsule is now available with even more sleep-promoting* power so you can get better, deeper sleep when you need it most.",
+        "tagText": "mint flavor",
+        "subImage": "shopify:\/\/shop_images\/beam-the-one-mint_f80db25f-eeea-4b0b-b38c-6d79f21841cc.jpg",
+        "popupheading": "dream extra strength capsules",
+        "popupimg": "shopify:\/\/shop_images\/hemp-nutritionfacts-dream-caps-1200.jpg"
+      }
+    },
+    "163591091178dea289": {
+      "type": "horizontal-bar",
+      "blocks": {
+        "163591091178dea289-0": {
+          "type": "column",
+          "settings": {
+            "iconheading": "gluten free",
+            "iconcontent": ""
+          }
+        },
+        "163591091178dea289-1": {
+          "type": "column",
+          "settings": {
+            "iconheading": "no sugar added",
+            "iconcontent": ""
+          }
+        },
+        "163591091178dea289-2": {
+          "type": "column",
+          "settings": {
+            "iconheading": "dairy free",
+            "iconcontent": ""
+          }
+        },
+        "4a1fb147-516c-4906-b4e5-160d6321d8f7": {
+          "type": "column",
+          "settings": {
+            "iconheading": "non-GMO",
+            "iconcontent": ""
+          }
+        },
+        "dc8e6f20-e41e-4deb-99d7-a4872fa1e47a": {
+          "type": "column",
+          "settings": {
+            "iconheading": "keto friendly",
+            "iconcontent": ""
+          }
+        }
+      },
+      "block_order": [
+        "163591091178dea289-0",
+        "163591091178dea289-1",
+        "163591091178dea289-2",
+        "4a1fb147-516c-4906-b4e5-160d6321d8f7",
+        "dc8e6f20-e41e-4deb-99d7-a4872fa1e47a"
+      ],
+      "settings": {
+        "gridTitle": ""
+      }
+    },
+    "1636309289f032057f": {
+      "type": "product-stats",
+      "blocks": {
+        "206cbd35-b96d-483a-9742-78ea9ca2591c": {
+          "type": "column",
+          "settings": {
+            "statHeading": "92%",
+            "statContent": "felt a noticeable sense of calm after taking The One.<span class=\"cross-text\">†<\/span>"
+          }
+        },
+        "bed762b6-aa6f-4082-b307-375c180df0a8": {
+          "type": "column",
+          "settings": {
+            "statHeading": "84%",
+            "statContent": "felt their mood improve after taking The One.<span class=\"cross-text\">†<\/span>"
+          }
+        }
+      },
+      "block_order": [
+        "206cbd35-b96d-483a-9742-78ea9ca2591c",
+        "bed762b6-aa6f-4082-b307-375c180df0a8"
+      ],
+      "settings": {
+        "statBGImage": "shopify:\/\/shop_images\/image_2_1.jpg",
+        "statBGColor": "#fff",
+        "productHeading": "",
+        "productBodyText": "",
+        "popupheading": ""
+      }
+    },
+    "163535382289658a11": {
+      "type": "product-mid-hero",
+      "settings": {
+        "heroBGImage": "shopify:\/\/shop_images\/image_1_1.jpg",
+        "heroBGColor": "#be8a8a",
+        "heroHeading": "The One, the only ",
+        "heroBodyText": "<p>our approach to hemp oil is simple: source only the best, most sustainable ingredients. Organic hemp seed and grape seed oils help compounds stay intact so you can absorb all the benefits of our hemp tincture. Less stress and more calm = a better state of mind.<\/p>"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": false,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "product-stats": {
+      "type": "product-stats",
+      "disabled": true,
+      "blocks": {
+        "bb11208a-d6e0-4846-920b-7bec11022ec0": {
+          "type": "column",
+          "settings": {
+            "statHeading": "98%",
+            "statContent": "<p>of people surveyed <strong>fall asleep <br>faster<\/strong> when taking Dream Powder.<span style=\"font-size: 10px; position: relative; top: -6px;\">†<\/span><\/p>"
+          }
+        },
+        "3739e969-ca30-49c8-ad92-130967922668": {
+          "type": "column",
+          "settings": {
+            "statHeading": "99%",
+            "statContent": "<p>of people experience <strong>better sleep quality<\/strong>.<span style=\"font-size: 10px; position: relative; top: -6px;\">†<\/span><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bb11208a-d6e0-4846-920b-7bec11022ec0",
+        "3739e969-ca30-49c8-ad92-130967922668"
+      ],
+      "settings": {
+        "statBGImage": "shopify:\/\/shop_images\/image_2.jpg",
+        "statBGColor": "#ffffff",
+        "productHeading": "",
+        "productBodyText": "",
+        "popupheading": ""
+      }
+    },
+    "16353565802d2d8b6e": {
+      "type": "product-accordian",
+      "blocks": {
+        "bd79d06b-de6b-49da-9cc1-bcef1f8e7c3a": {
+          "type": "column",
+          "settings": {
+            "statHeading": "start low and grow",
+            "statContent": "<p>from 500mg to 2000mg, The One is offered in a range of potencies. If you’re new to hemp, we recommend starting with the lowest potency to gauge how you react to the benefits.<\/p>"
+          }
+        },
+        "2d1aeae0-dd4e-429b-aea3-6f82eab98618": {
+          "type": "column",
+          "settings": {
+            "statHeading": "see how you feel",
+            "statContent": "<p>there may be some learning as you go to find out what you prefer and how well you respond. Everybody is unique!<\/p>"
+          }
+        },
+        "92639f2f-33ac-4a03-ad11-c69930a040f6": {
+          "type": "column",
+          "settings": {
+            "statHeading": "use consistently",
+            "statContent": "<p>we suggest you use The One at the same time every day to best understand how it affects you and to keep a consistent level in your system.<\/p>"
+          }
+        },
+        "1d0f84bc-32ab-417d-96cc-07b047ecb7de": {
+          "type": "column",
+          "settings": {
+            "statHeading": "enjoy it multiple ways",
+            "statContent": "<p>you can add The One to anything from drinks to dressings. Our favorite way to enjoy is under the tongue, as this can help it reach your digestive system faster. Simply hold for 30 seconds then swallow.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bd79d06b-de6b-49da-9cc1-bcef1f8e7c3a",
+        "2d1aeae0-dd4e-429b-aea3-6f82eab98618",
+        "92639f2f-33ac-4a03-ad11-c69930a040f6",
+        "1d0f84bc-32ab-417d-96cc-07b047ecb7de"
+      ],
+      "settings": {
+        "statBGImage": "shopify:\/\/shop_images\/ingredients.jpg",
+        "statBGColor": "#ffffff",
+        "heroHeading": "How do I use The One?",
+        "section_styles": "pt4 pb6 pt0--md pb0--md mt0--md mb0--md"
+      }
+    },
+    "1636307709a1720cc1": {
+      "type": "product-mid-hero-2",
+      "settings": {
+        "heroBGImage": "shopify:\/\/shop_images\/image_3_0af59e40-3dfd-4f57-bb40-0fd80b2a5627.jpg",
+        "heroBGImageMobile": "shopify:\/\/shop_images\/image_3-mobile.jpg",
+        "heroBGColor": "#ffffff",
+        "heroHeading": "your new daily ritual",
+        "heroBodyText": "daily rituals keep us centered and balanced, and The One’s adaptability to any routine does just that. Enjoy every day, as needed, whether that’s keeping it with your toothbrush for a morning serving or storing it on your counter for that lunchtime reminder. Taking it at the same time each day will help you reap all the benefits."
+      }
+    },
+    "163535530806e4dccb": {
+      "type": "grid-with-icons",
+      "blocks": {
+        "163535530806e4dccb-0": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/savings-icon.png",
+            "iconheading": "monthly savings",
+            "iconcontent": ""
+          }
+        },
+        "163535530806e4dccb-1": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/cart.png",
+            "iconheading": "free mug + frother with your first delivery",
+            "iconcontent": ""
+          }
+        },
+        "163535530806e4dccb-2": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/vip.png",
+            "iconheading": "VIP support",
+            "iconcontent": ""
+          }
+        },
+        "8b21463f-9030-49ea-9a33-7b3851baacb1": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/shipping.png",
+            "iconheading": "free shipping on every order",
+            "iconcontent": ""
+          }
+        },
+        "3ac56819-a8cd-4e20-952c-1dead4b055df": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/pause_a4b6c02c-0f2d-4204-8bbe-6d9267133b0e.png",
+            "iconheading": "pause or cancel anytime",
+            "iconcontent": ""
+          }
+        }
+      },
+      "block_order": [
+        "163535530806e4dccb-0",
+        "163535530806e4dccb-1",
+        "163535530806e4dccb-2",
+        "8b21463f-9030-49ea-9a33-7b3851baacb1",
+        "3ac56819-a8cd-4e20-952c-1dead4b055df"
+      ],
+      "settings": {
+        "gridTitle": "subscribe to better sleep"
+      }
+    },
+    "1635356617646f55ff": {
+      "type": "product-mid-hero",
+      "disabled": true,
+      "settings": {
+        "heroBGImage": "shopify:\/\/shop_images\/pep_cr_2.jpg",
+        "heroBGColor": "#ffffff",
+        "heroHeading": "when to enjoy",
+        "heroBodyText": "<p>with a glass of water, take 2 capsules 45 to 60 minutes before bedtime and enjoy your deepest night’s sleep.<\/p>"
+      }
+    },
+    "163536855792c4574f": {
+      "type": "fifty-fifty",
+      "settings": {
+        "fiftyImage": "shopify:\/\/shop_images\/beam_TiaClairToomey_08_brighter_43c0e344-a2de-47a1-b043-a859e056358c.jpg",
+        "heroBGColor": "#ffffff",
+        "heroHeading": "why this CrossFit champion loves The One",
+        "heroBodyTopText": "\"I don’t know what i would do without my Beam products. Not only are they constantly trying to evolve and create products that help with our recovery but they keep trying to think outside the box with their products. The One would have to be a favorite of mine.\"",
+        "heroBodyText": "<p><strong>Tia-Clair Toomey-Orr<\/strong><\/p><p><em>5x CrossFit Games Champion<\/em><\/p>"
+      }
+    },
+    "1635512142e6a1ad8f": {
+      "type": "related-products",
+      "settings": {
+        "statBGColor": "#ffffff",
+        "productHeading": "",
+        "productBodyText": "",
+        "popupheading": ""
+      }
+    },
+    "16358623413a317eb1": {
+      "type": "reviews-end",
+      "settings": {
+        "heroBGColor": "#ffffff",
+        "heroHeading": "",
+        "heroBodyText": ""
+      }
+    },
+    "1635917889a6342e69": {
+      "type": "main-product-bottom",
+      "settings": {
+        "productHeading": "dream extra strength capsules",
+        "productBodyText": "",
+        "mobileBodyText": "",
+        "tagText": "new product",
+        "subImage": "shopify:\/\/shop_images\/beam-dream-xs-product.jpg",
+        "popupheading": "dream extra strength capsules",
+        "popupimg": "shopify:\/\/shop_images\/hemp-nutritionfacts-dream-caps-1200.jpg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "163591091178dea289",
+    "1636309289f032057f",
+    "163535382289658a11",
+    "product-recommendations",
+    "product-stats",
+    "16353565802d2d8b6e",
+    "1636307709a1720cc1",
+    "163535530806e4dccb",
+    "1635356617646f55ff",
+    "163536855792c4574f",
+    "1635512142e6a1ad8f",
+    "16358623413a317eb1",
+    "1635917889a6342e69"
+  ]
+}

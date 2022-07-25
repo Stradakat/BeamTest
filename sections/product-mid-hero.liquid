@@ -1,0 +1,87 @@
+<div class="full-width pt6 pb6 pt10--md pb10--md hero-section  {% if product.handle  == 'sleep-powder' %}image-push{% endif %}" style="min-height: 380px;background-image: url({{ section.settings.heroBGImage | img_url : '2048x2048' }})">
+    <div class="large-container pl3 pr3 pl6--md pr6--md pt6 pb6 mt3--md mb3--md pt10--md pb10--md">
+    <div class="row align--middle gutter--none">
+            <div class="col tl c7 c6--md c5--lg c4--xl pt6--md">
+                {% if section.settings.heroHeading %}
+                <h2 role="heading" class="sans--large fw--600 mb2 color--white">
+                    {{ section.settings.heroHeading | escape }}
+                </h2>
+                {% endif %}
+                {% if section.settings.heroBodyText %}
+                <div class="sans--body-new fw--600 color--white">
+                    {{ section.settings.heroBodyText }}
+                </div>                
+                {% endif %}
+            </div>
+
+
+    </div>
+</div>
+</div>
+
+<style>
+.hero-section {
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@media (min-width: 1540px) {
+    .hero-section {
+        min-height: 720px !important;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .image-push {
+        background-position: calc(35% - 50px) 50% !important;
+    }
+    .large-container {
+        padding-bottom: 0 !important;
+    }
+  
+
+}
+
+.large-container {
+    max-width: 1600px;
+    margin: inherit auto;
+}
+    
+</style>
+
+{% schema %}
+{
+  "name": "Product Mid Hero",
+  "class": "product-subscription_banner",
+  "settings": [	      
+            {
+                "type": "image_picker",
+                "id": "heroBGImage",
+                "label": "Background Image"
+            },
+            {
+                "type": "color",
+                "id": "heroBGColor",
+                "label": "Background Color",
+                "default": "#fff"
+              },
+			{
+				"type": "text",
+				"id": "heroHeading",
+				"label": "Title"
+			},
+			{
+				"type": "richtext",
+				"id": "heroBodyText",
+				"label": "Body Copy"
+			}
+  ],
+  "presets": [{
+    "name": "Product Mid Hero",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

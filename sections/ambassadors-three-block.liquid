@@ -1,0 +1,141 @@
+<div class="pt2 mt0 mb0 mt3--md mb0--md main-content" style="margin: auto; background: url({{ section.settings.bgImg | img_url: '2000x2000' }}) no-repeat;">
+    <h2 class="fw--600 sans--medium mb2 pr1 pl1 pb4 tc color--white main-title">How it Works</h2>
+    <div class="icons-inline">
+        {% for block in section.blocks%}
+        <div class="paragraph-item">
+        <h1 class="fw--600 icon-text icon-number">STEP {{block.settings.statNumber}}</h1>
+        <h1 class="fw--600 icon-text icon-title">{{block.settings.statHeading}}</h1>
+        <h1 class="fw--400 icon-text icon-content">{{block.settings.statContent}}</h1>
+        </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+<style>
+    .main-title {
+        font-size: 24px;
+    }
+    .main-content {
+        padding: 5% 0 8%;
+    }
+    .icon-number {
+        letter-spacing: 3px;
+    }
+    .icon-content {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+    .icon-title {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+    .icons-inline {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 2vw
+    }
+    .paragraph-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1%;
+        width: 30%;
+    }
+    .icon-text {
+        color: #fff;
+        text-align: center;
+    }
+    .icoImage {
+        max-height: 40px;
+        max-width: 40px;
+        margin-bottom: 20px;
+    }
+    .mobile-line {
+      display: none;
+    }
+    .main-content {
+        background-size: cover !important;
+    }
+@media (max-width: 800px) {
+    .main-title {
+        padding-top: 5%;
+    }
+    .icoImage {
+        display: none;
+    }
+    .icons-inline {
+        flex-direction: column;
+    }
+    .arrow {
+      display: none;
+    }
+    .paragraph-item {
+      font-style: 25px !important;
+      padding: 20px 0;
+      width: 90%;
+    }
+    .icon-text {
+      font-size: 20px;
+    }
+    .mobile-line {
+      display: block;
+      border-style: inset; 
+      border-width: 1px;
+      margin: 0;
+      width: 90vw;
+    }
+    .icons-inline {
+      margin-bottom: 10px;
+    }
+
+    }
+</style>
+
+{% schema %}
+{
+    "name": "How it Works",
+  "settings": [	      
+            {
+				"type": "text",
+				"id": "heroSubtitle",
+				"label": "SubTitle"
+            },
+            {
+				"type": "image_picker",
+				"id": "bgImg",
+				"label": "Background Image"
+            }
+  ],
+  "blocks": [
+  {
+    "type": "column",
+    "name": "link",
+    "limit": 10,
+    "settings": [
+      {
+        "type": "text",
+        "id": "statNumber",
+        "label": "number"
+      },
+      {
+        "type": "text",
+        "id": "statHeading",
+        "label": "title"
+      },
+      {
+        "type": "text",
+        "id": "statContent",
+        "label": "content"
+      }
+    ]
+  }
+],
+  "presets": [{
+    "name": "How it Works",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

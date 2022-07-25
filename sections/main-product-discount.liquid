@@ -1,0 +1,302 @@
+{% assign add_to_cart = 'Add to cart' %}
+{% assign sold_out = 'Sold Out' %}
+{% assign unavailable = 'Unavailable' %}
+{% assign product_id = 4528614113335 %}
+
+
+<meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
+<meta itemprop="image" content="{{ product | img_url: 'grande' }}" />
+<div class="modal hidden" id="download-modal"></div>
+<div class="modal--overlay hidden"></div>
+
+
+<!-- The Modal -->
+<div id="detailsModal" class="details-modal">
+
+
+    <!-- Modal content -->
+    <div class="details-modal-content" style="max-width: 560px;">
+        <div class="pr p2 tl color--white" style="background-color: #94C6FF;">
+            <h1 class="sans--medium fw--600 lowercase" temprop="name">{{ section.settings.popupheading }}</h1>
+            <p class="sans--small fw--600">{{ product.type }}</p>
+            <span class="close fw--600" style="font-weight: 600 !important;">&times;</span>
+        </div>
+        <div class="inner">
+			<img style="width: 100%;height: auto;" class="full-width" src="{{ section.settings.popupimg | img_url: '1024x1024' }}">
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="productView">
+    <div itemscope itemtype="http://schema.org/Product">
+        <div data-event-type="product" data-entity-id="{{product.id}}" data-name="{{product.title}}">
+            
+			{% assign variant = product.selected_or_first_available_variant %}
+            {% assign featured_image = product.selected_or_first_available_variant.featured_image | default:
+            product.featured_image %}
+
+			<form action="/cart/add" data-productid="{{ product.id }}" method="post" class="product-form"
+			id="add-to-cart" enctype="multipart/form-data">
+
+			<div class="full-width pt3 pt10--md">
+				<div class="row align--middle gutter--none">
+
+						<div class="col pr tc c6--md">
+							{% if product.handle == "sleep-powder" %}
+							<p style="position: absolute;bottom: 0; right: 0; left: 0;" class="mobile-value-add sans--small fw--600 p1 bg--main-blue lowercase color--white hide--md">{{ section.settings.productBodyText | escape }}</p>
+							{% endif %}
+							<span class="product-tag-overlay color--blue hide--md"> 
+								{% if section.settings.tagText %}
+									{{ section.settings.tagText | escape }}
+								{% endif %}
+								</span>
+								<div class="hide--md">
+                                    <img class="full-width sub_image hidden" src="{{ product.featured_image | product_img_url: '800x720', crop: 'center' }}">
+                                    <img class="full-width one-time_image" src="{{ section.settings.subImage | img_url: '800x720', crop: 'center' }}">
+                                </div>
+                                <div class="show--md">
+                                    <img class="full-width sub_image hidden" src="{{ product.featured_image | product_img_url: "1024x1024" }}">
+                                    <img class="full-width one-time_image" src="{{ section.settings.subImage | img_url: '1024x1024' }}">
+                                </div>
+							</div>
+						<div class="col c6--md">
+							<div class="p1 pt2 pb3 p3--md pl6--md pr6--md tl" style="max-width: 620px; margin: 0 auto;">
+								<div class="sans--body show--md mb1">
+									<span class="color--main-blue fw--600"> 
+									{% if section.settings.tagText %}
+										{{ section.settings.tagText | escape }}
+									{% endif %}
+									</span><span class="color--main-blue fw--600 ml1 mr1">|</span>{% include 'stars-dream' %}
+								</div>
+								<h2 class="sans--large-medium fw--600 mb1 mb2--md">
+									{% if section.settings.productHeading %}
+										{{ section.settings.productHeading | escape }}
+									{% else %}
+										{{product.title}}
+									{% endif %}
+								</h2>
+								<p class="sans--body-new mb1 mb2--md show--md">
+									{{ product.description }}
+								</p>
+								<p class="sans--body-new mb1 mb2--md hide--md">
+									{% if section.settings.mobileBodyText %}
+										{{ section.settings.mobileBodyText | escape }}
+									{% endif %}
+								</p>
+								<div class="mt2--md mb2 mb2--md">
+								<p id="detailsModalBtn1" class="dib detailsModalBtn1 fw--600 pointer underline color--blue">nutrition info</p>
+								<div class="hide--md" style="margin-top: -6px;float: right;">
+									{% include 'stars-dream' %}
+								</div>
+							</div>
+								{% if section.settings.productBodyText %}
+								<p class="sans--body fw--600 mb1 mb2--md show--md">{{ section.settings.productBodyText | escape }}</p>
+								{% endif %}
+
+
+								{% if product.available and product.variants.size > 1 %}
+								{% render 'swatch' for product.options as swatch %}
+								{% endif %}
+
+								{% assign hide_default_title = false %}
+								{% if product.variants.size == 1 and product.variants.first.title contains 'Default'
+								%}
+								{% assign hide_default_title = true %}
+								{% endif %}
+								<div id="product-variants"
+									class="select--product-option{% if hide_default_title %} hidden{% endif %}">
+									<select id="product-select" class="form-select" name="id"
+										data-productid="{{ product.id }}">
+										{% for variant in product.variants %}
+										<option class="form-select" {% if
+											variant==product.selected_or_first_available_variant %} selected{% endif
+											%} value="{{ variant.id }}">
+											{{ variant.title }} - {{ variant.price | money }}
+										</option>
+										{% endfor %}
+									</select>
+								</div>
+                                    <!-- Begin ReCharge code -->
+                                    {% if product.available %}{% include 'subscription-product-discount' %}{% endif %}
+                                    <!-- End ReCharge code -->
+									
+                                    <div class="sans--small pb2 hidden">
+                                        <div id="product-price" itemprop="offers" itemscope
+                                            itemtype="http://schema.org/Offer" class="delta">
+                                            <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+                                            {% if product.available %}
+                                            <link itemprop="availability" href="http://schema.org/InStock" />
+                                            {% else %}
+                                            <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                                            {% endif %}
+                                            <p>
+                                                {% assign variant = product.selected_or_first_available_variant %}
+                                                {% if product.compare_at_price > product.price %}
+                                                <span class="product-price on-sale" itemprop="price">{{ variant.price |
+                                                    money }}</span>
+                                                <s class="product-compare-price">{{ variant.compare_at_price | money
+                                                    }}</s>
+                                                {% else %}
+                                                <span class="product-price sans--medium fw--600" itemprop="price">{{
+                                                    variant.price | money }}</span>
+                                                {% endif %}
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+									<div id="product-add" class="form-action">
+                                        <div class="qtydiv">
+                                            <div class="qtybox">
+                                                <span class="btnqty qtyminus icon-minus">-</span>
+                                                <input type="text" id="productQuantity" name="quantity" value="1"
+                                                    min="1" class="quantity-selector quantity-input" readonly="">
+                                                <span class="btnqty qtyplus icon-plus">+</span>
+                                            </div>
+                                        </div>
+                                        <input type="submit" name="add" id="add" class="button button--primary"
+                                            value="{{ add_to_cart | escape }}">
+                                    </div>
+
+                                    {% include 'guarantee' %}
+
+
+
+							</div>
+						</div>
+					
+				</div>
+			</div>
+		</form>	
+
+		</div>
+	</div>
+</div>
+
+<style>
+	.template-product .button--primary {border-radius: 6px !important;width: 65% !important;background-color: #2F358E;transition: ease-in-out 200ms;}
+	.template-product .button--primary::first-letter { text-transform: capitalize !important;}
+	#shopify-section-template--14175733153847__1635526379cb5fee3b .detailsModalBtn1 {display: none !important;}
+	.template-product .button--primary:hover {background-color: #94C6FF !important}
+	.template-product .qtydiv {min-width: 33% !important;border-radius: 6px !important;}
+	.product-tag-overlay {
+		top: 46px;
+		right: 20px;
+		left: auto;
+	}
+	.bg--main-blue {background-color: #94C6FF;}
+	.color--main-blue {color: #94C6FF;}
+
+	.text-m {display: none !important;}
+	.yotpo .yotpo-bottomline .yotpo-icon-star, .yotpo .yotpo-bottomline .yotpo-icon-half-star, .yotpo .yotpo-bottomline .yotpo-icon-empty-star {
+		color: #94C6FF !important;
+	}
+    @media screen and (max-width: 600px) {
+	div#rc_container {
+		margin-bottom: -5px !important;
+	}
+}
+</style>
+
+<script>
+
+$(document).ready(function () {
+
+$('.qtybox .btnqty').on('click', function () {
+	var qty = parseInt($(this).parent('.qtybox').find('.quantity-input').val());
+	if ($(this).hasClass('qtyplus')) {
+		qty++;
+	} else {
+		if (qty > 1) {
+			qty--;
+		}
+	}
+	qty = (isNaN(qty)) ? 1 : qty;
+	$(this).parent('.qtybox').find('.quantity-input').val(qty);
+});
+
+
+    // Get the modal
+    var modal = document.getElementById("detailsModal");
+
+    // Get the button that opens the modal
+    var btn1 = document.querySelector(".detailsModalBtn1");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+
+    // When the user clicks on the button, open the modal
+    btn1.onclick = function () {
+        modal.style.display = "block";
+    }
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+});
+
+</script>
+
+
+{% schema %}
+{
+  "name": "Product banner Discount",
+  "class": "product-subscription_banner",
+  "settings": [	      
+			{
+				"type": "text",
+				"id": "productHeading",
+				"label": "Product Title"
+			},
+			{
+				"type": "text",
+				"id": "productBodyText",
+				"label": "Main Body Copy"
+			},
+			{
+				"type": "text",
+				"id": "mobileBodyText",
+				"label": "Main Body Copy"
+			},
+			{
+				"type": "text",
+				"id": "tagText",
+				"label": "Tag Copy"
+			},
+			{
+				"type": "image_picker",
+				"id": "subImage",
+				"label": "Sub Image"
+			},
+			{
+				"type": "text",
+				"id": "popupheading",
+				"label": "Popup Heading"
+			},
+			{
+				"type": "image_picker",
+				"id": "popupimg",
+				"label": "Popup Image"
+			}			
+  ],
+  "presets": [{
+    "name": "Product banner Discount",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

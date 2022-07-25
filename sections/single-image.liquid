@@ -1,0 +1,70 @@
+<div class="single-img-contain">
+<h1 class="action-title">FAQs</h1>
+
+<div class="image-contain">
+    <img class="single-img" src="{{ section.settings.joinImg |  img_url: '1024x1024' }}">
+</div>
+</div>
+
+<style>
+    .single-img {
+        width: 55%;
+    }
+    @media screen and (max-width: 800px) {
+        .single-img {
+        width: 98%;
+        padding-top: 5%;
+    }
+    }
+</style>
+
+{% schema %}
+{
+    "name":"Single Image",
+    "settings":[
+       {
+          "type":"image_picker",
+          "id":"joinImg",
+          "label":"Image"
+       }
+    ]
+ }
+
+{% endschema %}
+
+<style>
+    .single-img-contain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 7%;
+    }
+    .single-image {
+        width: 80%;
+    }
+    .image-contain {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+</style>
+
+{% javascript %}
+
+(function () {
+$('body').on('click', '.shopify_explorer_faq__question', function () {
+$(this).next('.shopify_explorer_faq__answer').slideToggle(150).toggleClass('active');
+$(this).toggleClass('question-active');
+$(this).toggleClass('active');
+$(this).find("span").toggleClass('expanded')
+});
+$(document).on('shopify:block:select', '#shopify-section-page-shopify_explorer_faq-template', function (event) {
+$(event.target).find('.shopify_explorer_faq__answer').slideDown(150);
+});
+$(document).on('shopify:block:deselect', '#shopify-section-page-shopify_explorer_faq-template', function (event) {
+$(event.target).find('.shopify_explorer_faq__answer').slideUp(150);
+});
+}());
+
+{% endjavascript %}

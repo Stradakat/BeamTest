@@ -1,0 +1,109 @@
+<div class="pt2 mt0 mb0 mt3--md mb0--md" style="width: 90%; margin: auto;">
+    <h2 class="fw--600 sans--medium mb2 color--beam-blue pr1 pl1 pt3 tc">more to love.</h2>
+    <h2 class="fw--400 sans--body mb3 pl1 pr1 tc" style="line-height: 1.4;">the highest-quality functional wellness products for better <span class="fw--600">sleep</span>, <span class="fw--600">calm</span>, <span class="fw--600">energy</span>, <span class="fw--600">recovery</span>, and <span class="fw--600">hydration</span>.</h2>
+    <h2 class="sans--medium mb4 color--black pr1 pl1 tc" style="font-weight: 400; font-style: italic; font-size: 18px;">explore by benefit:</h2>
+    <div class="icons-inline">
+        {% for block in section.blocks%}
+        <a href="{{block.settings.statContent}}">
+        <hr class="mobile-line">
+        <div class="icon-item">
+        <img class="icoImage" src="{{ block.settings.iconImg |  img_url: '500x500' }}">
+        <h1 class="fw--600 icon-text">{{block.settings.statHeading}} <span class="arrow">></span></h1>
+        </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+<style>
+    .icons-inline {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .icon-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .icoImage {
+        max-height: 40px;
+        max-width: 40px;
+        margin-bottom: 20px;
+    }
+    .mobile-line {
+      display: none;
+    }
+@media (max-width: 800px) {
+    .icoImage {
+        display: none;
+    }
+    .icons-inline {
+        flex-direction: column;
+    }
+    .arrow {
+      display: none;
+    }
+    .icon-item {
+      font-style: 25px !important;
+      padding: 20px 0;
+    }
+    .icon-text {
+      font-size: 20px;
+    }
+    .mobile-line {
+      display: block;
+      border-style: inset; 
+      border-width: 1px;
+      margin: 0;
+      width: 90vw;
+    }
+    .icons-inline {
+      margin-bottom: 10px;
+    }
+
+    }
+</style>
+
+{% schema %}
+{
+    "name": "links",
+  "settings": [	      
+            {
+				"type": "text",
+				"id": "heroSubtitle",
+				"label": "SubTitle"
+			}
+  ],
+  "blocks": [
+  {
+    "type": "column",
+    "name": "link",
+    "limit": 10,
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "iconImg",
+            "label": "Image"
+        },
+      {
+        "type": "text",
+        "id": "statHeading",
+        "label": "Name"
+      },
+      {
+        "type": "url",
+        "id": "statContent",
+        "label": "Link"            
+      }
+    ]
+  }
+],
+  "presets": [{
+    "name": "Links",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

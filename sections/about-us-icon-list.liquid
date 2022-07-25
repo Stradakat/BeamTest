@@ -1,0 +1,120 @@
+<div class="row align--center mt3 mb1 mt4--md mb2--md">
+    <div style="width: 75vw" class="col c10 c10--sm c8--md c8--xl">
+        <div class="tc">
+            <h3 class="fw--600 sans--medium mb2 color--beam-blue pr1 pl1 top-copy">with meticulous product research, unique ingredient stacks, and top-quality sourcing, we're pushing the boundaries of what's possible in the wellness space</h3>
+        </div>
+    </div>
+</div>
+
+<div class="row align--center mt3 mb1 mt4--md mb2--md">
+    <div class="col c10 c10--sm c9--md c8--xl icon-container">
+        <div style="display: flex; flex-direction: column;" class="mt5 icon-contain">
+        {% for block in section.blocks %}
+        <div style="display: flex; flex-direction: row;" class="item-contain pb2">
+            <picture class="mr5 icon-img" style="margin-top: 5px;">
+                <source
+                    srcset="{{block.settings.iconImg | img_url: '500x500'}}"
+                    media="(min-width: 800px)"><img class="full-width" alt="about us header photo" src="{{block.settings.iconImg | img_url: '500x500'}}">
+            </picture>
+            <div class="mb2 full-width">                       
+                <h1 class="fw--600 sans--medium mb2 color--black">{{block.settings.statHeading}}</h1>
+                <h1 class="fw--400 sans--body mb3  block-content" style="line-height: 1.4;">
+                    {{block.settings.statContent}}
+                </h1>
+            </div>
+        </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+    <style>
+    .pill {
+    border-radius: 6px;
+    display: inline-block;
+    border: #2F358E;
+    transition: 200ms ease-in-out;
+    min-width: 240px;
+    max-width: 170px;
+    font-size: 16px;
+    line-height: 22px;
+}
+.top-copy {
+    font-size: 28px;
+    line-height: 1.4;
+}
+.pill:hover {opacity: .8;}
+.icon-container {
+    padding: 0 100px;
+    margin-left: 10vw;
+}
+.icon-img {
+    width: 3vw;
+}
+.block-content {
+    max-width: 80%;
+}
+@media (max-width: 800px) {
+    .item-contain {
+        padding-top: 0;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .icon-container {
+    padding: 0 0px;
+    width: 100% !important;
+    margin-left: 0;
+}
+.block-content {
+    max-width: 92% !important;
+    margin: auto;
+}
+.icon-img {
+   display: none;
+}
+.icon-contain {
+    margin-top: 10px;
+}
+}
+    </style>
+
+{% schema %}
+{
+    "name": "Icon List",
+  "settings": [	      
+            {
+				"type": "text",
+				"id": "heroSubtitle",
+				"label": "SubTitle"
+			}
+  ],
+  "blocks": [
+  {
+    "type": "column",
+    "name": "Icon Item",
+    "limit": 10,
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "iconImg",
+            "label": "Icon"
+        },
+      {
+        "type": "text",
+        "id": "statHeading",
+        "label": "Item heading"
+      },
+      {
+        "type": "richtext",
+        "id": "statContent",
+        "label": "Item content"            
+      }
+    ]
+  }
+],
+  "presets": [{
+    "name": "About Us",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

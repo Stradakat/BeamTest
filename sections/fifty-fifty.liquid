@@ -1,0 +1,166 @@
+<div class="full-width fifty-section">
+    {% if product.handle == 'dream-extra-strength-powder' or product.handle == 'sea-salt-caramel-dream-powder' or 'the-summer-bedtime-bundle' or product.handle == 'sea-salt-caramel-extra-strength-dream-powder' %}
+    <div
+        class="row align--middle gutter--none  dream-xs-contain {% if  product.handle == 'sea-salt-caramel-dream-powder' %}sea-salt-contain{%endif%}{% if  product.handle == 'sea-salt-caramel-extra-strength-dream-powder' %}dream-ssc-contain{%endif%}">
+        {% else %}
+        <div class="row align--middle gutter--none fifty-contain">
+            {% endif %}
+            <div class="col tl c6--md">
+
+                <img loading="lazy" class="full-width {% if  product.handle != 'the-summer-bedtime-bundle' or product.handle != 'sea-salt-caramel-extra-strength-dream-powder' or product.handle != 'sea-salt-caramel-extra-strength-dream-powder' %} desktop-headshot {% endif %}{% if  product.handle == 'sleep-powder'%}hide-img{%endif%}" src="{{ section.settings.fiftyImage | img_url: '1024x1024' }}">
+
+                    {% if  product.handle == 'sleep-powder' %}
+
+                    <img loading="lazy" class="full-width mob-img"
+                    src="{{ section.settings.mobImg | img_url: '1024x1024' }}">
+                    {% endif %}
+            </div>
+            <div class="col tl c6--md pt2--md {% if product.handle == 'sea-salt-caramel-extra-strength-dream-powder' or product.handle == 'sleep-powder'%}tc-mobile{% endif %} ">
+                <div class="p2" style="max-width: 500px; margin: 0 auto;">
+                    {% if section.settings.heroHeading %}
+                    <h2 class="sans--large fw--600 mb2 mb3--md color--black sub-headline-50">
+                        {{ section.settings.heroHeading | escape }}
+                    </h2>
+                    {% endif %}
+                    {% if section.settings.heroBodyTopText %}
+                    <div class="sans--body-new fw--600 mb1" style="color: #427CBF">
+                        {{ section.settings.heroBodyTopText }}
+                    </div>
+                    {% endif %}
+                    {% if section.settings.heroBodyText %}
+                    <div class="sans--body-new color--black">
+                        {{ section.settings.heroBodyText }}
+                    </div>
+                    {% endif %}
+                </div>
+                {% if section.settings.smallFiftyImage %}
+
+                <!-- <img loading="lazy" class="full-width mobile-headshot"
+                    src="{{ section.settings.smallFiftyImage | img_url: '1024x1024' }}"> -->
+
+                {% endif %}
+
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        .mob-img {
+            display: none;
+        }
+        .mobile-headshot {
+            display: none;
+        }
+
+
+        .hero-section {
+            background-color: #fff;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        @media (min-width: 1540px) {
+
+
+            .hero-section {
+                min-height: 720px !important;
+            }
+
+
+
+        }
+
+        .large-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .dream-xs-contain {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+        .dream-ssc-contain {
+            display: flex;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 800px) {
+            .mob-img {
+            width: 20vw;
+            margin: auto;
+            padding-top: 5%;
+            display: block;
+        }
+            .sub-headline-50 {
+                padding-top: 20px;
+            }
+
+            .tc-mobile {
+                text-align: center;
+            }
+            .desktop-headshot {
+            }
+            .hide-img {
+                display: none;
+            }
+
+            .dream-xs-contain {
+                flex-direction: column;
+            }
+
+            .sea-salt-contain {
+                display: none !important;
+            }
+            .dream-ssc-contain {
+                flex-direction: column-reverse;
+            }
+        }
+    </style>
+
+    {% schema %}
+    {
+    "name": "50 50",
+    "class": "product-subscription_banner",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "fiftyImage",
+    "label": "Left Image"
+    },
+    {
+    "type": "color",
+    "id": "heroBGColor",
+    "label": "Background Color",
+    "default": "#fff"
+    },
+    {
+    "type": "text",
+    "id": "heroHeading",
+    "label": "Title"
+    },
+    {
+    "type": "text",
+    "id": "heroBodyTopText",
+    "label": "Top Body Text"
+    },
+    {
+    "type": "richtext",
+    "id": "heroBodyText",
+    "label": "Body Copy"
+    },
+    {
+    "type": "image_picker",
+    "id": "mobImg",
+    "label": "Left Image"
+    }
+    ],
+    "presets": [{
+    "name": "50 50",
+    "category": "Content"
+    }]
+    }
+
+    {% endschema %}

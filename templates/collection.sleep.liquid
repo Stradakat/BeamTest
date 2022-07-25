@@ -1,0 +1,684 @@
+{% comment %}
+  Important notes about pagination:
+  - Never access collection.products before the opening paginate tag.
+  - Never paginate by more than 50.
+{% endcomment %}
+
+
+{% assign products_per_page = settings.products_per_row | times: settings.number_of_rows %}
+{% assign numbers = 'zero, one, two, three, four, five, six' | split: ',' %}
+{% assign products_per_row = settings.products_per_row | times: 1 %}
+{% assign products_per_row = numbers[products_per_row] | strip | append: '-per-row' %}
+
+{% paginate collection.products by 40 %}
+
+
+<img height="1" width="1" style="border-style:none;" alt="" src="https://insight.adsrvr.org/track/pxl/?adv=iv5xfdn&ct=0:kjn7dmf&fmt=3"/>
+
+{% assign active = collection.url | split: '/collections/' | splice: 1 %}
+
+  <div class="pt1 pt0--md">
+  <div class="col pt10--md">
+{% section 'collection-header' %}
+<div class="mobile-scroller">
+  <ul class="scroll-list">
+    <li>
+      <a href="/collections/shop-all/">all</a>
+    </li>
+    <li id="shop-all">
+      <a class="mobile-nav-select" href="/collections/sleep/">sleep</a>
+    </li>
+    <li>
+      <a href="/collections/calm/">calm</a>
+    </li>
+    <li>
+      <a href="/collections/energy/">energy</a>
+    </li>
+    <li>
+      <a href="/collections/recovery/">recovery</a>
+    </li>
+    <li>
+      <a href="/collections/hydration/">hydration</a>
+    </li>
+    <li>
+      <a href="/collections/sale/">sale</a>
+    </li>
+  </ul>
+</div>
+<label class="dropdown mobile-drop" >
+
+  <!-- <div id="menu-trigger" class="dd-button blog-div">
+    <div style="display: flex; align-items: center;">
+    <svg height="16" viewBox="0 0 21 16" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="#000" transform="translate(1)"><path d="m.38 3.166667h18.24" stroke-linecap="round"/><circle cx="4.071429" cy="3.166667" fill="#fff" r="2.666667"/><g transform="matrix(-1 0 0 -1 19 15.380953)"><path d="m.38 3.166667h18.24" stroke-linecap="round"/><circle cx="4.071429" cy="3.166667" fill="#fff" r="2.666667"/></g></g></svg>
+    <a class="first-link pl1">FILTER
+    </a>
+    </div>
+    <span class="down-arrow"></span>
+  </div> -->
+
+  
+  <input type="checkbox" class="dd-input" id="test">
+  <ul id="menu-show" class="dd-menu">
+    <div class="menu-contain">
+    <div class="filter-top">
+    <h1 class="filter-button" id="exit">FILTER</h1>
+    <h1 class="exit-button" id="exit"><img class="icon-exit" src="https://cdn.shopify.com/s/files/1/0264/4076/1399/t/35/assets/exit.png?v=1644426477"></h1>
+    </div>
+    <h1 class="filter-title-mb">BENEFIT</h1>
+    <li><a href="/collections/shop-all"><div class="filter-select"></div>all</a></li>
+    <li><a href="/collections/sleep"><div class="filter-select selected"></div>sleep</a></li>
+    <li><a href="/collections/calm"><div class="filter-select"></div>calm</a></li>
+    <li><a href="/collections/energy"><div class="filter-select"></div>energy</a></li>
+    <li><a href="/collections/recovery"><div class="filter-select"></div>recovery</a></li>
+    <li><a href="/collections/hydration-powders"><div class="filter-select"></div>hydration</a></li>
+    <li><a href="/collections/sale"><div class="filter-select"></div>sale</a></li>
+
+  </div>
+</ul>
+</label>
+    <div class="">
+        <div class="collection-flex contained">
+          <div class="collection-filter">
+          <div class="filter">
+            <h1 class="filter-title">BENEFIT</h1>
+            <ul>
+              <li><a href="/collections/shop-all"><div class="filter-select"></div>all</a></li>
+              <li><a href="/collections/sleep"><div class="filter-select selected"></div><span style="font-weight: 600;">sleep</span></a></li>
+              <li><a href="/collections/calm"><div class="filter-select"></div>calm</a></li>
+              <li><a href="/collections/energy"><div class="filter-select"></div>energy</a></li>
+              <li><a href="/collections/recovery"><div class="filter-select"></div>recovery</a></li>
+              <li><a href="/collections/hydration-powders"><div class="filter-select"></div>hydration</a></li>
+              <li><a href="/collections/sale"><div class="filter-select"></div>sale</a></li>
+
+            </ul>
+          </div>
+          </div>
+          <div class="product-flex">
+          <div class="product-contain">
+          <h1 class="collection-name"><span class="fw--600 collection-title">sleep collection: </span><span class="collection-description">powerful natural sleep products to help you drift off fast and wake up refreshed*</span></h1>
+          <h1></h1>
+            <div class="row align--center product-main">
+                <div class="product-inline">
+                    <div class="row gutter--vertical align--left product-row-flex">
+                     
+                      {% for product in collections.sleep.products %}
+                        <div class="col c6--sm c4--md product-item-card id-{{ product.id }}">
+                       
+                        
+                          <div class="product-card pb1">
+                            {% include 'product-grid-collection' with products_per_row %}
+                          </div>
+                        </div>
+                          {% else %}
+                            <p>There are no products in this view.</p>
+                        {% endfor %}
+                        <div class="sleep-last-flex">
+                        {% section 'inline-flex-product' %}
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          {% section 'featured-product' %}
+      </div>
+    </div>
+    <div class="mobile-collection flex-collection">
+      <h1 class="collection-name sleep-collection"><span class="fw--600 collection-title">sleep collection </span><span class="seperator" style="font-size: 22px;"> | </span><span class="collection-description">powerful natural sleep products to help you drift off fast and wake up refreshed*</span></h1>
+      {% for product in collections.sleep.products %}
+      <div class="product-item sleep-item">
+        {% for image in product.images | limit: 1 %}
+        <a title="{{ product.title }}" href="{{ product.url }}">
+          <img class="product-image" src="{{ image.src | img_url: '450x450' }}">
+          </a>
+        {% endfor %}
+      <a href="{{product.url}}">
+      <div class="product-title-price">
+      <p class="fw--600">{{ product.title }}</p>
+      {% for variant in product.variants %}
+      <label for="rc_purchase_type_autodeliver" class="rc_label rc_label__autodeliver">
+          {% assign check_zeros = variant.metafields.subscriptions.discount_variant_price | split: "."  | slice: 1 %}
+          {% assign no_zeros = variant.metafields.subscriptions.discount_variant_price | split: "."  | slice: 0 %}
+          {% if check_zeros contains "00" %}
+          <div id="" class="fw--600 dib rc_price rc_price__autodeliver">${{variant.metafields.subscriptions.discount_variant_price | split: "."  | slice: 0 }}</div>
+          {% else %}
+          <div id="" class="fw--600 dib rc_price rc_price__autodeliver">{{product.price | money_without_trailing_zeros }}</div>
+          {% endif %}
+          
+      </label>
+      {% endfor %}
+      </div>
+      </a>
+      <div class="stars-mobile">
+        {% include 'stars-dark' %}
+    </div>
+      </div>
+      {% endfor %}
+      <div class="sleep-last-flex">
+        {% section 'inline-flex-product' %}
+      </div>
+
+      {% section 'featured-product' %}
+      </div>
+   </div>
+</div>
+{% section 'collection-join' %}
+
+
+<style>
+  .product-main {
+    margin: 0;
+  }
+  .mobile-drop {
+    display: none;
+  }
+  .mobile-collection {
+    display: none;
+  }
+  .mobile-filter {
+    display: none;
+  }
+   .filter-title {
+     letter-spacing: 3px;
+     font-size: 13px;
+     font-weight: 600;
+   }
+  .collection-flex {
+    display: flex;
+    flex-direction: row;
+  }
+  .product-contain {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 5vw;
+    border-top: 2px solid #dfdfdf;
+    padding-top: 30px;
+    width: 72vw;
+  }
+  .product-inline {
+    width: 100%;
+  }
+  .sleep-last-flex {
+    width: 32%;
+    margin-left: 1%;
+    height: 24.55vw;
+}
+.icon-exit {
+  width: 15px;
+}
+  .collection-filter {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    border-top: 2px solid #dfdfdf;
+    margin-left: 4vw;
+  }
+  .filter {
+    padding-top: 30px;
+  }
+  .filter ul {
+    padding-top: 30px;
+    font-weight: 600;
+  }
+  .filter li {
+    padding: 5px 0;
+  }
+  .filter a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+  .collection-title {
+    text-transform: capitalize;
+  }
+
+  .filter-select {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #dfdfdf;
+    margin-right: 10px;
+    border-radius: 2px;
+  }
+  .selected {
+    background: #427BBE;
+    border: 0;
+  }
+
+  .product-card {
+    border: 0 !important;
+  }
+  .product-title {
+    font-size: 16px;
+  }
+  .featured-button-text {
+    width: 50%;
+  }
+  .product-title-inline {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            align-items: flex-start;
+        }
+
+  .product-price-compare {
+        color: #817f7f;
+        font-weight: 400 !important;
+    }
+    .price-compare {
+        padding-left: 1px;
+        font-weight: 400 !important;
+        color: #817f7f;
+    }
+  .product-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+  }
+  .product-row-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .collection-name {
+    display: flex;
+    padding: 0px 0 30px;
+    width: 100%;
+  }
+  .collection-title {
+    font-size: 16px;
+    padding-right: 10px;
+  }
+  .collection-description {
+    font-size: 16px;
+  }
+  .featured-contain {
+    flex-direction: row-reverse;
+    height: 400px;
+    margin: 5% auto;
+    margin-left: 5vw;
+    width: 72.5vw;
+  }
+  .content-contain {
+    background-color: #f3f1f1;
+    text-align: center;
+    padding: 45px 3vw;
+    align-items: center;
+  }
+  .product-excerpt {
+    padding-top: 10px;
+    color: grey;
+    font-size: 18px;
+  }
+  .featured-image {
+    width: 50%;
+    border-radius: 0 !important;
+  }
+  .featured {
+    letter-spacing: 8px;
+    padding-bottom: 10px;
+  }
+  .mobile-scroller {
+    height: 0;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-top: 2vh;
+  }
+  .scroll-list {
+    display: flex;
+  }
+  .mobile-scroller li {
+    padding: 0 5vw;
+  }
+  .mobile-scroller li:first-child {
+    padding-left: 25px;
+  }
+  .mobile-scroller::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.product-flex {
+    width: 75vw;
+  }
+@media screen and (max-width: 800px) {
+  .product-image {
+    max-width: 100%;
+  }
+  .mobile-nav-select {
+    color: #427BBE;
+    font-weight: 600;
+  }
+  .sleep-collection {
+    margin-top: 0 !important;
+    border-top: 0 !important;
+  }
+  .featured-image {
+    width: 100% !important;
+  }
+ 
+  .mobile-drop {
+    display: flex;
+  }
+  .dropdown {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.dd-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #f3f1f1;
+  padding: 10px 0px 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 90%;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+.down-arrow {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid #000;
+        border-right: 2px solid #000;
+        transform: rotate(45deg);
+        margin: 0px 25px;
+      }
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+  z-index: 999;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+.menu-contain {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0 0 4vw;
+  text-transform: uppercase;
+  color: #7e7676;
+  letter-spacing: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  width: 80vw;
+  top: 0;
+  right: 0;
+  margin-top: 20vw;
+  position: fixed;
+  background: white;
+  height: 100%;
+} 
+.dd-input:checked + .dd-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0vw;
+  text-transform: uppercase;
+  color: #7e7676;
+  letter-spacing: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(211, 211, 211, .6);
+  top: 0;
+  right: 0;
+  position: fixed;
+  border: 2px solid lightgray;
+} 
+
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: flex;
+  margin: -10px -20px;
+  padding: 10px 20px;
+  color: black;
+}
+
+
+.dd-menu li.divider{
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
+  .current-blog {
+    border: 3px solid #3d7cc9 !important;
+    background: #deeefe;
+    margin-left: -2px;
+  }
+  .blog-nav {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .filter-top {
+    display: flex;
+    padding-bottom: 10%;
+    margin-top: 5%;
+  }
+  .filter-button {
+    left: 0;
+    padding-left: 5%;
+    font-size: 12px;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 6px;
+  }
+  .exit-button {
+      display: block;
+      position: absolute;
+      right: 0;
+      padding-right: 5%;
+      font-size: 18px;
+      font-weight: 400;
+      }
+  .mobile-filter {
+    display: block;
+    margin: 0 5vw;
+    border: 2px solid gray;
+    margin-bottom: 5%;
+  }
+  .filter-start {
+    padding: 10px 5px;
+    letter-spacing: 4px;
+  }
+  .stars-mobile {
+    padding: 0 5px;
+  }
+  .content-contain {
+    padding: 45px 20px;
+  }
+  .featured {
+    padding-bottom: 0;
+  }
+  .sleep-last-flex {
+    width: 49%;
+  }
+  .collection-name {
+    margin: 0 15px;
+    padding-bottom: 40px;
+    border-top: 2px solid #f3f1f1;
+    margin-top: 40px;
+  }
+  .collection-title {
+    padding-top: 15px;
+  }
+  .collection-flex {
+    display: none;
+  }
+  .product-item {
+    width: 49vw;
+    padding-bottom: 20px;
+  }
+  .product-title-price {
+    padding: 0 5px;
+  }
+  .product-title-price p{
+    line-height: 130%;
+    padding-top: 3px;
+  }
+  .mobile-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .mobile-scroller {
+    display: flex;
+    height: 100%;
+  }
+  .scroll-list {
+    background-color: #f6f6f6;
+    height: 44px;
+    align-items: center;
+  }
+  .mobile-scroller li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .product-contain {
+    border-top: 0;
+  }
+  .filter-title {
+    display: none;
+  }
+  .filter-title-mb {
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 400;
+    margin-left: 5%;
+    color: black;
+    border-top: 1px solid #f3f1f1;
+    width: 80%;
+    padding-top: 5%;
+    padding-bottom: 10%;
+   }
+  .collection-filter {
+    border-top: 0;
+  }
+  .filter ul {
+    display: none;
+  }
+  .collection-name {
+    flex-direction: column;
+    align-items: left !important;
+  }
+  .seperator {
+    display: none;
+  }
+  .collection-description {
+    padding-left: 0;
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .collection-title {
+    font-size: 16px;
+  }
+  .collection-description {
+    font-size: 16px;
+  }
+  .product-item-card {
+    width: 48vw !important;
+    padding: 0 !important;
+  }
+  .product-contain {
+    width: 100vw;
+  }
+  .collection-filter {
+    display: none;
+  }
+  .product-flex {
+    margin: auto;
+  }
+  .product-contain {
+    margin-left: 0;
+  }
+  .product-row-flex {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .product-flex {
+    margin: 0 2.46vw;
+  }
+
+
+}
+</style>
+
+{% if paginate.pages > 1 %}
+<div class="pagination centered">
+  {{ paginate | default_pagination }}
+</div>
+{% endif %}
+
+{% endpaginate %}
+
+{% comment %}
+  JavaScript for collection sorting.
+{% endcomment %}
+
+
+
+<script>
+jQuery('.sort-by')
+  .val('{{ collection.sort_by | default: collection.default_sort_by }}')
+  .on('change', function() {
+    Shopify.queryParams.sort_by = jQuery(this).val();
+    location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
+  });
+
+  var activeVar = "{{active}}";
+  var activeLink = document.getElementById(activeVar);
+  activeLink.style.fontWeight = 600;
+  activeLink.style.borderBottom = "2px solid black";
+</script>
+
+
+<script>
+  var exit = document.getElementById("exit");
+  var menu = document.getElementById("menu-show");
+  var menuTrigger = document.getElementById("menu-trigger");
+  $(exit).click(function() {
+      menu.style.display = "none";
+})
+$(menuTrigger).click(function() {
+    if (menu.style.display === 'none'){
+      menu.style.display = "flex";
+    }
+})
+
+</script>

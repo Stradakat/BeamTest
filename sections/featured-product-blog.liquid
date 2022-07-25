@@ -1,0 +1,101 @@
+{% assign products = "dream-powder-peppermint,sleep-powder,dream-extra-strength-capsules,focus-capsules,the-one,sleep-capsules,recovery-capsule,holiday-bundle,energy-hydration-powder,collagen-hydration-powder,hydration-sample-pack,probiotic-hydration-powder,salve,focus-powder,the-one-natural" | split: ',' %}
+
+{% assign length = article.tags.size %}
+<div class="featured-products-blog pb3">
+{% for tag in article.tags %}
+{% if products contains tag %}
+    <a class="featured-blog-product" href={{all_products[tag].url}}>
+        {% for image in all_products[tag].images limit:1 %}
+        <img class="product-image lazyload" src="{{ image.src | img_url: '1024x1024	' }}">
+        {% endfor %}
+       
+        <h1 class="item-title">{{all_products[tag].title}}</h1>
+        <h1 class="pb2 item-price">{{all_products[tag].price | money_without_trailing_zeros}}</h1>
+    </a>
+{% endif %}
+{% endfor %}
+</div>
+
+<style>
+    .featured-products-blog {
+        display: flex;
+        flex-direction: column;
+    }
+    .product-image {
+        width: 100%;
+        border-radius: 12px;
+        height: auto;
+        object-fit: cover;
+    }
+    .item-title {
+        padding-top: 5px;
+    }
+    @media screen and (max-width: 800px) {
+        .product-item {
+            max-width: 100%;
+            padding: 10px 5px;
+        }
+        .product-image {
+            height: auto;
+        }
+        .featured-products-blog {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .product-link {
+            text-decoration: none !important;
+        }
+        .item-title {
+            padding-top: 5px;
+            padding: 5px 0 0px 5px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .item-price {
+            padding-left: 5px;
+            text-decoration: none;
+        }
+        .featured-blog-product {
+            max-width: 48% !important;
+            padding-top: 20px !important;
+            text-decoration: none !important;
+            color: black !important;
+        }
+        
+    }
+</style>
+
+
+
+
+{% schema %}
+{
+"name": "featured products",
+  "settings": [	      
+            {
+				"type": "text",
+				"id": "heroSubtitle",
+				"label": "SubTitle"
+			}
+  ],
+  "blocks": [
+  {
+    "type": "column",
+    "name": "link",
+    "limit": 3,
+    "settings": [
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+        }
+    ]
+  }
+],
+  "presets": [{
+    "name": "Products",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

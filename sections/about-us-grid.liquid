@@ -1,0 +1,312 @@
+    <div class="mt0 mb5 mt2--md mb8--md grid-copy">
+        <div class="container tc">
+            <h2 class="fw--600 sans--medium mb2 color--blue pr1 pl1">record breakers and risk takers:</h2>
+            <h2 style="font-weight: 300!important" class="sans--large mb4 color--black pr1 pl1">meet the Beam Advisory Board</h2>
+        <div class="row gutter--none desktop-slider">
+            <div class="col advisor-img" style="display: flex; flex-wrap: wrap;">
+                {% for block in section.blocks %}
+                <div class="p1 advisor-img-item" style="flex: 1 1 30%;">
+                    {% if block.settings.statCaption != '' %}
+                        <div class="overlay"></div>
+                    {% endif %}
+                    <img class="aImage" style="width: 100%;" src="{{ block.settings.iconImg |  img_url: '400x300' }}">
+                    {% if block.settings.statCaption != '' %}
+                    <div class="quote-overlay-contain">
+                        <div class="quote-icon" style="display: flex; flex-direction: row; justify-content: center; width: 100%; margin-bottom: -9%;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="102" viewBox="0 0 53 102">
+                                <text id="_" data-name="“" transform="translate(3)" fill="#9ec5f9" font-size="102" font-family="HoeflerText-Black, Hoefler Text" font-weight="800" letter-spacing="0.014em"><tspan style="filter: brightness(10)" x="-2.051" y="74">“</tspan></text>
+                              </svg>
+                        </div>
+                        <h1 class="quote-overlay">{{block.settings.statCaption}}</h1>
+                    </div>
+                    {% endif %}
+                    <h1 class="fw--600">{{block.settings.statHeading}}</h1>
+                    <h1 style="font-style: italic; line-height: 125%; font-size: 15px; padding-top: 3px; margin-top: 8px;">{{block.settings.statContent}}</h1>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="mobile-slider">
+        {% for block in section.blocks %}
+        <div class="">
+            <div class=""></div>
+            <img class="" src="{{ block.settings.iconImg |  img_url: '400x400' }}">
+            <h1 class="mobile-title">{{block.settings.statHeading}}</h1>
+            <h1 style="font-style: italic;">{{block.settings.statContent}}</h1>
+            <h1 class="mobile-quote">{{block.settings.statCaption}}</h1>
+        </div>
+        {% endfor %}
+    </div>
+
+    <style>
+    .advisor-img-item {
+        position: relative;
+    }
+    .overlay {
+        position: absolute;
+        display: none;
+        background-color: #008CBA;
+        width: 95%;
+        height: 80%;
+        border-radius: 7px;
+        opacity: 0.75;
+        z-index: 999;
+        background-color: #008CBA;
+    }
+    .aImage {
+        filter: grayscale(100%);
+    }
+    .advisor-img-item:hover .overlay {
+        display: flex;
+    }
+    .quote-overlay {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        font-size: 22px;
+        line-height: 150%;
+    }
+    .quote-overlay-contain {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        opacity: 1;
+        font-style: 15px;
+
+    }
+    .advisor-img-item:hover .quote-overlay-contain {
+        display: flex;
+        flex-direction: column;
+        font-size: 29px;
+        height: 100%;
+        width: 90%;
+        z-index: 999;
+        padding-top: 10%;
+    }
+    .pill {
+    border-radius: 6px;
+    display: inline-block;
+    border: #2F358E;
+    transition: 200ms ease-in-out;
+    min-width: 240px;
+    max-width: 170px;
+    font-size: 16px;
+    line-height: 22px;
+}
+@media only screen and (min-width: 800px) {
+    .slick-list{padding:0 20% !important;}
+    .mobile-slider {
+        display: none;
+        flex-direction: column;
+    }
+    .mobile-slider .slick-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1vw;
+    }
+    .slick-dots {
+        position: absolute !important;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        top: 86%;
+    }
+    .slick-dots li {
+        width: 1%;
+    }
+    .slick-dots li button { 
+   font-size: 0; 
+    } 
+    .dot-slide {
+        width: 20px;
+        height: 20px;
+        border: 1px solid white;
+        border-radius: 50px;
+    }
+    .slick-dots li.slick-active button {
+        border-radius: 50px;
+    }
+    .slick-dots li.slick-active .dot-slide {
+        background-color: #fff !important;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .overlay {
+        height: 71%;
+        width: 93%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .overlay {
+        height: 64%;
+        width: 92%;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .grid-copy {
+        margin-bottom: 0px;
+    }
+    .mobile-quote {
+        padding-top: 10px;
+    }
+    .mobile-title {
+        padding-top: 10px;
+        font-weight: 600;
+    }
+    .advisor-img {
+        display: none !important;
+    }
+    .slick-list{padding:0 20% !important;}
+    .mobile-slider {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .mobile-slider .slick-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1vw;
+    }
+    .slick-dots {
+        position: absolute !important;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        top: 75%;
+    }
+    .slick-dots li {
+        width: 2%;
+    }
+    .slick-dots li button { 
+   font-size: 0; 
+    } 
+    .dot-slide {
+        width: 20px;
+        height: 20px;
+        border: 1px solid white;
+        border-radius: 50px;
+    }
+    .slick-dots li.slick-active button {
+        border-radius: 50px;
+    }
+    .slick-dots li.slick-active .dot-slide {
+        background-color: #fff !important;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .slick-dots li {
+        width: 2%;
+    }
+    .slick-dots {
+        top: 80% !important;
+    }
+    .slick-dots li.slick-active button {
+        background-color: white !important;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .slick-dots {
+        top: 70% !important;
+        left: 0 !important;
+        bottom: 0 !important;
+    }
+    .dot-slide {
+        display: none;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .slick-dots {
+        top: 50% !important;
+        left: 0 !important;
+        bottom: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .slick-dots {
+        top: 40% !important;
+        left: 0 !important;
+        bottom: 0 !important;
+    }
+    .slick-dots li {
+        width: 12px;
+    }
+}
+
+.pill:hover {opacity: .8;}
+    </style>
+    <script>
+         $(document).ready(function () {
+        $('.mobile-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            centerMode: true,
+            centerPadding: 0,
+            customPaging : function(slider, i) {
+                return '<button id=slick-slide-control' + i  + '><div class="dot-slide"></div></button>';
+            },
+        });
+    });
+    </script>
+
+{% schema %}
+{
+    "name": "Advisors",
+  "settings": [	      
+            {
+				"type": "text",
+				"id": "heroSubtitle",
+				"label": "SubTitle"
+			}
+  ],
+  "blocks": [
+  {
+    "type": "column",
+    "name": "Advisor",
+    "limit": 10,
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "iconImg",
+            "label": "Image"
+        },
+      {
+        "type": "text",
+        "id": "statHeading",
+        "label": "Name"
+      },
+      {
+        "type": "richtext",
+        "id": "statContent",
+        "label": "Subtitle"            
+      },
+      {
+        "type": "richtext",
+        "id": "statCaption",
+        "label": "Hover Caption"            
+      }
+    ]
+  }
+],
+  "presets": [{
+    "name": "About Us",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

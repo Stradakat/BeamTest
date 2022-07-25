@@ -1,0 +1,236 @@
+{
+  "sections": {
+    "16358797767b00d090": {
+      "type": "main-product-discount",
+      "settings": {
+        "productHeading": "White Chocolate Peppermint Dream Powder",
+        "productBodyText": "subscription includes mug + frother",
+        "mobileBodyText": "",
+        "tagText": "exclusive offer for skimm'rs ",
+        "subImage": "shopify:\/\/shop_images\/dream-pep-subs.jpg",
+        "popupheading": "White Chocolate Peppermint Dream Powder",
+        "popupimg": "shopify:\/\/shop_images\/hemp-nutritionfacts-dream-peppermint-30BG_ddb40b4e-d4fd-4d80-9936-711d8b3c0b07.jpg"
+      }
+    },
+    "163535382289658a11": {
+      "type": "product-mid-hero",
+      "settings": {
+        "heroBGImage": "shopify:\/\/shop_images\/pep_full_bleed.jpg",
+        "heroBGColor": "#be8a8a",
+        "heroHeading": "your winter wind-down",
+        "heroBodyText": "<p>swirls of <strong>peppermint<\/strong> mix with <strong>creamy white chocolate<\/strong> for the guilt-free hot cocoa of your dreams<\/p>"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "product-stats": {
+      "type": "product-stats",
+      "blocks": {
+        "bb11208a-d6e0-4846-920b-7bec11022ec0": {
+          "type": "column",
+          "settings": {
+            "statHeading": "98%",
+            "statContent": "<p>of people surveyed <strong>fall asleep <br>faster<\/strong> when taking Dream Powder.<span style=\"font-size: 10px; position: relative; top: -6px;\">†<\/span><\/p>"
+          }
+        },
+        "3739e969-ca30-49c8-ad92-130967922668": {
+          "type": "column",
+          "settings": {
+            "statHeading": "99%",
+            "statContent": "<p>of people experience <strong>better sleep quality<\/strong>.<span style=\"font-size: 10px; position: relative; top: -6px;\">†<\/span><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bb11208a-d6e0-4846-920b-7bec11022ec0",
+        "3739e969-ca30-49c8-ad92-130967922668"
+      ],
+      "settings": {
+        "statBGImage": "shopify:\/\/shop_images\/frother.jpg",
+        "statBGColor": "#ffffff",
+        "productHeading": "",
+        "productBodyText": "",
+        "popupheading": ""
+      }
+    },
+    "163535530806e4dccb": {
+      "type": "grid-with-icons",
+      "blocks": {
+        "163535530806e4dccb-0": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/savings-icon.png",
+            "iconheading": "monthly savings",
+            "iconcontent": ""
+          }
+        },
+        "163535530806e4dccb-1": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/cart.png",
+            "iconheading": "free mug + frother with your first delivery",
+            "iconcontent": ""
+          }
+        },
+        "163535530806e4dccb-2": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/vip.png",
+            "iconheading": "VIP support",
+            "iconcontent": ""
+          }
+        },
+        "8b21463f-9030-49ea-9a33-7b3851baacb1": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/shipping.png",
+            "iconheading": "free shipping on every order",
+            "iconcontent": ""
+          }
+        },
+        "3ac56819-a8cd-4e20-952c-1dead4b055df": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/pause_a4b6c02c-0f2d-4204-8bbe-6d9267133b0e.png",
+            "iconheading": "pause or cancel anytime",
+            "iconcontent": ""
+          }
+        }
+      },
+      "block_order": [
+        "163535530806e4dccb-0",
+        "163535530806e4dccb-1",
+        "163535530806e4dccb-2",
+        "8b21463f-9030-49ea-9a33-7b3851baacb1",
+        "3ac56819-a8cd-4e20-952c-1dead4b055df"
+      ],
+      "settings": {
+        "gridTitle": "subscribe to better sleep"
+      }
+    },
+    "16353565802d2d8b6e": {
+      "type": "product-accordian",
+      "blocks": {
+        "bd79d06b-de6b-49da-9cc1-bcef1f8e7c3a": {
+          "type": "column",
+          "settings": {
+            "statHeading": "Nano Hemp",
+            "statContent": "<p>hemp particles with the highest absorption potential to naturally support inflammation, balance, and sleep*<\/p>"
+          }
+        },
+        "2d1aeae0-dd4e-429b-aea3-6f82eab98618": {
+          "type": "column",
+          "settings": {
+            "statHeading": "reishi",
+            "statContent": "<p>a mushroom superfood that helps to support the body’s sleep cycle and manage stress*<\/p>"
+          }
+        },
+        "92639f2f-33ac-4a03-ad11-c69930a040f6": {
+          "type": "column",
+          "settings": {
+            "statHeading": "magnesium",
+            "statContent": "<p>a mineral that aids the body’s ability to fall asleep by relaxing the muscles and regulating the nervous system*<\/p>"
+          }
+        },
+        "1d0f84bc-32ab-417d-96cc-07b047ecb7de": {
+          "type": "column",
+          "settings": {
+            "statHeading": "L-Theanine",
+            "statContent": "<p>an amino acid that promotes relaxation and helps improve sleep quality*<\/p>"
+          }
+        },
+        "1ee8c65c-d2b5-428d-bfb0-a86e73243819": {
+          "type": "column",
+          "settings": {
+            "statHeading": "melatonin",
+            "statContent": "<p>a compound that regulates the body’s circadian rhythm, promoting restful sleep*<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bd79d06b-de6b-49da-9cc1-bcef1f8e7c3a",
+        "2d1aeae0-dd4e-429b-aea3-6f82eab98618",
+        "92639f2f-33ac-4a03-ad11-c69930a040f6",
+        "1d0f84bc-32ab-417d-96cc-07b047ecb7de",
+        "1ee8c65c-d2b5-428d-bfb0-a86e73243819"
+      ],
+      "settings": {
+        "statBGImage": "shopify:\/\/shop_images\/dream-pow.png",
+        "statBGColor": "#ffffff",
+        "heroHeading": "what’s in White Chocolate Peppermint Dream Powder?"
+      }
+    },
+    "1635356617646f55ff": {
+      "type": "product-mid-hero",
+      "settings": {
+        "heroBGImage": "shopify:\/\/shop_images\/bundle_cr_1.jpg",
+        "heroBGColor": "#ffffff",
+        "heroHeading": "how to enjoy",
+        "heroBodyText": "<p>put at least 1 scoop of powder into a mug of warm milk or hot water and blend using your beam frother for a cozy finish. Sip 20-30 minutes before bedtime to enjoy your deepest night’s sleep.<\/p>"
+      }
+    },
+    "163536855792c4574f": {
+      "type": "fifty-fifty",
+      "settings": {
+        "fiftyImage": "shopify:\/\/shop_images\/dr_weiss_2.jpg",
+        "heroBGColor": "#ffffff",
+        "heroHeading": "Meet Beam's resident sleep expert",
+        "heroBodyTopText": "Dr. Carleara Weiss, Ph.D., M.S., R.N. member, american academy of sleep medicine",
+        "heroBodyText": "<p>“beam is committed to offering products that may contribute to sleep quality while maintaining an ethical and conscious approach to overall wellness.”<\/p><p><\/p><p>- Dr. Weiss<\/p>"
+      }
+    },
+    "1635512142e6a1ad8f": {
+      "type": "related-products",
+      "settings": {
+        "statBGColor": "#ffffff",
+        "productHeading": "",
+        "productBodyText": "",
+        "popupheading": ""
+      }
+    },
+    "1635526379cb5fee3b": {
+      "type": "main-product",
+      "settings": {
+        "productHeading": "your best sleep. ever.",
+        "productBodyText": "subscription includes free mug + frother \t\t\t \t\t ",
+        "mobileBodyText": "",
+        "tagText": "limited time only for skimm'rs",
+        "subImage": "shopify:\/\/shop_images\/dream-pep-subs.jpg",
+        "popupheading": ""
+      }
+    },
+    "16358623413a317eb1": {
+      "type": "reviews-end",
+      "disabled": true,
+      "settings": {
+        "heroBGColor": "#ffffff",
+        "heroHeading": "",
+        "heroBodyText": ""
+      }
+    }
+  },
+  "order": [
+    "16358797767b00d090",
+    "163535382289658a11",
+    "product-recommendations",
+    "product-stats",
+    "163535530806e4dccb",
+    "16353565802d2d8b6e",
+    "1635356617646f55ff",
+    "163536855792c4574f",
+    "1635512142e6a1ad8f",
+    "1635526379cb5fee3b",
+    "16358623413a317eb1"
+  ]
+}

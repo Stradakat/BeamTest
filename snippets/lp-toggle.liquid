@@ -1,0 +1,364 @@
+{% assign prodToggle = all_products['sea-salt-caramel-dream-powder'] %}
+{% assign prodToggle2 = all_products['sleep-powder'] %}
+{% assign prodToggle3 = all_products['dream-extra-strength-powder'] %}
+
+
+<form id="ssToggle" action="/cart/add" data-productid="{{ prodToggle.id }}" method="post" class="product-form"
+								id="add-to-cart" enctype="multipart/form-data">
+<div class="full-width">
+<div class="row align--middle gutter--none">
+		<!-- <div class="col pr tc c6--md">
+			{% if prodToggle.handle == "sleep-powder" %}
+			<p style="position: absolute;bottom: 0; right: 0; left: 0;" class="mobile-value-add sans--small fw--600 p1 bg--main-blue lowercase color--white hide--md">{{ section.settings.productBodyText | escape }}</p>
+			{% endif %}
+			<span class="product-tag-overlay color--blue hide--md"> 
+				{% if section.settings.tagText %}
+					{{ section.settings.tagText | escape }}
+				{% endif %}
+				</span>
+			</div> -->
+		<div style="width: 100%" class="col c6--md">
+			<div class="pt2 pb3 tl" style="margin: 0 auto;">
+				<!-- <div class="sans--body show--md mb1">
+					<span class="color--main-blue fw--600"> 
+					{% if section.settings.tagText %}
+						{{ section.settings.tagText | escape }}
+					{% endif %}
+					</span><span class="color--main-blue fw--600 ml1 mr1">|</span>{% include 'stars-dream' %}
+				</div> -->
+				{% assign hide_default_title = false %}
+				{% if prodToggle.variants.size == 1 and prodToggle.variants.first.title contains 'Default'
+				%}
+				{% assign hide_default_title = true %}
+				{% endif %}
+				<div id="product-variants"
+					class="select--product-option{% if hide_default_title %} hidden{% endif %}">
+					<select id="product-select" class="form-select" name="id"
+						data-productid="{{ prodToggle.id }}">
+						{% for variant in prodToggle.variants %}
+						<option class="form-select" {% if
+							variant==prodToggle.selected_or_first_available_variant %} selected{% endif
+							%} value="{{ variant.id }}">
+							{{ variant.title }} - {{ variant.price | money }}
+						</option>
+						{% endfor %}
+					</select>
+				</div>
+               
+					<!-- Begin ReCharge code -->
+					{% if prodToggle.available %}{% include 'pod-sub-ssc' %}{% endif %}
+					<!-- End ReCharge code -->
+					
+					<div class="sans--small pb2 hidden">
+						<div id="product-price" itemprop="offers" itemscope
+							itemtype="http://schema.org/Offer" class="delta">
+							<meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+							{% if prodToggle.available %}
+							<link itemprop="availability" href="http://schema.org/InStock" />
+							{% else %}
+							<link itemprop="availability" href="http://schema.org/OutOfStock" />
+							{% endif %}
+							<p>
+								{% assign variant = prodToggle.selected_or_first_available_variant %}
+								{% if prodToggle.compare_at_price > prodToggle.price %}
+								<span class="product-price on-sale" itemprop="price">{{ variant.price |
+									money }}</span>
+								<s class="product-compare-price">{{ variant.compare_at_price | money
+									}}</s>
+								{% else %}
+								<span class="product-price sans--medium fw--600" itemprop="price">{{
+									variant.price | money }}</span>
+								{% endif %}
+							</p>
+						</div>
+
+					</div>
+					<input style="width: 100%" type="submit" name="add" id="buttonSelect" class="button button--primary" value="Redeem $20 off subscription">
+					<p class="gaurentee ">30-day money back guarantee</p>
+			</div>
+		</div>
+</div>
+
+</div>
+</form>
+
+<style>
+    .select-wrap 
+{
+  border: 1px solid rgb(170, 170, 170);
+  margin-bottom: 10px;
+  padding: 0 5px 5px;
+  width:100%;
+  background-color:#ffff;
+}
+
+.select-wrap label
+{
+  font-size:10px;
+  text-transform: uppercase;
+  color: #777;
+  padding: 2px 8px 0;
+}
+
+select
+{
+  border:0px;
+}
+    .gaurentee {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+        font-style: italic;
+    }
+    .main-form-action {
+        width: 100%;
+    }
+    .button--primary {
+        border-radius: 5px !important;
+        font-size: 16px !important;
+    }
+	#product-add-pod-otp {
+		display: none;
+	}
+</style>
+
+
+<form id="sleepToggle" action="/cart/add" data-productid="{{ prodToggle2.id }}" method="post" class="product-form"
+								id="add-to-cart" enctype="multipart/form-data">
+<div class="full-width">
+<div class="row align--middle gutter--none">
+		<!-- <div class="col pr tc c6--md">
+			{% if prodToggle2.handle == "sleep-powder" %}
+			<p style="position: absolute;bottom: 0; right: 0; left: 0;" class="mobile-value-add sans--small fw--600 p1 bg--main-blue lowercase color--white hide--md">{{ section.settings.productBodyText | escape }}</p>
+			{% endif %}
+			<span class="product-tag-overlay color--blue hide--md"> 
+				{% if section.settings.tagText %}
+					{{ section.settings.tagText | escape }}
+				{% endif %}
+				</span>
+			</div> -->
+		<div style="width: 100%" class="col c6--md">
+			<div class="pt2 pb3 tl" style="margin: 0 auto;">
+				<!-- <div class="sans--body show--md mb1">
+					<span class="color--main-blue fw--600"> 
+					{% if section.settings.tagText %}
+						{{ section.settings.tagText | escape }}
+					{% endif %}
+					</span><span class="color--main-blue fw--600 ml1 mr1">|</span>{% include 'stars-dream' %}
+				</div> -->
+				{% assign hide_default_title = false %}
+				{% if prodToggle2.variants.size == 1 and prodToggle2.variants.first.title contains 'Default'
+				%}
+				{% assign hide_default_title = true %}
+				{% endif %}
+				<div id="product-variants"
+					class="select--product-option{% if hide_default_title %} hidden{% endif %}">
+					<select id="product-select" class="form-select" name="id"
+						data-productid="{{ prodToggle2.id }}">
+						{% for variant in prodToggle2.variants %}
+						<option class="form-select" {% if
+							variant==prodToggle2.selected_or_first_available_variant %} selected{% endif
+							%} value="{{ variant.id }}">
+							{{ variant.title }} - {{ variant.price | money }}
+						</option>
+						{% endfor %}
+					</select>
+				</div>
+					<!-- Begin ReCharge code -->
+					{% if prodToggle2.available %}{% include 'pod-sub' %}{% endif %}
+					<!-- End ReCharge code -->
+					
+					<div class="sans--small pb2 hidden">
+						<div id="product-price" itemprop="offers" itemscope
+							itemtype="http://schema.org/Offer" class="delta">
+							<meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+							{% if prodToggle2.available %}
+							<link itemprop="availability" href="http://schema.org/InStock" />
+							{% else %}
+							<link itemprop="availability" href="http://schema.org/OutOfStock" />
+							{% endif %}
+							<p>
+								{% assign variant = prodToggle2.selected_or_first_available_variant %}
+								{% if prodToggle2.compare_at_price > prodToggle2.price %}
+								<span class="product-price on-sale" itemprop="price">{{ variant.price |
+									money }}</span>
+								<s class="product-compare-price">{{ variant.compare_at_price | money
+									}}</s>
+								{% else %}
+								<span class="product-price sans--medium fw--600" itemprop="price">{{
+									variant.price | money }}</span>
+								{% endif %}
+							</p>
+						</div>
+
+					</div>
+					<input style="width: 100%" type="submit" name="add" id="buttonSelect" class="button button--primary" value="Redeem $20 off subscription">
+					<p class="gaurentee ">30-day money back guarantee</p>
+			</div>
+		</div>
+</div>
+
+</div>
+</form>
+
+<style>
+    .select-wrap 
+{
+  border: 1px solid rgb(170, 170, 170);
+  margin-bottom: 10px;
+  padding: 0 5px 5px;
+  width:100%;
+  background-color:#ffff;
+}
+
+.select-wrap label
+{
+  font-size:10px;
+  text-transform: uppercase;
+  color: #777;
+  padding: 2px 8px 0;
+}
+
+select
+{
+  border:0px;
+}
+    .gaurentee {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+        font-style: italic;
+    }
+    .main-form-action {
+        width: 100%;
+    }
+    .button--primary {
+        border-radius: 5px !important;
+        font-size: 16px !important;
+    }
+	#product-add-pod-otp {
+		display: none;
+	}
+</style>
+
+
+<form id="xsToggle" action="/cart/add" data-productid="{{ prodToggle3.id }}" method="post" class="product-form"
+								id="add-to-cart" enctype="multipart/form-data">
+<div class="full-width">
+<div class="row align--middle gutter--none">
+		<!-- <div class="col pr tc c6--md">
+			{% if prodToggle3.handle == "sleep-powder" %}
+			<p style="position: absolute;bottom: 0; right: 0; left: 0;" class="mobile-value-add sans--small fw--600 p1 bg--main-blue lowercase color--white hide--md">{{ section.settings.productBodyText | escape }}</p>
+			{% endif %}
+			<span class="product-tag-overlay color--blue hide--md"> 
+				{% if section.settings.tagText %}
+					{{ section.settings.tagText | escape }}
+				{% endif %}
+				</span>
+			</div> -->
+		<div style="width: 100%" class="col c6--md">
+			<div class="pt2 pb3 tl" style="margin: 0 auto;">
+				<!-- <div class="sans--body show--md mb1">
+					<span class="color--main-blue fw--600"> 
+					{% if section.settings.tagText %}
+						{{ section.settings.tagText | escape }}
+					{% endif %}
+					</span><span class="color--main-blue fw--600 ml1 mr1">|</span>{% include 'stars-dream' %}
+				</div> -->
+				{% assign hide_default_title = false %}
+				{% if prodToggle3.variants.size == 1 and prodToggle3.variants.first.title contains 'Default'
+				%}
+				{% assign hide_default_title = true %}
+				{% endif %}
+				<div id="product-variants"
+					class="select--product-option{% if hide_default_title %} hidden{% endif %}">
+					<select id="product-select" class="form-select" name="id"
+						data-productid="{{ prodToggle3.id }}">
+						{% for variant in prodToggle3.variants %}
+						<option class="form-select" {% if
+							variant==prodToggle3.selected_or_first_available_variant %} selected{% endif
+							%} value="{{ variant.id }}">
+							{{ variant.title }} - {{ variant.price | money }}
+						</option>
+						{% endfor %}
+					</select>
+				</div>
+					<!-- Begin ReCharge code -->
+					{% if prodToggle3.available %}{% include 'pod-sub-xs' %}{% endif %}
+					<!-- End ReCharge code -->
+					
+					<div class="sans--small pb2 hidden">
+						<div id="product-price" itemprop="offers" itemscope
+							itemtype="http://schema.org/Offer" class="delta">
+							<meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+							{% if prodToggle3.available %}
+							<link itemprop="availability" href="http://schema.org/InStock" />
+							{% else %}
+							<link itemprop="availability" href="http://schema.org/OutOfStock" />
+							{% endif %}
+							<p>
+								{% assign variant = prodToggle3.selected_or_first_available_variant %}
+								{% if prodToggle3.compare_at_price > prodToggle3.price %}
+								<span class="product-price on-sale" itemprop="price">{{ variant.price |
+									money }}</span>
+								<s class="product-compare-price">{{ variant.compare_at_price | money
+									}}</s>
+								{% else %}
+								<span class="product-price sans--medium fw--600" itemprop="price">{{
+									variant.price | money }}</span>
+								{% endif %}
+							</p>
+						</div>
+
+					</div>
+					<input style="width: 100%" type="submit" name="add" id="buttonSelect" class="button button--primary" value="Redeem $20 off subscription">
+					<p class="gaurentee ">30-day money back guarantee</p>
+			</div>
+		</div>
+</div>
+
+</div>
+</form>
+
+<style>
+    .select-wrap 
+{
+  border: 1px solid rgb(170, 170, 170);
+  margin-bottom: 10px;
+  padding: 0 5px 5px;
+  width:100%;
+  background-color:#ffff;
+}
+
+.select-wrap label
+{
+  font-size:10px;
+  text-transform: uppercase;
+  color: #777;
+  padding: 2px 8px 0;
+}
+
+select
+{
+  border:0px;
+}
+    .gaurentee {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+        font-style: italic;
+    }
+    .main-form-action {
+        width: 100%;
+    }
+    .button--primary {
+        border-radius: 5px !important;
+        font-size: 16px !important;
+    }
+	#product-add-pod-otp {
+		display: none;
+	}
+</style>

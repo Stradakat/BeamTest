@@ -1,0 +1,309 @@
+{
+  "sections": {
+    "16359082345bffccf2": {
+      "type": "main-product-otp",
+      "settings": {
+        "productHeading": "The Summer Bedtime Bundle",
+        "productBodyText": "",
+        "mobileBodyText": "",
+        "tagText": "limited time only",
+        "subImage": "shopify:\/\/shop_images\/bundle-hero.jpg",
+        "popupheading": "The Summer Bedtime Bundle",
+        "popupimg": "shopify:\/\/shop_images\/bundle-nutrition-facts-01.jpg"
+      }
+    },
+    "1635907310c28b3917": {
+      "type": "horizontal-bar",
+      "blocks": {
+        "1635907310c28b3917-0": {
+          "type": "column",
+          "settings": {
+            "iconheading": "non-GMO",
+            "iconcontent": ""
+          }
+        },
+        "1635907310c28b3917-1": {
+          "type": "column",
+          "settings": {
+            "iconheading": "gluten free",
+            "iconcontent": ""
+          }
+        },
+        "1635907310c28b3917-2": {
+          "type": "column",
+          "settings": {
+            "iconheading": "no sugar added",
+            "iconcontent": ""
+          }
+        },
+        "286b65f5-5616-4c60-9a10-0cd40f725ea0": {
+          "type": "column",
+          "settings": {
+            "iconheading": "dairy free",
+            "iconcontent": ""
+          }
+        },
+        "97836b5c-7e95-4efb-b031-6731f7b0bdb9": {
+          "type": "column",
+          "settings": {
+            "iconheading": "keto friendly",
+            "iconcontent": ""
+          }
+        }
+      },
+      "block_order": [
+        "1635907310c28b3917-0",
+        "1635907310c28b3917-1",
+        "1635907310c28b3917-2",
+        "286b65f5-5616-4c60-9a10-0cd40f725ea0",
+        "97836b5c-7e95-4efb-b031-6731f7b0bdb9"
+      ],
+      "settings": {
+        "gridTitle": ""
+      }
+    },
+    "163535382289658a11": {
+      "type": "product-mid-hero",
+      "disabled": true,
+      "settings": {
+        "heroBGImage": "shopify:\/\/shop_images\/bundle_cr_1.jpg",
+        "heroBGColor": "#be8a8a",
+        "heroHeading": "bedtime, but make it winter",
+        "heroBodyText": "<p><strong>time to hibernate.<\/strong> This bundle includes 2 flavors of Dream and a winterized Beam mug to help you drift off and wake up holiday-ready. Perfect as a gift for those who could use a good night’s sleep.<\/p>"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "product-stats": {
+      "type": "product-stats",
+      "blocks": {
+        "bb11208a-d6e0-4846-920b-7bec11022ec0": {
+          "type": "column",
+          "settings": {
+            "statHeading": "98%",
+            "statContent": "<p>of people surveyed <strong>fall asleep <br>faster<\/strong> when taking Dream Powder.<span style=\"font-size: 10px; position: relative; top: -6px;\">†<\/span><\/p>"
+          }
+        },
+        "3739e969-ca30-49c8-ad92-130967922668": {
+          "type": "column",
+          "settings": {
+            "statHeading": "99%",
+            "statContent": "<p>of people experience <strong>better sleep quality<\/strong>.<span style=\"font-size: 10px; position: relative; top: -6px;\">†<\/span><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bb11208a-d6e0-4846-920b-7bec11022ec0",
+        "3739e969-ca30-49c8-ad92-130967922668"
+      ],
+      "settings": {
+        "statBGImage": "shopify:\/\/shop_images\/how-to-enjoy-desktop.jpg",
+        "statBGColor": "#ffffff",
+        "productHeading": "",
+        "productBodyText": "",
+        "popupheading": ""
+      }
+    },
+    "163535530806e4dccb": {
+      "type": "grid-with-icons",
+      "disabled": true,
+      "blocks": {
+        "163535530806e4dccb-0": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/savings-icon.png",
+            "iconheading": "monthly savings",
+            "iconcontent": ""
+          }
+        },
+        "163535530806e4dccb-1": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/cart.png",
+            "iconheading": "free mug + frother with your first delivery",
+            "iconcontent": ""
+          }
+        },
+        "163535530806e4dccb-2": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/vip.png",
+            "iconheading": "VIP support",
+            "iconcontent": ""
+          }
+        },
+        "8b21463f-9030-49ea-9a33-7b3851baacb1": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/shipping.png",
+            "iconheading": "free shipping on every order",
+            "iconcontent": ""
+          }
+        },
+        "3ac56819-a8cd-4e20-952c-1dead4b055df": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/pause_a4b6c02c-0f2d-4204-8bbe-6d9267133b0e.png",
+            "iconheading": "pause or cancel anytime",
+            "iconcontent": ""
+          }
+        }
+      },
+      "block_order": [
+        "163535530806e4dccb-0",
+        "163535530806e4dccb-1",
+        "163535530806e4dccb-2",
+        "8b21463f-9030-49ea-9a33-7b3851baacb1",
+        "3ac56819-a8cd-4e20-952c-1dead4b055df"
+      ],
+      "settings": {
+        "gridTitle": "subscribe to better sleep"
+      }
+    },
+    "1653068035e5f2f89d": {
+      "type": "product-ingrediants-picture",
+      "blocks": {
+        "18251ee6-a992-41d0-a0a9-2c819614f00f": {
+          "type": "Accordian",
+          "settings": {
+            "statHeading": "Nano Hemp",
+            "statContent": "<p>hemp particles with the highest absorption potential to naturally support mood, stress, rest, and wellbeing*<\/p>"
+          }
+        },
+        "6600ddaa-907d-4c9b-9605-8fc0ad0b7c4a": {
+          "type": "Accordian",
+          "settings": {
+            "statHeading": "Reishi",
+            "statContent": "<p>a mushroom superfood that helps to support the body’s sleep cycle and manage stress*<\/p>"
+          }
+        },
+        "77ba10d1-c374-4ade-b9aa-896f37d881a8": {
+          "type": "Accordian",
+          "settings": {
+            "statHeading": "Magnesium",
+            "statContent": "<p>a mineral that aids the body’s ability to fall asleep by relaxing the muscles and regulating the nervous system*<\/p>"
+          }
+        },
+        "96cffbea-dd27-436c-bb57-d21eac63a75d": {
+          "type": "Accordian",
+          "settings": {
+            "statHeading": "L-Theanine",
+            "statContent": "<p>an amino acid that promotes relaxation and helps improve sleep quality*<\/p>"
+          }
+        },
+        "ba2ef822-a0d7-446c-b8a8-694e835c25dc": {
+          "type": "Accordian",
+          "settings": {
+            "statHeading": "Melatonin",
+            "statContent": "<p>a compound that regulates the body’s circadian rhythm, promoting restful sleep*<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "18251ee6-a992-41d0-a0a9-2c819614f00f",
+        "6600ddaa-907d-4c9b-9605-8fc0ad0b7c4a",
+        "77ba10d1-c374-4ade-b9aa-896f37d881a8",
+        "96cffbea-dd27-436c-bb57-d21eac63a75d",
+        "ba2ef822-a0d7-446c-b8a8-694e835c25dc"
+      ],
+      "settings": {
+        "statBGColor": "#ffffff",
+        "heroHeading": "what’s in Dream Powder?",
+        "statContent": "",
+        "statBGImage": "shopify:\/\/shop_images\/summer-sleep-rituals.jpg"
+      }
+    },
+    "1653054137794927a6": {
+      "type": "product-mid-hero-4",
+      "settings": {
+        "heroBGImage": "shopify:\/\/shop_images\/bundle-how-to-enjoy-desktop.jpg",
+        "heroMobImage": "shopify:\/\/shop_images\/bundle-how-to-enjoy-mobile.jpg",
+        "heroBGColor": "#ffffff",
+        "heroHeading": "how to enjoy",
+        "heroBodyText": "<p> Pour 1 scoop of powder into a mug of hot water or milk and blend using your Beam frother for a cozy finish. Sip 30-45 minutes before bedtime. Enjoy your best night’s sleep and crush your morning. <\/p>"
+      }
+    },
+    "16530702734eb037fa": {
+      "type": "product-checks",
+      "blocks": {
+        "564576a0-c8f5-4991-bea3-a8d661d9be49": {
+          "type": "column",
+          "settings": {
+            "compareHeading": "Keep a regular schedule. Set a consistent bedtime and wake-up time.",
+            "iconBlock": "shopify:\/\/shop_images\/1.jpg"
+          }
+        },
+        "a7688d84-5d43-4d61-9aad-f1074244cc4d": {
+          "type": "column",
+          "settings": {
+            "compareHeading": "Avoid light exposure at least 1 hour before bedtime. This supports our biological clock and the natural cycle of Melatonin.",
+            "iconBlock": "shopify:\/\/shop_images\/2.jpg"
+          }
+        },
+        "1a36c0f6-1c53-4992-a1b2-dceb837a2672": {
+          "type": "column",
+          "settings": {
+            "compareHeading": "Set a time for winding down with a warm shower, meditation, or journaling. This is also a good time for Dream Powder or Dream Capsules.",
+            "iconBlock": "shopify:\/\/shop_images\/3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "564576a0-c8f5-4991-bea3-a8d661d9be49",
+        "a7688d84-5d43-4d61-9aad-f1074244cc4d",
+        "1a36c0f6-1c53-4992-a1b2-dceb837a2672"
+      ],
+      "settings": {
+        "statBGColor": "#ffffff",
+        "heroHeading": "Summer Sleep Rituals",
+        "heroSubHeading": "From Sleep Expert and Beam Partner Dr. Carleara Weiss, Ph.D., M.S., R.N.,",
+        "statBGImage": "shopify:\/\/shop_images\/BEAM-DR-WEISS_0429-grey.jpg",
+        "statMobImage": "shopify:\/\/shop_images\/BEAM-DR-WEISS_0429-grey_1.jpg"
+      }
+    },
+    "163536855792c4574f": {
+      "type": "fifty-fifty",
+      "disabled": true,
+      "settings": {
+        "fiftyImage": "shopify:\/\/shop_images\/dr_weiss_2.jpg",
+        "heroBGColor": "#ffffff",
+        "heroHeading": "Meet Beam's resident sleep expert",
+        "heroBodyTopText": "Dr. Carleara Weiss, Ph.D., M.S., R.N. member, american academy of sleep medicine",
+        "heroBodyText": "<p>“beam is committed to offering products that may contribute to sleep quality while maintaining an ethical and conscious approach to overall wellness.”<\/p><p><\/p><p>- Dr. Weiss<\/p>"
+      }
+    },
+    "1635512142e6a1ad8f": {
+      "type": "related-products",
+      "settings": {
+        "statBGColor": "#ffffff",
+        "productHeading": "",
+        "productBodyText": "",
+        "popupheading": ""
+      }
+    }
+  },
+  "order": [
+    "16359082345bffccf2",
+    "1635907310c28b3917",
+    "163535382289658a11",
+    "product-recommendations",
+    "product-stats",
+    "163535530806e4dccb",
+    "1653068035e5f2f89d",
+    "1653054137794927a6",
+    "16530702734eb037fa",
+    "163536855792c4574f",
+    "1635512142e6a1ad8f"
+  ]
+}

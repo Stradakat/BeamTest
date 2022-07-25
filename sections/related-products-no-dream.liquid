@@ -1,0 +1,185 @@
+<div class="mb0 pt4 pb4 pt7--md pb8--md tc" style="background-color: transparent;">
+    <h2 class="fw--600 sans--large mb2 color--blue pr1 pl1">more to love</h2>
+    <div class="row align--center mb1 mb3--md">
+        <div class="col c11 c10--sm c7--md c5--xl">
+            <div class="tc">
+                <h3 style="line-height: 1.4;" class="fw--400 sans--body mb3 pl1 pr1">
+                    The highest quality functional wellness products for better <strong>sleep, calm, energy, recovery, and hydration.</strong> Trusted by our athletes, partners, + wellness community.
+                </h3>
+            </div>
+        </div>
+
+    </div>
+        {% if product.handle == "sleep-powder" %}
+        <div class="grid-container contained">
+            <div class="row align--center">
+                <div class="col c9--lg">
+                    <div class="row gutter--vertical align--center">
+                              {% for product in collections.dream-pdp-related.products %}
+                              <div class="col c6--sm c4--md hide-{{product.handle}}">
+                                  <div class="product-card">
+                                      {% include 'product-grid-collection' with 'three-per-row' %}
+                                  </div>
+                              </div>
+                              {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+          <div class="grid-container contained">
+              <div class="row align--center">
+                  <div class="col c9--lg">
+                      <div class="row gutter--vertical align--center">
+    
+                                {% for product in collections.related.products %}
+                                <div class="col c6--sm c4--md hide-{{product.handle}}">
+                                    <div class="product-card">
+                                        {% include 'product-grid-collection' with 'three-per-row' %}
+                                    </div>
+                                </div>
+                                {% endfor %}
+    
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    {% endif %}
+    </div>
+
+
+    <style>
+        .product-title-inline {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            align-items: flex-start;
+        }
+          .product-card {
+            border: 0 !important;
+        }
+        .product-title {
+            font-size: 16px;
+        }
+        .product-price {
+            font-size: 16px;
+        }
+
+#dream-powder-peppermint .sans--large {
+                font-size: 23px;
+                line-height: 27px;
+}
+        @media (min-width: 800px) {
+          #dream-powder-peppermint  .sans--large {
+                font-size: 34px;
+                line-height: 40px;
+}
+        }
+
+        @media screen and (max-width: 1424px) {
+        .slick-dots {
+            top: auto !important;
+            bottom: -20px !important;
+            left: auto !important;
+            right: auto;
+            text-align: center;
+        }
+
+        .slick-dots li {
+            display: inline;
+            margin-right: 8px;
+        }
+
+        .slideshow.slideshow-mobile .slick-dots {
+            bottom: 24px !important;
+        }
+
+        .slideshow.slideshow-mobile .slick-dots li button {
+            background-color: transparent;
+        }
+
+        .slick-dots li button {
+            background-color: #C2C2C2;
+        }
+
+        .slick-dots li button {
+            text-indent: -100000px;
+            border-radius: 100%;
+            border: solid rgba(255, 255, 255, 0.781) 1px;
+            background-color: #C2C2C2;
+            width: 14px;
+            height: 14px;
+        }
+
+        .slideshow.slideshow-mobile .slick-dots li.slick-active button,
+        .slick-dots li.slick-active button {
+            background-color: #8c8cf0;
+        }
+    }
+    </style>
+
+
+{% schema %}
+{
+    "name": "Related Products",
+  "class": "product-subscription_banner",
+  "settings": [	      
+            {
+                "type": "image_picker",
+                "id": "statBGImage",
+                "label": "Background Image"
+            },
+            {
+                "type": "color",
+                "id": "statBGColor",
+                "label": "Background Color",
+                "default": "#fff"
+              },
+			{
+				"type": "text",
+				"id": "productHeading",
+				"label": "Product Title"
+			},
+			{
+				"type": "text",
+				"id": "productBodyText",
+				"label": "Main Body Copy"
+			},
+			{
+				"type": "text",
+				"id": "popupheading",
+				"label": "Popup Heading"
+			}	
+  ],
+  "blocks": [
+  {
+    "type": "column",
+    "name": "Column",
+    "limit": 10,
+    "settings": [
+      {
+        "id": "iconimage",
+        "type": "image_picker",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "statHeading",
+        "label": "Stat heading"
+      },
+      {
+        "type": "richtext",
+        "id": "statContent",
+        "label": "Stat content"            
+      }
+    ]
+  }
+],
+  "presets": [{
+    "name": "Related Products",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

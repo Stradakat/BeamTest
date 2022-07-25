@@ -1,0 +1,348 @@
+  <div class="row gutter--none row-flex">
+          <div class="col tc c6--md bubbles-main {% if product.handle == 'sea-salt-caramel-extra-strength-dream-powder'%}main-ssc{% endif %}">
+            <div class="col tl pb4--md ml2 bubbles-contain {% if product.handle == 'sea-salt-caramel-extra-strength-dream-powder'%}bubbles-ssc{% endif %}">
+            <div class="accordion pl2 pr2 compare-contain">
+                  {% assign count = 0 %}
+                  {% assign count = count | plus: 1 %}
+                  <div class="item">
+                  {% for block in section.blocks %}
+                  {% if block.settings.compareHeading %}
+                      <span class="tl sans--body fw--600">{{ block.settings.compareHeading}}</span>
+                    {% endif %}
+                      {% if block.settings.statCompareOne %}
+                    <span class="compare-top {% if product.handle == 'sea-salt-caramel-extra-strength-dream-powder'%}compare-caramel{% endif %}">{{ block.settings.statCompareOne}}</span>
+                    {% endif %}
+                    {% if block.settings.statCompareTwo %}
+                      <span class="compare-bottom  {% if product.handle == 'sea-salt-caramel-extra-strength-dream-powder'%}bottom-caramel{% endif %}" style="width: {{block.settings.bottomPercent}}">{{ block.settings.statCompareTwo}}</span>
+                    {% endif %}
+                  {% endfor %}   
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="col tl c5--md pt7 pb4--md mobile-ingredients mob-ingred" style="margin: auto;">
+          {% if section.settings.heroHeading %}
+          <h2 class="sans--large fw--600 mb2 color--black pl2 pr2 mob-title">
+              {{ section.settings.heroHeading | escape }}
+          </h2>
+          {% endif %}
+          <div class="accordion pl2 pr2">
+              {% assign count = 0 %}
+              {% for block in section.blocks %}
+              {% assign count = count | plus: 1 %}
+              {% if block.settings.statHeading %}
+          <div class="item ingredient-item">
+              <a href="#acc{{ count }}" class="acc-heading-desktop sans--body disable-focus-ring">
+                  <span style="color: #3E7DCA" class="tl sans--body fw--800">{{ block.settings.statHeading}}</span>
+                  <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+          
+              <section id="acc{{ count }}" class="acc-content-desktop">
+        
+              <div class="inner pb3 mb2">
+        
+        {% if block.settings.statContent %}
+        <h5 class="tl sans--body">
+          {{ block.settings.statContent }}
+        </h5>
+        {% endif %}
+              </div><!-- / .inner -->
+          </section>
+        </div>
+        {% endif %}
+              {% endfor %}   
+        
+        
+        </div>
+        
+        </div>
+</div>
+
+<style>
+  .bubbles-ssc {
+    background-color: #FFF0D9;
+  }
+  .row-flex {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+    .main-compare {
+    display: flex;
+    justify-content: center;
+    margin: 0 3%;
+    align-items: center;
+}
+.bubbles-contain {
+  width: 80% !important;
+  margin: 0 auto;
+  padding: 10% 0px;
+}
+.bubbles-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #e7e6e6;
+}
+.main-ssc {
+    background-color: #FFF0D9 !important;
+  }
+.accordian-section {
+  background-image: url();
+  background-color: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 5% 0;
+}
+
+.ingredient-item {
+  border-bottom: 1px solid #C2C2C2 !important;
+  padding-top: 4%;
+}
+.compare-left {
+width: 50%;
+}
+.compare-right {
+width: 50%;
+display: flex;
+flex-direction: column;
+}
+.container {
+display: flex;
+flex-direction: column;
+margin: auto;
+width: 90% !important;
+}
+.compare-flex {
+display: flex;
+}
+.top-img {
+  margin-right: 5%;
+}
+.main-title {
+font-size: 34px;
+line-height: 125%;
+}
+.compare-top {
+display: flex;
+justify-content: space-between;
+background-color: #253350;
+height: 40px;
+align-items: center;
+padding: 0 2%;
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+color: #fff;
+width: 100%;
+}
+.compare-caramel {
+display: flex;
+justify-content: space-between;
+background-color: #B45321;
+height: 40px;
+align-items: center;
+padding: 0 2%;
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+color: #fff;
+width: 100%;
+}
+.compare-bottom {
+display: flex;
+justify-content: space-between;
+background-color: #D7D2F7;
+height: 40px;
+align-items: center;
+padding: 0 2%;
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+margin-bottom: 2%;
+
+}
+.bottom-caramel {
+background-color: #fff !important;
+}
+.compare-img {
+        width: 40%;
+        max-width: 50%;
+        display: flex;
+    justify-content: center;
+    }
+    .image-item {
+        max-height: 90%;
+        object-fit: cover;
+    }
+
+@media screen and (max-width: 800px) {
+ 
+  
+  .bubbles-main {
+    background-color: #fff;
+  }
+  .row-flex {
+    flex-direction: column-reverse;
+  }
+  .bubbles-contain {
+    width: 100% !important;
+    margin: 5% 0;
+  }
+    .compare-contain {
+        margin: 0 3%;
+    }
+    .compare-title {
+        padding-left: 10px;
+    }
+    .main-compare {
+        flex-direction: column;
+    }
+    .compare-img {
+        width: 100%;
+        margin: 0;
+        max-width: 100%;
+    }
+    .bubbles-ssc {
+    background-color: #fff;
+    margin-bottom: 0 !important;
+  }
+  .bottom-caramel {
+    background-color: #FFF0D9 !important;
+  }
+  .main-ssc {
+    background-color: #fff !important;
+  }
+  .mob-ingred {
+    padding-top: 0 !important
+  }
+  .mob-title {
+    text-align: center;
+    padding: 0;
+  }
+  
+    
+}
+  
+</style>
+
+<script>
+  $( document ).ready(function() {
+  
+  let accTitleDesktop = document.getElementsByClassName("acc-heading-desktop");
+          let accContentDesktop = document.getElementsByClassName("acc-content-desktop");
+          let singleModeDesktop = true;
+          
+          for( let j=0; j<accContentDesktop.length; j++ ){
+              let realHeightDesktop = accContentDesktop[j].offsetHeight;
+              accContentDesktop[j].setAttribute("data-height", realHeightDesktop + "px");
+              accContentDesktop[j].style.height = 0;
+          }
+          
+          for( let i=0; i<accTitleDesktop.length; i++ ){
+              accTitleDesktop[i].onclick = function(){
+                  let openedAccDesktop = this.getAttribute('href').replace('#', '');
+  
+                  if( this.classList.contains("active") ){
+                      this.classList.remove("active");
+                      document.getElementById(openedAccDesktop).style.height = 0;
+                      
+                      return false;
+                  }
+                  
+                  if( singleModeDesktop ){						
+                      for(let k=0; k<accTitleDesktop.length; k++) {
+                          accTitleDesktop[k].classList.remove("active");
+                      }
+  
+                      for(let j=0; j<accContentDesktop.length; j++) {
+                          accContentDesktop[j].style.height = 0;
+                      }
+                  }
+                  
+                  this.classList.add("active");
+                  
+                  document.getElementById(openedAccDesktop).style.height = accContentDesktop[i].getAttribute("data-height");
+                  
+                  return false;
+              }
+      }
+  });
+  
+  </script>
+
+{% schema %}
+{
+  "name": "Dream Comparison",
+  "class": "product-subscription_banner",
+  "settings": [	      
+            {
+                "type": "color",
+                "id": "statBGColor",
+                "label": "Background Color",
+                "default": "#fff"
+              },
+              {
+        "type": "text",
+        "id": "heroHeading",
+        "label": "Title"
+      },
+            {
+        "type": "textarea",
+        "id": "statContent",
+        "label": "content"
+      },
+      {
+          "type": "image_picker",
+          "id": "statBGImage",
+          "label": "Background Image"
+      }
+  ],
+  "blocks": [
+  {
+    "type": "column",
+    "name": "Compare",
+    "limit": 10,
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "compareHeading",
+        "label": "Accordian heading"
+      },
+      {
+        "type": "textarea",
+        "id": "statCompareOne",
+        "label": "Compare Top"
+      },
+      {
+        "type": "textarea",
+        "id": "statCompareTwo",
+        "label": "Compare Bottom"            
+      },
+      {
+        "type": "text",
+        "id": "bottomPercent",
+        "label": "Bottom Bubble Percent"            
+      }
+    ]
+  },
+  {
+    "type": "Accordian",
+    "name": "Accordian",
+    "settings": [
+      {
+        "type": "text",
+        "id": "statHeading",
+        "label": "Accordian heading"
+      },
+      {
+        "type": "richtext",
+        "id": "statContent",
+        "label": "Accordian content"            
+      }
+    ]
+}
+  ],
+  "presets": [{
+    "name": "Accordian - Image Left",
+    "category": "Content"
+  }]
+  }
+  
+{% endschema %}

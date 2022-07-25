@@ -1,0 +1,192 @@
+<div class="flex-contain">
+    <div class="join-inline-2">
+        <div class="join-flex">
+        <img class="join-img" src="{{ section.settings.joinImg2 |  img_url: '400x600' }}">
+        </div>
+        <div class="join-flex-copy-2">
+            <h1 style="text-transform: none !important" class="header-label">WHY DREAM POWDER</h1>
+            <h1 style="text-transform: none !important" role="heading" class="join-title">{{section.settings.joinTitle2}}</h1>
+            <h1 style="text-transform: none !important" class="join-copy pt3 pb3">{{section.settings.copy2}}</h1>
+        </div>
+    </div>
+    <div class="join-inline">
+        <div class="join-flex">
+        <img class="join-img" src="{{ section.settings.joinImg |  img_url: '400x600' }}">
+        <div class="bottom-right">
+        <span style="text-transform: none !important;" class="fw--600">Danica Patrick</span>
+        <br>
+        <span style="text-transform: none !important;"  style="font-style: italic">Beam partner</span>
+        </div>
+        </div>
+        <div class="join-flex-copy">
+            <h1 style="text-transform: none !important" class="header-label">HOW IT WORKS</h1>
+            <h1 class="join-title">{{section.settings.joinTitle}}</h1>
+            <h1 class="join-copy pt3 pb3">{{section.settings.copy}}</h1>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .bottom-right {
+    position: absolute;
+    bottom: 5%;
+    right: 25%;
+    }
+    .join-inline {
+        width: 80%;
+        display: flex;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+    .join-img {
+        object-fit: cover;
+        width: 90%;
+        margin-right: 10%;
+    }
+    .join-img-2 {
+        object-fit: cover;
+        width: 95%;
+        padding-left: 5%;
+    }
+    .flex-contain {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .join-inline-2 {
+        width: 80%;
+        display: flex;
+        margin: auto;
+        padding-bottom: 50px;
+        flex-direction: row-reverse;
+    }
+    .join-flex {
+        width: 50%;
+        position: relative;
+        color: white;
+
+    }
+    .join-flex-copy {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 4%;
+    }
+    .join-flex-copy-2 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 3%;
+    }
+    .join-title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .join-copy {
+        font-size: 18px;
+        line-height: 150%;
+        width: 80%;
+    }
+    .btn {
+        border-radius: 3px;
+        display: inline-block;
+        background-color: #427BBE;
+        color: #fff;
+        transition: 200ms ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 225px;
+        height: 55px;
+    }
+    .header-label {
+        color: #427BBE;
+        text-transform: capitalize !important;
+        letter-spacing: 2px;
+        font-size: 13px;
+        font-weight: 600;
+        padding-bottom: 20px;
+    }
+    
+    ::marker {
+        font-size: 14px;
+    }
+    @media screen and (max-width: 800px) {
+        .join-title {
+            width: 90%;
+        }
+        .join-inline-2 {
+            flex-direction: column;
+            width: 100%;
+            padding-bottom: 0;
+        }
+        .join-img {
+            width: 100vw;
+        }
+        .join-flex-copy {
+        width: 100%;
+        align-items: center;
+        padding-top: 30px;
+        padding-left: 0;
+        text-align: center;
+        }
+        .join-flex-copy-2 {
+            width: 100%;
+        align-items: center;
+        padding-top: 30px;
+        padding-left: 0;
+        text-align: center;
+        margin: 0;
+        }
+        .join-inline {
+            flex-direction: column;
+            width: 100%;
+        }
+        .bottom-right {
+            right: -25%;
+        }
+        
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Inline",
+  "settings": [	      
+            {
+				"type": "text",
+				"id": "joinTitle",
+				"label": "title"
+			},
+            {
+				"type": "textarea",
+				"id": "copy",
+				"label": "copy"
+			},
+            {
+                "type": "image_picker",
+                "id": "joinImg",
+                "label": "Image"
+            },
+            {
+				"type": "text",
+				"id": "joinTitle2",
+				"label": "title"
+			},
+            {
+				"type": "textarea",
+				"id": "copy2",
+				"label": "copy"
+			},
+            {
+                "type": "image_picker",
+                "id": "joinImg2",
+                "label": "Image"
+            }
+  ]
+}
+
+{% endschema %}

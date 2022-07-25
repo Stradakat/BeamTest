@@ -1,0 +1,70 @@
+<div class="faq-contain">
+    {%- assign expand_questions = section.settings.expand_questions -%}
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'question' -%}
+                <div class="faq-item {% unless expand_questions %}{% endunless %}" {{ block.shopify_attributes }}>
+                    <div class="shopify_explorer_faq__question fw--600 {% unless expand_questions %}link{% endunless %}"><h1 class="title-block">{{ block.settings.title }}</h1><span class="toggle-open"></span></div>
+                    
+                    <div class="shopify_explorer_faq__answer answer rte">
+                        {{ block.settings.answer }}
+                    </div>
+                </div>
+        {%- endcase -%}
+    {%- endfor -%}
+</div>
+<style>
+     .answer {
+        display: none;
+    }
+    .title-block {
+        max-width: 80%;
+    }
+</style>
+{% schema %}
+
+{
+    "name": "FAQs",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "expand_questions",
+            "label": "Expand all questions by default",
+            "default": false
+        }
+    ],
+    "blocks": [
+        {
+            "type": "separator",
+            "name": "Section separator",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Heading"
+                }
+            ]
+        }, {
+            "type": "question",
+            "name": "Question",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Question"
+                }, {
+                    "type": "textarea",
+                    "id": "answer",
+                    "label": "Answer"
+                }
+            ]
+        }
+    ]
+}
+
+{% endschema %}
+{% stylesheet %}
+
+
+
+{% endstylesheet %}

@@ -1,0 +1,122 @@
+<div class="mt4 mb3 mt7--md mb7--md">
+    <div class="container pt2--md pb2--md">
+        <div class="row">
+
+            <div class="col hide--md mb2 mb0--md">
+                <div class="">
+                    <div class="pr">
+                        <div class="push-up">
+                            <picture class="full-width">
+                                <source srcset="{{ section.settings.image | img_url: '1024x1024' }}"
+                                    media="(min-width: 800px)"><img class="full-width rounded-image"
+                                    alt="an all-natural alternative"
+                                    src="{{ section.settings.image | img_url: '1024x1024' }}">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col c7--md c6--lg pt1--md mb3 tc tl--md">
+				{% if section.settings.labeltext %}
+					<h6 class="sans--body mb3"><span class="color--white bg--purple fw--600"
+							style="padding: 2px 16px; border-radius: 5px; opacity: .6;">{{ section.settings.labeltext }}
+						</span>
+					</h6>
+				{% endif %}	
+				{% if section.settings.heading %}
+					<h2 class="fw--600 sans--large mb2 color--blue">{{ section.settings.heading }}
+					</h2>
+				{% endif %}
+				{% if section.settings.content %}
+					<h3 class="fw--300 sans--body mb2 color--blue">
+						{{ section.settings.content }}
+					</h3>
+				{% endif %}
+				{% if section.settings.subheading %}
+					<h2 class="sans--medium color--blue subheading"><span class="fw--600" style="text-transform: capitalize !important;"text-transform: capitalize !important;>{{ section.settings.subheading }}
+					</span><br><span style="font-style: italic;">{{ section.settings.other }}
+					</span></h2>
+				{% endif %}
+                
+
+            </div>
+            <div class="col c1--lg show--md"></div>
+
+            <div class="col c5--md c5--lg mb2 mb0--md show--md">
+                <div class="">
+                    <div class="pr">
+                        <div class="push-up">
+                            <picture class="full-width">
+                                <source srcset="{{ section.settings.image | img_url: '1024x1024' }}"
+                                    media="(min-width: 800px)"><img class="full-width rounded-image"
+                                    alt="an all-natural alternative"
+                                    src="{{ section.settings.image | img_url: '1024x1024' }}">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+	.rounded-image {
+        border-radius: 68px;
+    }
+
+	@media screen and (max-width: 600px) {
+        .rounded-image {
+            border-radius: 28px;
+        }
+	}
+</style>
+
+{% schema %}
+{
+  "name": "Text Image no background",
+  "class": "text-image_no_background",
+  "settings": [	
+             {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Left Image"			
+			},
+			{
+              "type":"text",
+              "id":"labeltext",
+              "label": "Label title",
+			  "default": "Meet Beam's resident sleep expert"
+			},
+			{
+				"type":"text",
+				"id":"heading",
+				"label": "Heading Text",
+				"default": "dr. carleara weiss"
+			},
+			{
+				"type":"text",
+				"id":"content",
+				"label": "Content",
+				"default": "“we are a 24/7 society where sleep is undervalued and consequently, many struggle with poor sleep quality. as a sleep scientist, my goal is to help people understand the importance of sleep for physical and mental health. beam is committed to offering products that may contribute to sleep quality while maintaining an ethical and conscious approach to overall wellness for those who consume their products.”"
+			},
+			{
+				"type":"text",
+				"id":"subheading",
+				"label": "SubHeading Text",
+				"default": "Dr. Weiss, PhD, MS, RN"
+			},
+			{
+				"type":"text",
+				"id":"other",
+				"label": "Other",
+				"default": "sleep scientist"
+			}
+  ],
+  "presets": [{
+    "name": "Text Image no background",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

@@ -1,0 +1,246 @@
+<div class="perks-contain">
+    <h2 role="heading" class="tc fw--400 vs-title" style="font-weight: 400">
+        Choose your perfect night of sleep
+    </h2>
+    <div class="perks-content">
+        <div class="video-banner">
+            <video class="perks-video"
+                poster="https://cdn.shopify.com/s/files/1/0264/4076/1399/files/poster_85a03a7d-9d9a-4cf2-bec7-d09214db1f2e.png?v=1643143285"
+                style="max-width:100%;opacity: .85; border-radius: 15px; width: 40vw; height: 600px; object-fit: cover;"
+                muted playsinline autoplay loop>
+                <source
+                    src="https://cdn.shopify.com/s/files/1/0264/4076/1399/files/dream-mobile-homepage.mp4?v=1643141779"
+                    type="video/mp4">
+            </video>
+        </div>
+        <div class="compare-div">
+            <h1 class="color--blue mb4 perks-on" style="font-weight: 300; font-size: 35px;">perks on perks</h1>
+            <div class="blocks-list">
+                {% for block in section.blocks %}
+                <div style="margin-bottom: 10px;" class="compare-contain">
+                    <picture class="mr5 icon-img" style="margin-top: 5px;">
+                        <source srcset="{{block.settings.iconImg | img_url: '1024x1024'}}" media="(min-width: 800px)">
+                        <img class="full-width compare-img" alt="subscription icon photo"
+                            src="{{block.settings.iconImg | img_url: '1024x1024'}}">
+                    </picture>
+                    <div class="full-width icon-content">
+                        <h1 class="fw--600 prod-title color--black">{{block.settings.statHeading}}</h1>
+                        <h1 class="fw--600 sans--body pb1  block-content" style="line-height: 1.4;">
+                            {{block.settings.statContent}}
+                        </h1>
+                    </div>
+                    <ul>
+                        <div class="check">
+                            <svg width="15px" height="17px" viewBox="0 0 10 12" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                    font-family="LucidaGrande, Lucida Grande" font-size="14" font-weight="normal">
+                                    <g id="tiktok-mobile" transform="translate(-18.000000, -2604.000000)"
+                                        fill="#15599D">
+                                        <g id="right-for-oyu" transform="translate(18.000000, 2558.000000)">
+                                            <text id="✓">
+                                                <tspan x="0" y="57">✓</tspan>
+                                            </text>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <li class="list-contain">{{block.settings.statContent2}}</li>
+                        <div class="check">
+                            <svg width="15px" height="17px" viewBox="0 0 10 12" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                    font-family="LucidaGrande, Lucida Grande" font-size="14" font-weight="normal">
+                                    <g id="tiktok-mobile" transform="translate(-18.000000, -2604.000000)"
+                                        fill="#15599D">
+                                        <g id="right-for-oyu" transform="translate(18.000000, 2558.000000)">
+                                            <text id="✓">
+                                                <tspan x="0" y="57">✓</tspan>
+                                            </text>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <li class="list-contain">{{block.settings.statContent3}}</li>
+                        <div class="check">
+                            <svg width="15px" height="17px" viewBox="0 0 10 12" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                    font-family="LucidaGrande, Lucida Grande" font-size="14" font-weight="normal">
+                                    <g id="tiktok-mobile" transform="translate(-18.000000, -2604.000000)"
+                                        fill="#15599D">
+                                        <g id="right-for-oyu" transform="translate(18.000000, 2558.000000)">
+                                            <text id="✓">
+                                                <tspan x="0" y="57">✓</tspan>
+                                            </text>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <li class="list-contain">{{block.settings.statContent4}}</li>
+                    </ul>
+                    {% if forloop.index == 1 %}
+                    <div class="product-button"><a class="button-inner"
+                            style="color: #fff !important; font-size:18px; line-height: 2.4;min-width: 220px; height: 100%; background-color: #427cbf !important; width: 60%;"
+                            title="get yours now" href="/products/sleep-powder">Shop now</a></div>
+                    {% endif %}
+                    {% if forloop.index == 2 %}
+                    <div class="product-button"><a class="button-inner"
+                            style="color: #fff !important; font-size:18px; line-height: 2.4;min-width: 220px; height: 100%; background-color: #427cbf !important; width: 60%;"
+                            title="get yours now" href="/products/sleep-capsules">Shop now</a></div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .button-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-color: #427cbf !important;
+        color: #fff !important;
+        font-size: 18px;
+        line-height: 2.4;
+        min-width: 220px;
+        border-radius: 3px;
+    }
+
+    .product-button {
+        width: 50%;
+        height: 7vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .vs-title {
+        font-size: 35px;
+        font-weight: 300;
+        margin-bottom: 30px;
+    }
+
+    .check {
+        margin: 3% 0 0;
+    }
+
+    .compare-contain {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 5%;
+        text-align: center;
+    }
+
+    .compare-contain:first-of-type {
+        border-right: 1px solid lightgray;
+    }
+
+    .list-contain {
+        width: 80%;
+        margin: auto;
+    }
+
+    .compare-div {
+        width: 100vw;
+    }
+
+    .video-banner {
+        display: none;
+    }
+
+    .prod-title {
+        font-size: 24px !important;
+        margin-bottom: 15px;
+        color: #427cbf !important;
+        padding-top: 15px;
+        font-weight: 600;
+    }
+
+    .blocks-list {
+        display: flex;
+        align-items: center;
+    }
+
+    .perks-content {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        align-items: center;
+        margin: 0 15vw;
+    }
+
+    .compare-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blocks-list {
+        display: flex;
+    }
+
+    .perks-copy {
+        padding-left: 8%;
+    }
+</style>
+
+{% schema %}
+{
+"name": "Perks",
+"blocks": [
+{
+"type": "column",
+"name": "Icon Item",
+"limit": 10,
+"settings": [
+{
+"type": "image_picker",
+"id": "iconImg",
+"label": "Icon"
+},
+{
+"type": "text",
+"id": "statHeading",
+"label": "Item heading"
+},
+{
+"type": "richtext",
+"id": "statContent",
+"label": "Item content"
+},
+{
+"type": "richtext",
+"id": "statContent2",
+"label": "list content"
+},
+{
+"type": "richtext",
+"id": "statContent3",
+"label": "list content"
+},
+{
+"type": "richtext",
+"id": "statContent4",
+"label": "list content"
+}
+]
+}
+],
+"presets": [{
+"name": "About Us",
+"category": "Content"
+}]
+}
+
+{% endschema %}

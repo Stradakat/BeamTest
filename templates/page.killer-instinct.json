@@ -1,0 +1,174 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-subscription-banner",
+      "settings": {
+        "bannerimg": "shopify:\/\/shop_images\/dream3-carousel_1000x1000_crop_center_e71748d4-7a71-427d-8152-c94b9e3b901b.jpg",
+        "headertext": "",
+        "headertext1": "exclusive offer for Killer Instinct listeners",
+        "bannerproduct": "dream-powder-skimm",
+        "subscriptionid": "39514520027191",
+        "heading": "your best sleep, ever.",
+        "popupheading": "dream powder",
+        "popupimg": "shopify:\/\/shop_images\/hemp-nutritionfacts-dream-powder-1.jpg",
+        "description": "dream is a delicious, guilt free hot chocolate that promotes better sleep—all with no artificial sweeteners or added sugar. Packed with nano CBD, reishi, magnesium,L-Theanine, and melatonin.",
+        "btntext": "get 35% off",
+        "price": "61.75",
+        "saleprice": "$95.00"
+      }
+    },
+    "16346718157ff6c5cf": {
+      "type": "marquee-section",
+      "settings": {
+      }
+    },
+    "16346720048344eda8": {
+      "type": "image-text-background",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/killer_instinct_hero.jpg",
+        "icon": "shopify:\/\/shop_images\/zzz.png",
+        "heading": "The Power of Dream",
+        "content": "With Dream Powder, you’re getting more than just quality shuteye. You’re providing your body with sleep-enhancing* vitamins and minerals, such as Magnesium, Reishi,L-Theanine, and Nano Hemp."
+      }
+    },
+    "1634672066c4f41430": {
+      "type": "icon-grid",
+      "blocks": {
+        "1634672066c4f41430-0": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-magnesium.png",
+            "iconheading": "reishi",
+            "iconcontent": "mushroom superfood that helps to support the body’s sleep cycle as well as manage stress*"
+          }
+        },
+        "1634672066c4f41430-1": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-melatonin.png",
+            "iconheading": "magnesium",
+            "iconcontent": "mineral that aids the body’s ability to fall asleep by producing melatonin and regulating the nervous system*"
+          }
+        },
+        "1634672066c4f41430-2": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-hemp.png",
+            "iconheading": "Nano Hemp",
+            "iconcontent": "particles with the highest absorption potential to naturally support inflammation, balance, and sleep*"
+          }
+        },
+        "a090ba49-6c44-402b-af05-708c32bacb95": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-reishi.png",
+            "iconheading": "L-Theanine",
+            "iconcontent": "amino acid that promotes relaxation, calmness and helps improve sleep quality*"
+          }
+        },
+        "144ff647-9e9c-406d-937b-b717f32701d4": {
+          "type": "column",
+          "settings": {
+            "iconimage": "shopify:\/\/shop_images\/icon-Ltheanine.png",
+            "iconheading": "melatonin",
+            "iconcontent": "compound that regulates the body’s circadian rhythm, promoting restful sleep*"
+          }
+        }
+      },
+      "block_order": [
+        "1634672066c4f41430-0",
+        "1634672066c4f41430-1",
+        "1634672066c4f41430-2",
+        "a090ba49-6c44-402b-af05-708c32bacb95",
+        "144ff647-9e9c-406d-937b-b717f32701d4"
+      ],
+      "settings": {
+        "title": "what’s in <br>your dream powder?"
+      }
+    },
+    "163467211368da8cda": {
+      "type": "text-image-background",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/dream_rebrand-lifestyle_08-enjoy_1b563ce9-294d-451a-8e44-fa535087d853.jpg",
+        "headingimage": "shopify:\/\/shop_images\/half-moon.png",
+        "heading": "how to enjoy",
+        "content": "put at least 1 scoop of dream powder into a mug of warm milk or hot water and blend using your beam frother for a cozy frothy finish. Sip 20-30 minutes before bedtime then enjoy your deepest night’s sleep."
+      }
+    },
+    "1634672297c1b732ff": {
+      "type": "table-layout",
+      "settings": {
+        "left-heading": "98%",
+        "left-content": "fall asleep faster when taking dream.",
+        "right-heading": "100%",
+        "right-content": "experience better sleep quality."
+      }
+    },
+    "1634672351b7e28145": {
+      "type": "text-image-no-background",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/drweiss-testimonial.jpg",
+        "labeltext": "Meet Beam's resident sleep expert",
+        "heading": "dr. carleara weiss",
+        "content": "“we are a 24\/7 society where sleep is undervalued and consequently, many struggle with poor sleep quality. as a sleep scientist, my goal is to help people understand the importance of sleep for physical and mental health. beam is committed to offering products that may contribute to sleep quality while maintaining an ethical and conscious approach to overall wellness for those who consume their products.”",
+        "subheading": "-Dr. Weiss, PhD, MS, RN",
+        "other": "sleep scientist"
+      }
+    },
+    "16346723935e5cf3e7": {
+      "type": "logo-grid",
+      "blocks": {
+        "16346723935e5cf3e7-0": {
+          "type": "column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/maxim-logo.png",
+            "logocontent": "\"these pro-athlete-approved hemp products will improve physical and mental wellness.\""
+          }
+        },
+        "16346723935e5cf3e7-1": {
+          "type": "column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/beam-homepage-presslogo-forbes_2x_be45a002-498d-49e9-8bbf-60145ca4dab6.png",
+            "logocontent": "\"[Beam] is a great addition to an athlete’s nightly routine.\""
+          }
+        },
+        "16346723935e5cf3e7-2": {
+          "type": "column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/beam-homepage-presslogo-realsimple_2x_190725_183951.png",
+            "logocontent": "\"i've started using [Beam] hemp everyday... and it changed my life.\""
+          }
+        }
+      },
+      "block_order": [
+        "16346723935e5cf3e7-0",
+        "16346723935e5cf3e7-1",
+        "16346723935e5cf3e7-2"
+      ],
+      "settings": {
+      }
+    },
+    "16346724545cbde775": {
+      "type": "product-subscription-add",
+      "settings": {
+        "variantid": "39514520027191",
+        "price": "61.75",
+        "saleprice": "$95.00",
+        "review": "",
+        "headertext": "killer instinct listeners",
+        "headertext1": "35% off your dream subscription + free mug + frother"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16346718157ff6c5cf",
+    "16346720048344eda8",
+    "1634672066c4f41430",
+    "163467211368da8cda",
+    "1634672297c1b732ff",
+    "1634672351b7e28145",
+    "16346723935e5cf3e7",
+    "16346724545cbde775"
+  ]
+}

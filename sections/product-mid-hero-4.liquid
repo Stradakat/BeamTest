@@ -1,0 +1,200 @@
+<div class="full-width pt6 pb6 pt10--md pb10--md hero-section  desktop-hero {% if product.handle  == 'sleep-powder' %}image-push{% endif %}"
+    style="min-height: 380px;background-image: url({{ section.settings.heroBGImage | img_url : '2048x2048' }})">
+    <div class="large-container pl3 pr3 pl6--md pr6--md pt6 pb6 mt3--md mb3--md pt10--md pb10--md">
+        <div class="row align--middle gutter--none">
+            <div class="col tl c7 c6--md c5--lg c4--xl pt6--md">
+                {% if section.settings.heroHeading %}
+                <h2 role="heading" class="sans--large fw--600 mb2 color--white">
+                    {{ section.settings.heroHeading | escape }}
+                </h2>
+                {% endif %}
+                {% if section.settings.heroBodyText %}
+                <div class="sans--body-new fw--600 color--white">
+                    {{ section.settings.heroBodyText }}
+                </div>
+                {% endif %}
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div loading="lazy"
+    class="full-width pt6 pb6 pt10--md pb10--md hero-section mobile-hero  {% if product.handle  == 'sleep-powder' %}image-push{% endif %}"
+    style="min-height: 380px;background-size: 122%;background-image: url({{ section.settings.heroMobImage | img_url : '1024x1024' }})">
+    <div class="large-container pl3 pr3 pl6--md pr6--md pt6 pb6 mt3--md mb3--md pt10--md pb10--md">
+        <div class="row align--middle gutter--none mobile-content">
+            <div class="tc content-container">
+                {% if product.handle == "sea-salt-caramel-dream-powder"%}
+                <h2 role="heading" class="sans--large fw--600 mb2 sea-heading">
+                    {{ section.settings.heroHeading | escape }}
+                </h2>
+                {% else %}
+                <h2 role="heading" class="sans--large fw--600 mb2 color--white {% if product.handle  == 'the-summer-bedtime-bundle' or product.handle  == 'sea-salt-caramel-extra-strength-dream-powder' %}summer-title{% endif %}">
+                    {{ section.settings.heroHeading | escape }}
+                </h2>
+                {% endif %}
+                {% if section.settings.heroBodyText %}
+                {% if product.handle == "sea-salt-caramel-dream-powder"%}
+                <div class="sans--body-new mobile-copy fw--600 color--black">
+                    {{ section.settings.heroBodyText }}
+                </div>
+                {% else %}
+                <div class="sans--body-new mobile-copy fw--600 sea-paragraph {% if product.handle  == 'the-summer-bedtime-bundle' %}summer-paragraph{% endif %}">
+                    {{ section.settings.heroBodyText }}
+                </div>
+                {% endif %}
+                {% endif %}
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .desk-break::after {
+        content: "/a";
+        white-space: pre;
+    }
+    .sea-heading {
+        color: #fff;
+    }
+
+    .sea-paragraph {
+        color: #fff;
+    }
+
+    .hero-section {
+        background-color: #fff;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .mobile-hero {
+        display: none;
+    }
+
+    @media (min-width: 1540px) {
+        .hero-section {
+            min-height: 720px !important;
+        }
+
+    }
+
+    @media (max-width: 800px) {
+        .desk-break::after {
+        content: "";
+
+    }
+        .sea-heading {
+            color: #3D7CC9;
+        }
+
+        .sea-paragraph {
+            color: #000;
+        }
+        .summer-paragraph {
+            color: #000;
+        }
+        .summer-title {
+            color: #3D7CC9;
+        }
+
+        .large-container {
+            padding-top: 0 !important;
+        }
+
+        .mobile-hero {
+            display: flex;
+        }
+
+        .desktop-hero {
+            display: none;
+        }
+
+        .mobile-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content-container {
+            width: 70%;
+            min-height: 500px;
+        }
+
+        .mobile-copy {
+            font-size: 16px;
+            line-height: 150%;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+        .content-container {
+            width: 100%;
+            min-height: 500px;
+            padding-top: 30px;
+        }
+
+        .mobile-copy {
+            font-size: 12px;
+            line-height: 150%;
+        }
+
+    }
+
+    @media (max-width: 700px) {
+        .image-push {
+            background-position: calc(35% - 50px) 50% !important;
+        }
+
+    }
+
+    .large-container {
+        max-width: 1600px;
+        margin: inherit auto;
+    }
+</style>
+
+{% schema %}
+{
+"name": "Product Mid Hero",
+"class": "product-subscription_banner",
+"settings": [
+{
+"type": "image_picker",
+"id": "heroBGImage",
+"label": "Background Image"
+},
+{
+"type": "image_picker",
+"id": "heroMobImage",
+"label": "Mobile Image"
+},
+{
+"type": "color",
+"id": "heroBGColor",
+"label": "Background Color",
+"default": "#fff"
+},
+{
+"type": "text",
+"id": "heroHeading",
+"label": "Title"
+},
+{
+"type": "richtext",
+"id": "heroBodyText",
+"label": "Body Copy"
+}
+],
+"presets": [{
+"name": "Product Mid Hero",
+"category": "Content"
+}]
+}
+
+{% endschema %}

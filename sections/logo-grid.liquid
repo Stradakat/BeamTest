@@ -1,0 +1,103 @@
+<div class="mb5 mt5--md pt3 pb7 mb6--md container" >
+    <div class="pt4 pb6 pb10--md">
+        <div class="brand-slider" id="new-brand-slider">
+			{% for block in section.blocks %}
+				<div class="mb2 mb0--md pl1 pr1">
+					{% if block.settings.logo %}
+						<p class="tc"><span class="dib">
+								<picture class="promo__press-logo p1"><img class="promo__press-logo" style="max-width: 130px;"
+										src="{{ block.settings.logo | img_url: 'medium' }}">
+								</picture>
+							</span>
+						</p>
+					{% endif %}
+					{% if block.settings.logocontent %}
+						<h5 class="tc">{{ block.settings.logocontent }}</h5>
+					{% endif %}
+				</div>
+			{% endfor %}  
+        </div>
+    </div>
+</div>
+<script>
+	$(document).ready(function () {
+		$('.brand-slider').slick({
+			autoplay: true,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			fade: false,
+			useTransform: true,
+			arrows: false,
+			dots: false,
+			autoplaySpeed: 5000,
+			adaptiveHeight: false,
+			pauseOnHover: true,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						fade: false
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 1,
+						fade: false,
+						arrows: false,
+						dots: true,
+						customPaging: function (slider, i) {
+							return $('<button type="button" />').text(i + 1);
+						}
+					}
+				}
+			]
+		});
+
+	});
+	
+</script>
+
+{% schema %}
+  {
+    "name": "Logo grid",
+	"class": "logo-grid",
+    "settings": [
+      
+    ],
+    "blocks": [
+      {
+        "type": "column",
+        "name": "Column",
+        "limit": 10,
+        "settings": [
+          {
+			"type": "image_picker",
+            "id": "logo",           
+            "label": "Logo"
+          },
+          {
+            "type": "text",
+            "id": "logocontent",
+            "label": "Content"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+        "name": "Logo grid",
+        "category": "content",
+        "blocks": [
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          }
+        ]
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,354 @@
+<div class="mt6 mb4 mt10--md mb4--md">
+    <div class="row align--center mb0 mb0--md learn-header">
+        <div class="col c8--sm c6--lg pt1">
+            <div class="tc pt4">
+                <h2 style="text-transform: inherit !important;" class="sans--medium fw--600 mb1 mb2--md new--blue">FAQs</h3>
+                <h3 class="sans--large fw--600 mb1 mb2--md color--black learn-title">learn more about Beam</h3>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container contained pt1--md pb1--md">
+        <div class="support-flex">
+        <div class="support-flex-first">
+        <div class="first-left-div">
+                <div class="">
+                    <h2 class="fw--600 new--blue sub-title">subscriptions</h2>
+                </div>
+            </div>
+        </div>
+        <div class="support-flex-second">
+            {% section 'faq-section' %}
+        </div>
+    </div>
+    <div class="support-flex">
+        <div class="support-flex-first">
+        <div class="first-left-div">
+                <div class="">
+                    <h2 class="fw--600 new--blue sub-title">shipping</h2>
+                </div>
+            </div>
+        </div>
+        <div class="support-flex-second">
+            {% section 'shipping-faq' %}
+        </div>
+    </div>
+    <div class="support-flex">
+        <div class="support-flex-first returns-first">
+        <div class="first-left-div">
+                <div class="">
+                    <h2 class="fw--600 new--blue sub-title return-title">returns + exchanges</h2>
+                </div>
+            </div>
+        </div>
+        <div class="support-flex-second about-second">
+            {% section 'returns-faq' %}
+        </div>
+    </div>
+    <div class="support-flex">
+        <div class="support-flex-first">
+        <div class="first-left-div">
+                <div class="">
+                    <h2 class="fw--600 new--blue sub-title">legality</h2>
+                </div>
+            </div>
+        </div>
+        <div class="support-flex-second">
+            {% section 'legal-faq' %}
+        </div>
+    </div>
+    <div class="support-flex">
+        <div class="support-flex-first">
+        <div class="first-left-div">
+                <div class="">
+                    <h2 class="fw--600 new--blue sub-title">About Us</h2>
+                </div>
+            </div>
+        </div>
+        <div class="support-flex-second">
+            {% section 'about-faq' %}
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="help-contain">
+    <div class="help-content">
+    <h1 style="font-weight: 300;" class="sans--large mb1 mt8 mb2--md new--blue">we're here to help</h1>
+    <h1 style="font-weight: 300;" class="sans--medium mb1 mt2 mb2--md color--black git">get in touch</h1>
+    <div class="help-btns-contain">
+        <div class="help-item-contain">
+            <h1 style="text-transform: uppercase !important" class="sans--medium fw--600 mb1 mb2--md color--black btn-label">LIVE CHAT</h1>
+            <a onclick="GorgiasChat.open();" class="help-btn">
+                <h1>Launch Chat</h1>
+            </a>
+        </div>
+        <div class="help-item-contain">
+            <h1 style="text-transform: uppercase !important" class="sans--medium fw--600 mb1 mb2--md color--black btn-label">EMAIL</h1>
+            <a href="mailto:hello@beamtlc.com" class="help-btn">
+                <h1>Email Us</h1>
+            </a>
+        </div>
+        <div class="help-item-contain">
+            <h1 style="text-transform: uppercase !important" class="sans--medium fw--600 mb1 mb2--md color--black btn-label">WHOLESALE</h1>
+            <a href="https://beamtlc.typeform.com/to/hwjIj3?typeform-source=beam.typeform.com" class="help-btn">
+                <h1>inquiries</h1>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+<style>
+    .returns-first {
+        width: 22% !important;
+    }
+    .about-second {
+        padding-left: 5% !important;
+    }
+    .help-item-contain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 28%;
+    }
+    .help-btn {
+        color: white;
+        background-color: #427BBE;
+        font-size: 18px;
+        width: 100%;
+        height: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+    }
+    .help-contain {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        background-color: #f4f4f4;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 100px;
+    }
+    .help-content {
+        width: 60vw;
+        margin: auto;
+        text-align: center;
+    }
+    .help-btns-contain {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        padding-top: 40px;
+        margin: auto;
+    }
+    .btn-label {
+        font-size: 18px;
+        letter-spacing: 4px;
+    }
+    .rich-text ul {margin-left: 32px;margin-top: 6px;}
+    .rich-text ul li {
+        list-style: disc;
+    }
+    .learn-title {
+        font-weight: 300 !important;
+    }
+    .new--blue {
+        color: #427BBE;
+    }
+    .support-flex {
+        display: flex;
+        border-bottom: 2px solid #f4f4f4;
+        width: 80vw;
+        margin: auto;
+        padding-top: 30px;
+    }
+    .learn-header {
+        padding-bottom: 70px;
+        background-color: #f4f4f4;
+        margin: 0;
+    }
+    .support-flex-first {
+        width: 10%;
+        display: flex;
+    }
+    .support-flex-second {
+        width: 90%;
+        padding-left: 15%;
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+    }
+    .first-left-div {
+        margin: 0;
+    }
+    /* .q-div {
+        text-align: left !important;
+        border-bottom: 2px solid #f4f4f4;
+        width: 100%;
+    } */
+    .sub-title {
+        font-size: 18px ;
+    }
+    .faq-item {
+        width: 100%;
+        font-size: 21px;
+        border-bottom: 2px solid #f4f4f4;
+        padding-bottom: 35px;
+        margin-bottom: 35px;
+    }
+    .faq-item:last-child {
+        border-bottom: 0;
+        margin-bottom: 20px;
+    }
+    .faq-item:hover {
+        cursor: pointer;
+    }
+    .answer {
+        display: none;
+        padding-top: 20px;
+    }
+    .answer li {
+        text-indent: -25px;
+        margin-left: 30px;
+        font-size: 18px;
+    }
+    .title-block {
+        font-size: 18px;
+    }
+    .question-active {
+        color: #427BBE;
+    }
+    .down-arrow {
+        display: block;
+    }
+    .exit-arrow {
+        display: none;
+    }
+    .display {
+        visibility: hidden;
+    }
+    .toggle-open{
+    display: flex;
+    background:url("https://cdn.shopify.com/s/files/1/0264/4076/1399/t/35/assets/down-arrow-2.png?v=1644501959");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    }
+    .expanded{
+    display: flex !important;
+    background:url("https://cdn.shopify.com/s/files/1/0264/4076/1399/t/35/assets/exit-black.png?v=1644502052") !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    width: 18px !important;
+    height: 18px !important;
+    }
+
+    .shopify_explorer_faq__question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 21px !important;
+        font-weight: 600 !important;
+    }
+.shopify_explorer_faq__item--expandable > .shopify_explorer_faq__question {cursor: pointer;}
+.shopify_explorer_faq__item--expandable > .shopify_explorer_faq__answer {display: none;}
+.shopify_explorer_faq__separator {text-transform: none;text-align: center;}
+.shopify_explorer_faq__separator :not(:first-child) {margin-top: 1.2em;}
+.shopify_explorer_faq__item {/* border-bottom: 1px solid #000; */}
+.shopify_explorer_faq__item:not(:last-child) {margin-bottom: 0.9em;}
+.shopify_explorer_faq__item .shopify_explorer_faq__question {margin-bottom: 0.2em;position: relative;padding: 11px 15px;padding-right: 30px;margin: 0;font-weight: 100;font-size: 1.1rem;background: #8dbc24;color: #fff;}
+.shopify_explorer_faq__item .shopify_explorer_faq__question.active::before {-webkit-transform: rotate(-135deg);-ms-transform: rotate(-135deg);transform: rotate(-135deg)}
+.shopify_explorer_faq__item .shopify_explorer_faq__answer {padding: 41px 15px;}
+.shopify_explorer_faq__item .shopify_explorer_faq__answer.active {border-top: 1px solid #000;background: rgba(238, 238, 238, 0.64)}
+.shopify_explorer_faq__item .shopify_explorer_faq__question::before {
+  position: absolute;
+  right: 0;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  content: '';
+  display: block;
+  height: 12px;
+  margin-top: -8px;
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform-origin: 66% 66%;
+  -ms-transform-origin: 66% 66%;
+  transform-origin: 66% 66%;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  width: 12px;
+}
+@media screen and (max-width: 800px) {
+    .support-flex-first {
+        justify-content: left;
+        width: 100%;
+    }
+    .support-flex {
+        flex-direction: column;
+    }
+    .support-flex-second {
+        padding: 0;
+        width: 100%;
+    }
+    .faq-item {
+        width: 100%;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .shopify_explorer_faq__question {
+        font-size: 18px !important;
+    }
+    .answer {
+        font-size: 18px !important;
+    }
+    .sub-title {
+        margin-left: 0%;
+        padding-bottom: 30px;
+    }
+    .help-btns-contain {
+        flex-direction: column;
+        width: 100%;
+    }
+    .help-item-contain {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .help-btn {
+        width: 90%;
+        margin-top: 10px;
+    }
+    .btn-label {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+    .git {
+        margin-top: 20px;
+    }
+    .help-btns-contain {
+        padding-top: 20px;
+    }
+    .help-contain {
+        padding-bottom: 50px;
+    }
+    .returns-first {
+        justify-content: left;
+        width: 100% !important;
+    }
+    .return-title {
+        margin: 0;
+    }
+    .about-second {
+        padding-left: 0 !important;
+    }
+    
+}
+
+</style>

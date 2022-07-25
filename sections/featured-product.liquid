@@ -1,0 +1,128 @@
+
+{%- assign product = section.settings.product -%}
+{% if section.settings.product %}
+<div class="pl8 pr8 featured-contain">
+    {% for image in product.images %}
+    {% if forloop.index == 1 %}
+    <img loading="lazy" class="featured-image-cutout" style="border-radius: 0px;" src={{ section.settings.featuredImage | img_url: '1024x1024' }}>
+    {% endif %}
+    {% endfor %}
+    <div class="pl5 fw--600 content-contain">
+        <h1 class="color--blue featured">FEATURED</h1>
+        <h1 class="sans--medium fw--600 product-title capitalize">{{product.title}}</h1>
+        <p style="font-weight: 400 !important" class="pt3 product-excerpt">{{product.description | truncate: 165}}</p>
+        <a class="p2 mt3 mb3 featured-button-text" href="{{product.url}}">Learn More</a>
+    </div>
+</div>
+{% endif %}
+<style>
+    .featured-image-cutout {
+        width: 60%;
+        object-fit: cover;
+    }
+    .featured-contain {
+        display: flex;
+        margin: auto;
+        margin-left: 5vw;
+        padding: 0;
+    }
+    
+    .content-contain {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 25px 0 25px 60px;
+        justify-content: center;
+    }
+    .featured {
+        letter-spacing: 5px;
+        font-size: 13px;
+        font-weight: 700
+    }
+    .product-excerpt {
+        line-height: 150%;
+        font-weight: 400 !important;
+        font-size: 21px;
+    }
+    .featured-button-text {
+        background-color: #3d7cc9;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 33%;
+        color: white;
+        height: 50px;
+        margin-bottom: 0;
+    }
+    @media screen and (max-width: 1020px) {
+        .featured-button-text {
+            width: 50%;
+        }
+            .featured-contain {
+            display: flex;
+            margin: auto;
+            width: 73vw;
+            padding-right: 0;
+        }
+    }
+    @media screen and (max-width: 860px) {
+        .featured-button-text {
+            width: 60%;
+        }
+    }
+
+
+    @media screen and (max-width: 800px) {
+        .featured-contain {
+            flex-direction: column !important;
+            padding: 0;
+            width: 100% !important;
+            margin: 0;
+            align-items: center;
+            margin-left: 0 !important;
+        }
+        .content-contain {
+            padding: 0;
+            text-align: center;
+            align-items: center;
+            padding-top: 10px;
+        }
+        .featured-image-cutout {
+            width: 100%;
+            padding: 0;
+            border-radius: 0 !important;
+        }
+        .featured-button-text {
+            width: 35%;
+        }
+    }
+    @media screen and (max-width: 1000px) {
+    .content-contain {
+        padding: 45px 10px !important;
+    }
+}
+
+</style>
+
+
+
+
+{% schema %}
+{
+  "name": "Featured Product",
+"settings": [	      
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Featured Product"
+        },
+        {
+            "type": "image_picker",
+            "id": "featuredImage",
+            "label": "Featured Image"
+        }
+]
+}
+
+{% endschema %}

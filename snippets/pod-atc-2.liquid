@@ -1,0 +1,126 @@
+<form action="/cart/add" data-productid="{{ product.id }}" method="post" class="product-form"
+								id="add-to-cart" enctype="multipart/form-data">
+<div class="full-width">
+<div class="row align--middle gutter--none">
+		<!-- <div class="col pr tc c6--md">
+			{% if product.handle == "sleep-powder" %}
+			<p style="position: absolute;bottom: 0; right: 0; left: 0;" class="mobile-value-add sans--small fw--600 p1 bg--main-blue lowercase color--white hide--md">{{ section.settings.productBodyText | escape }}</p>
+			{% endif %}
+			<span class="product-tag-overlay color--blue hide--md"> 
+				{% if section.settings.tagText %}
+					{{ section.settings.tagText | escape }}
+				{% endif %}
+				</span>
+			</div> -->
+		<div style="width: 100%" class="col c6--md">
+			<div class="" style="margin: 0 auto;">
+				<!-- <div class="sans--body show--md mb1">
+					<span class="color--main-blue fw--600"> 
+					{% if section.settings.tagText %}
+						{{ section.settings.tagText | escape }}
+					{% endif %}
+					</span><span class="color--main-blue fw--600 ml1 mr1">|</span>{% include 'stars-dream' %}
+				</div> -->
+				{% assign hide_default_title = false %}
+				{% if product.variants.size == 1 and product.variants.first.title contains 'Default'
+				%}
+				{% assign hide_default_title = true %}
+				{% endif %}
+				<div id="product-variants"
+					class="select--product-option{% if hide_default_title %} hidden{% endif %}">
+					<select id="product-select" class="form-select" name="id"
+						data-productid="{{ product.id }}">
+						{% for variant in product.variants %}
+						<option class="form-select" {% if
+							variant==product.selected_or_first_available_variant %} selected{% endif
+							%} value="{{ variant.id }}">
+							{{ variant.title }} - {{ variant.price | money }}
+						</option>
+						{% endfor %}
+					</select>
+				</div>
+					<!-- Begin ReCharge code -->
+					{% if product.available %}<div class="hidden">{% include 'pod-sub' %}</div>{% endif %}
+					<!-- End ReCharge code -->
+					
+					<div class="sans--small pb2 hidden">
+						<div id="product-price" itemprop="offers" itemscope
+							itemtype="http://schema.org/Offer" class="delta">
+							<meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+							{% if product.available %}
+							<link itemprop="availability" href="http://schema.org/InStock" />
+							{% else %}
+							<link itemprop="availability" href="http://schema.org/OutOfStock" />
+							{% endif %}
+							<p>
+								{% assign variant = product.selected_or_first_available_variant %}
+								{% if product.compare_at_price > product.price %}
+								<span class="product-price on-sale" itemprop="price">{{ variant.price |
+									money }}</span>
+								<s class="product-compare-price">{{ variant.compare_at_price | money
+									}}</s>
+								{% else %}
+								<span class="product-price sans--medium fw--600" itemprop="price">{{
+									variant.price | money }}</span>
+								{% endif %}
+							</p>
+						</div>
+
+					</div>
+
+					<div id="product-add-pod2">
+
+						<input type="submit" style="min-width: 100% !important;" name="addCart" id="addPod" class="btn-white" value="Redeem Offer">
+					</div>
+			</div>
+		</div>
+</div>
+</div>
+</form>
+
+<style>
+    #product-variants {
+        display: none;
+    }
+    .gaurentee {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 10px;
+        width: 80%;
+        font-size: italic;
+    }
+    .form-btn {
+        width: 100%;
+        color: #427BBE;
+    }
+    .button--primary {
+        border-radius: 5px !important;
+        font-size: 18px;
+    }
+    .btn {
+        border-radius: 3px;
+        display: inline-block;
+        background-color: #427BBE;
+        color: #000;
+        transition: 200ms ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 255px;
+        height: 60px;
+    }
+    .btn-white {
+			background-color: #fff;
+			width: 150px;
+			font-size: 15px;
+			height: 50px;
+			font-weight: 600;
+            color: #427BBE;
+			z-index: 999;
+		}
+		.btn-white:hover {
+			color: #fff;
+			cursor: pointer;
+            background-color: #427BBE !important;
+		}
+</style>

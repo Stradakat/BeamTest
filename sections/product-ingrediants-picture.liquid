@@ -1,0 +1,316 @@
+<div class="row gutter--none  row-flex{% if product.handle == 'the-summer-bedtime-bundle' %} ss-flex {% endif %}">
+    <div class="">
+      <div class="">
+      <div class="">
+            {% assign count = 0 %}
+            {% assign count = count | plus: 1 %}
+            <div class="item">
+        <img class="ingred-image" src="{{section.settings.statBGImage | img_url: "1024x1024"}}">
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="col tl c5--md pt7 pb4--md mobile-ingredients" style="margin: auto;">
+    {% if section.settings.heroHeading %}
+    <h2 class="sans--large fw--600 mb2 color--black pl2 pr2 sec-header">
+        {{ section.settings.heroHeading | escape }}
+    </h2>
+    {% endif %}
+    <div class="accordion pl2 pr2">
+        {% assign count = 0 %}
+        {% for block in section.blocks %}
+        {% assign count = count | plus: 1 %}
+        {% if block.settings.statHeading %}
+    <div class="item ingredient-item">
+        <a href="#acc{{ count }}" class="acc-heading-desktop sans--body disable-focus-ring">
+            <span style="color: #3E7DCA" class="tl sans--body fw--800">{{ block.settings.statHeading}}</span>
+            <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+    
+        <section id="acc{{ count }}" class="acc-content-desktop">
+  
+        <div class="inner pb3 mb2">
+  
+  {% if block.settings.statContent %}
+  <h5 class="tl sans--body">
+    {{ block.settings.statContent }}
+  </h5>
+  {% endif %}
+        </div><!-- / .inner -->
+    </section>
+  </div>
+  {% endif %}
+        {% endfor %}   
+  
+  
+  </div>
+  
+  </div>
+</div>
+
+<style>
+.ingred-image {
+width: 50vw;
+}
+.row-flex {
+display: flex;
+flex-direction: row-reverse;
+}
+.ss-flex {
+  display: flex;
+flex-direction: row;
+}
+.main-compare {
+display: flex;
+justify-content: center;
+margin: 0 3%;
+align-items: center;
+}
+.bubbles-contain {
+width: 80% !important;
+margin: 0 auto;
+padding: 10% 0px;
+}
+.bubbles-main {
+display: flex;
+flex-direction: column;
+justify-content: center;
+background: #e7e6e6;
+}
+.accordian-section {
+background-image: url();
+background-color: #fff;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: left;
+padding: 5% 0;
+}
+
+.ingredient-item {
+border-bottom: 1px solid #C2C2C2 !important;
+padding-top: 4%;
+}
+.compare-left {
+width: 50%;
+}
+.compare-right {
+width: 50%;
+display: flex;
+flex-direction: column;
+}
+.container {
+display: flex;
+flex-direction: column;
+margin: auto;
+width: 90% !important;
+}
+.compare-flex {
+display: flex;
+}
+.top-img {
+margin-right: 5%;
+}
+.main-title {
+font-size: 34px;
+line-height: 125%;
+}
+.compare-top {
+display: flex;
+justify-content: space-between;
+background-color: #253350;
+height: 40px;
+align-items: center;
+padding: 0 2%;
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+color: #fff;
+width: 100%;
+}
+.compare-bottom {
+display: flex;
+justify-content: space-between;
+background-color: #D7D2F7;
+height: 40px;
+align-items: center;
+padding: 0 2%;
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+margin-bottom: 2%;
+
+}
+.compare-img {
+  width: 40%;
+  max-width: 50%;
+  display: flex;
+justify-content: center;
+}
+.image-item {
+  max-height: 90%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+  .mobile-ingredients {
+    padding-top: 0 !important;
+  }
+    .accordion {
+        padding-bottom: 30px;
+    }
+    .sec-header {
+        text-align: center;
+    }
+    .ingred-image {
+width: 100vw;
+}
+.bubbles-main {
+background-color: #fff;
+}
+.row-flex {
+flex-direction: column;
+}
+.bubbles-contain {
+width: 100% !important;
+margin: 5% 0;
+}
+.compare-contain {
+  margin: 0 3%;
+}
+.compare-title {
+  padding-left: 10px;
+}
+.main-compare {
+  flex-direction: column;
+}
+.compare-img {
+  width: 100%;
+  margin: 0;
+  max-width: 100%;
+}
+
+}
+
+</style>
+
+<script>
+$( document ).ready(function() {
+
+let accTitleDesktop = document.getElementsByClassName("acc-heading-desktop");
+    let accContentDesktop = document.getElementsByClassName("acc-content-desktop");
+    let singleModeDesktop = true;
+    
+    for( let j=0; j<accContentDesktop.length; j++ ){
+        let realHeightDesktop = accContentDesktop[j].offsetHeight;
+        accContentDesktop[j].setAttribute("data-height", realHeightDesktop + "px");
+        accContentDesktop[j].style.height = 0;
+    }
+    
+    for( let i=0; i<accTitleDesktop.length; i++ ){
+        accTitleDesktop[i].onclick = function(){
+            let openedAccDesktop = this.getAttribute('href').replace('#', '');
+
+            if( this.classList.contains("active") ){
+                this.classList.remove("active");
+                document.getElementById(openedAccDesktop).style.height = 0;
+                
+                return false;
+            }
+            
+            if( singleModeDesktop ){						
+                for(let k=0; k<accTitleDesktop.length; k++) {
+                    accTitleDesktop[k].classList.remove("active");
+                }
+
+                for(let j=0; j<accContentDesktop.length; j++) {
+                    accContentDesktop[j].style.height = 0;
+                }
+            }
+            
+            this.classList.add("active");
+            
+            document.getElementById(openedAccDesktop).style.height = accContentDesktop[i].getAttribute("data-height");
+            
+            return false;
+        }
+}
+});
+
+</script>
+
+{% schema %}
+{
+"name": "Image Comparison",
+"class": "product-subscription_banner",
+"settings": [	      
+      {
+          "type": "color",
+          "id": "statBGColor",
+          "label": "Background Color",
+          "default": "#fff"
+        },
+        {
+  "type": "text",
+  "id": "heroHeading",
+  "label": "Title"
+},
+      {
+  "type": "textarea",
+  "id": "statContent",
+  "label": "content"
+},
+{
+    "type": "image_picker",
+    "id": "statBGImage",
+    "label": "Background Image"
+}
+],
+"blocks": [
+{
+"type": "column",
+"name": "Compare",
+"limit": 10,
+"settings": [
+{
+  "type": "textarea",
+  "id": "compareHeading",
+  "label": "Accordian heading"
+},
+{
+  "type": "textarea",
+  "id": "statCompareOne",
+  "label": "Compare Top"
+},
+{
+  "type": "textarea",
+  "id": "statCompareTwo",
+  "label": "Compare Bottom"            
+},
+{
+  "type": "text",
+  "id": "bottomPercent",
+  "label": "Bottom Bubble Percent"            
+}
+]
+},
+{
+"type": "Accordian",
+"name": "Accordian",
+"settings": [
+{
+  "type": "text",
+  "id": "statHeading",
+  "label": "Accordian heading"
+},
+{
+  "type": "richtext",
+  "id": "statContent",
+  "label": "Accordian content"            
+}
+]
+}
+],
+"presets": [{
+"name": "Image Comparison",
+"category": "Content"
+}]
+}
+
+{% endschema %}

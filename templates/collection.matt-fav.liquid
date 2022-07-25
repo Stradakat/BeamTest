@@ -1,0 +1,170 @@
+{% comment %}
+  Important notes about pagination:
+  - Never access collection.products before the opening paginate tag.
+  - Never paginate by more than 50.
+{% endcomment %}
+
+{% assign products_per_page = settings.products_per_row | times: settings.number_of_rows %}
+{% assign numbers = 'zero, one, two, three, four, five, six' | split: ',' %}
+{% assign products_per_row = settings.products_per_row | times: 1 %}
+{% assign products_per_row = numbers[products_per_row] | strip | append: '-per-row' %}
+{% assign subColor = 'color--blue' %}
+
+{% paginate collection.products by products_per_page %}
+{% if collection.handle == 'recovery' %}
+    {% assign subColor = 'color--orange' %}
+{% elsif collection.handle == 'energy' %}
+{% assign subColor = 'color--green' %}
+{% elsif collection.handle == 'sleep' %}
+{% assign subColor = 'color--purple' %}
+{% else %}
+{% assign subColor = 'color--blue' %}
+{% endif %}
+
+<img height="1" width="1" style="border-style:none;" alt="" src="https://insight.adsrvr.org/track/pxl/?adv=iv5xfdn&ct=0:kjn7dmf&fmt=3"/>
+<div class="col mt3 mt6--md" style="background-color: #F6FAFF;">
+
+            <div class="grid-container contained pt6 pt10--md pb2">
+
+                <div class="row align--center">
+
+                    <div class="col tc c8--md c6--lg">
+                            <h1 class="sans--large tc fw--600 lowercase mb1 mb2--md {{ subColor }}">{{ collection.title }}</h1>
+                            <div class="tc rich-text serif--small color--blue">
+                                <p>{{ collection.description }}</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+</div>
+<img class="pa wave-overlay" src="//cdn.shopify.com/s/files/1/0264/4076/1399/t/12/assets/wave-overlay.png?v=11608760819937612709">
+
+<div class="pb5 pt3" >
+
+  <div class="col">
+    <div class="reveal__container active">
+        <div class="reveal__component__1--fade-fast grid-container contained">
+            <div class="row align--center">
+                <div class="col c9--lg">
+                    <div class="row gutter--vertical align--center">
+                      {% for product in collection.products %}
+   <div class="col c6--sm p1 c5--md id-{{ product.id }}">
+    <div class="product-card pb1">
+      {% include 'product-grid-item' with products_per_row %}
+    </div>
+    </div>
+    {% else %}
+      <p>There are no products in this view.</p>
+    {% endfor %}
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Section 2 -->
+<div class="pt1 pb1 tc color--white" style="background-color: #8c8cf0;">
+  <div class="marquee">
+      <div class="track">
+          <div class="content">
+            dream improves sleep quality, which is more than just sleep. <span class="pl3 pr3 pl8--md pr8--md">•</span> dream improves sleep quality, which is more than just sleep. <span
+                  class="pl3 pr3 pl8--md pr8--md">•</span> dream improves sleep quality, which is more than just sleep. <span class="pl3 pr3 pl8--md pr8--md">•</span>
+                  dream improves sleep quality, which is more than just sleep. <span class="pl3 pr3 pl8--md pr8--md">•</span>
+                  dream improves sleep quality, which is more than just sleep. <span class="pl3 pr3 pl8--md pr8--md">•</span> dream improves sleep quality, which is more than just sleep. <span
+                  class="pl3 pr3 pl8--md pr8--md">•</span> dream improves sleep quality, which is more than just sleep. <span class="pl3 pr3 pl8--md pr8--md">•</span>
+
+          </div>
+      </div>
+  </div>
+
+</div>
+
+
+
+{% if paginate.pages > 1 %}
+<div class="pagination centered">
+  {{ paginate | default_pagination }}
+</div>
+{% endif %}
+
+{% endpaginate %}
+
+{% comment %}
+  JavaScript for collection sorting.
+{% endcomment %}
+<script>
+jQuery('.sort-by')
+  .val('{{ collection.sort_by | default: collection.default_sort_by }}')
+  .on('change', function() {
+    Shopify.queryParams.sort_by = jQuery(this).val();
+    location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
+  });
+
+
+</script>
+
+<style>
+  .rounded-image {
+    border-radius: 68px;
+  }
+      .marquee {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 26px;
+  overflow-x: hidden;
+}
+.marquee .content {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 74s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media screen and (max-width: 600px) {
+    .pill {
+        border-radius: 32px;
+        display: inline-block;
+        border: #2F358E;
+        transition: 200ms ease-in-out;
+        min-width: 100%;
+        padding-right: 32px;
+        padding-left: 32px;
+
+    }
+    
+    .marquee {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 22px;
+  overflow-x: hidden;
+}
+.marquee .content {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 50s linear infinite;
+}
+}
+</style>

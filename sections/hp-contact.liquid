@@ -1,0 +1,26 @@
+<div class="contact">
+    <div class="contact-content">
+    <h1 class="color--white faqs-title" role="heading" style="font-size: 30px;">have Questions?</h1>
+    <h1 class="sans--medium color--white m3 faqs-subtitle contact-subtitle">We're here to help</h1>
+    <a href="/pages/support" class="btn  fw--400 btn-white">Email Us</a>
+    </div>
+    <picture class="contact-img">
+        <source
+            srcset="{{section.settings.contactBG | img_url: '1024x1024'}}"
+            media="(min-width: 800px)"><img loading="lazy" class="contact-img" alt="contact background photo" src="{{section.settings.contactBG | img_url: '1024x1024' | crop: 'center' }}">
+    </picture>
+</div>
+
+
+{% schema %}
+{
+  "name": "contact",
+"settings": [	      
+          {
+              "type": "image_picker",
+              "id": "contactBG",
+              "label": "Background Image"
+          }
+]
+}
+{% endschema %}

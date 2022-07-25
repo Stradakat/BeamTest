@@ -1,0 +1,366 @@
+<div class="ga-ab-wrap">
+    <div class="banner-mobile-slider hide--md">
+      
+      {% for block in section.blocks %}
+          	{% if block.type ==  "image" %}
+              <div class="pr color--primary of--hidden hide--md hero--mobile">    
+                  <div class="push-up full-width" style="height: 100%;">
+                          <div class="mt2 pt3 pb2" style="height: 100%; background: url({{ block.settings.mobileimage | img_url: 'master' }}); background-size: cover;" >
+                              <a href="">
+                                <img style="width: 100%; line-height: 0; opacity: 0;" alt="Hero image - Dream" src="{{ block.settings.mobileimage | img_url: 'master' }}" />
+                            </a>         
+                              <div class="pl2 pr2 banner_content">
+                                  <div class="sans--xxl tc mb2 pl4--md">
+                                      <h2 class="hero-main-title sans--xl color--black mt2 mb2 fw--300">
+                                          {{block.settings.heading}}
+                                      </h2>
+                                      <p class="sans--medium hero-sub-title color--black pb3 pb4--lg fw--300">
+                                         {{block.settings.content}}
+                                      </p>
+
+                                  <div class="tc"><a class="dib custom-button--wave-primary-top link--opacity pill" style="color: #fff !important; line-height: 2; background-color: #2f358e !important"  title="get yours now" href="{{block.settings.btnlink}}">{{block.settings.btntext}}</a></div>
+
+                                  </div>
+                              </div>    
+                          </div>
+                  </div>    
+              </div>
+            {% elsif block.type =="video" %}
+                <div class="pr color--primary of--hidden hide--md hero--mobile">    
+                    <div class="push-up full-width" style="height: 100%;" >
+                            <div class="mt2 pt3 pb2" style="min-height: 500px; background: url({{ block.settings.mobileimage | img_url: 'master' }}); background-size: cover;" >
+                                <a href="">
+                                  <img style="width: 100%; line-height: 0; opacity: 0;" alt="Hero image - Dream" src="{{ block.settings.mobileimage | img_url: 'master' }}" />
+                              </a>
+            					<div class="video-banner">
+                                    <div class="image_spacer"></div>
+                                    <video style="" muted playsinline autoplay loop>
+                                        <source src="https://cdn.shopify.com/s/files/1/0264/4076/1399/files/Beam_9x16_2_mobile_web.mp4?v=1633530554" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="pl2 pr2 banner_content">
+                                    <div class="sans--xxl tc mb2 pl4--md">
+                                        <h2 class="hero-main-title sans--xl color--black mt2 mb2 fw--300">
+                                            {{block.settings.heading}}
+                                        </h2>
+                                        <p class="sans--medium hero-sub-title color--black pb3 pb4--lg fw--300">
+                                           {{block.settings.content}}
+                                        </p>
+
+                                    <div class="tc"><a class="dib custom-button--wave-primary-top link--opacity pill" style="color: #fff !important; line-height: 2; background-color: #2f358e !important"  title="get yours now" href="{{block.settings.btnlink}}">{{block.settings.btntext}}</a></div>
+
+                                    </div>
+                                </div>    
+                            </div>
+                    </div>    
+                </div>
+          	{% endif %}
+          {% endfor %}
+		
+    </div>
+    
+    <div class="banner-desktop-slider show--md" >
+        
+          {% for block in section.blocks %}
+          	{% if block.type ==  "image" %}
+              <div class="mt10 pr color--primary of--hidden show--md bg--blue-light hero--desktop">
+                        <a title="get yours now" href="/collections/danica"><picture class="">
+                          <source srcset="{{ block.settings.image | img_url: 'master' }}" media="(min-width: 800px)" />
+                          <img class="hero__cover" alt="Hero image - Sleep" src="{{ block.settings.image | img_url: 'master' }}" style="opacity: 1;" /></picture>
+
+                          </a>     
+                      <div class="push-up full-width ">
+                          <div class="grid-container contained">
+                              <div class="row mt0 pt3 pt0--md mt0--md mb2 pb0--md mb0--md" style="text-align: {{block.settings.content_align}};">
+
+                                  <div class="col c12 c12--sm c6--md c6--lg c6--xl show--md">
+                                      <div class="tc tl--md mb2 p5 pt7 pl4--lg pr3--lg pl3--md" style="text-align:  {{block.settings.text_align}};">
+                                      <h2 class="hero-main-title sans--large fw--600 color--black mt1 mb3 show--md">
+                                          <span>{{block.settings.heading}}</span>    
+                                      </h2>
+                                      <p class="sans--medium hero-sub-title color--black pb5" style="">
+                                          {{block.settings.content}}</p>
+                                      <div class=""><a class="dib custom-button--wave-primary-top link--opacity pill" style="color: #fff !important; line-height: 2; background-color: #2f358e !important"  title="get yours now" href="{{block.settings.btnlink}}">{{block.settings.btntext}}<span>→</span></a></div>
+
+                                      </div>
+                                  </div>
+                                  <div class="col c12 c12--sm c7--md c8--lg show--md">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+            {% elsif block.type =="video" %}
+                <div class="mt10 pr color--primary of--hidden show--md bg--blue-light hero--desktop">
+                        <a title="get yours now" href="#"><picture class="">
+                          <source srcset="{{ block.settings.image | img_url: "master" }}" media="(min-width: 800px)" />
+                          <img class="hero__cover" alt="Hero image - Sleep" src="{{ block.settings.image | img_url: "master" }}" style="opacity: 0;" /></picture>
+
+                          </a>
+                    <div class="video-banner">
+                          <div class="image_spacer"></div>
+                          <video style="" muted playsinline autoplay loop>
+                              <source src="{{ block.settings.videonlink }}" type="video/mp4">
+                          </video>
+                      </div>
+                      <div class="push-up full-width ">
+                          <div class="grid-container contained">
+                              <div class="row mt0 pt3 pt0--md mt0--md mb2 pb0--md mb0--md" style="text-align: {{block.settings.content_align}};">
+
+                                  <div class="col c12 c12--sm c6--md c6--lg c6--xl show--md">
+                                      <div class="tc tl--md mb2 p5 pt7 pl4--lg pr3--lg pl3--md" style="text-align:  {{block.settings.text_align}};">
+                                      <h2 class="hero-main-title sans--large fw--600 color--black mt1 mb3 show--md">
+                                          <span>{{block.settings.heading}}</span>    
+                                      </h2>
+                                      <p class="sans--medium hero-sub-title color--black pb5" style="">
+                                          {{block.settings.btntext}}</p>
+                                      <div class=""><a class="dib custom-button--wave-primary-top link--opacity pill" style="color: #fff !important; line-height: 2; background-color: #2f358e !important"  title="get yours now" href="{{block.settings.btnlink}}">{{block.settings.btntext}} <span>→</span></a></div>
+
+                                      </div>
+                                  </div>
+                                  <div class="col c12 c12--sm c7--md c8--lg show--md">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+          	{% endif %}
+          {% endfor %}
+      
+       
+  	</div>
+</div>
+
+<style>
+        .hero--desktop {
+          height: {{ section.settings.height }};
+        }
+        .hero--desktop .video-banner {
+        	height: 100%;
+          	overflow:hidden;
+        }
+  .hero--mobile {
+  	height: {{ section.settings.height1 }};
+  }
+  .hero--mobile .video-banner {
+        	height: 100%;
+          	overflow:hidden;
+        }
+      </style>
+
+  <script>   
+    
+
+        
+      $('.banner-desktop-slider').slick({
+        autoplay: false,
+        slidesToShow: 1,
+         slidesToScroll: 1,
+        fade: false,
+        useTransform: false,
+        arrows: false,
+        dots: false,
+        autoplaySpeed: 5000,
+        adaptiveHeight: false,
+        pauseOnHover: false,
+    
+      });
+    
+    $('.banner-mobile-slider').slick({
+        autoplay: false,
+        slidesToShow: 1,
+         slidesToScroll: 1,
+        fade: false,
+        useTransform: false,
+        arrows: false,
+        dots: false,
+        autoplaySpeed: 5000,
+        adaptiveHeight: false,
+        pauseOnHover: false,
+    
+      });
+    </script>
+
+{% schema %}
+{
+  "name": "Index",
+  "class": "slider-section",
+  "max_blocks": 3,
+  "settings": [
+     {
+          "type": "text",
+          "id": "height",
+          "label": "Slider height",
+		  "default": "700px"
+        },
+		 {"type": "text",
+          "id": "height1",
+          "label": "Mobile Slider height",
+		  "default": "600px"
+        }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Banner Image"
+        },
+		{
+          "type": "image_picker",
+          "id": "mobileimage",
+          "label": "Mobile Banner Image"
+        },
+        {
+			"type": "text",
+            "id": "heading",
+            "label": "Heading"
+		},
+         {
+			"type": "text",
+            "id": "content",
+            "label": "Content"
+		},
+		 {
+			"type": "text",
+            "id": "btntext",
+            "label": "Button label"
+		},
+		 {
+			"type": "url",
+            "id": "btnlink",
+            "label": "Button Link"
+		},
+        {
+          "type": "select",
+          "id": "content_align",
+          "label": "Content Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        },
+       	{
+          "type": "select",
+          "id": "text_align",
+          "label": "Text Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "url",
+          "id": "videonlink",
+          "label": "Video Link"
+        },
+        {
+			"type": "text",
+            "id": "heading",
+            "label": "Heading"
+		},
+         {
+			"type": "text",
+            "id": "content",
+            "label": "Content"
+		},
+		 {
+			"type": "text",
+            "id": "btntext",
+            "label": "Button label"
+		},
+		 {
+			"type": "url",
+            "id": "btnlink",
+            "label": "Button Link"
+		},
+        {
+          "type": "select",
+          "id": "content_align",
+          "label": "Content Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        },
+       	{
+          "type": "select",
+          "id": "text_align",
+          "label": "Text Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "image"
+      },
+      {
+        "type": "image"
+      },
+      {
+        "type": "video"
+      }
+    ]
+  }
+}
+
+{% endschema %}

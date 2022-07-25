@@ -1,0 +1,416 @@
+{% assign add_to_cart = 'Add to cart' %}
+{% assign sold_out = 'Sold Out' %}
+{% assign unavailable = 'Unavailable' %}
+{% assign product_id = product.id %}
+
+
+<meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
+<meta itemprop="image" content="{{ product | img_url: 'grande' }}" />
+<div class="modal hidden" id="download-modal"></div>
+<div class="modal--overlay hidden"></div>
+
+<div class="mobile-title">
+	<div>
+		<div>
+			<div class="hide--md tl stars-mob">
+				{% if product.handle == "dream-starter-pack-tiktok"%}
+				{% include 'stars-dark-dream' %}
+				{% else %}
+				{% include 'stars-dream' %}
+				{% endif %}
+			</div>
+			<h2 class="sans--large-medium fw--600 mb1 mb2--md tl">
+				{% if section.settings.productHeading %}
+					{{ section.settings.productHeading | escape }}
+				{% else %}
+					{{product.title}}
+				{% endif %}
+			</h2>
+		</div>
+	</div>
+</div>
+
+<!-- The Modal -->
+<div id="detailsModal" class="details-modal">
+    <!-- Modal content -->
+    <div class="details-modal-content" style="max-width: 560px; border-radius: 8px;overflow: hidden;">
+        <div class="pr p2 tl color--white bg--new-blue">
+            <h1 class="sans--medium fw--600 lowercase" temprop="name">{{ section.settings.popupheading }}</h1>
+            <p class="sans--small fw--600">{{ product.type }}</p>
+            <span class="close fw--600" style="font-weight: 600 !important;">&times;</span>
+        </div>
+        <div class="inner">
+			<img loading="lazy" style="width: 100%;height: auto;" class="full-width" src="{{ section.settings.popupimg | img_url: '1024x1024' }}">
+        </div>
+    </div>
+
+</div>
+
+
+<!-- The Modal -->
+{% include 'why-sub'%}
+
+<div class="productView">
+    <div itemscope itemtype="http://schema.org/Product">
+        <div data-event-type="product" data-entity-id="{{product.id}}" data-name="{{product.title}}">
+            
+			{% assign variant = product.selected_or_first_available_variant %}
+            {% assign featured_image = product.selected_or_first_available_variant.featured_image | default:
+            product.featured_image %}
+
+			<form action="/cart/add" data-productid="{{ product.id }}" method="post" class="product-form"
+			id="add-to-cart" enctype="multipart/form-data">
+
+			<div class="full-width pt10--md">
+				<div class="row align--middle gutter--none">
+
+						<div class="col pr tc c6--md">
+							{% if product.handle == "sleep-powder" %}
+							<p style="position: absolute;bottom: 0; right: 0; left: 0;" class="mobile-value-add sans--small fw--600 p1 bg--main-blue lowercase color--white hide--md">{{ section.settings.productBodyText | escape }}</p>
+							{% endif %}
+							<span class="product-tag-overlay color--blue hide--md"> 
+								{% if section.settings.tagText %}
+									{{ section.settings.tagText | escape }}
+								{% endif %}
+								</span>
+								<div class="hide--md">
+								<img loading="lazy" class="full-width sub_image hidden" src="{{ product.featured_image | product_img_url: '800x720', crop: 'center' }}">
+								<img loading="lazy" class="full-width one-time_image" src="{{ section.settings.subImage | img_url: '800x720', crop: 'center' }}">
+								<img loading="lazy" class="pa pt6 pr1 pt4--md" id="discountSkimmfbgwp_q4_2021Mobile" style="display: none; top: 0; right: 0; max-width: 29vw;" src="{{ 'starburst-A.png' | asset_url }}">
+								<img loading="lazy" class="pa pt7 pr1 pt4--md" id="discountSkimmMobile" style="display: none; top: 0; right: 0; max-width: 25vw;" src="{{ 'circle.png' | asset_url }}">
+							</div>
+							<div class="show--md">
+								<img loading="lazy" class="full-width sub_image hidden" src="{{ product.featured_image | product_img_url: "master" }}">
+								<img loading="lazy" class="full-width one-time_image" src="{{ section.settings.subImage | img_url: '1024x1024' }}">
+								<img loading="lazy" class="pa pt4 pr4" id="discountSkimm" style="display: none; top: 0; right: 0; max-width: 15vw;" src="{{ 'circle.png' | asset_url }}">
+								<img loading="lazy" class="pa pt4 pr4" id="discountSkimmfbgwp_q4_2021" style="display: none; top: 0; right: 0; max-width: 15vw;" src="{{ 'starburst-A.png' | asset_url }}">
+							</div>
+							</div>
+						<div class="col c6--md">
+							<!-- <div class="p1 pb3 p3--md pl6--md pr6--md tl breadcrumbs" style="max-width: 620px; padding-top: 0;">
+							<nav aria-label="Home" class="breadcrumb">
+								<a style="font-size: 15px; padding-right: 7px;" class="Breadcrumbs" href="{{ routes.root_url }}">home </a> / 
+								<a style="font-size: 15px; padding: 0 7px;" class="Breadcrumbs" href="/collections/shop-all/"> shop all </a> / 
+								<a style="font-size: 15px; padding-left: 7px;" href="/collections/{{ product.metafields.my_fields.subnav_collection }}">{{ product.metafields.my_fields.subnav_collection }} collection</a>
+							</nav>
+							</div> -->
+							<div class="p1 pb3 p3--md pl6--md pr6--md tl" style="max-width: 620px; margin: 0 auto;">
+								<div class="desktop-info">
+									<div class="hide--md tc">
+									{% if product.handle == "mini-dream-bundle" %}
+										{% include 'stars-dark-dream' %}
+									{% else %}
+										{% include 'stars-dream' %}
+									{% endif %}
+									</div>
+									<h2 role="heading" class="sans--large-medium fw--600 mb1 mb2--md tc tl--md capitalize">
+										{% if section.settings.productHeading %}
+											{{ section.settings.productHeading | escape }}
+										{% else %}
+											{{product.title}}
+										{% endif %}
+									</h2>
+								</div>
+
+								<div class="sans--body show--md mb1">
+									{% if product.handle == "mini-dream-bundle" %}
+										{% include 'stars-dark-dream' %}
+									{% elsif product.handle == "dream-starter-pack-tiktok" %}
+										{% include 'stars-dark-dream' %}
+									{% else %}
+										{% include 'stars-dream' %}
+									{% endif %}
+								</div>
+
+								<p class="sans--body-new mb1 mb2--md tc tl--md first-letter">
+									{{ product.description }}
+								</p>
+								{% if product.handle == "sleep-powder" or product.handle == "dream-extra-strength-powder" %}
+								<div class="fw--600 tc tl--md mobile-hide" id="GWP">
+									Subscription includes mug + frother
+								</div>
+								{% endif %}
+								<div class="mt2--md mb2 mb2--md tc tl--md list-links">
+									<p class="dib subscribeModalBtn fw--600 pointer color--black">{{product.price | money_without_trailing_zeros}}</p>
+									<span class="color--new-blue fw--600 ml1 mr1">|</span>
+									<p class="dib fw--400 color--black | capitalize">{{section.settings.servingSize}}</p>
+									<span class="color--new-blue fw--600 ml1 mr1">|</span>
+									<p id="detailsModalBtn1" class="dib detailsModalBtn1 fw--600 pointer underline color--new-blue">nutrition info</p>
+								</div>
+								{% if product.available and product.variants.size > 1 %}
+								{% render 'swatch' for product.options as swatch %}
+								{% endif %}
+
+								{% assign hide_default_title = false %}
+								{% if product.variants.size == 1 and product.variants.first.title contains 'Default'
+								%}
+								{% assign hide_default_title = true %}
+								{% endif %}
+								<div id="product-variants"
+									class="select--product-option{% if hide_default_title %} hidden{% endif %}">
+									<select id="product-select" class="form-select" name="id"
+										data-productid="{{ product.id }}">
+										{% for variant in product.variants %}
+										<option class="form-select" {% if
+											variant==product.selected_or_first_available_variant %} selected{% endif
+											%} value="{{ variant.id }}">
+											{{ variant.title }} - {{ variant.price | money }}
+										</option>
+										{% endfor %}
+									</select>
+								</div>
+                                    <!-- Begin ReCharge code -->
+                                    {% if product.available %}{% include 'subscription-product-new' %}{% endif %}
+                                    <!-- End ReCharge code -->
+									
+                                    <div class="sans--small pb2 hidden">
+                                        <div id="product-price" itemprop="offers" itemscope
+                                            itemtype="http://schema.org/Offer" class="delta">
+                                            <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+                                            {% if product.available %}
+                                            <link itemprop="availability" href="http://schema.org/InStock" />
+                                            {% else %}
+                                            <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                                            {% endif %}
+                                            <p>
+                                                {% assign variant = product.selected_or_first_available_variant %}
+                                                {% if product.compare_at_price > product.price %}
+                                                <span class="product-price on-sale" itemprop="price">{{ variant.price |
+                                                    money }}</span>
+                                                <s class="product-compare-price">{{ variant.compare_at_price | money
+                                                    }}</s>
+                                                {% else %}
+                                                <span class="product-price sans--medium fw--600" itemprop="price">{{
+                                                    variant.price | money }}</span>
+                                                {% endif %}
+                                            </p>
+                                        </div>
+
+                                    </div>
+									<div class="fw--400 tc tl--md pt1 pb2" id="SKIMM" style="display: none;">
+									use code <span class="fw--600">SKIMM15</span> at checkout for <span class="fw--600">15% off</span>.
+									</div>
+									<div id="product-add" class="form-action">
+                                        <div class="qtydiv">
+                                            <div class="qtybox">
+                                                <span class="btnqty qtyminus icon-minus">-</span>
+                                                <input type="text" id="productQuantity" name="quantity" value="1"
+                                                    min="1" class="quantity-selector quantity-input" readonly="">
+                                                <span class="btnqty qtyplus icon-plus">+</span>
+                                            </div>
+                                        </div>
+                                        <input type="submit" name="add" id="add" style="text-transform: none !important" class="button button--primary"
+                                            value="{{ add_to_cart | escape }}">
+                                    </div>
+
+                                    {% include 'guarantee' %}
+
+
+									
+							</div>
+						
+						</div>
+						
+				</div>
+				
+			</div>
+		</form>	
+		</div>
+	</div>
+</div>
+
+<style>
+	
+	.mobile-title {
+		display: none;
+	}
+	.needsclick {
+		display: none;
+	}
+	@media screen and (max-width: 800px) {
+		.mobile-hide {
+			display: none;
+		}
+		.main-grid {
+			display: block;
+		}
+		.desktop-info {
+			display: none;
+		}
+		.mobile-title {
+			display: block;
+			margin: 0;
+			padding-bottom: 4vh;
+			padding-top: 10vh;
+			padding-left: 3%;
+			background-color: #f6f6f6;
+		}
+		.stars-mob {
+			padding-top: 30px;
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+        .list-links {
+            padding-top: 20px;
+        }
+		.mobile-title {
+			padding-top: 6vh;
+			padding-bottom: 2vh;
+		}
+	}
+	
+	.template-product .button--primary {border-radius: 6px !important;width: 72% !important;background-color: #3d7cc9;transition: ease-in-out 200ms;}
+	#shopify-section-template--14175733153847__1635526379cb5fee3b .detailsModalBtn1 {display: none !important;}
+	.template-product .button--primary:hover {background-color: #94C6FF !important}
+	.template-product .qtydiv {min-width: 20% !important;border-radius: 6px !important;max-width: 26%;}
+	.product-tag-overlay {
+		top: 26px;
+		right: 20px;
+		left: auto;
+	}
+	.bg--main-blue {background-color: #2F358E;}
+	.color--main-blue {color: #94C6FF;}
+	.text-m {display: none !important;}
+	.yotpo .yotpo-bottomline .yotpo-icon-star, .yotpo .yotpo-bottomline .yotpo-icon-half-star, .yotpo .yotpo-bottomline .yotpo-icon-empty-star {
+		color: #94C6FF !important;
+	}
+    @media screen and (max-width: 600px) {
+	div#rc_container {
+		margin-bottom: -5px !important;
+	}
+	}
+	.close2 {
+    color: #fff;
+    float: right;
+    font-size: 38px;
+    position: absolute;
+    top: 24px;
+    font-weight: 400;
+    right: 20px;
+	cursor: pointer;
+}
+.perks-copy {
+	padding: 3% 3% 0;
+}
+.block-content {
+	margin-bottom: 15px;
+}
+.subicon {
+	width: 25px;
+}
+.perks-on {
+	line-height: 125%;
+}
+.productView ul {margin-left: 12px;padding-left: 12px;}
+.productView ul li {list-style: disc !important;}
+</style>
+
+<script>
+$(document).ready(function () {
+$('.qtybox .btnqty').on('click', function () {
+	var qty = parseInt($(this).parent('.qtybox').find('.quantity-input').val());
+	if ($(this).hasClass('qtyplus')) {
+		qty++;
+	} else {
+		if (qty > 1) {
+			qty--;
+		}
+	}
+	qty = (isNaN(qty)) ? 1 : qty;
+	$(this).parent('.qtybox').find('.quantity-input').val(qty);
+});
+	var modal2 = document.getElementById("subscribeModal");
+    var btn2 = document.querySelector(".subscribeModalBtn");
+    var span2 = document.getElementsByClassName("close2")[0];
+    // When the user clicks on the button, open the modal
+    btn2.onclick = function () {
+        modal2.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+		span2.onclick = function () {
+        modal2.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event2) {
+        if (event2.target == modal2) {
+            modal2.style.display = "none";
+        }
+    }
+    // Get the modal
+    var modal = document.getElementById("detailsModal");
+    // Get the button that opens the modal
+    var btn1 = document.querySelector(".detailsModalBtn1");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks on the button, open the modal
+    btn1.onclick = function () {
+        modal.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+</script>
+
+
+{% schema %}
+{
+  "name": "Product Sub banner",
+  "class": "product-subscription_banner",
+  "settings": [	      
+			{
+				"type": "text",
+				"id": "productHeading",
+				"label": "Product Title"
+			},
+			{
+				"type": "text",
+				"id": "productBodyText",
+				"label": "Main Body Copy"
+			},
+			{
+				"type": "text",
+				"id": "mobileBodyText",
+				"label": "Main Body Copy"
+			},
+			{
+				"type": "text",
+				"id": "tagText",
+				"label": "Tag Copy"
+			},
+			{
+				"type": "image_picker",
+				"id": "subImage",
+				"label": "Sub Image"
+			},
+			{
+				"type": "text",
+				"id": "servingSize",
+				"label": "Serving Size"
+			},
+			{
+				"type": "text",
+				"id": "popupheading",
+				"label": "Popup Heading"
+			},
+			{
+				"type": "image_picker",
+				"id": "popupimg",
+				"label": "Popup Image"
+			}			
+  ],
+  "presets": [{
+    "name": "Product Sub banner",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

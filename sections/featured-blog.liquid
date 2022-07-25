@@ -1,0 +1,108 @@
+
+{%- assign article = section.settings.article -%}
+<div class="pl8 pr8 featured-contain">
+    <img class="featured-image" style="border-radius: 10px;" src={{ article.image.src | img_url: '2048x2048' }}>
+    <div class="pl5 fw--600 content-contain">
+        <h1 class="color--blue featured">FEATURED</h1>
+        <p style="font-weight: 300; text-transform: lowercase; color: grey; font-size: 18px;">{{article.published_at | date: "%B %d, %Y" }}</p>
+        <h1 class="sans--medium fw--600 pt2 article-title">{{article.title}}</h1>
+        <div style="font-weight: 400 !important" class="pt3 article-excerpt">{{article.excerpt_or_content | truncate: 165}}</div>
+        <a class="p2 mt3 mb3 featured-button-text" href="{{article.url}}">Read More</a>
+    </div>
+</div>
+
+<style>
+    .article-excerpt p{
+        font-weight: 400 !important;
+        font-size: 16px;
+        line-height: 125%;
+    }
+    .featured-image {
+        width: 60%;
+        object-fit: cover;
+        padding-right: 3%;
+    }
+    .featured-contain {
+        display: flex;
+        width: 95%;
+        margin: auto;
+    }
+    
+    .content-contain {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 25px 0 25px 60px;
+        justify-content: center;
+    }
+    .featured {
+        letter-spacing: 5px;
+        font-size: 13px;
+        font-weight: 700
+    }
+    .article-excerpt {
+        line-height: 150%;
+        font-weight: 400 !important;
+        font-size: 21px;
+    }
+    .featured-button-text {
+        background-color: #3d7cc9;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 33%;
+        color: white;
+        height: 50px;
+    }
+    @media screen and (max-width: 1020px) {
+        .featured-button-text {
+            width: 50%;
+        }
+    }
+    @media screen and (max-width: 860px) {
+        .featured-button-text {
+            width: 60%;
+        }
+    }
+
+
+    @media screen and (max-width: 800px) {
+        .featured-contain {
+            flex-direction: column;
+            padding: 0;
+            width: 90%;
+            align-items: center;
+        }
+        .content-contain {
+            padding: 0;
+            text-align: center;
+            align-items: center;
+            padding-top: 10px;
+        }
+        .featured-image {
+            width: 90vw;
+        }
+        .featured-button-text {
+            width: 35%;
+        }
+    }
+</style>
+
+
+
+
+{% schema %}
+{
+  "name": "Featured Blog",
+"settings": [	      
+        {
+            "type": "article",
+            "id": "article",
+            "label": "Featured Blog"
+        }
+
+]
+}
+
+{% endschema %}

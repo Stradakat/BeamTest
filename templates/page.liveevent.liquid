@@ -1,0 +1,63 @@
+<div class="pt2 mt0 mb0 mt3--md mb0--md">
+	{% section 'am-header'%}
+	{% section 'brand-inline'%}
+	{% section 'am-flex'%}
+	{% section 'lp-cutout'%}
+	{% section 'lp-trusted'%}
+	{% section 'lp-learn'%}
+</div>
+
+<style>
+	.footer{ 
+		position: relative;
+		z-index: 999;
+	}
+	.success_message {
+		text-align: left;
+	}
+	#k_id_email{
+		color: black !important;
+	}
+	.brand-container {
+		margin-top: 0;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.featured-title {
+		color: #427BBE !important;
+	}
+</style>
+
+<script>
+
+	$(".testimonial-slider").slick({
+		dots: true,
+		customPaging: function (slider, i) {
+			return $('<button type="button" />').text(i + 1);
+		},
+		centerMode: true,
+		centerPadding: "24%",
+		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		responsive: [{
+			breakpoint: 992,
+			settings: {
+				centerPadding: "120px"
+			}
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				centerPadding: "80px"
+			}
+	
+		},
+		{
+			breakpoint: 554,
+			settings: {
+				centerPadding: "10px"
+			}
+		}]
+	}); 
+	</script>

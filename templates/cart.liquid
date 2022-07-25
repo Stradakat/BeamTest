@@ -1,0 +1,469 @@
+{% assign hide_freeship = false %}
+{% assign foundGWP_title = false %}
+
+{% for item in cart.items %}
+{% if item.product.title contains "6 days of elevate" %}
+{% assign foundGWP_title = true %}
+{% endif %}
+{% if item.product.title contains "dream" %}
+{% assign upsells = 'upsells' %}
+{% else %}
+{% assign upsells = 'upsells' %}
+{% endif %}
+{% assign gwp_added = false %}
+{% assign gwpRemoved = false %}
+{% for item in cart.items %}
+{% if item.variant.id == 39736244633655 %}
+{% assign gwp_added = true %}
+{% endif %}
+{% endfor %}
+
+{% if item.product.title contains "subscription" %}
+{% assign hide_freeship = true %}
+{% endif %}
+
+{% if cart.item_count == 1 %}
+  {% if item.product.title contains '3 nights of dream caps' or item.product.title contains 'dream powder peppermint - 10 servings' or item.product.title contains 'mini fixer' or item.product.title contains '3 nights of dream extra strength capsules' %}
+      <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById("checkoutBtn").disabled = true;
+        document.getElementById("checkoutBtn2").disabled = true;
+        document.getElementById("offerCopy").style.display = 'block';
+        document.getElementById("offerCopyMobile").style.display = 'block';
+        document.getElementById("offerCopyItem").style.display = 'block';
+
+      });
+
+      </script>
+  {% endif %}
+{% endif %}
+
+{% endfor %}
+
+<!-- Begin ReCharge code -->
+{% include 'subscription-cart-footer' %}
+<!-- End ReCharge code -->
+
+
+<img height="1" width="1" style="border-style:none;" alt=""
+  src="https://insight.adsrvr.org/track/pxl/?adv=iv5xfdn&ct=0:ydqbmcz&fmt=3" />
+<div class="container mt3--md pt6--md" style="max-width: 1240px;">
+
+  <div class="page mt0 pt0 mt5--md pt2--md">
+
+    <main class="page-content pt4 pt0--md">
+      {% if cart.item_count > 0 %}
+      <div class="row">
+
+        <div class="col c8--xl mb3 mb2--md">
+          <h1 class="mt3 mb4 tc tl--lg">
+            <div class="sans--medium-large fw--300"><span class="fw--600">my cart</span> | {{ cart.item_count }} items</div>
+          </h1>
+
+          <div class="hide--md mt4 mb3">
+
+            <form class="cart" action="/cart" method="post">
+
+              <input id="checkoutBtn2" class="button button--checkout full-width" style="text-transform: capitalize;" type="submit" name="checkout"
+                value="checkout" />
+
+              {% comment %}Paypal and Google checkout buttons{% endcomment %}
+              {% if additional_checkout_buttons %}
+              <span class="additional-checkout-buttons">
+
+                <p class="additional-checkout-buttons">
+                  {{ content_for_additional_checkout_buttons }}
+                </p>
+              </span>
+              {% endif %}
+            </form>
+
+            <div id="offerCopyMobile" style="display: none; font-style: italic !important" class="tc mt2 mb2 color--beam-blue sans--medium">
+              offer only available with purchase
+              
+            <a style="text-decoration: underline !important;" class="db fw--400 mt1 sans--body full-width"
+            href="/collections/shop-all">continue shopping</a>
+            </div>
+          </div>
+
+
+
+<div id="PSACart" style="display: none;" class="mt1 bg--light-gray color--blue p1 pl4--md pr4--md pt3--md pb3--md fw--600 tc">
+
+  <h3 class="sans--body">
+    discount applied at checkout
+  </h3>
+
+</div>
+
+
+          <form class="cart" action="/cart" method="post">
+
+            {% assign hide_default_title = false %}
+
+
+            <div class="cart">
+
+              <div class="cart-list">
+                {% for item in cart.items %}
+                {% if item.variant.title contains 'Default Title' %}
+                {% assign hide_default_title = true %}
+                {% endif %}
+                {% if item.product.id == 4528627089463 %}
+                {% assign hide_upsell = true %}
+                {% endif %}
+                {% if item.product.title contains "subscription" %}
+                {% assign hide_upsell = true %}
+                <style>
+                  .fs-notice {
+                    display: none !important;
+                  }
+
+                  .sub-notice {
+                    display: block !important;
+                  }
+                </style>
+                {% endif %}
+                {% if item.product.title contains "renew" %}
+                {% assign hide_upsell = true %}
+                {% endif %}
+
+                {% if item.product.title contains "free trial" %}
+                <style>
+
+                </style>
+                {% endif %}
+
+                <div class="cart-item bg--white color--black product-{{ item.product.id }}">
+                  <div class="cart-item-block cart-item-figure">
+                    <a href="{{ collection_url }}{{ item.url }}">
+                      <img class="rounded cart-item-image" src="{{ item | img_url: '500x500', crop: 'center' }}"
+                        alt="{{ item.title | escape }}" />
+                    </a>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="cart-item-block mt1 mt3--md">
+
+                    <div class="sans--medium fw--600"><a href="{{ collection_url }}{{ item.url }}">{{ item.product.title
+                        }}</a></div>
+                        {% if item.product.title == "10 serving dream powder - sweatcoin Auto renew"%}
+                        <h1 class="pt1">10-serving bag of Dream Powder (20% off subscription starts in 14 days)</h1>
+                        {% endif %}
+                        <div id="offerCopyItem" style="display: none; font-style: italic !important" class="tl mt1 mb1 color--beam-blue sans--body">
+                          offer only available with purchase
+                          </div>
+                    {% if item.variant.title %} <div
+                      class="sans--small fw--300 {% if hide_default_title %} hidden{% endif %}"><a
+                        href="{{ collection_url }}{{ item.url }}">{{ item.variant.title }}</a></div>{% endif %}
+
+                        {% if item.product.title contains "subscription" %}
+                      
+                        <div id="PSAPrice" class="cart-item-price mt1--md mb1">
+                            {{ item.line_price | money }}
+                        </div>
+                        {% endif %}
+
+
+                    {% if item.product.title contains "subscription" %}
+                    {% elsif item.product.title contains "dream powder peppermint - exclusive offer" or item.product.title contains "dream extra strength capsules (3 free nights)" or "Dream Starter Pack" %}
+                    {% if item.variant.compare_at_price %}
+                    {% if item.variant.id == 39736244633655 %}
+                    <div class="cart-item-price mt1--md mb1">
+                     free with purchase
+                  </div>
+                  {% else %}
+                    <div class="cart-item-price mt1--md mb1">
+                      {{ item.line_price | money }}
+                      </div>
+                  {% endif %}
+                      {% else %}
+                      <div class="cart-item-price mt1--md mb1">
+                        {{ item.line_price | money }}
+                        </div>
+                      {% endif %}
+                    {% else %}
+                 
+                    <div  id="PSAPriceOTP" class="cart-item-price mt1--md mb1">
+                          {{ item.line_price | money }}
+                   </div>
+                    {% endif %}
+
+                    <div class="sans--small fw--300 ellipsis pt0 pb0 mb0 mb2--md">
+                      qty: <input type="number" name="updates[]" id="updates_{{ item.id }}" class="quantity"
+                        value="{{ item.quantity }}" />
+                    </div>
+
+                    <script>
+                      function removeGWP(){
+                        let date = new Date(Date.now() + 64.64e+7);
+                        date = date.toUTCString();
+                        document.cookie = "gwpRemoved=true; path=/; expires=" + date; 
+                      }
+                    </script>
+                    <a {% if item.variant.id == 39736244633655 %} onclick="removeGWP()" {%endif%} class="remove-item remove-main sans--small color--gray"
+                      href="/cart/change?line={{ forloop.index }}&quantity=0">remove</a>
+
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                </div>
+
+
+                {% endfor %}
+              </div>
+            </div>
+            <input class="button button--index full-width rounded mb2" type="submit" name="update"
+              value="update cart" />
+
+
+          </form>
+          <div class="row gutter--none mb0--md pb2--md">
+
+
+          <div class="row db mt3 tc pt3 pb1 pb1--md">
+            <div class="db mb0 tc fw--600 pl1 pr1 pl2--md pr2--md">
+              <div class="sans--medium color--blue mb1 pl3 pr3 pl2--md pr2--md" style="font-size: 21px;">
+                More to love
+              </div>
+              <div class="sans--body db pl1 pr1 pl5--md pr5--md">shop these favorites for a limited time.</div>
+            </div>
+          </div>
+
+
+          <div class="sale-contain">
+          {% for product in collections.[upsells].products %}
+
+          <div class="col c4 mt2 mb2 tl clearfix sale-row {% if hide_upsellOLD %} hidden{% endif %}">
+
+            <div class="pl1 pr1 sale-item">
+
+            <form class="sale-form" method="post" action="/cart/add">
+              <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+              <img class="addon-image" src="{{ product.featured_image | product_img_url: '320x320', crop: 'center' }}"
+                alt="{{ product.title | escape  }}" />
+              <div class="sale-item-contain">
+              <h5 class="sans--small fw--600 mt1">{{ product.title | escape }}</h5>
+              <h6 class="mb1 sans--xsmall fw--300">{{ product.vendor | escape }}</h6>
+              <h6 class="mb1 sans--small fw--600">
+               {{ product.price | money }}
+              </h6>
+              <!-- <input type="submit" id="add-{{ forloop.index }}" value="add" style="margin-top: auto; cursor:pointer; text-decoration: underline;color: #427CBF;" class="hide--md" /> -->
+              <input class="sale-atc" type="submit" id="add-{{ forloop.index }}" value="Add to cart" style="margin-top: auto; cursor:pointer;" class="show--md" />
+              </div>
+            </form>
+
+
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+
+          {% endfor %}
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="pt0 col c4--lg c4--xl pt4--lg mb2 tl">
+        <div class="p2 pb3 pt3 rounded" style="background: #F5F5F5;">
+          <h2 class="sans--body fw--600 mb1 show--lg" style="text-transform: uppercase !important;letter-spacing: 1px !important;">order summary:</h2>
+
+
+
+          <div class="sans--medium fw--600 pt1">
+            subtotal: <em>{{ cart.total_price | money }}</em>
+          </div>
+
+          
+          <form class="cart mt2" action="/cart" method="post">
+
+            <input id="checkoutBtn" class="button button--checkout full-width capitalize" type="submit" name="checkout"
+              value="checkout" />
+
+            {% comment %}Paypal and Google checkout buttons{% endcomment %}
+            {% if additional_checkout_buttons %}
+            <span class="additional-checkout-buttons">
+
+              <p class="additional-checkout-buttons">
+                {{ content_for_additional_checkout_buttons }}
+              </p>
+            </span>
+            {% endif %}
+ 
+          </form>
+          {% include 'guarantee' %}
+
+
+          <a class="cs-button db fw--400 mt2 mb3 button button--checkout-secondary full-width hide--md"
+            href="/collections/shop-all">← continue shopping</a>
+
+        </div>
+
+        <div id="offerCopy" style="display: none; font-style: italic !important" class="tc mt2 mb2 color--beam-blue sans--medium">
+          offer only available with purchase
+          
+        <a style="text-decoration: underline !important;" class="db fw--400 mt1 sans--body full-width"
+        href="/collections/shop-all">continue shopping</a>
+        </div>
+      </div>
+      {% if cart.total_price >= 1000 and gwp_added == false %}
+      {% assign gwp_added = true %}
+      <script>
+
+        $(document).ready(function() {
+        if (document.cookie.indexOf('gwpRemoved=') > -1 ) {
+          console.log('gwpremoved')
+        }else {
+
+            jQuery.post('/cart/add.js', {
+                        quantity: 1,
+                        id: 39736244633655                               
+            });
+            setTimeout( 
+              function() {
+                window.location.reload(true);
+              }, 500);
+              let date = new Date(Date.now() + 64.64e+7);
+              date = date.toUTCString();
+            }});
+        </script>
+        {% endif %}
+        {% if cart.total_price <= 1499 and gwp_added == true %}
+        <script>
+          $(document).ready(function() {
+              var variantId2 = 39736244633655;
+              jQuery.post('/cart/update.js', 'updates['+variantId2+']=0');
+              setTimeout( 
+                function() {
+                  window.location.reload(true);
+                }, 500);
+          });
+          </script>
+      {% endif %}
+  </div>
+  {% else %}
+
+  <div class="mt7 pt4 mb6 tc" style="min-height:300px;">
+    <h2 class="gamma">It appears that your cart is currently empty!</h2>
+    <h3 class="delta">You can continue browsing <a class="here-button"
+        href="/collections/shop-all">here</a>.</h3>
+  </div>
+
+  {% endif %}
+  </main>
+</div>
+</div>
+
+<style>
+  .here-button {
+    text-decoration: underline;
+    color: #146ff8;
+  }
+  .sale-atc {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #417cbf;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .btn {
+        border-radius: 3px;
+        display: inline-block;
+        background-color: #427BBE;
+        color: #fff;
+        transition: 200ms ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 225px;
+        height: 55px;
+    }
+  .sale-item-contain {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 90%;
+    margin: 5px auto 0;
+  }
+  .sale-contain {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sale-item {
+    height: 100%;
+  }
+  .sale-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    text-align: center;
+  }
+  .button--checkout {
+    height: 54px;
+    line-height: 54px;
+    background-color: #427CBF;
+    color: #fff;
+    padding: 0 20px;
+    font-family: Poppins,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,Helvetica Neue,sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    transition: .2s background-color ease-out;
+    border-radius: 6px;
+  }
+  .button--checkout:hover {
+    background-color:  #2f358e;
+  }
+  .cart-list {
+    margin-top: 10px !important;
+  }
+
+  .cart-list>.cart-item {
+    border: none;
+  }
+
+  .cart-list>.cart-item~.cart-item {
+    border-top: 1px solid rgb(194, 194, 194);
+  }
+
+  .addon-image {
+    max-width: 340px;
+    border-radius: 14px;
+    font-weight: 600;
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 800px) {
+    .sale-row {
+      width: 50% !important;
+    }
+    
+  }
+  .addon-image:hover {opacity: .8;cursor: pointer;}
+</style>
+
+
+<script>
+if (document.cookie.indexOf('podsaveamerica_q1_2022') > -1 ) {
+  document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById("PSACart").style.display = 'block';
+    document.getElementById("PSAPrice").style.display = 'none';
+    document.getElementById("PSAPriceOTP").style.display = 'none';
+            });
+}
+
+</script>
+
+<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=e60e7d5f-8b5c-4c2c-ae89-8f6f3099dbba"></script>
+

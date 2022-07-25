@@ -1,0 +1,40 @@
+{% assign pro = all_products['sleep-powder'] %}
+
+<div class="yotpo yotpo-main-widget" data-product-id="{{ pro.id }}" data-name="{{ pro.title | escape }}"
+data-url="{{ shop.url }}{{ pro.url }}" data-image-url="{{ pro.featured_image | product_img_url: " large"
+|replace: '?' , '%3F' | replace: '&' ,'%26'}}" data-description="{{ pro.description | escape }}"></div>
+
+{% schema %}
+{
+  "name": "Reviews (Bundle pdp)",
+  "class": "product-subscription_banner",
+  "settings": [	      
+            {
+                "type": "image_picker",
+                "id": "heroBGImage",
+                "label": "Background Image"
+            },
+            {
+                "type": "color",
+                "id": "heroBGColor",
+                "label": "Background Color",
+                "default": "#fff"
+              },
+			{
+				"type": "text",
+				"id": "heroHeading",
+				"label": "Title"
+			},
+			{
+				"type": "richtext",
+				"id": "heroBodyText",
+				"label": "Body Copy"
+			}
+  ],
+  "presets": [{
+    "name": "Product Reviews",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

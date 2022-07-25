@@ -1,0 +1,74 @@
+<div class="learn">
+    <div class="contact-content">
+    <h1 style="text-transform: none !important" class="color--white learn-title" style="font-size: 30px; font-weight: 300;">Wake up on the right side of the bed</h1>
+    <h1 style="text-transform: none !important" class="sans--medium color--white mt3 mb6 lm-subtitle">try <span style="font-weight: 600; font-style: italic;">dream powder</span> for your best sleep ever</h1>
+    <a href="/products/sleep-powder" class="btn fw--400 btn--black">Learn More</a>
+    </div>
+    <picture class="contact-img">
+        <source
+            srcset="{{section.settings.contactBG | img_url: '1024x1024'}}"
+            media="(min-width: 800px)"><img class="contact-img" alt="contact background photo" src="{{section.settings.contactBG | img_url: '1024x1024' | crop: 'center' }}">
+    </picture>
+</div>
+
+<style>
+        .learn {
+            position: relative;
+            z-index: 999;
+        }
+       .contact-content {
+            position: absolute;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+        .btn-white {
+            background-color: #fff;
+            color: #427BBE;
+        }
+         .learn {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            }
+            .lm-subtitle {
+                font-size: 20px;
+            }
+            .btn--black {
+                color: black;
+                background-color: white;
+            }
+            @media screen and (max-width: 800px) {
+                .learn {
+                    margin-top: 60%;
+                }
+                .contact-content {
+                    width: 90%;
+                    text-align: center;
+                }
+                .learn-title {
+                    line-height: 110%;
+                }
+                
+            }
+</style>
+{% schema %}
+{
+  "name": "learn more",
+"settings": [	      
+          {
+              "type": "image_picker",
+              "id": "contactBG",
+              "label": "Background Image"
+          }
+]
+}
+{% endschema %}

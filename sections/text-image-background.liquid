@@ -1,0 +1,75 @@
+
+<div class="mt6 mt10--md mb10--md">
+    <div class="mt10--md mb10--md" style="background-color: #f0f0ff;">
+        <div class="container">
+            <div class="row align--middle">
+                <div class="col c2 hide--md"></div>
+                <div class="col pt3 c8 hide--md">
+                    <img class="full-width rounded-image"
+                        src="{{ section.settings.image | img_url: '1024x1024' }}">
+                </div>
+                <div class="col c6--md pt4--md">
+                    <div class="tc mt3 hide--md "><span style="width: 38px;" class="dib ml1 mb1"><img
+                                class="full-width half-moon" src="{{  section.settings.headingimage | img_url: '1024x1024' }}"></span></div>
+
+                    <h2 class="sans--large tc tl--md fw--600 mt3 mt0--md mb2 color--blue">{{ section.settings.heading }}<span style="width: 38px;"
+                            class="dib show--md ml1 mb1"><img class="full-width half-moon"
+                                src="{{  section.settings.headingimage | img_url: '1024x1024' }}"></span></h2>
+                    <p class="sans--body tc tl--md fw--400 mb4 mb10--md color--black">
+                        {{ section.settings.content }}
+                    </p>
+                </div>
+                <div class="col c1 show--md"></div>
+
+                <div class="col c5--md show--md" style="margin-top: -100px;margin-bottom: -80px;">
+                    <img class="full-width rounded-image"
+                        src="{{ section.settings.image | img_url: '1024x1024' }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+	.rounded-image {
+        border-radius: 68px;
+    }
+	@media screen and (max-width: 600px) {
+        .rounded-image {
+            border-radius: 28px;
+        }
+	}
+</style>
+{% schema %}
+{
+  "name": "Text Image Background",
+  "class": "text-image_background",
+  "settings": [	
+             {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Background Image"			
+			},
+			{
+				"type": "image_picker",
+				"id": "headingimage",
+				"label": "Heading icon"			
+			  },
+			{
+              "type":"text",
+              "id":"heading",
+              "label": "Heading"			 
+			},
+			{
+				"type":"text",
+				"id":"content",
+				"label": "Content"			 
+			}
+  ],
+  "presets": [{
+    "name": "Text Image Background",
+    "category": "Content"
+  }]
+}
+
+{% endschema %}

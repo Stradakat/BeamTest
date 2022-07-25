@@ -1,0 +1,129 @@
+<div class="tc row align--center bg--blue-light pt2 pb2">
+    <div class="col c11 c10--md c10--lg">
+        <h2 class="sans--large tc fw--600 mb2 color--blue hidden">{{ section.settings.gridTitle }}</h2>
+
+
+        <div style="max-width: 2200px; margin-left: auto; margin-right: auto" id="new-ingredient-section">
+
+            <div class="icon-slider">
+				{% for block in section.blocks %}
+					<div class="db">
+						{% if block.settings.iconimage %}
+							<p class="tc"><span class="dib">
+									<picture class="promo__press-logo p1"><img class="promo__press-logo"
+                                        style="max-width: 54px;" src="{{ block.settings.iconimage | img_url: 'medium' }}">
+									</picture>
+								</span>
+							</p>
+						{% endif %}
+						{% if block.settings.iconheading %}
+							<h4 class="tc color--black fw--600">{{ block.settings.iconheading}}</h4>
+						{% endif %}
+						{% if block.settings.iconcontent %}
+							<h5 class="tc pl1 pr1 pl5--md pr5--md">
+								{{ block.settings.iconcontent }}
+							</h5>
+						{% endif %}
+					</div>
+				{% endfor %}               
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	$(document).ready(function () {
+		$('.icon-slider').slick({
+        autoplay: true,
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        fade: false,
+        useTransform: true,
+        arrows: false,
+        dots: false,
+        autoplaySpeed: 3000,
+        adaptiveHeight: false,
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 1424,
+                settings: {
+                    fade: false,
+                    slidesToShow: 3,
+                    fade: false,
+                    arrows: false,
+                    dots: false,
+                    customPaging: function (slider, i) {
+                        return $('<button type="button" />').text(i + 1);
+                    }
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    fade: false,
+                    arrows: false,
+                    dots: false,
+                    customPaging: function (slider, i) {
+                        return $('<button type="button" />').text(i + 1);
+                    }
+                }
+            }
+        ]
+    });
+	});
+	
+</script>
+{% schema %}
+  {
+    "name": "Horizontal Break w Col",
+	"class": "grid-with-icons",
+    "settings": [
+      {
+        "type": "text",
+        "id": "gridTitle",
+        "label": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "column",
+        "name": "Column",
+        "limit": 10,
+        "settings": [
+          {
+            "id": "iconimage",
+            "type": "image_picker",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "iconheading",
+            "label": "Icon heading"
+          },
+          {
+            "type": "text",
+            "id": "iconcontent",
+            "label": "Icon content"            
+          }
+        ]
+      }
+    ],
+    "presets": [{
+        "name": "Horizontal Break w Col",
+        "category": "content",
+        "blocks": [
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          }
+        ]
+    }]
+  }
+{% endschema %}
+
