@@ -75,14 +75,14 @@
         </div>
     </div>
 
-    <div class="mt10--lg pr color--primary of--hidden show--md bg--blue-light hero--desktop">
+    <div class="mt10--lg pr color--primary of--hidden show--md bg--white hero--desktop">
         <div class="image-banner">
             <img class="desktop-img" src="https://s3-alpha-sig.figma.com/img/ee3e/152d/ac68a27bd698452f3f746159f3de4140?Expires=1659916800&Signature=AbQjegpFUV9OBh76UhjWDW2kQjKJ4Zm8tUomg5BD18rJ3FH9rniislzC02b~CsDnY84L3cRm9k~Grss8cmHFn3Smoy5nVnbRYpFiodm0~wVNASECb8WjQ-vhwor1FiYwql3Xn9AwSRegN~hlh2UOYl12-PWQq3waW24B1QbLvH8-fW0Eae2Q9wZ~ip-2W4He-AlaSfISUMLc1xjgYBkncuTiayJfHpIXEfBWw2Go5ghXKjpDEv30F561aqaZQKTgZuYrEmUgBv1GN5om2nWqNQM4wHfGPR9oZ4GUy0CnbhK2oWOpxRoV67ivuONQSFAYMzzQcEfnYvNRWbynWY32yQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA">
         </div>
         <div class="pl2 pr2 pa content-contain">
         
             <div class="tl">
-                <h2 style="text-transform: none !important; margin-bottom: 90px; font-size: 35px; text-align: center;"
+                <h2 style="text-transform: none !important; margin-bottom: 90px; font-size: 35px; text-align: center; position: inherit !important;"
                     class="hero-main-title sans--large fw--500 color--white mt1 mb2 show--md; ">
                     99% of people experience better sleep quality when taking Dream Powder.
                 </h2>
@@ -93,6 +93,25 @@
                 <div class="tl"><a class="dib custom-button--wave-primary-top link--opacity pill"
                         style="color: #427CBF !important; line-height: 1.7; background-color: white !important; font-size: 20px; "
                         title="get yours now" href="/collections/sleep">Shop all</a></div>
+            </div>
+        </div>
+
+        <div class="grid-container contained">
+            <div class="row align--right">
+                <div class="col c6--lg">
+                    <div class="row gutter--vertical align--center">
+    
+                        {% for product in collections.start-with-these.products %}
+                        <div class="col c6--md c4--md hide-{{product.handle}}">
+                            <div class="product-card">
+                                {% include 'product-grid-collection' with 'two-per-row' %}
+                            </div>
+                        </div>
+                        {% endfor %}
+    
+    
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -140,13 +159,13 @@
     </div>
     <div class="grid-container contained">
         <div class="row align--center">
-            <div class="col c9--lg">
+            <div class="col c6--lg">
                 <div class="row gutter--vertical align--center">
 
                     {% for product in collections.start-with-these.products %}
-                    <div class="col c6--sm c4--md hide-{{product.handle}}">
+                    <div class="col c6--md c4--md hide-{{product.handle}}">
                         <div class="product-card">
-                            {% include 'product-grid-collection' with 'three-per-row' %}
+                            {% include 'product-grid-collection' with 'two-per-row' %}
                         </div>
                     </div>
                     {% endfor %}
